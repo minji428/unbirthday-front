@@ -15,7 +15,7 @@ class main extends React.Component<{}, any> {
     render() {
         return(
             <div style={{display:'contents'}}>
-                <div id="main" data-framer-hydrate-v2="{&quot;routeId&quot;:&quot;augiA20Il&quot;}" data-framer-ssr-released-at="2022-07-28T14:57:24.033Z" data-framer-page-optimized-at="2022-07-31T09:16:40.247Z">
+                <div className='background' data-framer-hydrate-v2="{&quot;routeId&quot;:&quot;augiA20Il&quot;}" data-framer-ssr-released-at="2022-07-28T14:57:24.033Z" data-framer-page-optimized-at="2022-07-31T09:16:40.247Z">
                     <div data-framer-generated="true" class="framer-6wZMz" style="display:contents">
                         <div class="framer-72rtr7" style="min-height:100%;width:auto" name="Phone">
                             <div style="position:absolute;pointer-events:none;user-select:none;border-radius:inherit;top:0;right:0;bottom:0;left:0" data-framer-background-image-wrapper="true">
