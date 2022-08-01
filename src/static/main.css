@@ -1,0 +1,55 @@
+.background{
+    position: absolute;
+    pointer-events: none;
+    user-select: none;
+    border-radius: inherit;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    
+}
+
+
+
+.unbirthday-logo-div1{
+    position:absolute;
+    pointer-events:none;
+    user-select:none;
+    border-radius:inherit;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0
+}
+
+.unbirthday-logo-div1{
+    display:contents;
+    border-radius:inherit;
+    pointer-events:none
+}
+
+.unbirthday_logo_clock_all_white{
+    user-select:none;
+    display:block;
+    width:100%;
+    height:100%;
+    border-radius:inherit;
+    object-position:center;
+    object-fit:cover;
+    image-rendering:auto
+}
+
+.title-p{
+    line-height: 2em;
+}
+.title-sp{
+    position: absolute;
+    font-family: 'Noto Sans KR', sans-serif;
+    /* --framer-font-family:"UhBee KeongKeong Regular", serif;
+    --framer-font-style:normal;
+    --framer-font-weight:400;
+    --font-selector:Q1VTVE9NO1VoQmVlIEtlb25nS2VvbmcgUmVndWxhcg==;
+    --framer-text-color:var(--extracted-1w3ko1f);
+    --framer-font-size:29px; */
+}
