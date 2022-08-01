@@ -17,7 +17,7 @@ class main extends React.Component<{}, any> {
             <div style={{display:'contents'}}>
                 <div className='background' data-framer-hydrate-v2="{&quot;routeId&quot;:&quot;augiA20Il&quot;}" data-framer-ssr-released-at="2022-07-28T14:57:24.033Z" data-framer-page-optimized-at="2022-07-31T09:16:40.247Z">
                     <div data-framer-generated="true" class="framer-6wZMz" style="display:contents">
-                        <div class="framer-72rtr7" style="min-height:100%;width:auto" name="Phone">
+                        <div className="framer-72rtr7" name="Phone">
                             <div style="position:absolute;pointer-events:none;user-select:none;border-radius:inherit;top:0;right:0;bottom:0;left:0" data-framer-background-image-wrapper="true">
                                 <div style="display:contents;border-radius:inherit;pointer-events:none">
                                     <img src="https://framerusercontent.com/images/JRtUbkQg7EhALpd6pGYnBYm3b8.jpg" alt="" srcset="https://framerusercontent.com/images/JRtUbkQg7EhALpd6pGYnBYm3b8.jpg?scale-down-to=512 236w, https://framerusercontent.com/images/JRtUbkQg7EhALpd6pGYnBYm3b8.jpg?scale-down-to=1024 473w, https://framerusercontent.com/images/JRtUbkQg7EhALpd6pGYnBYm3b8.jpg?scale-down-to=2048 946w, https://framerusercontent.com/images/JRtUbkQg7EhALpd6pGYnBYm3b8.jpg 1170w" sizes="calc(100vw)" style="pointer-events:none;user-select:none;display:block;width:100%;height:100%;border-radius:inherit;object-position:center;object-fit:cover;image-rendering:auto">
