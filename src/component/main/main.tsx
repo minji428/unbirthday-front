@@ -14,67 +14,45 @@ class main extends React.Component<{}, any> {
 
     render() {
         return(
-            <div style={{display:'contents'}}>
-                <div className='background' data-framer-hydrate-v2="{&quot;routeId&quot;:&quot;augiA20Il&quot;}" data-framer-ssr-released-at="2022-07-28T14:57:24.033Z" data-framer-page-optimized-at="2022-07-31T09:16:40.247Z">
-                    <div data-framer-generated="true" className='framer-6wZMz'>
-                        <div className='framer-72rtr7'>
-                            <div className='unbirth-1' data-framer-background-image-wrapper="true">
-                                <div className='unbirth-2'>
-                                    <img src="https://framerusercontent.com/images/JRtUbkQg7EhALpd6pGYnBYm3b8.jpg" alt=""  sizes="calc(100vw)" className='unbirth-3'/>
+            // <!DOCTYPE html><html>
+                // <head>
+                //     <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet" />
+                // </head>
+                <body>
+                    <div className="v1469_1763">
+                        <div className="v1469_1764">
+                            <div className="v1469_1765">
+                                <div className="v1469_1766">
+                                    <span className="v1469_1767">Happy Unbirthday!</span>
+                                    <span className="v1469_1768">생일이 아니더라도, 그 사람에게 깜짝! 내 마음을 전해요</span>
                                 </div>
                             </div>
-                                <nav data-framer-name="Topbar" data-border="true">
-                                    <div data-framer-name="Unbirthday로고_시계_All_white">
-                                        <div className='unbirth-4' data-framer-background-image-wrapper="true">
-                                            <div className='unbirth-5'>
-                                                <img src="https://framerusercontent.com/images/mcQFXNbLL2qghi3GAJB8gDU3WqY.png" alt="" sizes="calc(0.13157894736842105px)" className='unbirth-6'/>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div data-framer-name="Icons"></div>
-                                    <div data-framer-name="Links">
-                                        <div className='framer-p79by9_rich-text-wrapper' data-framer-component-type="RichText">
-                                            <p className='unbirth-7'>
-                                                <span className='unbirth-8'>TEAM</span>
-                                            </p>
-                                        </div>
-                                        <div className='framer-1lnnpoq_rich-text-wrapper' data-framer-component-type="RichText">
-                                            <p className='unbirth-9'>
-                                                <span className='unbirth-10'>JOIN</span>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </nav>
-                                <div className='framer-si2tk6_rich-text-wrapper' data-framer-component-type="RichText">
-                                    <p className='unbirth-11'>
-                                        <span className='unbirth-12'>"내가 너의</span>
-                                    </p>
-                                    <p className='unbirth-13'>
-                                        <span className='unbirth-14'>비생일을</span>
-                                    </p>
-                                    <p className='unbirth-15'>
-                                        <span className='unbirth-16'>축하해줄게!"</span>
-                                    </p>
-                                </div>
-                                <div data-framer-name="박스">
-                                    <div className='unbirth-17' data-framer-background-image-wrapper="true">
-                                        <div className='unbirth-18'>
-                                            <img src="https://framerusercontent.com/images/zurraKs6UZLsbDZwyY3j3kcNP4M.png" alt="" sizes="calc(236px)" className='unbirth-19'/>
-                                        </div>
-                                    </div>
-                                    <div className='framer-1wdfkx9_rich-text-wrapper' data-framer-component-type="RichText">
-                                        <p className='unbirth_20'>
-                                            <span className='unbirth-21'>비생일 카드 보내기</span>
-                                        </p>
-                                    </div>
+                            <div className="v1469_1769">
+                                <div className="v1469_1770">
                                 </div>
                             </div>
-                            <div id="overlay"></div>
+                            <div className="v1469_1771">
+                                <div className="name"></div>
+                            </div>
+                            <div className="v1469_1773">
+                                <div className="name"></div>
+                            </div>
                         </div>
+                        <div className="name"></div>
+                        <div className="name"></div>
                     </div>
-                <div id="svg-templates" className='unbirth-22'>
-            </div>
-            </div>
+                </body>
+            // </html> 
+            // <br/><br/> 
+            // <div style = {{display:'contents'}}>
+            //     <div className = 'v1469_1763'></div>
+            //     <div className='v1469_1764'></div>
+            //     <div className='v1469_1765'></div>
+            // </div>
+
+
+
+
         )
     }
 }
