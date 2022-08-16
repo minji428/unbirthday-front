@@ -18,7 +18,7 @@ class main extends React.Component<{}, any> {
                 // <head>
                 //     <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet" />
                 // </head>
-                <body>
+                //<body>
                     <div className="v1469_1763">
                         <div className="v1469_1764">
                             <div className="v1469_1765">
@@ -41,7 +41,7 @@ class main extends React.Component<{}, any> {
                         <div className="name"></div>
                         <div className="name"></div>
                     </div>
-                </body>
+                //</body>
             // </html> 
             // <br/><br/> 
             // <div style = {{display:'contents'}}>
