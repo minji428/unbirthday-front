@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="'https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Light.woff2'" rel="stylesheet" format="woff2" /> 
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- 'GmarketSansMedium' 'Noto Sans KR' 'PyeongChangPeace-Light'-->
+    </head>
+<body>
+    <div class= 'main'>
+        <div class="part1"></div>
+         <div class="whiteBox">
+            <img class="xIcon" src="./img/xIcon.png">
+            <div class="mainText">#태그 선택</div>
+            <div class="subText">말해주고 싶은 그 사람만의 분위기는 무엇인가요?💬</div>
+            <div class="tags">
+                <div class="rowTag">
+                    <div class="eachTag">#유잼인</div>
+                    <div class="eachTag">#포근한</div>
+                </div>
+
+                <div class="rowTag">
+                    <div class="eachTag">#빛이 나는</div>
+                    <div class="eachTag">#한여름 사이다 같은</div>
+                </div>
+
+                <div class="rowTag">
+                    <div class="eachTag">#아이처럼 밝은</div>
+                    <div class="eachTag">#친근한</div>
+                </div>
+
+                <div class="rowTag">
+                    <div class="eachTag">#봄날의 햇살같은</div>
+                    <div class="eachTag">#어른스러운</div>
+                </div>
+
+                <div class="rowTag">
+                    <div class="eachTag">#닮고 싶은</div>
+                    <div class="eachTag">#시크한</div>
+                </div>
+
+                <div class="rowTag">
+                    <div class="eachTag">#소나무처럼 곧은</div>
+                    <div class="eachTag">#마이웨이를 가는</div>
+                </div>
+            </div>
+         </div>
+        <div class="part2"></div>    
+    </div>
+</body>
+<style>
+     .main {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        /* position: relative; */
+        width: 100%;
+        height: 100vh;
+        flex-grow: 1;
+        background-color:#393939;
+        position:relative;
+        /* padding:15px; */
+        position: fixed;
+        overflow: hidden;
+        padding-top: 15px;
+        padding-left: 5px;
+        padding-right: 5px;
+        top: 0;
+        left: 0;
+        /* align-items: center; */
+        align-content:space-around;
+    }
+
+    .part1{
+        display: flex;
+        flex:0.8;
+    }
+    .part2{
+        display: flex;
+        flex:1.3;
+    }
+    .whiteBox{
+        display: flex;
+        flex:6;
+        flex-direction: column;
+        border-radius: 10px 10px;
+        /* position:relative; */
+        /* margin-bottom: 20%; */
+        /* margin-top:25%; */
+        /* background-image: url('./img/_.png');
+        background-size: contain;
+        background-repeat: no-repeat; */
+        /* background-position: center; */
+        /* height: auto; */
+        margin-left: 3%;
+        margin-right: 3%;
+        
+        /* flex:3; */
+        background-color: rgba(239, 239, 239, 1);
+    }
+    .xIcon{
+        position:absolute;
+        width: 5%;
+        margin-top: 4%;
+        margin-left:83%;
+    }
+    .mainText{
+        /* width:100%; */
+        /* flex:1; */
+        text-align:left;
+        margin-top: 10%;
+        /* margin-bottom: 20%; */
+        vertical-align:text-top;
+        font-size:18px;
+        font-family:'Noto Sans KR';
+        /* background-color: forestgreen; */
+        margin-left:7%;
+        /* margin-right:7%; */
+        color:black;
+    }
+    .subText{
+        font-family: 'Noto Sans KR';
+        text-align:left;
+        font-size: 8pt;
+        margin-left:7%;
+        margin-bottom: 5%;
+        color:rgba(120, 120, 120, 1);
+    }
+    .tags{
+        display: flex;
+        flex:8;
+        flex-direction: column;
+        /* background-color: aqua; */
+        /* margin-top:10%; */
+        margin:7%;
+    }
+    .rowTag{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-bottom: 10%;
+    }
+    .eachTag{
+        display:flex;
+        font-size: 11px;
+        font-family: 'GmarketSansMedium';
+        background-color: rgba(145, 215, 224, 1);
+        border-radius: 15px 15px;
+        width:45%;
+        height:180%;
+        /* text-align: center; */
+        justify-content: center;
+        align-items: center;
+    }
+    .yelloBox img{
+        /* display:flex; */
+        width:100%;
+        height: 100%;
+        
+        /* position:absolute; */
+        /* top:0;
+        left:0; */
+    }
+    
+
+  
+</style>

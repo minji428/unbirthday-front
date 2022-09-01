@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Light.woff2" rel="stylesheet" format="woff2" /> 
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff" rel="stylesheet"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    </head>
+<body>
+    <div class= 'main'>
+        <div class="texts">
+            <div class='mainText'>
+               짜잔~ 축하받은 걸 축하해요!
+            </div>
+            <div class="subTexts">
+                카드를 저장하면 내가 받은 #태그도 모아볼 수 있어요.
+            </div>
+        </div>
+            <div class="yelloBox">
+                <div>
+                    <img class="card" src="./img/cardNormal.png">
+                </div>
+
+                <div class="insideYellow">
+                    <div class='personName'>
+                        HAPPY<br>
+                        UN-BIRTHDAY<br>
+                        은빈!
+                    </div>
+                    <div class="subText">
+                     From. 수수
+                    </div>
+                   </div>
+                </div>
+                
+                <div class="btns">
+                    <div class="btn">카드 보내기</div>
+                    <div class="btn">내 카드함</div>
+                </div>
+            </div>
+
+    </div>
+</body>
+<style>
+     .main {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        /* position: relative; */
+        width: 100%;
+        height: 100vh;
+        flex-grow: 1;
+        background-color:#393939;
+        position:relative;
+        /* padding:15px; */
+        position: fixed;
+        overflow: hidden;
+        padding-top:10%;
+        padding-left: 3%;
+        padding-right: 3%;
+        top: 0;
+        left: 0;
+        align-items:center;
+    }
+
+    .texts{
+        display: flex;
+        flex-direction: column;
+        flex:0.5;
+        text-align:center;
+        align-items: center;
+        vertical-align:text-top;
+    }
+    .mainText{
+        font-size:19px;
+        font-family:'Noto Sans KR';
+        margin-left:7%;
+        margin-right:7%;
+        margin-bottom: 2%;
+        color:#ffffff;
+    }
+    .subTexts{
+        font-size:14px;
+        font-family:'Noto Sans KR';
+        color:#ffffff;
+    }
+    .yelloBox{
+        display: flex;
+        flex-direction: column;
+        flex:1;
+        position:relative;
+        margin-top:2%;
+        margin-left: 7%;
+        margin-right: 7%;
+    }
+    
+    .yelloBox img{
+        width:100%;
+        height: 100%;
+    }
+    
+    
+    .insideYellow{
+        display: flex;
+        width: 90%;
+        height: 90%;
+        top:0;
+        left:0;
+        flex-direction: column;
+        flex:6;
+        position:absolute;
+        padding:5%;
+        text-align: center;
+    }
+    .personName{
+        display: flex;
+        flex:0.7;
+        margin-top: 6%;
+        font-family:'PyeongChangPeace-Light';
+        font-size: 20pt;
+        font-weight:bold;
+        text-align: left;
+        color:rgba(201, 102, 211, 1);
+        
+    }
+  
+    .subText{
+        display: flex;
+        flex:0.7;
+        flex-direction: row;
+        align-items:flex-end;
+        font-family:'PyeongChangPeace-Light';
+        font-size: 17pt;
+        font-weight:bold;
+        text-align: left;
+        color:rgba(201, 102, 211, 1);
+    }
+   
+    
+
+    .btns{
+        display: flex;
+        flex-direction: column;
+        flex:1;
+        position:relative;
+        /* background-color: blue; */
+        width: 45%;
+        height: 30%;
+        /* background-color: blue; */
+        align-items: center;
+        justify-content: center;
+        margin-top: 5%;
+        margin-bottom: 15%;
+        font-family: 'GmarketSansMedium';
+        font-size: 25px;
+        color:rgba(222, 210, 249, 1);
+        
+    }
+    .btn{
+        display: flex;
+        flex-direction: row;
+        /* flex:1; */
+        margin: 5%;
+        border-radius: 50% / 50%;
+        border-style: solid;
+        border-width: 3px;
+        border-color: rgba(222, 210, 249, 1);
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+
+
+    }
+</style>
