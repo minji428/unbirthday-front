@@ -5,6 +5,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import Main from './component/main/main'
 import LetterResive from './component/letter/letterResive'
+import Login from './component/login/login'
 
 const App = () => {
 
@@ -14,6 +15,7 @@ const App = () => {
         <Routes>
           <Route path='/' element={<Main/>}></Route>
           <Route path='/letterResive' element={<LetterResive/>}></Route>
+          <Route path='/login' element={<Login/>}></Route>
         </Routes>
       </BrowserRouter>
     </div>
