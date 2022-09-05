@@ -8,35 +8,132 @@
 <body>
     <div class= 'main'>
         <div class="happyUnbirthday">
-            <img src="./img/happyUnbirthday.png">
+            <img src="./img/mainText.png">
         </div>
         <div class="names">
-            <div>&emsp;&emsp;&emsp;김채윤&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;김채윤&emsp;&emsp;</div>
-            <div>&emsp;&nbsp;&nbsp;장원영&nbsp;김채윤&emsp;&emsp;&emsp;&emsp;장원영&nbsp;김채윤&emsp;</div>
-            <div>&nbsp;장원영&nbsp;김채윤&nbsp;장원영&nbsp;김채윤&nbsp;장원영&nbsp;김채윤&nbsp;</div>
-            <div>&nbsp;김채윤&nbsp;장원영&nbsp;김채윤&nbsp;장원영&nbsp;김채윤&nbsp;장원영&nbsp;</div>
-            <div>&emsp;장원영</div>
-            <div>&emsp;&nbsp;&nbsp;김채윤&nbsp;장원영&nbsp;김채윤&nbsp;장원영&nbsp;김채윤&nbsp; </div>
+            <div class="row"> 
+                <div>김채윤</div>
+                <div>김채윤</div>
+            </div>
+            <div class="row">
+                <div class="insideRow2">
+                    <div>장원영</div>
+                    <div>김채윤</div>
+                </div> 
+                <div class="insideRow2">
+                    <div>장원영</div>
+                    <div>김채윤</div>
+                </div>
+            </div>
+            <div class="row"> 
+                <div class="insideRow3">
+                    <div>장원영</div>
+                    <div>김채윤</div>
+                    <div>장원영</div>
+                    <div>김채윤</div>
+                    <div>장원영</div>
+                    <div>김채윤</div>
+                </div>
+            </div>
+            <div class="row"> 
+                <div class="insideRow3">
+                    <div>장원영</div>
+                    <div>김채윤</div>
+                    <div>장원영</div>
+                    <div>김채윤</div>
+                    <div>장원영</div>
+                    <div>김채윤</div>
+                </div>
+            </div>
+            <div class="rowSpecial">
+                <div>
+                    장원영
+                </div>
+                <div class="ment">
+                    <div>
+                        바로 어제 비생일 축하를 받은 사람들
+                    </div>
+                    <div>
+                        오늘도 비생일 축하해!
+                    </div>
+                </div>
+                <div>
+                    김채윤
+                </div>
+            </div>
 
-            <div>&emsp;&emsp;&emsp;장원영&nbsp;김채윤&nbsp;장원영&nbsp;김채윤&nbsp;</div>
-            <div>&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;장원영&nbsp;김채윤&nbsp;장원영&nbsp; </div>
-            <div>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;윤은빈&nbsp;김채윤&emsp; </div>
-            <div>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;김채윤&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;  </div>
-            <div> </div>
+            <div class="row"> 
+                <div class="insideRow6">
+                    <div>장원영</div>
+                    <div>김채윤</div>
+                    <div>장원영</div>
+                    <div>김채윤</div>
+                    <div>장원영</div>
+                </div>
+            </div>
+
+            <div class="row"> 
+                <div class="insideRow7">
+                    <div>장원영</div>
+                    <div>김채윤</div>
+                    <div>장원영</div>
+                    <div>김채윤</div>
+                </div>
+            </div>
+
+            <div class="row"> 
+                <div class="insideRow8">
+                    <div>장원영</div>
+                    <div>김채윤</div>
+                    <div>장원영</div>
+                </div>
+            </div>
+            <div class="row"> 
+                <div class="insideRow9">
+                    <div>장원영</div>
+                    <div>김채윤</div>
+                </div>
+            </div>
+            <div class="row"> 
+                <div class="insideRow3">
+                    <div>장원영</div>
+                </div>
+            </div>
         </div>
 
-        <div class="buttons">
-            <div>카드 보내기</div>
-            <div>내 카드함</div>
-            <!-- 카두 보내기 -->
+        <div class="btns">
+            <div class="btn">카드 보내기</div>
+            <div class="btn">내 카드함</div>
         </div>
     </div>
 </body>
 <style>
+    @font-face {
+    font-family: 'PyeongChangPeace-Light';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'GmarketSansMedium';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'GmarketSansLight';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
     .main {
         box-sizing: border-box;
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
         width: 100%;
         height: 100vh;
         flex-grow: 1;
@@ -45,9 +142,10 @@
         /* padding:15px; */
         position: fixed;
         overflow: hidden;
-        padding-top: 35px;
-        padding-left: 10px;
-        padding-right: 10px;
+        padding-top: 10%;
+        padding-left: 2%;
+        padding-right: 2%;
+        padding-bottom: 5%;
         top: 0;
         left: 0;
         /* align-items: center; */
@@ -67,19 +165,118 @@
         /* padding: 30%; */
     }
     .names{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        /* align-items: center; */
         flex:1.5;
-        /* margin-top: 20%; */
+        font-family: 'GmarketSansMedium';
         width: 100%;
         color : white;
-        font-size: 11pt;
+        font-size: 12pt;
+        margin-bottom: 5%;
+
     }
-    .buttons{
-        flex: 0.8;
-        background-color: #91d7e0;
+    .row{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
     }
-    .buttons > div{
-        color: white;
-        text-align: center;
+    .rowSpecial{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .ment{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 9pt;
+        color:rgba(247, 167, 255, 1);
+    }
+    .row2{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    
+    .insideRow2{
+        display: flex;
+        flex-direction: row;
+        width:30%;
+        /* background-color: blueviolet; */
+        justify-content: space-around;
+        
+    }
+    .insideRow3{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content:space-evenly;
+    }
+    
+    .insideRow6{
+        display: flex;
+        flex-direction: row;
+        width:75%;
+        justify-content: space-around;
+    }
+    .insideRow7{
+        display: flex;
+        flex-direction: row;
+        width:65%;
+        justify-content: space-around;
+    }
+    .insideRow8{
+        display: flex;
+        flex-direction: row;
+        width:45%;
+        justify-content: space-around;
+    }
+
+    .insideRow9{
+        display: flex;
+        flex-direction: row;
+        width:30%;
+        justify-content: space-around;
+    }
+
+    .btns{
+        display: flex;
+        flex-direction: column;
+        flex:1;
+        position:relative;
+        /* background-color: blue; */
+        width: 45%;
+        height: 30%;
+        /* background-color: blue; */
+        align-items: center;
+        justify-content: center;
+        margin-top: 5%;
+        margin-bottom: 15%;
+        font-family: 'GmarketSansMedium';
+        font-size: 25px;
+        color:rgba(222, 210, 249, 1);
+        
+    }
+    .btn{
+        display: flex;
+        flex-direction: row;
+        /* flex:1; */
+        margin: 5%;
+        border-radius: 50% / 50%;
+        border-style: solid;
+        border-width: 3px;
+        border-color: rgba(222, 210, 249, 1);
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+
+
     }
  
 </style>

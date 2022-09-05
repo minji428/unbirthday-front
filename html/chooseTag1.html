@@ -56,6 +56,36 @@
     </div>
 </body>
 <style>
+      @font-face {
+    font-family: 'PyeongChangPeace-Light';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+    }
+    @font-face {
+    font-family: 'PyeongChangPeace-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+    @font-face {
+        font-family: 'GmarketSansMedium';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'GmarketSansBold';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'Noto Sans KR';
+        src : url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+        /* font-weight: 500; */
+    }
      .main {
         box-sizing: border-box;
         display: flex;
@@ -91,14 +121,6 @@
         flex:6;
         flex-direction: column;
         border-radius: 10px 10px;
-        /* position:relative; */
-        /* margin-bottom: 20%; */
-        /* margin-top:25%; */
-        /* background-image: url('./img/_.png');
-        background-size: contain;
-        background-repeat: no-repeat; */
-        /* background-position: center; */
-        /* height: auto; */
         margin-left: 3%;
         margin-right: 3%;
         
@@ -112,23 +134,20 @@
         margin-left:83%;
     }
     .mainText{
-        /* width:100%; */
-        /* flex:1; */
         text-align:left;
         margin-top: 10%;
-        /* margin-bottom: 20%; */
         vertical-align:text-top;
-        font-size:18px;
+        font-size:20px;
         font-family:'Noto Sans KR';
-        /* background-color: forestgreen; */
+        font-weight: 700;
         margin-left:7%;
-        /* margin-right:7%; */
         color:black;
     }
     .subText{
         font-family: 'Noto Sans KR';
+        font-weight: 500;
         text-align:left;
-        font-size: 8pt;
+        font-size: 11pt;
         margin-left:7%;
         margin-bottom: 5%;
         color:rgba(120, 120, 120, 1);

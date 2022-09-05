@@ -1,56 +1,4 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <link href="https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Light.woff2" rel="stylesheet" format="woff2" /> 
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.googleapis.com"> 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    </head>
-<body>
-    <div class= 'main'>
-        <div class="btn">
-            <img src="./img/back.png" class="backBtn"/>
-        </div>
-            <div class='mainText'>
-                누구에게 누가 보내는 카드인가요?
-            </div>
-            <div class="yelloBox">
-                <div>
-                    <img class="card" src="./img/cardFront.png">
-                </div>
-                    
-                <div class="insideYellow">
-                    <div class="write">
-                        <div class="toPerson">
-                            <div class="nameBox">
-                                    받는 사람
-                            </div>
-                            <div class="notice">3자 이내로 입력해주세요.</div>
-                        </div>
-                        <div class="fromPerson">
-                            <div class="nameBox">
-                                보내는 사람
-                            </div>
-                        </div>
-                    </div>
-
-                    
-                </div>
-                
-            </div>
-                
-                <div class='writeBack'>
-                    <div>
-                        뒷장 쓰기
-                    </div>
-                </div>
-        </div>
-
-    </div>
-</body>
-<style>
-     @font-face {
+@font-face {
     font-family: 'PyeongChangPeace-Light';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Light.woff2') format('woff2');
     font-weight: 300;
@@ -223,4 +171,3 @@
         font-size: 20px;
         color:rgba(222, 210, 249, 1);
     }
-</style>
