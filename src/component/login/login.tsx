@@ -1,4 +1,6 @@
 import React, {Component, useEffect} from 'react';
+// import {Helmet} from "react-helmet";
+
 import '../../static/login.css';
 
 class login extends React.Component<{}, any> {
