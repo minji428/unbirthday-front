@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import '../../static/cardSend/cardsend2.css';
+import '../../static/cardSend/cardSend2.css';
 {/* <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet"></link> */}
 
 
@@ -16,7 +16,7 @@ class cardSend2 extends React.Component<{}, any> {
         return(
             <div className= 'CS2main'>
                 <div className="CS2btnBack">
-                    <img src="../img/back.png" className="backBtn"/>
+                    <img src="../img/back.png" className="CS2backBtn"/>
                 </div>
                 <div className='CS2mainText'>
                     누구에게 누가 보내는 카드인가요?

@@ -20,6 +20,7 @@ class ChooseTag4 extends React.Component<{}, any> {
                 <img className="CTxIcon" src="../img/xIcon.png"/>
                 <div className="CTmainText">#태그 선택</div>
                 <div className="CTsubText">그 사람은 매사에 어떤 사람이라고 말해주고 싶나요?💬</div>
+                <div className="CTtags">
                     <div className="CTrowTag">
                         <div className="CTeachTagOrange">#좋은 에너지를 주는</div>
                         <div className="CTeachTagOrange">#현명한</div>
