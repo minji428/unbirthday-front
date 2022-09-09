@@ -1,0 +1,104 @@
+@font-face {
+    font-family: 'PyeongChangPeace-Light';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+    }
+    @font-face {
+    font-family: 'PyeongChangPeace-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+    @font-face {
+        font-family: 'GmarketSansMedium';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'GmarketSansBold';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'Noto Sans KR';
+        src : url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+        /* font-weight: 500; */
+    }
+    .SF2main {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        background-color:#393939;
+        position:relative;
+        position: fixed;
+        overflow: hidden;
+        padding-top: 17%;
+        padding-bottom: 15%;
+        top: 0;
+        left: 0;
+        align-items: center; 
+    }
+    .SF2colors{
+        display: flex;
+        flex:0.7;
+        width:50%;
+        left:0;
+
+    }
+    .SF2color{
+        width: 100%;
+    }
+    .SF2texts{
+        display: flex;
+        flex:1.5;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width:100%;
+        text-align:center;
+    }
+    .SF2mainText{
+        font-size:35px;
+        font-family:'Noto Sans KR';
+        font-weight: 700;
+        color:#ffffff;
+        margin-bottom: 3%;
+    }
+    .SF2btn{
+        display: flex;
+        flex-direction: row;
+        margin: 5%;
+        border-radius: 50% / 50%;
+        border-style: solid;
+        border-width: 3px;
+        border-color: rgba(100, 175, 251, 1);
+        width: 40%;
+        height: 25%;
+        justify-content: center;
+        align-items: center;
+        font-family: 'GmarketSansMedium';
+        font-size: 25px;
+        color:rgba(100, 175, 251, 1)
+
+
+    }
+    .SF2cakes{
+        display: flex;
+        /* flex-direction: row; */
+        width: 100%;
+        flex:2.5;
+        /* background-color:darkkhaki; */
+        /* margin-bottom; */
+    }
+    .SF2cake{
+        width: 100%;
+        /* margin-bottom: 10%; */
+    }
+ 
+   

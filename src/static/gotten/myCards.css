@@ -1,0 +1,214 @@
+@font-face {
+    font-family: 'PyeongChangPeace-Light';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+    }
+    @font-face {
+    font-family: 'PyeongChangPeace-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+    @font-face {
+        font-family: 'GmarketSansMedium';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'GmarketSansBold';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'Noto Sans KR';
+        src : url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+        /* font-weight: 500; */
+    }
+     .MCmain {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        /* position: relative; */
+        width: 100%;
+        height: 100vh;
+        flex-grow: 1;
+        background-color:#393939;
+        position:relative;
+        position: fixed;
+        overflow: hidden;
+        padding-top: 15px;
+        /* padding-left: 5px;
+        padding-right: 5px; */
+        top: 0;
+        left: 0;
+        align-content:space-around;
+    }
+    .MCstatus{
+        display: flex;
+        flex-direction: column;
+        flex:1;
+        margin-bottom: 5%;
+        position:relative;
+    }
+    .MClogo{
+        position:absolute;
+        width: 10%;
+        margin-top: 8%;
+        margin-left: 5%;
+    }
+    .MCmainText{
+        margin-top: 10%;
+        font-size:25px;
+        font-family:'Noto Sans KR';
+        font-weight: 500;
+        color:white;
+        text-align: center;
+    }
+
+    .MCtags{
+        display: flex;
+        flex:1;
+        flex-direction: column;
+    }
+    .MCrow1{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 5%;
+        width: 100%;
+    }
+    .MCrow2{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 5%;
+    }
+    .MCrowText1{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 3%;
+        font-family: 'Noto Sans KR';
+        font-weight: 500;
+        font-size:17pt;
+        color:white;
+        margin-left: 5%;
+    }
+    .MCsmall1{
+        font-weight: 100;
+        font-size: 10pt;
+        margin-right: 5%;
+    }
+    .MCrowTag{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        margin-left: 7%;
+    }
+    
+    .MCblue-Tag{
+        display:flex;
+        font-size: 13px;
+        font-family: 'GmarketSansMedium';
+        border-width: 1px;
+        color:black;
+        background-color:rgba(145, 215, 224, 1);
+        border-radius: 15px 15px;
+        width:35%;
+        height:100%;
+        justify-content: center;
+        align-items: center;
+        margin-bottom : 4%;
+        margin-right: 5%;
+    }
+    
+    /* -------------받은 카드----------- */
+    .MCcards{
+        display: flex;
+        flex:3;
+        flex-direction: column;
+        margin-top:5%;
+        margin-left: 5%;
+        margin-right: 5%;
+
+    }
+    .MCrowText2{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 5%;
+        font-family: 'Noto Sans KR';
+        font-weight: 500;
+        font-size: 17pt;
+        color:white;
+    }
+    .MCrowCard{
+        display:flex;
+        flex:1;
+        /* background-color: coral; */
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 5%;
+        
+    }
+    .MCsmall2{
+        font-weight: 100;
+        font-size: 10pt;
+    }
+   .MCeachCard{
+        width: 40%;
+        height: fit-content;
+        margin-right: 3%;
+   }
+   .MCeachCardEmpty{
+         width:40%;
+        height: fit-content;
+   }
+   /* ---------------정보------------ */
+   .MCinfos{
+        display: flex;
+        flex:4;
+        flex-direction: column;
+        margin-left:5%;
+        margin-right: 5%;
+        /* background-color: antiquewhite; */
+   }
+   .MCrowInfo{
+    display: flex;
+    flex-direction: column;
+   }
+   .MCidpw{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 2%;
+    align-items: center;
+   }
+   .MCname{
+    font-family: 'Noto Sans KR';
+    font-weight: 700;
+    font-size: 13pt;
+    color:white;
+    margin-right: 7%;
+   }
+   .MCuser{
+    font-family: 'Noto Sans KR';
+    font-weight: 100;
+    font-size: 12pt;
+    color:white;
+    padding-bottom: 2%;
+   }
+
+    .MCnoticeText{
+        font-family: 'Noto Sans KR';
+        font-weight: 100;
+        font-size: 12pt;
+        text-decoration:underline;
+        color:white;
+        margin-bottom: 2%;
+
+    }
+    .MCnotices{
+        margin-bottom: 2%;
+    }
