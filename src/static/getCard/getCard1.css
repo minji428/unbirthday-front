@@ -1,26 +1,53 @@
 @font-face {
     font-family: 'PyeongChangPeace-Light';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Light.woff2') format('woff2');
+    src: url('../font/PyeongChangPeace-Light.otf') format('woff2');
     font-weight: 300;
     font-style: normal;
-    }
-    @font-face {
+}
+@font-face {
     font-family: 'PyeongChangPeace-Bold';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Bold.woff2') format('woff2');
-    font-weight: 700;
+    src: url('../font/PyeongChangPeace-Bold.otf') format('woff2');
+    /* font-weight: 300; */
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'GmarketSansLight';
+    src: url('../font/GmarketSansLight.otf') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
     @font-face {
         font-family: 'GmarketSansMedium';
-        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+        src: url('../font/GmarketSansMedium.otf') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'GmarketSansBold';
+        src: url('../font/GmarketSansBold.otf') format('woff');
         font-weight: normal;
         font-style: normal;
     }
     @font-face {
         font-family: 'Noto Sans KR';
-        src : url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500&display=swap');
-        /* font-weight: 500; */
+        src : url('../font/NotoSansKR-Bold.otf');
+        font-weight: 700;
+    }
+    @font-face {
+        font-family: 'Noto Sans KR';
+        src : url('../font/NotoSansKR-Light.otf');
+        font-weight: 300;
+    }
+    @font-face {
+        font-family: 'Noto Sans KR';
+        src : url('../font/NotoSansKR-Regular.otf');
+        font-weight: 400;
+    }
+    @font-face {
+        font-family: 'Noto Sans KR';
+        src : url('../font/NotoSansKR-Medium.otf');
+        font-weight: 500;
     }
 .GC1main {
     box-sizing: border-box;
