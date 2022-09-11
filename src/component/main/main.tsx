@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import { Link } from 'react-router-dom';
 import '../../static/main.css';
 
 class main extends React.Component<{}, any> {
@@ -8,6 +9,12 @@ class main extends React.Component<{}, any> {
         this.state = {
 
         }
+
+        this.cardSend = this.cardSend.bind(this)
+    }
+
+    cardSend(){
+        window.location.href = '/cardsend'
     }
 
     render() {
@@ -108,7 +115,7 @@ class main extends React.Component<{}, any> {
                 </div>
 
                 <div className="btns">
-                    <div className="btn">카드 보내기</div>
+                    <div className="btn" onClick={this.cardSend}>카드 보내기</div>
                     <div className="btn">내 카드함</div>
                 </div>
             </div>

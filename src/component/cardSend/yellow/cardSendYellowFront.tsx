@@ -1,15 +1,33 @@
 import React, {Component} from 'react';
-import '../../static/cardSend/cardSend2.css';
-{/* <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet"></link> */}
+import '../../../static/cardSend/cardSendFront.css';
 
+import CardSendYellowBack from './cardSendYellowBack'
 
-class cardSend2 extends React.Component<{}, any> {
+class cardSendYellowFront extends React.Component<{}, any> {
     constructor(props: any){
         super(props)
 
         this.state = {
-
+            showback : false
         }
+
+        this.cardSendYelloBack = this.cardSendYelloBack.bind(this)
+    }
+
+    componentDidUpdate = (prevProps:any, prevState:any, snapshot:any) => {
+
+        if(prevState.showback !== this.state.showback) {
+            if(this.state.showback) {
+                alert('될까?');
+                return <CardSendYellowBack/>
+            }
+        }
+    }
+
+    cardSendYelloBack(){
+        this.setState({
+            showback : true
+        })
     }
 
     render() {
@@ -28,9 +46,9 @@ class cardSend2 extends React.Component<{}, any> {
                         
                     <div className="CS2insideYellow">
                         <div className="CS2write">
-                            <div className="CS2toPerson">
+                           <div className="CS2toPerson">
                                 <div className="CS2nameBox">
-                                    받는 사람
+                                    <input type="text" className="form-control" name="keyword" placeholder='받는 사람'/>
                                 </div>
                                 <div className="CS2notice">3자 이내로 입력해주세요.</div>
                             </div>
@@ -44,14 +62,12 @@ class cardSend2 extends React.Component<{}, any> {
                     
                 </div>
                     
-                <div className='CS2writeBack'>
-                    <div>
-                        뒷장 쓰기
-                    </div>
+                <div className='CS2writeBack' >
+                    <div onClick={this.cardSendYelloBack}>뒷장 쓰기</div>
                 </div>
         </div>
 
         )
     }
 }
-export default cardSend2;
+export default cardSendYellowFront;
