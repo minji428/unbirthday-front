@@ -16,12 +16,6 @@ class cardSendYellowFront extends React.Component<{}, any> {
 
     componentDidUpdate = (prevProps:any, prevState:any, snapshot:any) => {
 
-        if(prevState.showback !== this.state.showback) {
-            if(this.state.showback) {
-                alert('될까?');
-                return <CardSendYellowBack/>
-            }
-        }
     }
 
     cardSendYelloBack(){
@@ -64,6 +58,7 @@ class cardSendYellowFront extends React.Component<{}, any> {
                     
                 <div className='CS2writeBack' >
                     <div onClick={this.cardSendYelloBack}>뒷장 쓰기</div>
+                    {this.state.showback ? <CardSendYellowBack/>: ''}
                 </div>
         </div>
 

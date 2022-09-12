@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import '../../../static/cardSend/cardSendBack.css';
 
+import CardSendComplete from './cardSendComplete'
+
 class cardSendYellowBack extends React.Component<{}, any> {
     constructor(props: any){
         super(props)
@@ -10,11 +12,17 @@ class cardSendYellowBack extends React.Component<{}, any> {
         }
     }
 
+    backButton(){
+        // location.href로 하면 새로고침 되어서 이전에 작성했던 내용들이 사라짐..
+        // 뒷장 쓰기 했던 것 처럼 컴포넌트를 변경하는 방법 생각해보기
+        window.location.href = '/cardSend/yellow'
+    }
+
     render() {
         return(
             <div className= 'CS3main'>
             <div className="CS3btn">
-                <img src="../img/back.png" className="CS3backBtn"/>
+                <img src="../img/back.png" className="CS3backBtn" onClick={this.backButton}/>
             </div>
                 <div className='CS3mainText'>
                     그 사람을 생각하며 채워주세요.
@@ -117,6 +125,7 @@ class cardSendYellowBack extends React.Component<{}, any> {
                         <div>
                             완성하기
                         </div>
+                        {/* 완성하기 누르면 uuid 생성하고 그 url로 이동시킨 다음에 Complete 보여주기 */}
                     </div>
                 </div>
    
