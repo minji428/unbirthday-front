@@ -9,6 +9,7 @@ class cardSend extends React.Component<{}, any> {
 
         }
 
+        this.backButton = this.backButton.bind(this)
         this.yelloCard = this.yelloCard.bind(this)
         this.orangeCard = this.orangeCard.bind(this)
         this.whiteCard = this.whiteCard.bind(this)
@@ -31,11 +32,15 @@ class cardSend extends React.Component<{}, any> {
 
     }
 
+    backButton(){
+        window.location.href = '/'
+    }
+
     render() {
         return(
             <div className= 'CS1main'>
                 <div className="CS1btn">
-                    <img src="../img/back.png" className="CS1backBtn"/>
+                    <img src="../img/back.png" className="CS1backBtn" onClick={this.backButton}/>
                 </div>
                 <div className='CS1mainText'>
                         그 사람을 깜짝 놀래켜줄<br></br>
