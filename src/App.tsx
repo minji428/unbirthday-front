@@ -32,9 +32,9 @@ const App = () => {
         <Routes>
           <Route path='/' element={<Main/>}></Route>
           <Route path='/cardsend' element={<CardSend/>}></Route>
-          <Route path='/cardSend/yellow' element={<CardSendYellow/>}></Route>
-          <Route path='/cardSend/cardSend3' element={<CardSend3/>}></Route>
-          <Route path='/cardSend/cardSend4' element={<CardSend4/>}></Route>
+          <Route path='/cardsend/yellow' element={<CardSendYellow/>}></Route>
+          <Route path='/cardsend/cardSend3' element={<CardSend3/>}></Route>
+          <Route path='/cardsend/cardSend4' element={<CardSend4/>}></Route>
           <Route path='/login' element={<Login/>}></Route>
           <Route path='/register' element={<Register/>}></Route>
           <Route path='/gotten/taggotten' element={<TagGotten/>}></Route>
