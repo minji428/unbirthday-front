@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 import '../../../static/cardSend/cardSendFront.css';
 
-import CardSendYellowBack from './cardSendYellowBack'
+import CardSendOrangeBack from './cardSendOrangeBack'
 
-class cardSendYellowFront extends React.Component<{}, any> {
+class cardSendOrangeFront extends React.Component<{}, any> {
     constructor(props: any){
         super(props)
 
@@ -62,11 +62,11 @@ class cardSendYellowFront extends React.Component<{}, any> {
                     
                 <div className='CS2writeBack' >
                     <div onClick={this.cardSendYelloBack}>뒷장 쓰기</div>
-                    {this.state.showback ? <CardSendYellowBack/>: ''}
+                    {this.state.showback ? <CardSendOrangeBack/>: ''}
                 </div>
         </div>
 
         )
     }
 }
-export default cardSendYellowFront;
+export default cardSendOrangeFront;

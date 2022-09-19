@@ -6,6 +6,9 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Main from './component/main/main'
 import CardSend from './component/cardSend/cardSend'
 import CardSendYellow from './component/cardSend/yellow/cardSendYellowFrame'
+import CardSendOrange from './component/cardSend/orange/cardSendOrangeFrame'
+import CardSendWhite from './component/cardSend/white/cardSendWhiteFrame'
+import CardSendPurple from './component/cardSend/purple/cardSendPurpleFrame'
 import CardSend3 from './component/cardSend/cardSend3'
 import CardSend4 from './component/cardSend/cardSend4'
 import Login from './component/login/login'
@@ -33,6 +36,9 @@ const App = () => {
           <Route path='/' element={<Main/>}></Route>
           <Route path='/cardsend' element={<CardSend/>}></Route>
           <Route path='/cardsend/yellow' element={<CardSendYellow/>}></Route>
+          <Route path='/cardsend/orange' element={<CardSendOrange/>}></Route>
+          <Route path='/cardsend/white' element={<CardSendWhite/>}></Route>
+          <Route path='/cardsend/purple' element={<CardSendPurple/>}></Route>
           <Route path='/cardsend/cardSend3' element={<CardSend3/>}></Route>
           <Route path='/cardsend/cardSend4' element={<CardSend4/>}></Route>
           <Route path='/login' element={<Login/>}></Route>

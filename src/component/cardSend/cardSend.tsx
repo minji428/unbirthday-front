@@ -17,19 +17,19 @@ class cardSend extends React.Component<{}, any> {
     }
 
     yelloCard(){
-        window.location.href = '/cardSend/yellow'
+        window.location.href = '/cardsend/yellow'
     }
 
     orangeCard(){
-
+        window.location.href = '/cardsend/orange'
     }
 
     whiteCard(){
-
+        window.location.href = '/cardsend/white'
     }
 
     purpleCard(){
-
+        window.location.href = '/cardsend/purple'
     }
 
     backButton(){
