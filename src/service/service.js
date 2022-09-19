@@ -1,9 +1,12 @@
 import axios from 'axios';
 import * as httpStatus from '../util/httpErrorStatusMsgUtil'
+let defaultUrl = 'http://localhost:8080'
 
 export function anyService(requestURL, requestMethod, callbackFunc, param) {
+    console.log(requestURL)
     var axiosBody = {
-        url : process.env.REACT_APP_server_url + requestURL,
+        // url : defaultUrl + requestURL,
+        url : requestURL,
         method : requestMethod,
     }
 

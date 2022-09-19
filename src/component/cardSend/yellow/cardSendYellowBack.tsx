@@ -15,7 +15,7 @@ class cardSendYellowBack extends React.Component<{}, any> {
     backButton(){
         // location.href로 하면 새로고침 되어서 이전에 작성했던 내용들이 사라짐..
         // 뒷장 쓰기 했던 것 처럼 컴포넌트를 변경하는 방법 생각해보기
-        window.location.href = '/cardSend/yellow'
+        window.location.href = '/cardsend/yellow'
     }
 
     render() {
