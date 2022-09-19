@@ -1,6 +1,4 @@
 import React, {Component, useEffect} from 'react';
-// import {Helmet} from "react-helmet";
-
 import '../../static/login.css';
 
 class login extends React.Component<{}, any> {
@@ -12,50 +10,44 @@ class login extends React.Component<{}, any> {
         }
     }
 
+    join(){
+        window.location.href = "/register"
+    }
+    
     render() {
-        // useEffect(() => {
-        //     const font = document.createElement('link')
-        //     font.rel="stylesheet"
-        //     font.href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap"
-        //     document.head.appendChild(font)
-
-        //     return () => {
-        //         document.head.removeChild(font)
-        //     }
-        // }, [])
         return(
-            <div className= 'main'>
-            <text className='mainText'>
+            <div className= 'LoginMain'>
+            <text className='LoginmainText'>
                 오늘도<br/>
                 해피 언버스데이- 👋
             </text>
             
-            <div className="total">
-                 {/* 아이디 비번 입력 */}
-                <div className="info">
-                    {/* 아이디 비번 */}
-                    <div className = "numAndpass">
-                        <text className="infoText">아이디</text>
-                        <div className="number">
+            <div className="Logintotal">
+                <div className="Logininfo">
+                    <div className = "LoginnumAndpass">
+                        <div className="LogininfoText">아이디</div>
+                        <div className="Loginnumber">
                             <div>아이디를 입력하세요.</div>
-                            
                         </div>
-                        {/* <div id='rectangle10' className='rectangle10'></div> */}
-                        <text className="infoText">비밀번호</text>
-                        <div className="number">
+                        
+                        <div className="LogininfoText">비밀번호</div>
+                        <div className="Loginnumber">
                            비밀번호를 입력하세요.
                         </div>
-                        <div className="find">
+                        <div className="Loginfind">
                             아이디/비밀번호 찾기
                         </div>
                     </div>
-    
+                </div>
+                
+                <div className="LoginBtn">
                     <div className = "logins">로그인</div>
+
                 </div>
     
                 <div className="login">
-                    <div className="texts">아직 가입 전이라면?</div>
-                    <div className="loginText">30초만에 가입하기</div>
+                    <div className="Logintexts">아직 가입 전이라면?</div>
+                    <div className="loginText" onClick={this.join}>30초만에 가입하기</div>
                 </div>
             </div>
         </div>

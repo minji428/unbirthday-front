@@ -1,0 +1,232 @@
+@font-face {
+    font-family: 'PyeongChangPeace-Light';
+    src: url('../font/PyeongChangPeace-Light.otf') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'PyeongChangPeace-Bold';
+    src: url('../font/PyeongChangPeace-Bold.otf') format('woff2');
+    /* font-weight: 300; */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GmarketSansLight';
+    src: url('../font/GmarketSansLight.otf') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+    @font-face {
+        font-family: 'GmarketSansMedium';
+        src: url('../font/GmarketSansMedium.otf') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'GmarketSansBold';
+        src: url('../font/GmarketSansBold.otf') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'Noto Sans KR';
+        src : url('../font/NotoSansKR-Bold.otf');
+        font-weight: 700;
+    }
+    @font-face {
+        font-family: 'Noto Sans KR';
+        src : url('../font/NotoSansKR-Light.otf');
+        font-weight: 300;
+    }
+    @font-face {
+        font-family: 'Noto Sans KR';
+        src : url('../font/NotoSansKR-Regular.otf');
+        font-weight: 400;
+    }
+    @font-face {
+        font-family: 'Noto Sans KR';
+        src : url('../font/NotoSansKR-Medium.otf');
+        font-weight: 500;
+    }
+.GC3main {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    /* position: relative; */
+    width: 100%;
+    height: 100vh;
+    flex-grow: 1;
+    background-color:#393939;
+    position:relative;
+    /* padding:15px; */
+    position: fixed;
+    overflow: hidden;
+    padding-top:10%;
+    padding-left: 3%;
+    padding-right: 3%;
+    top: 0;
+    left: 0;
+    align-items:center;
+}
+
+.GC3texts{
+    display: flex;
+    flex-direction: column;
+    flex:0.5;
+    text-align:center;
+    align-items: center;
+    vertical-align:text-top;
+}
+.GC3mainText{
+    font-size:19px;
+    font-family:'Noto Sans KR';
+    margin-left:7%;
+    margin-right:7%;
+    margin-bottom: 2%;
+    color:#ffffff;
+}
+.GC3subTexts{
+    font-size:14px;
+    font-family:'Noto Sans KR';
+    color:#ffffff;
+}
+.GC3yelloBox{
+    display: flex;
+    flex-direction: column;
+    flex:1;
+    position:relative;
+    margin-top:2%;
+    margin-left: 7%;
+    margin-right: 7%;
+}
+
+.GC3yelloBox img{
+    width:100%;
+    height: 100%;
+}
+
+
+.GC3insideYellow{
+    display: flex;
+    width: 90%;
+    height: 90%;
+    top:0;
+    left:0;
+    flex-direction: column;
+    flex:6;
+    position:absolute;
+    padding:5%;
+    text-align: center;
+}
+.GC3personName{
+    display: flex;
+    flex:0.7;
+    margin-top: 6%;
+    font-family:'PyeongChangPeace-Light';
+    font-size: 20pt;
+    font-weight:bold;
+    text-align: left;
+    color:rgba(201, 102, 211, 1);
+    
+}
+
+.GC3tagMessage{
+    display: flex;
+    flex-direction: column;
+    /* background-color: darkgoldenrod; */
+    flex:2;
+    /* padding-left: 7%;
+    padding-right: 7%; */
+    padding-top:2%;
+    padding-bottom: 2%;
+    justify-content: center;
+    /* align-items: stretch; */
+    justify-content: space-evenly;
+    
+}
+.GC3temp{
+    display: flex;
+    justify-content: space-evenly;
+}
+.GC3tagSpace{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 53%;
+}
+.GC3textSpace{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+}
+.GC3subText{
+    font-family: 'PyeongChangPeace-Light';
+    font-size: 10pt;
+}
+.GC3tag{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'GmarketSansMedium';
+    font-size: 8pt;
+    background-color: black;
+    border-radius: 20px 20px;
+    width: 100%;
+    height: 100%;
+    margin-top:6%;
+    margin-bottom: 6%;
+    color:white;
+
+}
+
+.GC3writeMessage{
+    display: flex;
+    flex:1;
+    flex-direction: column;
+    justify-content: space-around;
+
+    padding-left: 5%;
+    padding-right: 5%;
+    text-align: left;
+    font-family: 'Noto Sans KR';
+    font-size: 10pt;
+    margin-bottom: 2%;
+}
+
+
+.GC3btns{
+    display: flex;
+    flex-direction: column;
+    flex:1;
+    position:relative;
+    /* background-color: blue; */
+    width: 45%;
+    height: 30%;
+    /* background-color: blue; */
+    align-items: center;
+    justify-content: center;
+    margin-top: 5%;
+    margin-bottom: 15%;
+    font-family: 'GmarketSansMedium';
+    font-size: 25px;
+    color:rgba(222, 210, 249, 1);
+    
+}
+.GC3btn{
+    display: flex;
+    flex-direction: row;
+    /* flex:1; */
+    margin: 5%;
+    border-radius: 50% / 50%;
+    border-style: solid;
+    border-width: 3px;
+    border-color: rgba(222, 210, 249, 1);
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+
+
+}

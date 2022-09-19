@@ -1,0 +1,137 @@
+@font-face {
+    font-family: 'PyeongChangPeace-Light';
+    src: url('../font/PyeongChangPeace-Light.otf') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'PyeongChangPeace-Bold';
+    src: url('../font/PyeongChangPeace-Bold.otf') format('woff2');
+    /* font-weight: 300; */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GmarketSansLight';
+    src: url('../font/GmarketSansLight.otf') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+    @font-face {
+        font-family: 'GmarketSansMedium';
+        src: url('../font/GmarketSansMedium.otf') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'GmarketSansBold';
+        src: url('../font/GmarketSansBold.otf') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'Noto Sans KR';
+        src : url('../font/NotoSansKR-Bold.otf');
+        font-weight: 700;
+    }
+    @font-face {
+        font-family: 'Noto Sans KR';
+        src : url('../font/NotoSansKR-Light.otf');
+        font-weight: 300;
+    }
+    @font-face {
+        font-family: 'Noto Sans KR';
+        src : url('../font/NotoSansKR-Regular.otf');
+        font-weight: 400;
+    }
+    @font-face {
+        font-family: 'Noto Sans KR';
+        src : url('../font/NotoSansKR-Medium.otf');
+        font-weight: 500;
+    }
+    .SF1main {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        background-color:#393939;
+        position:relative;
+        position: fixed;
+        overflow: hidden;
+        padding-top: 15%;
+        padding-bottom: 15%;
+        top: 0;
+        left: 0;
+        align-items: center; 
+    }
+    .SF1colors{
+        display: flex;
+        flex:0.7;
+        width:50%;
+        left:0;
+
+    }
+    .SF1color{
+        width: 100%;
+    }
+    .SF1texts{
+        display: flex;
+        flex:1.5;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width:100%;
+        text-align:center;
+    }
+    .SF1mainText{
+        font-size:35px;
+        font-family:'Noto Sans KR';
+        font-weight: 700;
+        color:#ffffff;
+        margin-bottom: 3%;
+    }
+    .SF1subText{
+        font-size:19px;
+        font-family:'Noto Sans KR';
+        font-weight: 400;
+        color:#ffffff;
+        margin-bottom: 5%;
+    }
+    .SF1cakes{
+        display: flex;
+        /* flex-direction: row; */
+        width: 100%;
+        flex:2.5;
+        /* background-color:darkkhaki; */
+        /* margin-bottom; */
+    }
+    .SF1cake{
+        width: 100%;
+        /* margin-bottom: 10%; */
+    }
+    .SF1letter{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: flex-end;
+        /* align-items: flex-end ; */
+        /* background-color: aqua; */
+        flex:1;
+
+    }
+    .SF1letters{
+        display: flex;
+        flex-direction: row;
+        font-size: 30px;
+        width: 15%;
+        margin-bottom: 10%;
+        margin-right: 5%;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        border-color: rgba(222, 210, 249, 1);
+        border-style: solid;
+        border-width: 2px;
+    }
+   
