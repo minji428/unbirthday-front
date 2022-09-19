@@ -54,6 +54,10 @@ class Register extends React.Component<{}, any> {
         }
     }
 
+    login(){
+        window.location.href = "/login"
+    }
+    
     render() {
         return(
             <div className= 'RSmain'>
@@ -85,7 +89,7 @@ class Register extends React.Component<{}, any> {
     
                 <div className="RSlogin">
                     <div className="RStexts">이미 계정이 있다면?</div>
-                    <div className="RSloginText">로그인하기</div>
+                    <div className="RSloginText" onClick={this.login}>로그인하기</div>
                 </div>
             </div>
         </div>

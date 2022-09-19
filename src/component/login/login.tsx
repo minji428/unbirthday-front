@@ -10,17 +10,11 @@ class login extends React.Component<{}, any> {
         }
     }
 
+    join(){
+        window.location.href = "/register"
+    }
+    
     render() {
-        // useEffect(() => {
-        //     const font = document.createElement('link')
-        //     font.rel="stylesheet"
-        //     font.href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap"
-        //     document.head.appendChild(font)
-
-        //     return () => {
-        //         document.head.removeChild(font)
-        //     }
-        // }, [])
         return(
             <div className= 'LoginMain'>
             <text className='LoginmainText'>
@@ -53,7 +47,7 @@ class login extends React.Component<{}, any> {
     
                 <div className="login">
                     <div className="Logintexts">아직 가입 전이라면?</div>
-                    <div className="loginText">30초만에 가입하기</div>
+                    <div className="loginText" onClick={this.join}>30초만에 가입하기</div>
                 </div>
             </div>
         </div>
