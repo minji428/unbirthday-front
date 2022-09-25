@@ -35,7 +35,12 @@ class login extends React.Component<{}, any> {
                            비밀번호를 입력하세요.
                         </div>
                         <div className="Loginfind">
-                            아이디/비밀번호 찾기
+                            <div>
+                            아이디/비밀번호 외 정보를 수집하지 않아
+                            </div>
+                            <div>
+                            계정 찾기가 불가합니다. 계정을 잘 기억해주세요:)
+                            </div>
                         </div>
                     </div>
                 </div>

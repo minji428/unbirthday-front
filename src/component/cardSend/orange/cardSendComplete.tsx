@@ -26,7 +26,7 @@ class cardSendComplete extends React.Component<{}, any> {
         </div>
             <div className="CS4yelloBox">
                 <div>
-                    <img className="CS4card" src="../img/yellowBack.png"/>
+                    <img className="CS4card" src="../img/orangeBack.png"/>
                 </div>
                     
                 <div className="CS4insideYellow">

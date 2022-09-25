@@ -135,7 +135,36 @@
         color:rgba(201, 102, 211, 1);
         
     }
-    
+    .CS3personNameforOrange{
+        display: flex;
+        flex:0.7;
+        margin-top: 6%;
+        font-family:'PyeongChangPeace-Bold';
+        font-size: 20pt;
+        font-weight:bold;
+        text-align: left;
+        color:rgba(213, 250, 82, 1);
+    }
+    .CS3personNameforWhite{
+        display: flex;
+        flex:0.7;
+        margin-top: 6%;
+        font-family:'PyeongChangPeace-Bold';
+        font-size: 20pt;
+        font-weight:bold;
+        text-align: left;
+        color:black;
+    }
+    .CS3personNameforPurple{
+        display: flex;
+        flex:0.7;
+        margin-top: 6%;
+        font-family:'PyeongChangPeace-Bold';
+        font-size: 20pt;
+        font-weight:bold;
+        text-align: left;
+        color:rgba(250, 233, 82, 1);
+    }
     .CS3tagMessage{
         display: flex;
         flex-direction: column;
@@ -166,6 +195,7 @@
     .CS3subText{
         font-family: 'PyeongChangPeace-Light';
         font-size: 10pt;
+        color:black;
     }
     .CS3tag{
         display: flex;
@@ -189,6 +219,7 @@
         flex:1;
         flex-direction: column;
         justify-content: space-around;
+        color:black;
         background-color: white;
         border-color: rgba(0, 0, 0, 0.5);
         border-style:solid;

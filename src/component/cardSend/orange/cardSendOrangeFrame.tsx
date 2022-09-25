@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import '../../../static/cardSend/cardSendFront.css';
-import CardSendYellowFront from '../yellow/cardSendYellowFront'
+import CardSendOrangeFront from './cardSendOrangeFront'
 
 class cardSendOrangeFrame extends React.Component<{}, any> {
     constructor(props: any){
@@ -14,7 +14,7 @@ class cardSendOrangeFrame extends React.Component<{}, any> {
     render() {
         return(
             <div className= 'CS2main'>
-                <CardSendYellowFront/>
+                <CardSendOrangeFront/>
             </div>
         )
     }

@@ -15,7 +15,7 @@ class cardSendOrangeBack extends React.Component<{}, any> {
     backButton(){
         // location.href로 하면 새로고침 되어서 이전에 작성했던 내용들이 사라짐..
         // 뒷장 쓰기 했던 것 처럼 컴포넌트를 변경하는 방법 생각해보기
-        window.location.href = '/cardsend/oragne'
+        window.location.href = '/cardsend/orange'
     }
 
     render() {
@@ -29,11 +29,11 @@ class cardSendOrangeBack extends React.Component<{}, any> {
                 </div>
                 <div className="CS3yelloBox">
                     <div>
-                        <img className="CS3card" src="../img/yellowBack.png"/>
+                        <img className="CS3card" src="../img/OrangeBack.png"/>
                     </div>
                         
                     <div className="CS3insideYellow">
-                        <div className='CS3personName'>
+                        <div className='CS3personNameforOrange'>
                             HAPPY<br></br>
                             UN-BIRTHDAY 은빈!
                         </div>

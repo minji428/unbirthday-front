@@ -29,11 +29,11 @@ class cardSendWhiteBack extends React.Component<{}, any> {
                 </div>
                 <div className="CS3yelloBox">
                     <div>
-                        <img className="CS3card" src="../img/yellowBack.png"/>
+                        <img className="CS3card" src="../img/whiteBack.png"/>
                     </div>
                         
                     <div className="CS3insideYellow">
-                        <div className='CS3personName'>
+                        <div className='CS3personNameforWhite'>
                             HAPPY<br></br>
                             UN-BIRTHDAY 은빈!
                         </div>
