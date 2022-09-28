@@ -1,15 +1,24 @@
 import React, {Component} from 'react';
+import { Modal } from 'reactstrap';
 import '../../../static/cardSend/cardSendBack.css';
 
+import ChooseTagFirst from '../../chooseTag/chooseTag1'
 import CardSendComplete from './cardSendComplete'
 
-class cardSendYellowBack extends React.Component<{}, any> {
+interface cardSendYellowFrontProps {
+    toPerson: any,
+    fromPerson: any,
+}
+
+class cardSendYellowBack extends React.Component<cardSendYellowFrontProps, any> {
     constructor(props: any){
         super(props)
 
         this.state = {
-
+            clickFirstTag : false
         }
+
+        this.toggle = this.toggle.bind(this)
     }
 
     backButton(){
@@ -18,7 +27,18 @@ class cardSendYellowBack extends React.Component<{}, any> {
         window.location.href = '/cardsend/yellow'
     }
 
+    toggle(flag: any) {
+
+    }
+
+    chooseTagFirst(){
+        this.setState({
+            clickFirstTag : true
+        })
+    }
+
     render() {
+        console.log(this.state)
         return(
             <div className= 'CS3main'>
             <div className="CS3btn">
@@ -35,18 +55,19 @@ class cardSendYellowBack extends React.Component<{}, any> {
                     <div className="CS3insideYellow">
                         <div className='CS3personName'>
                             HAPPY<br></br>
-                            UN-BIRTHDAY 은빈!
+                            UN-BIRTHDAY {this.props.toPerson}
                         </div>
                         <div className="CS3tagMessage">
                             <div className="CS3temp">
                                 <div className="CS3tagSpace">
                                     <span className="CS3tag">
-                                        <div>#태그선택</div>
+                                        <div onClick={this.chooseTagFirst}>#태그선택</div>
+                                        {this.state.clickFirstTag ? <ChooseTagFirst/>:''}
                                     </span>
                                  </div>
                                 <div className="CS3textSpace">
                                     <div className='CS3subText'>
-                                        은빈(이)는
+                                        {this.props.toPerson}(이)는
                                     </div>
                                 </div>
                             </div>
@@ -127,6 +148,14 @@ class cardSendYellowBack extends React.Component<{}, any> {
                         </div>
                         {/* 완성하기 누르면 uuid 생성하고 그 url로 이동시킨 다음에 Complete 보여주기 */}
                     </div>
+
+
+                    <div>
+                        <Modal isOpen={this.state.modalFirst} size="md" toggle={this.toggle}>
+                            
+                        </Modal>
+                    </div>
+
                 </div>
    
         )
