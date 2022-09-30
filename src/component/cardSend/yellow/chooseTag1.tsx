@@ -1,7 +1,11 @@
 import React, {Component} from 'react';
-import '../../static/chooseTag/chooseTag.css';
+import '../../../static/chooseTag/chooseTag.css';
 
-class ChooseTag1 extends React.Component<{}, any> {
+interface cardSendYellowBackFrame{
+    clickFirst: any,
+}
+
+class ChooseTag1 extends React.Component<cardSendYellowBackFrame, any> {
     constructor(props: any){
         super(props)
 
@@ -16,6 +20,7 @@ class ChooseTag1 extends React.Component<{}, any> {
         this.setState({
             clickFirstTag : event.target.innerHTML
         })
+        this.props.clickFirst(event.target.innerHTML)
     }
 
     render() {

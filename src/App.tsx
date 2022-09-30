@@ -39,8 +39,6 @@ const App = () => {
           <Route path='/cardsend/orange' element={<CardSendOrange/>}></Route>
           <Route path='/cardsend/white' element={<CardSendWhite/>}></Route>
           <Route path='/cardsend/purple' element={<CardSendPurple/>}></Route>
-          <Route path='/cardsend/cardSend3' element={<CardSend3/>}></Route>
-          <Route path='/cardsend/cardSend4' element={<CardSend4/>}></Route>
           <Route path='/login' element={<Login/>}></Route>
           <Route path='/register' element={<Register/>}></Route>
           <Route path='/gotten/taggotten' element={<TagGotten/>}></Route>
