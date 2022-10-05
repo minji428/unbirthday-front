@@ -2,8 +2,8 @@ import React, {Component} from 'react';
 import { Modal } from 'reactstrap';
 import '../../../static/cardSend/cardSendBack.css';
 
-import ChooseTagFirst from './chooseTag1';
-// import ChooseTagFirst from '../../chooseTag/chooseTag1'
+// import ChooseTagFirst from './chooseTag1';
+import ChooseTagFirst from '../../chooseTag/chooseTag1'
 import ChooseTagSecond from '../../chooseTag/chooseTag2'
 import ChooseTagThird from '../../chooseTag/chooseTag3'
 import ChooseTagFourth from '../../chooseTag/chooseTag4'
@@ -21,6 +21,18 @@ interface Tag{
 
 interface chooseTag1 {
     FirstTag : any,
+}
+
+interface chooseTag2 {
+    SecondTag : any
+}
+
+interface chooseTag3 {
+    ThirdTag : any
+}
+
+interface chooseTag4 {
+    FourthTag : any
 }
 
 class cardSendYellowBack extends React.Component<cardSendYellowFrontProps, any> {
@@ -44,6 +56,9 @@ class cardSendYellowBack extends React.Component<cardSendYellowFrontProps, any> 
         this.chooseTagThird = this.chooseTagThird.bind(this)
         this.chooseTagFourth = this.chooseTagFourth.bind(this)
         this.clickFirst = this.clickFirst.bind(this)
+        this.clickSecond = this.clickSecond.bind(this)
+        this.clickThird = this.clickThird.bind(this)
+        this.clickFourth = this.clickFourth.bind(this)
     }
 
     backButton(){
@@ -92,6 +107,30 @@ class cardSendYellowBack extends React.Component<cardSendYellowFrontProps, any> 
         })
     }
 
+    // 두번째 태그 선택 완료
+    clickSecond = (data: any) => {
+        this.setState({
+            secondTag : data,
+            chooseSecondTag : false
+        })
+    }
+
+    // 세번째 태그 선택 완료
+    clickThird = (data: any) => {
+        this.setState({
+            thirdTag : data,
+            chooseThirdTag : false
+        })
+    }
+
+    // 네번째 태그 선택 완료
+    clickFourth = (data: any) => {
+        this.setState({
+            fourthTag : data,
+            chooseFourthTag : false
+        })
+    }
+
     render() {
         return(
             <div className= 'CS3main'>
@@ -135,8 +174,8 @@ class cardSendYellowBack extends React.Component<cardSendYellowFrontProps, any> 
                     
                                 <div className="CS3tagSpace">
                                     <span className="CS3tag">
-                                        <div onClick={this.chooseTagSecond}>{this.state.secondTag ? "dd" : "#태그선택"}</div>
-                                        {this.state.chooseSecondTag ? <ChooseTagSecond/>:''}
+                                        <div onClick={this.chooseTagSecond}>{this.state.secondTag ? this.state.secondTag : "#태그선택"}</div>
+                                        {this.state.chooseSecondTag ? <ChooseTagSecond clickSecond = {this.clickSecond}/>:''}
                                         </span>
                                     </div>
                                     
@@ -156,8 +195,8 @@ class cardSendYellowBack extends React.Component<cardSendYellowFrontProps, any> 
                                     
                                     <div className="CS3tagSpace">
                                         <span className="CS3tag">
-                                            <div onClick={this.chooseTagThird}>{this.state.thirdTag ? "dd" : "#태그선택"}</div>
-                                            {this.state.chooseThirdTag ? <ChooseTagThird/>:''}
+                                            <div onClick={this.chooseTagThird}>{this.state.thirdTag ? this.state.thirdTag : "#태그선택"}</div>
+                                            {this.state.chooseThirdTag ? <ChooseTagThird clickThird = {this.clickThird}/>:''}
                                         </span>
                                     </div>
                                 </div>
@@ -165,8 +204,8 @@ class cardSendYellowBack extends React.Component<cardSendYellowFrontProps, any> 
                                 <div className="CS3temp">
                                     <div className="CS3tagSpace">
                                         <span className="CS3tag">
-                                            <div onClick={this.chooseTagFourth}>{this.state.fourthTag ? "dd" : "#태그선택"}</div>
-                                            {this.state.chooseFourthTag ? <ChooseTagFourth/>:''}
+                                            <div onClick={this.chooseTagFourth}>{this.state.fourthTag ? this.state.fourthTag : "#태그선택"}</div>
+                                            {this.state.chooseFourthTag ? <ChooseTagFourth clickFourth = {this.clickFourth}/>:''}
                                         </span>
                                     </div>
                                     <div className="CS3textSpace">

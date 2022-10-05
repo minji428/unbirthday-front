@@ -21,10 +21,7 @@ class chooseTagFrame extends React.Component<{}, any> {
     render() {
         return(
             <div className= 'CS2main'>
-                <ChooseTag1/>
-                <ChooseTag2/>
-                <ChooseTag3/>
-                <ChooseTag4/>
+
             </div>
         )
     }
