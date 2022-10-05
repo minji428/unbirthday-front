@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import { Modal } from 'reactstrap';
 import '../../../static/cardSend/cardSendBack.css';
+import * as service from '../../../service/service'
 
 // import ChooseTagFirst from './chooseTag1';
 import ChooseTagFirst from '../../chooseTag/chooseTag1'
@@ -48,9 +49,9 @@ class cardSendYellowBack extends React.Component<cardSendYellowFrontProps, any> 
             secondTag : "",
             thirdTag : "",
             fourthTag : "",
+            memo: "",
         }
 
-        this.toggle = this.toggle.bind(this)
         this.chooseTagFirst = this.chooseTagFirst.bind(this)
         this.chooseTagSecond = this.chooseTagSecond.bind(this)
         this.chooseTagThird = this.chooseTagThird.bind(this)
@@ -65,10 +66,6 @@ class cardSendYellowBack extends React.Component<cardSendYellowFrontProps, any> 
         // location.href로 하면 새로고침 되어서 이전에 작성했던 내용들이 사라짐..
         // 뒷장 쓰기 했던 것 처럼 컴포넌트를 변경하는 방법 생각해보기
         window.location.href = '/cardsend/yellow'
-    }
-
-    toggle(flag: any) {
-
     }
 
     // 첫번째 태그 선택하는 화면
@@ -130,6 +127,25 @@ class cardSendYellowBack extends React.Component<cardSendYellowFrontProps, any> 
             chooseFourthTag : false
         })
     }
+
+    completeCard = async(e: any) => {
+        const param = {
+            send : this.props.fromPerson,
+            receive : this.props.toPerson,
+            firstTag : this.state.firstTag,
+            secondTag : this.state.secondTag,
+            thirdTag : this.state.thirdTag,
+            fourthTag : this.state.fourthTag,
+            memo : this.state.memo
+        }
+
+        service.anyService("/card/send/complete", "post", this.handleCompleteCard, param)
+    }
+
+    handleCompleteCard = (response: any) => {
+
+    }
+
 
     render() {
         return(
@@ -233,19 +249,11 @@ class cardSendYellowBack extends React.Component<cardSendYellowFrontProps, any> 
                     </div>
                     
                     <div className='CS3complete'>
-                        <div>
+                        <div onClick={this.completeCard}>
                             완성하기
                         </div>
                         {/* 완성하기 누르면 uuid 생성하고 그 url로 이동시킨 다음에 Complete 보여주기 */}
                     </div>
-
-
-                    <div>
-                        <Modal isOpen={this.state.modalFirst} size="md" toggle={this.toggle}>
-                            
-                        </Modal>
-                    </div>
-
                 </div>
    
         )
