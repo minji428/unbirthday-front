@@ -1,16 +1,14 @@
 import React, {Component} from 'react';
 import '../../../static/cardSend/cardSendFront.css';
 
-import CardSendYellowBack from './cardSendYellowBack'
+import CardSendPurpleBack from './cardSendPurpleBack'
 
-class cardSendYellowFront extends React.Component<{}, any> {
+class cardSendPurpleFront extends React.Component<{}, any> {
     constructor(props: any){
         super(props)
 
         this.state = {
-            showback : false,
-            toPerson : "",
-            fromPerson : "",
+            showback : false
         }
 
         this.cardSendYelloBack = this.cardSendYelloBack.bind(this)
@@ -30,16 +28,6 @@ class cardSendYellowFront extends React.Component<{}, any> {
         window.location.href = '/cardsend'
     }
 
-    getToPerson=(event: any) => {
-        let getToPerson = event.target.value
-        this.setState({toPerson : getToPerson})
-    }
-
-    getFromPerson=(event: any) => {
-        let getFromPerson = event.target.value
-        this.setState({fromPerson : getFromPerson})
-    }
-
     render() {
         return(
             <div className= 'CS2main'>
@@ -51,33 +39,34 @@ class cardSendYellowFront extends React.Component<{}, any> {
                 </div>
                 <div className="CS2yelloBox">
                     <div>
-                        <img src="../img/cardFront.png" className="CS2card"/>
+                        <img src="../img/cardFrontPurple.png" className="CS2card"/>
                     </div>
                         
                     <div className="CS2insideYellow">
                         <div className="CS2write">
                            <div className="CS2toPerson">
                                 <div className="CS2nameBox">
-                                    <input type={'text'} className="form-control" name="toPerson" placeholder='받는 사람' onChange={this.getToPerson}/>
+                                    <input type="text" className="form-control" name="keyword" placeholder='받는 사람'/>
                                 </div>
                                 <div className="CS2notice">3자 이내로 입력해주세요.</div>
                             </div>
                             <div className="CS2fromPerson">
                                 <div className="CS2nameBox">
-                                <input type={'text'} className="form-control" name="fromPerson" placeholder='보내는 사람' onChange={this.getFromPerson}/>
+                                    보내는 사람
                                 </div>
                             </div>
                         </div> 
                     </div>
+                    
                 </div>
                     
                 <div className='CS2writeBack' >
                     <div onClick={this.cardSendYelloBack}>뒷장 쓰기</div>
-                    {this.state.showback ? <CardSendYellowBack toPerson={this.state.toPerson} fromPerson={this.state.fromPerson}/>: ''}
+                    {this.state.showback ? <CardSendPurpleBack/>: ''}
                 </div>
         </div>
 
         )
     }
 }
-export default cardSendYellowFront;
+export default cardSendPurpleFront;

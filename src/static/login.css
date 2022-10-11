@@ -121,7 +121,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        color : rgba(184, 184, 184, 1);
+        color : black;
         font-family: 'Noto Sans KR';
         font-size: 12px;
         border-radius:10px;
@@ -141,7 +141,10 @@
     .Loginfind{
         font-family: 'Noto Sans KR';
         font-size: 11px;
-        color:rgba(255, 95, 15, 1);
+        color:white;
+        display: flex;
+        flex-direction: column;
+        align-self: center;
         
     }
     .logins{
@@ -166,6 +169,7 @@
         position: absolute;
         font-family:'Noto Sans KR';
         font-size: 12px;
+        font-weight: 700;
         bottom: 0;
         align-self: center;
         margin-bottom: 10%;
