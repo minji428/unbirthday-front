@@ -40,7 +40,14 @@ class login extends React.Component<{}, any> {
     handleClickLoginCallback = (response: any) => {
         console.log(response)
         let rData = response.data
+        
         if(rData.rtCode === "00") {
+            const userInfo = {
+                id: this.state.id,
+                pw: this.state.pw,
+            }
+            sessionStorage.setItem('userInfo', JSON.stringify(userInfo));
+            
             window.location.href = "/mypage"
         } else {
             alert(rData.rtMsg)

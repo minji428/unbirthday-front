@@ -1,16 +1,49 @@
 
 import React, {Component} from 'react';
 import '../../static/gotten/myCards.css';
+import * as service from '../../service/service'
+
+type UserInfo = {
+	id: string,
+	pw: string
+} 
 
 class MyCards extends React.Component<{}, any> {
     constructor(props: any){
         super(props)
 
         this.state = {
-
+            id: "",
+            pw: "",
+            cards: [],
         }
     }
 
+    componentDidMount() {
+        const userInfo = JSON.parse(sessionStorage.getItem("userInfo")!);
+
+        this.setState({
+            id: userInfo.id,
+            pw: userInfo.pw,
+        })
+
+        this.getCards(userInfo)
+    }
+
+    getCards = async(userInfo: UserInfo) => {
+        service.anyService("/mypage1/cards", "get", this.getCardsCallBack, userInfo)
+    }
+
+    getCardsCallBack = (response: any) => {
+        console.log(response)
+        let rData = response.data
+
+        if(rData.rtCode === "00" || rData.rtCode === "09") {
+        } else {
+            alert(rData.rtMsg)
+        }
+    }
+  
     render() {
         return(
             <div className= 'MCmain'>
@@ -57,7 +90,7 @@ class MyCards extends React.Component<{}, any> {
             <div className="MCrowInfo">
                 <div className="MCidpw">
                     <div className="MCname">아이디</div> 
-                    <div className="MCuser">eunbin22</div>
+                    <div className="MCuser">{this.state.id}</div>
                 </div>
                 <div className="MCidpw">
                     <div className="MCname">비밀 번호</div> 
