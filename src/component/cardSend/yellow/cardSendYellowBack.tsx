@@ -3,11 +3,11 @@ import { Modal } from 'reactstrap';
 import '../../../static/cardSend/cardSendBack.css';
 import * as service from '../../../service/service'
 
-// import ChooseTagFirst from './chooseTag1';
-import ChooseTagFirst from '../../chooseTag/chooseTag1'
-import ChooseTagSecond from '../../chooseTag/chooseTag2'
-import ChooseTagThird from '../../chooseTag/chooseTag3'
-import ChooseTagFourth from '../../chooseTag/chooseTag4'
+import ChooseTagFirst from './chooseTag/chooseTag1';
+// import ChooseTagFirst from '../../chooseTag/chooseTag1'
+import ChooseTagSecond from './chooseTag/chooseTag2'
+import ChooseTagThird from './chooseTag/chooseTag3'
+import ChooseTagFourth from './chooseTag/chooseTag4'
 
 import CardSendComplete from './cardSendComplete'
 
