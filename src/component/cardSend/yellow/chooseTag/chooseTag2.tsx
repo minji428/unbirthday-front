@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import '../../../static/chooseTag/chooseTag.css';
+import '../../../../static/chooseTag/chooseTag.css';
 
 interface cardSendYellowBackFrame{
     clickSecond: any,

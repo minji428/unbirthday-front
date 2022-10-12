@@ -136,7 +136,8 @@ class cardSendYellowBack extends React.Component<cardSendYellowFrontProps, any> 
             secondTag : this.state.secondTag,
             thirdTag : this.state.thirdTag,
             fourthTag : this.state.fourthTag,
-            memo : this.state.memo
+            memo : this.state.memo,
+            cardColor : "yellow"
         }
 
         service.anyService("/card/send/complete", "post", this.handleCompleteCard, param)
