@@ -9,7 +9,7 @@ import ChooseTagSecond from './chooseTag/chooseTag2'
 import ChooseTagThird from './chooseTag/chooseTag3'
 import ChooseTagFourth from './chooseTag/chooseTag4'
 
-import CardSendComplete from './cardSendComplete'
+import CardSendComplete from './cardSendYellowComplete'
 
 interface cardSendYellowFrontProps {
     toPerson: any,
@@ -153,6 +153,7 @@ class cardSendYellowBack extends React.Component<cardSendYellowFrontProps, any> 
     handleCompleteCard = (response: any) => {
         console.log(response)
         console.log(response.data)
+        window.location.href = '/cardsend/yellow/{reponse.data.data}'
     }
 
 
