@@ -1,13 +1,23 @@
 import React, {Component} from 'react';
 import '../../../static/cardSend/cardSendComplete.css';
+import * as service from '../../../service/service'
 
-class cardSendComplete extends React.Component<{}, any> {
+class cardSendYellowComplete extends React.Component<{}, any> {
     constructor(props: any){
         super(props)
 
         this.state = {
 
         }
+
+    }
+
+    componentDidMount = () => {
+        service.anyService("/card/info/c0d30a480c934e2aabc1a4c118f43f46", "get", this.didMountCallback)
+    }
+
+    didMountCallback = (response: any) => {
+        console.log(response.data)
     }
 
     render() {
@@ -124,4 +134,4 @@ class cardSendComplete extends React.Component<{}, any> {
         )
     }
 }
-export default cardSendComplete;
+export default cardSendYellowComplete;
