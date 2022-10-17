@@ -3,47 +3,46 @@ import React, {Component} from 'react';
 import '../../static/gotten/myCards.css';
 import * as service from '../../service/service'
 
-type UserInfo = {
-	id: string,
-	pw: string
-} 
 
 class MyCards extends React.Component<{}, any> {
     constructor(props: any){
         super(props)
 
         this.state = {
-            id: "",
-            pw: "",
-            cards: [],
+            tags: [],
         }
     }
 
     componentDidMount() {
-        const userInfo = JSON.parse(sessionStorage.getItem("userInfo")!);
+        const id = sessionStorage.getItem("id")
 
-        this.setState({
-            id: userInfo.id,
-            pw: userInfo.pw,
-        })
-
-        this.getCards(userInfo)
+        this.getTags(id)
     }
 
-    getCards = async(userInfo: UserInfo) => {
-        service.anyService("/mypage1/cards", "get", this.getCardsCallBack, userInfo)
+    getTags = async(id: unknown) => {
+        if(typeof id === 'string') {
+            const param = {
+                id: id,
+            }
+            service.anyService("/mypage/tags", "get", this.getTagsCallBack, param)
+        } else {
+            //id가 없으면
+        }
     }
 
-    getCardsCallBack = (response: any) => {
+    getTagsCallBack = (response: any) => {
         console.log(response)
         let rData = response.data
 
         if(rData.rtCode === "00" || rData.rtCode === "09") {
+            this.setState({
+                tags: rData.data
+            })
         } else {
             alert(rData.rtMsg)
         }
     }
-  
+
     render() {
         return(
             <div className= 'MCmain'>
@@ -61,9 +60,7 @@ class MyCards extends React.Component<{}, any> {
                     <div className="MCsmall1">자세히 보기</div>
                 </div>
                 <div className="MCrowTag">
-                    <div className="MCblue-Tag">#자꾸 보고 싶은</div>
-                    <div className="MCblue-Tag">#자신감 있는</div>
-                    <div className="MCblue-Tag">#어른스러운</div>
+                    {this.state.tags.length !== 0 ? this.state.tags.slice(0, 3).map((tag: String) => <div className="MCblue-Tag">#{tag}</div>) : ''}
                 </div>
             </div>
         </div>
@@ -90,11 +87,7 @@ class MyCards extends React.Component<{}, any> {
             <div className="MCrowInfo">
                 <div className="MCidpw">
                     <div className="MCname">아이디</div> 
-                    <div className="MCuser">{this.state.id}</div>
-                </div>
-                <div className="MCidpw">
-                    <div className="MCname">비밀 번호</div> 
-                    <div className="MCuser">unbirthday123</div>
+                    <div className="MCuser">{sessionStorage.getItem("id")}</div>
                 </div>
                 <div className="MCnoticeText">
                     <div className="MCnotices">로그아웃하기</div>
