@@ -28,7 +28,9 @@ class ChooseTag1 extends React.Component<cardSendYellowBackFrame, any> {
             <div className= 'CTmain'>
             <div className="CTpart1"></div>
              <div className="CTwhiteBox">
-                <img className="CTxIcon" src="../img/xIcon.png"/>
+                <div className="CTxIcon">
+                    <img className="CTxIconBtn" src="../img/xIcon.png"/>
+                </div>
                 <div className="CTmainText">#태그 선택</div>
                 <div className="CTsubText">그 사람의 모습은 어떤가요?💬</div>
                 <div className="CTtags">

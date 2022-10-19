@@ -127,6 +127,8 @@
         flex-direction: row;
         width: 100%;
         margin-left: 7%;
+        overflow:auto;
+        white-space: nowrap;
     }
     
     .MCblue-Tag{
@@ -153,7 +155,7 @@
         margin-top:5%;
         margin-left: 5%;
         margin-right: 5%;
-
+       
     }
     .MCrowText2{
         display: flex;
@@ -172,6 +174,8 @@
         flex-direction: row;
         justify-content: space-between;
         margin-bottom: 5%;
+        overflow:auto;
+        white-space: nowrap;
         
     }
     .MCsmall2{

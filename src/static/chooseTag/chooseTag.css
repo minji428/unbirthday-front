@@ -70,6 +70,18 @@
         /* align-items: center; */
         align-content:space-around;
     }
+    .CTxIcon{
+        display: flex;
+        flex-direction: row;
+        width:100%;
+        justify-content: center;
+        /* padding-left:10%;
+        padding-top: 25%; */
+        
+    }
+    .CTxIconBtn{
+        width:3.5%;
+    }
 
     .CTpart1{
         display: flex;
