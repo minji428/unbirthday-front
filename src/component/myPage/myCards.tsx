@@ -73,8 +73,11 @@ class MyCards extends React.Component<{}, any> {
                 </div>
                 <div className="MCrowCard">
                     <img className="MCeachCard" src="../img/newwhite.png"/>
+                    <div>이름1</div>
                     <img className="MCeachCard" src="../img/pink.png"/>
+                    <div>이름2</div>
                     <img className="MCeachCard" src="../img/newwhite.png"/>
+                    <div>이름3</div>
                 </div>
             </div>
             
