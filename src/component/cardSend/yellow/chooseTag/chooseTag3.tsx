@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import '../../static/chooseTag/chooseTag.css';
+import '../../../../static/chooseTag/chooseTag.css';
 
 interface cardSendYellowBackFrame{
     clickThird: any,
@@ -27,7 +27,7 @@ class ChooseTag3 extends React.Component<cardSendYellowBackFrame, any> {
             <div className= 'CTmain'>
             <div className="CTpart1"></div>
              <div className="CTwhiteBox">
-                <div className="CTxIcon">
+             <div className="CTxIcon">
                     <img className="CTxIconBtn" src="../img/xIcon.png"/>
                 </div>
                 <div className="CTmainText">#태그 선택</div>

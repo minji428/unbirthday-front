@@ -26,6 +26,8 @@ import GetCard3 from './component/getCard/getCard3';
 import SignInFin1 from './component/signInFin/signInFin1';
 import SignInFin2 from './component/signInFin/signInFin2';
 import SignInFin3 from './component/signInFin/signInFin3';
+import CardComplete from './component/cardSend/yellow/cardSendYellowComplete'
+import CardComplete2 from './component/cardSend/purple/cardSendComplete'
 
 const App = () => {
 
@@ -39,6 +41,7 @@ const App = () => {
           <Route path='/cardsend/orange' element={<CardSendOrange/>}></Route>
           <Route path='/cardsend/white' element={<CardSendWhite/>}></Route>
           <Route path='/cardsend/purple' element={<CardSendPurple/>}></Route>
+          <Route path='/cardsend/yellow/:pathvariable' element={<CardComplete/>}></Route>
           <Route path='/login' element={<Login/>}></Route>
           <Route path='/register' element={<Register/>}></Route>
           <Route path='/gotten/taggotten' element={<TagGotten/>}></Route>

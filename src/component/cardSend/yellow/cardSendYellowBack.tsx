@@ -3,13 +3,13 @@ import { Modal } from 'reactstrap';
 import '../../../static/cardSend/cardSendBack.css';
 import * as service from '../../../service/service'
 
-// import ChooseTagFirst from './chooseTag1';
-import ChooseTagFirst from '../../chooseTag/chooseTag1'
-import ChooseTagSecond from '../../chooseTag/chooseTag2'
-import ChooseTagThird from '../../chooseTag/chooseTag3'
-import ChooseTagFourth from '../../chooseTag/chooseTag4'
+import ChooseTagFirst from './chooseTag/chooseTag1';
+// import ChooseTagFirst from '../../chooseTag/chooseTag1'
+import ChooseTagSecond from './chooseTag/chooseTag2'
+import ChooseTagThird from './chooseTag/chooseTag3'
+import ChooseTagFourth from './chooseTag/chooseTag4'
 
-import CardSendComplete from './cardSendComplete'
+import CardSendComplete from './cardSendYellowComplete'
 
 interface cardSendYellowFrontProps {
     toPerson: any,
@@ -60,6 +60,7 @@ class cardSendYellowBack extends React.Component<cardSendYellowFrontProps, any> 
         this.clickSecond = this.clickSecond.bind(this)
         this.clickThird = this.clickThird.bind(this)
         this.clickFourth = this.clickFourth.bind(this)
+        this.writeMemo = this.writeMemo.bind(this)
     }
 
     backButton(){
@@ -128,6 +129,12 @@ class cardSendYellowBack extends React.Component<cardSendYellowFrontProps, any> 
         })
     }
 
+    writeMemo = (data: any) => {
+        this.setState({
+            memo : data.target.value
+        })
+    }
+
     completeCard = async(e: any) => {
         const param = {
             send : this.props.fromPerson,
@@ -136,14 +143,17 @@ class cardSendYellowBack extends React.Component<cardSendYellowFrontProps, any> 
             secondTag : this.state.secondTag,
             thirdTag : this.state.thirdTag,
             fourthTag : this.state.fourthTag,
-            memo : this.state.memo
+            memo : this.state.memo,
+            cardColor : "yellow"
         }
 
         service.anyService("/card/send/complete", "post", this.handleCompleteCard, param)
     }
 
     handleCompleteCard = (response: any) => {
-
+        console.log(response)
+        console.log(response.data)
+        window.location.href = '/cardsend/yellow/{reponse.data.data}'
     }
 
 
@@ -233,15 +243,12 @@ class cardSendYellowBack extends React.Component<cardSendYellowFrontProps, any> 
                             </div> 
                         
                         
-                             <div className="CS3writeMessage" >
-                                <div>생일에나 할 수 있는 얘기를 오늘 해보네! </div>
-                                <div>낯간지럽지만 꼭 해주고 싶은 말이야.</div> 
-                                <div>매일이 생일처럼 특별했으면 좋겠어.</div> 
-                                <div>오늘도 해피 언버스데이 :)  </div>            
-                                <div className="CS3numCnt"> 
+                             {/* <div className="CS3writeMessage" > */}
+                                <textarea name="memo" cols={10} rows={6} onChange={this.writeMemo} placeholder={"생일에나 할 수 있는 얘기를 오늘 해보네!\n낯간지럽지만 꼭 해주고 싶은 말이야.\n매일이 생일처럼 특별했으면 좋겠어.\n오늘도 해피 언버스데이 :) "}/>
+                                {/* <div className="CS3numCnt"> 
                                     <div>80/90</div>
-                                </div>
-                            </div>
+                                </div> */}
+                            {/* </div> */}
                             <div className="CS3notice">최소 1자 이상 입력해주세요.</div>
     
     
