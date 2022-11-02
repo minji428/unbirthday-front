@@ -49,7 +49,7 @@ class cardSendYellowBack extends React.Component<cardSendYellowFrontProps, any> 
             secondTag : "",
             thirdTag : "",
             fourthTag : "",
-            memo: "",
+            memo: "생일에나 할 수 있는 얘기를 오늘 해보네!\n낯간지럽지만 꼭 해주고 싶은 말이야.\n매일이 생일처럼 특별했으면 좋겠어.\n오늘도 해피 언버스데이 :)",
         }
 
         this.chooseTagFirst = this.chooseTagFirst.bind(this)
