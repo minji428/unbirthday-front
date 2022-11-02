@@ -37,6 +37,7 @@ const App = () => {
         <Routes>
           <Route path='/' element={<Main/>}></Route>
           <Route path='/cardsend' element={<CardSend/>}></Route>
+          <Route path='/cardsend/cardsend4' element={<CardSend4/>}></Route>
           <Route path='/cardsend/yellow' element={<CardSendYellow/>}></Route>
           <Route path='/cardsend/orange' element={<CardSendOrange/>}></Route>
           <Route path='/cardsend/white' element={<CardSendWhite/>}></Route>
