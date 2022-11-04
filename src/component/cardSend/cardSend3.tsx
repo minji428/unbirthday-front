@@ -116,9 +116,8 @@ class CardSend3 extends React.Component<{}, any> {
                     </div>
                     
                     <div className='CS3complete'>
-                        <div>
-                            완성하기
-                        </div>
+                        <img src="../img/bt_complete.png">
+                        </img>
                     </div>
                 </div>
    

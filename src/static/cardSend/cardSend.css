@@ -99,24 +99,28 @@
         /* background-color: darkblue; */
         flex-direction: column;
         flex:5;
+        margin-bottom: 5%;
     }
     
     .CS1card-1st{
         display:flex;
-        flex:1;
+        /* flex:1; */
         /* background-color: coral; */
         flex-direction: row;
         justify-content: space-between;
         margin-bottom: 2%;
-        
     }
 
     .CS1card {
-        width: 48.5%;
+        width: 48.5%; 
         height: fit-content;
     }
 
-    .CS1part2{
-        display: flex;
-        flex:1.5;
+    .CS1card-2nd{
+        display:flex;
+        /* flex:1; */
+        /* background-color: coral; */
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 2%;
     }

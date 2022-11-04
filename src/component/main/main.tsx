@@ -115,8 +115,8 @@ class main extends React.Component<{}, any> {
                 </div>
 
                 <div className="btns">
-                    <div className="btn" onClick={this.cardSend}>카드 보내기</div>
-                    <div className="btn">내 카드함</div>
+                    <img src="../img/bt_send_card.png" onClick={this.cardSend}></img>
+                    <img src="../img/bt_mycards.png"></img>
                 </div>
             </div>
   
