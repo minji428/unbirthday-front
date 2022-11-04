@@ -96,8 +96,13 @@
         display: flex;
         flex:6;
         flex-direction: column;
+        overflow: scroll; 
         margin:5%;
+        -ms-overflow-style: none;
     }
+    .CGcards::-webkit-scrollbar{
+        display:none;
+      }
     .CGrow{
         display: flex;
         flex-direction: column;

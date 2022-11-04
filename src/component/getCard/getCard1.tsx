@@ -23,16 +23,16 @@ class GetCard1 extends React.Component<{}, any> {
                 <img className="GC1cake" src="../img/pinkCake.png"/>
                 <div className="GC1texts">
                     <div className="GC1subText">
-                      은빈님에게
+                      은빈님 오늘도
                     </div>
                     <div className="GC1subText">
-                      언버스데이 카드가 도착했어요&nbsp;💌
+                      언버스데이 축하해요&nbsp;💌
                     </div>
                 </div>
             </div>
-            <div className="GC1btns">
+            {/* <div className="GC1btns">
                 <div className="GC1btn">뭐지?</div>
-            </div>
+            </div> */}
            
         </div>
         )
