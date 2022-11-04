@@ -1,3 +1,21 @@
+/* 아이폰 SE */
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 374px) {
+
+}
+
+/* 스마트폰 모바일(세로) */
+
+@media only screen and (min-device-width : 375px) and (max-device-width : 479px) {
+
+}
+
+/* 스마트폰 모바일(가로) */
+
+@media only screen and (min-device-width : 480px) and (max-device-width : 767px) {
+
+}
+
 @font-face {
     font-family: 'PyeongChangPeace-Light';
     src: url('../font/PyeongChangPeace-Light.otf') format('woff2');
@@ -48,9 +66,6 @@
         font-family: 'Noto Sans KR';
         src : url('../font/NotoSansKR-Medium.otf');
         font-weight: 500;
-    }
-    * [type="font"] {
-        -webkit-appearance: none;   
     }
      .CS1main {
         box-sizing: border-box;
