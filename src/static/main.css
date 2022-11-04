@@ -91,7 +91,7 @@
         justify-content: space-between;
         /* align-items: center; */
         flex:1.5;
-        font-family: 'GmarketSansMedium';
+        font-family: 'GmarketSansMedium','serif', 'sans-serif', 'monospace', 'X';
         width: 100%;
         color : white;
         font-size: 12pt;
