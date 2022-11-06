@@ -144,7 +144,8 @@ class cardSendYellowBack extends React.Component<cardSendYellowFrontProps, any> 
             thirdTag : this.state.thirdTag,
             fourthTag : this.state.fourthTag,
             memo : this.state.memo,
-            cardColor : "yellow"
+            cardColor : "yellow",
+            sendId : sessionStorage.getItem("id")
         }
 
         service.anyService("/card/send/complete", "post", this.handleCompleteCard, param)
@@ -153,7 +154,9 @@ class cardSendYellowBack extends React.Component<cardSendYellowFrontProps, any> 
     handleCompleteCard = (response: any) => {
         console.log(response)
         console.log(response.data)
-        window.location.href = '/cardsend/yellow/{reponse.data.data}'
+        var cardUUID = response.data.data
+        sessionStorage.setItem("cardUUID", cardUUID)
+        window.location.href = '/cardsend/yellow/' + cardUUID
     }
 
 
