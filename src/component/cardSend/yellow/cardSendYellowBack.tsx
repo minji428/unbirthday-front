@@ -155,6 +155,7 @@ class cardSendYellowBack extends React.Component<cardSendYellowFrontProps, any> 
         console.log(response)
         console.log(response.data)
         var cardUUID = response.data.data
+        sessionStorage.setItem("cardUUID", cardUUID)
         window.location.href = '/cardsend/yellow/' + cardUUID
     }
 
