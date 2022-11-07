@@ -67,6 +67,9 @@
         src : url('../font/NotoSansKR-Medium.otf');
         font-weight: 500;
     }
+    /* * [type="font"] {
+        -webkit-appearance: none;   
+    } */
      .CS1main {
         box-sizing: border-box;
         display: flex;
@@ -120,25 +123,21 @@
         margin-bottom: 5%;
     }
     
-    .CS1card-1st{
-        display:flex;
-        /* flex:1; */
-        /* background-color: coral; */
-        flex-direction: row;
-        justify-content: space-between;
-        margin-bottom: 2%;
+        .CS1card-1st{
+            display:flex;
+            flex:1;
+            flex-direction: row;
+            justify-content: space-around;
+            margin-bottom: 2%;
+        }
+    
+        .CS1card-2nd{
+            display:flex;
+            /* flex:1; */
+            flex-direction: row;
+            justify-content: space-between;
+            margin-bottom: 2%;
+        }
+    
     }
-
-    .CS1card {
-        width: 48.5%; 
-        height: fit-content;
-    }
-
-    .CS1card-2nd{
-        display:flex;
-        /* flex:1; */
-        /* background-color: coral; */
-        flex-direction: row;
-        justify-content: space-between;
-        margin-bottom: 2%;
-    }
+     
