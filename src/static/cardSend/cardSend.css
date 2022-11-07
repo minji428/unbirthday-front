@@ -18,32 +18,32 @@
 
 @font-face {
     font-family: 'PyeongChangPeace-Light';
-    src: url('../font/PyeongChangPeace-Light.otf') format('woff2');
+    src: url('../font/PyeongChangPeace-Light.otf') format('otf');
     font-weight: 300;
     font-style: normal;
 }
 @font-face {
     font-family: 'PyeongChangPeace-Bold';
-    src: url('../font/PyeongChangPeace-Bold.otf') format('woff2');
+    src: url('../font/PyeongChangPeace-Bold.otf') format('otf');
     /* font-weight: 300; */
     font-style: normal;
 }
 
 @font-face {
     font-family: 'GmarketSansLight';
-    src: url('../font/GmarketSansLight.otf') format('woff');
+    src: url('../font/GmarketSansLight.otf') format('otf');
     font-weight: normal;
     font-style: normal;
 }
     @font-face {
         font-family: 'GmarketSansMedium';
-        src: url('../font/GmarketSansMedium.otf') format('woff');
+        src: url('../font/GmarketSansMedium.otf') format('otf');
         font-weight: normal;
         font-style: normal;
     }
     @font-face {
         font-family: 'GmarketSansBold';
-        src: url('../font/GmarketSansBold.otf') format('woff');
+        src: url('../font/GmarketSansBold.otf') format('otf');
         font-weight: normal;
         font-style: normal;
     }
