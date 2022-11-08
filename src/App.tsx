@@ -28,6 +28,8 @@ import SignInFin2 from './component/signInFin/signInFin2';
 import SignInFin3 from './component/signInFin/signInFin3';
 import CardComplete from './component/cardSend/yellow/cardSendYellowComplete'
 import CardComplete2 from './component/cardSend/purple/cardSendComplete'
+import Receiver1 from './component/receiver/receiver1';
+import Receiver2 from './component/receiver/receiver2';
 
 const App = () => {
 
@@ -37,6 +39,7 @@ const App = () => {
         <Routes>
           <Route path='/' element={<Main/>}></Route>
           <Route path='/cardsend' element={<CardSend/>}></Route>
+          <Route path='/cardsend/cardsend4' element={<CardSend4/>}></Route>
           <Route path='/cardsend/yellow' element={<CardSendYellow/>}></Route>
           <Route path='/cardsend/orange' element={<CardSendOrange/>}></Route>
           <Route path='/cardsend/white' element={<CardSendWhite/>}></Route>
@@ -57,6 +60,8 @@ const App = () => {
           <Route path='/signInFin/signInFin1' element={<SignInFin1/>}></Route>
           <Route path='/signInFin/signInFin2' element={<SignInFin2/>}></Route>
           <Route path='/signInFin/signInFin3' element={<SignInFin3/>}></Route>
+          <Route path='/receiver/receiver1' element={<Receiver1/>}></Route>
+          <Route path='/receiver/receiver2' element={<Receiver2/>}></Route>
         </Routes>
       </BrowserRouter>
     </div>

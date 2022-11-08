@@ -7,17 +7,38 @@ class cardSendYellowComplete extends React.Component<{}, any> {
         super(props)
 
         this.state = {
-
+            cardNo: "",
+            cardColor : "",
+            firstTag : "",
+            secondTag : "",
+            thirdTag : "",
+            fourthTag : "",
+            memo : "",
+            receive : "",
+            send : ""
         }
 
     }
 
     componentDidMount = () => {
-        service.anyService("/card/info/c0d30a480c934e2aabc1a4c118f43f46", "get", this.didMountCallback)
+        service.anyService("/card/info/"+sessionStorage.getItem("cardUUID"), "get", this.didMountCallback)
     }
 
     didMountCallback = (response: any) => {
         console.log(response.data)
+        const data = response.data.data
+        console.log(data)
+        this.setState({
+            cardNo: data.card_no,
+            cardColor : data.card_color,
+            firstTag : data.first_tag,
+            secondTag : data.second_tag,
+            thirdTag : data.third_tag,
+            fourthTag : data.fourth_tag,
+            memo : data.memo,
+            receive : data.receive,
+            send : data.send
+        })
     }
 
     render() {
@@ -42,18 +63,18 @@ class cardSendYellowComplete extends React.Component<{}, any> {
                 <div className="CS4insideYellow">
                     <div className='CS4personName'>
                         HAPPY<br></br>
-                        UN-BIRTHDAY 은빈!
+                        UN-BIRTHDAY {this.state.receive}!
                     </div>
                     <div className="CS4tagMessage">
                         <div className="CS4temp">
                             <div className="CS4tagSpace">
                                 <span className="CS4tag">
-                                    <div>#귀여운</div>
+                                    <div>{this.state.firstTag}</div>
                                 </span>
                              </div>
                             <div className="CS4textSpace">
                                 <div className='CS4subText'>
-                                    은빈(이)는
+                                    {this.state.receive}(이)는
                                 </div>
                             </div>
                         </div>
@@ -67,17 +88,15 @@ class cardSendYellowComplete extends React.Component<{}, any> {
                 
                             <div className="CS4tagSpace">
                                 <span className="CS4tag">
-                                    <div>#유잼인
-                                        
-                                    </div>
-                                    </span>
-
+                                    <div>{this.state.secondTag}</div>
+                                </span>
                                 </div>
                                 
                                 <div className="CS4textSpace">
                                     <div className='CS4subText'>
-                                            사람이야.</div>
-                                     </div>
+                                            사람이야.
+                                    </div>
+                                    </div>
                             </div>
         
                             <div className="CS4temp">
@@ -88,12 +107,13 @@ class cardSendYellowComplete extends React.Component<{}, any> {
                                 
                                 <div className="CS4textSpace">
                                     <div className='CS4subText'>
-                                        은빈(이)의 </div>
+                                        {this.state.receive}(이)의
+                                    </div>
                                 </div>
                                 
                                 <div className="CS4tagSpace">
                                     <span className="CS4tag">
-                                        <div>#좋은 에너지를 주는</div>
+                                        <div>{this.state.thirdTag}</div>
                                     </span>
                                 </div>
                             </div>
@@ -101,7 +121,7 @@ class cardSendYellowComplete extends React.Component<{}, any> {
                             <div className="CS4temp">
                                 <div className="CS4tagSpace">
                                     <span className="CS4tag">
-                                        <div>#현명한</div>
+                                        <div>{this.state.fourthTag}</div>
                                     </span>
                                 </div>
                                 <div className="CS4textSpace">
@@ -112,10 +132,7 @@ class cardSendYellowComplete extends React.Component<{}, any> {
 
                         </div> 
                          <div className="CS4writeMessage" >
-                            <div>생일에나 할 수 있는 얘기를 오늘 해보네! </div>
-                            <div>낯간지럽지만 꼭 해주고 싶은 말이야.</div> 
-                            <div>매일이 생일처럼 특별했으면 좋겠어.</div> 
-                            <div>오늘도 해피 언버스데이 :)  </div>          
+                            <div>{this.state.memo}</div>          
                         </div>
 
                     </div>

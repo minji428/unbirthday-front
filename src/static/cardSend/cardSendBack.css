@@ -258,15 +258,6 @@
         margin-bottom: 20%;
         margin-top: 5%;
         width: 40%;
-        border-radius: 50% / 50% ;
-        border-style: solid;
-        border-width: 3px thin;
-        border-color: rgba(222, 210, 249, 1);
+  
         /* background-color: yellowgreen; */
-    }
-    .CS3complete > div{
-        /* margin:2%; */
-        font-family: 'GmarketSansMedium';
-        font-size: 20px;
-        color:rgba(222, 210, 249, 1);
     }

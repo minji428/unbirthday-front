@@ -37,15 +37,27 @@ class CardGotten extends React.Component<{}, any> {
                     </div>
                 </div>
                 <div className="CGrowText">
-                    9월 3일 토요일
+                    9월 4일 일요일
                 </div>
                 <div className="CGrowCard">
                     <img className="CGeachCard" src="../img/newwhite.png"/>
-                    <img className="CGeachCardEmpty"/>
+                    <img className="CGeachCard" src="../img/newwhite.png"/>
                 </div>
                 <div className="CGrowCard">
                     <img className="CGeachCard" src="../img/newwhite.png"/>
-                    <img className="CGeachCard" src=""/>
+                    {/* <img className="CGeachCard" src=""/> */}
+                </div>
+
+                <div className="CGrowText">
+                    9월 5일 월요일
+                </div>
+                <div className="CGrowCard">
+                    <img className="CGeachCard" src="../img/newwhite.png"/>
+                    {/* <img className="CGeachCard" src="../img/newwhite.png"/> */}
+                </div>
+                <div className="CGrowCard">
+                    {/* <img className="CGeachCard" src="../img/newwhite.png"/> */}
+                    {/* <img className="CGeachCard" src=""/> */}
                 </div>
             </div>
         </div>

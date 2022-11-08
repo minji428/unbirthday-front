@@ -4,7 +4,7 @@ import '../../static/getCard/getCard3.css';
 {/* <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet"></link> */}
 
 
-class GetCard3 extends React.Component<{}, any> {
+class Receiver2 extends React.Component<{}, any> {
     constructor(props: any){
         super(props)
 
@@ -19,6 +19,9 @@ class GetCard3 extends React.Component<{}, any> {
             <div className="GC3texts">
                 <div className='GC3mainText'>
                    짜잔~ 축하받은 걸 축하해요!
+                </div>
+                <div className="GC2subTexts">
+                    카드를 저장하면 내가 받은 #태그를 분석해줘요.
                 </div>
             </div>
                 <div className="GC3yelloBox">
@@ -108,15 +111,18 @@ class GetCard3 extends React.Component<{}, any> {
                         </div>
                     </div>
                     
-                    <div className="GC3btns">
-                        <div className="GC3btn">
-                            <img src="../img/reply.png"></img>
+                    <div className="GC2btns">
+                        <div className="GC2btn">
+                                <img src="../img/bt_reply.png"></img>
+                            </div>
+                            <div className="GC2btn">
+                                <img src="../img/bt_save_card.png"></img>
+                            </div>
                         </div>
-                    </div>
                 </div>
     
 
         )
     }
 }
-export default GetCard3;
+export default Receiver2;

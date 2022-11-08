@@ -49,7 +49,7 @@ class cardSendYellowBack extends React.Component<cardSendYellowFrontProps, any> 
             secondTag : "",
             thirdTag : "",
             fourthTag : "",
-            memo: "",
+            memo: "생일에나 할 수 있는 얘기를 오늘 해보네!\n낯간지럽지만 꼭 해주고 싶은 말이야.\n매일이 생일처럼 특별했으면 좋겠어.\n오늘도 해피 언버스데이 :)",
         }
 
         this.chooseTagFirst = this.chooseTagFirst.bind(this)
@@ -144,7 +144,8 @@ class cardSendYellowBack extends React.Component<cardSendYellowFrontProps, any> 
             thirdTag : this.state.thirdTag,
             fourthTag : this.state.fourthTag,
             memo : this.state.memo,
-            cardColor : "yellow"
+            cardColor : "yellow",
+            sendId : sessionStorage.getItem("id")
         }
 
         service.anyService("/card/send/complete", "post", this.handleCompleteCard, param)
@@ -153,7 +154,9 @@ class cardSendYellowBack extends React.Component<cardSendYellowFrontProps, any> 
     handleCompleteCard = (response: any) => {
         console.log(response)
         console.log(response.data)
-        window.location.href = '/cardsend/yellow/{reponse.data.data}'
+        var cardUUID = response.data.data
+        sessionStorage.setItem("cardUUID", cardUUID)
+        window.location.href = '/cardsend/yellow/' + cardUUID
     }
 
 
@@ -256,9 +259,7 @@ class cardSendYellowBack extends React.Component<cardSendYellowFrontProps, any> 
                     </div>
                     
                     <div className='CS3complete'>
-                        <div onClick={this.completeCard}>
-                            완성하기
-                        </div>
+                        <img src="../img/bt_complete.png" onClick={this.completeCard}></img>
                         {/* 완성하기 누르면 uuid 생성하고 그 url로 이동시킨 다음에 Complete 보여주기 */}
                     </div>
                 </div>

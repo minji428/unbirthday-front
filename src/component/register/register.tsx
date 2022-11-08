@@ -28,6 +28,7 @@ class Register extends React.Component<{}, any> {
         let getPassword = event.target.value
         this.setState({pw : getPassword})
     }
+    
 
     // 입력한 개인정보 동의 가져오기
     checkPrivacy = (event: any) => {
@@ -36,13 +37,26 @@ class Register extends React.Component<{}, any> {
     }
 
     handleClickJoin = async(e: any) => {
-        const param = {
-            userId: this.state.id,
-            password: this.state.pw,
-            checkPrivacy: this.state.checkPrivacy
+        let regId = "^(?=.*[a-zA-z])(?=.*[0-9]).{6,12}$"
+        let regexpChkId = new RegExp(regId)
+
+        let regPw = "^(?=.*[a-zA-z])(?=.*[0-9])(?=.*[$`~!@$!%*#^?&\\(\\)\-_=+]).{8,}$"
+        let regexpChkPw = new RegExp(regPw)
+        
+        if(regexpChkId.test(this.state.id) === true &&
+            regexpChkPw.test(this.state.pw) === true) {
+            const param = {
+                userId: this.state.id,
+                password: this.state.pw,
+                checkPrivacy: this.state.checkPrivacy
+            }
+    
+            service.anyService("/account/reg", "post", this.handleClickJoinCallback, param)
+        } else {
+            // 멘트 정하기
+            alert("양식을 맞춰주세요");
         }
 
-        service.anyService("/account/reg", "post", this.handleClickJoinCallback, param)
     }
 
     handleClickJoinCallback = (response: any) => {

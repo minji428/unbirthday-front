@@ -48,8 +48,8 @@ class cardSend extends React.Component<{}, any> {
                 </div>
                 <div className="CS1cards">
                     <div className="CS1card-1st">
-                        <img onClick={this.yelloCard} className="CS1card" src="../img/_.png"/>
-                        <img onClick={this.orangeCard} className="CS1card" src="../img/orange.png"/>
+                        <img onClick={this.yelloCard} className="CS1card"  src="../img/yellow.png"/>
+                        <img onClick={this.orangeCard} className="CS1card"  src="../img/orange.png"/>
                     </div>
                             
                     <div className="CS1card-1st">
