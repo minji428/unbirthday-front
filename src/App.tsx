@@ -60,8 +60,8 @@ const App = () => {
           <Route path='/signInFin/signInFin1' element={<SignInFin1/>}></Route>
           <Route path='/signInFin/signInFin2' element={<SignInFin2/>}></Route>
           <Route path='/signInFin/signInFin3' element={<SignInFin3/>}></Route>
-          <Route path='/receiver/receiver1' element={<Receiver1/>}></Route>
-          <Route path='/receiver/receiver2' element={<Receiver2/>}></Route>
+          {/* <Route path='/receiver/receiver1' element={<Receiver1/>}></Route>
+          <Route path='/receiver/receiver2' element={<Receiver2/>}></Route> */}
         </Routes>
       </BrowserRouter>
     </div>
