@@ -27,7 +27,9 @@ import SignInFin1 from './component/signInFin/signInFin1';
 import SignInFin2 from './component/signInFin/signInFin2';
 import SignInFin3 from './component/signInFin/signInFin3';
 import CardComplete from './component/cardSend/yellow/cardSendYellowComplete'
-import CardComplete2 from './component/cardSend/purple/cardSendComplete'
+import CardCompleteWhite from './component/cardSend/white/cardSendWhiteComplete'
+import CardCompletePurple from './component/cardSend/purple/cardSendPurpleComplete'
+import CardCompleteOrange from './component/cardSend/orange/cardSendOrangeComplete'
 import Receiver1 from './component/receiver/receiver1';
 import Receiver2 from './component/receiver/receiver2';
 
@@ -42,8 +44,12 @@ const App = () => {
           <Route path='/cardsend/cardsend4' element={<CardSend4/>}></Route>
           <Route path='/cardsend/yellow' element={<CardSendYellow/>}></Route>
           <Route path='/cardsend/orange' element={<CardSendOrange/>}></Route>
+          <Route path='/cardsend/orange/orange_complete' element={<CardCompleteOrange/>}></Route>
           <Route path='/cardsend/white' element={<CardSendWhite/>}></Route>
+          <Route path='/cardsend/white/white_complete' element={<CardCompleteWhite/>}></Route>
           <Route path='/cardsend/purple' element={<CardSendPurple/>}></Route>
+          <Route path='/cardsend/purple/purple_complete' element={<CardCompletePurple/>}></Route>
+          
           <Route path='/cardsend/yellow/:pathvariable' element={<CardComplete/>}></Route>
           <Route path='/login' element={<Login/>}></Route>
           <Route path='/register' element={<Register/>}></Route>

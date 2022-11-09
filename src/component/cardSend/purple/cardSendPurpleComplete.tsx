@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import '../../../static/cardSend/cardSendComplete.css';
-
+import '../../../static/cardSend/cardSend4.css';
 class cardSendComplete extends React.Component<{}, any> {
     constructor(props: any){
         super(props)
@@ -14,7 +14,7 @@ class cardSendComplete extends React.Component<{}, any> {
         return(
             <div className= 'CS4main'>
         <div className="CS4btn">
-            <img src="../img/back.png" className="CS4backBtn"/>
+            <img src="../../img/back.png" className="CS4backBtn"/>
         </div>
         <div className="CS4texts">
             <div className='CS4mainText'>
@@ -26,13 +26,13 @@ class cardSendComplete extends React.Component<{}, any> {
         </div>
             <div className="CS4yelloBox">
                 <div>
-                    <img className="CS4card" src="../img/purpleBack.png"/>
+                    <img className="CS4card" src="../../img/purpleBack.png"/>
                 </div>
                     
                 <div className="CS4insideYellow">
                     <div className='CS4personName'>
                         HAPPY<br></br>
-                        UN-BIRTHDAY 은빈!
+                        UN-BIRTHDAY 은빈
                     </div>
                     <div className="CS4tagMessage">
                         <div className="CS4temp">
@@ -118,9 +118,6 @@ class cardSendComplete extends React.Component<{}, any> {
                     </div>
                 </div>
             </div>
-
-  
-
         )
     }
 }

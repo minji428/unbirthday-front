@@ -7,7 +7,7 @@ import ChooseTagSecond from './chooseTag/chooseTag2'
 import ChooseTagThird from './chooseTag/chooseTag3'
 import ChooseTagFourth from './chooseTag/chooseTag4'
 
-import CardSendComplete from './cardSendComplete'
+import CardSendComplete from './cardSendOrangeComplete'
 
 interface cardSendOrangeFrontProps {
     toPerson: any,
