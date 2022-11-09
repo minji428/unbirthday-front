@@ -46,7 +46,7 @@ class cardSendYellowComplete extends React.Component<{}, any> {
         return(
             <div className= 'CS4main'>
         <div className="CS4btn">
-            <img src=".../img/back.png" className="CS4backBtn"/>
+            <img src="../../img/back.png" className="CS4backBtn"/>
         </div>
         <div className="CS4texts">
             <div className='CS4mainText'>
@@ -58,7 +58,7 @@ class cardSendYellowComplete extends React.Component<{}, any> {
         </div>
             <div className="CS4yelloBox">
                 <div>
-                    <img className="CS4card" src=".../img/yellowBack.png"/>
+                    <img className="CS4card" src="../../img/yellowBack.png"/>
                 </div>
                     
                 <div className="CS4insideYellow">
