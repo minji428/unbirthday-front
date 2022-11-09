@@ -1,39 +1,19 @@
-import React, {Component, ReactPropTypes} from 'react';
-import { Card } from '../myPage/cardGotten'
 
+import React, {Component} from 'react';
 import '../../static/getCard/getCard3.css';
-import Receiver1 from './receiver1';
 {/* <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet"></link> */}
 
-//재사용할 수 있는 방법 찾아보기
-interface receiver1Props {
-    card: Card,
-    setCard: (card:Card) => void,
-}
 
-class Receiver2 extends React.Component<receiver1Props, any> {
+class Receiver2 extends React.Component<{}, any> {
     constructor(props: any){
         super(props)
 
         this.state = {
-            isFlipped: true,
-        }
-        
-        this.cardFront = this.cardFront.bind(this)
-    }
 
-    cardFront = (event:any) => {
-        this.setState({
-            isFlipped: false,
-        })
-        this.props.setCard(this.props.card); 
+        }
     }
 
     render() {
-        if (!this.state.isFlipped && this.props.card!=null) {
-            return <Receiver1 card={this.state.card}/>
-        }
-        
         return(
             <div className= 'GC3main'>
             <div className="GC3texts">
@@ -49,21 +29,21 @@ class Receiver2 extends React.Component<receiver1Props, any> {
                         <img className="GC3card" src="../img/yellowBack.png"/>
                     </div>
                         
-                    <div className="GC3insideYellow" onClick={(e) => this.cardFront(e)}>
+                    <div className="GC3insideYellow">
                         <div className='GC3personName'>
                             HAPPY<br></br>
-                            UN-BIRTHDAY {this.props.card.receive}!
+                            UN-BIRTHDAY 은빈!
                         </div>
                         <div className="GC3tagMessage">
                             <div className="GC3temp">
                                 <div className="GC3tagSpace">
                                     <span className="GC3tag">
-                                        <div>{this.props.card.first_tag}</div>
+                                        <div>#귀여운</div>
                                     </span>
                                  </div>
                                 <div className="GC3textSpace">
                                     <div className='GC3subText'>
-                                    {this.props.card.receive}(이)는
+                                        은빈(이)는
                                     </div>
                                 </div>
                             </div>
@@ -77,16 +57,17 @@ class Receiver2 extends React.Component<receiver1Props, any> {
                     
                                 <div className="GC3tagSpace">
                                     <span className="GC3tag">
-                                        <div>{this.props.card.second_tag}
+                                        <div>#유잼인
                                             
                                         </div>
-                                    </span>
-                                </div>
-                                    
-                                <div className="GC3textSpace">
-                                    <div className='GC3subText'>
-                                            사람이야.</div>
+                                        </span>
+    
                                     </div>
+                                    
+                                    <div className="GC3textSpace">
+                                        <div className='GC3subText'>
+                                                사람이야.</div>
+                                         </div>
                                 </div>
             
                                 <div className="GC3temp">
@@ -97,12 +78,12 @@ class Receiver2 extends React.Component<receiver1Props, any> {
                                     
                                     <div className="GC3textSpace">
                                         <div className='GC3subText'>
-                                        {this.props.card.receive}(이)의 </div>
+                                            은빈(이)의 </div>
                                     </div>
                                     
                                     <div className="GC3tagSpace">
                                         <span className="GC3tag">
-                                            <div>{this.props.card.third_tag}</div>
+                                            <div>#좋은 에너지를 주는</div>
                                         </span>
                                     </div>
                                 </div>
@@ -110,7 +91,7 @@ class Receiver2 extends React.Component<receiver1Props, any> {
                                 <div className="GC3temp">
                                     <div className="GC3tagSpace">
                                         <span className="GC3tag">
-                                            <div>{this.props.card.fourth_tag}</div>
+                                            <div>#현명한</div>
                                         </span>
                                     </div>
                                     <div className="GC3textSpace">
@@ -121,13 +102,10 @@ class Receiver2 extends React.Component<receiver1Props, any> {
     
                             </div> 
                              <div className="GC3writeMessage" >
-                                {/* 
                                 <div>생일에나 할 수 있는 얘기를 오늘 해보네! </div>
                                 <div>낯간지럽지만 꼭 해주고 싶은 말이야.</div> 
                                 <div>매일이 생일처럼 특별했으면 좋겠어.</div> 
-                                <div>오늘도 해피 언버스데이 :)  </div>           
-                                */}
-                                {this.props.card.memo}
+                                <div>오늘도 해피 언버스데이 :)  </div>          
                             </div>
     
                         </div>
@@ -135,12 +113,12 @@ class Receiver2 extends React.Component<receiver1Props, any> {
                     
                     <div className="GC2btns">
                         <div className="GC2btn">
-                            <img src="../img/bt_reply.png"></img>
+                                <img src="../img/bt_reply.png"></img>
+                            </div>
+                            <div className="GC2btn">
+                                <img src="../img/bt_save_card.png"></img>
+                            </div>
                         </div>
-                        <div className="GC2btn">
-                            <img src="../img/bt_save_card.png"></img>
-                        </div>
-                    </div>
                 </div>
     
 

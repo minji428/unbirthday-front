@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import '../../static/gotten/cardGotten.css';
-import GetCard2 from '../receiver/receiver1';
+import GetCard1 from '../getCard/getCard1';
 import * as service from '../../service/service'
 
 export interface Card {
@@ -125,7 +125,7 @@ class CardGotten extends React.Component<{}, any> {
 
     render() {
         if (this.state.showfront && this.state.card!=null) {
-            return <GetCard2 card={this.state.card}/>
+            return <GetCard1 card={this.state.card}/>
         }
         return(
             <div className= 'CGmain'>
