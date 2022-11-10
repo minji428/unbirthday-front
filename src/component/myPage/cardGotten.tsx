@@ -16,14 +16,18 @@ export interface Card {
     reg_date: string
 }
 
+type CardsWithDate = {
+    reg_date: Card[],
+}
+
 class CardGotten extends React.Component<{}, any> {
     constructor(props: any){
         super(props)
 
         this.state = {
-            showfront: false,
-            cards: [] as Card[],
+            isClicked: false,
             card: {} as Card,
+            cards: [] as CardsWithDate[],
         }
 
         this.cardFront = this.cardFront.bind(this)
@@ -52,7 +56,13 @@ class CardGotten extends React.Component<{}, any> {
 
         if(rData.rtCode === "00" || rData.rtCode === "09") {
             this.setState({
-                cards: rData.data
+                cards: this.setCards(rData.data)
+            })
+            Object.keys(this.state.cards).map((key) =>{
+                console.log(key)
+            })
+            Object.values(this.state.cards).map(key => {
+                console.log(key)
             })
         } else {
             alert(rData.rtMsg)
@@ -63,8 +73,18 @@ class CardGotten extends React.Component<{}, any> {
         window.location.href="/mypage"
     }
 
-    getDate = (date: string) => {
+    setCards = (cards: Card[]) => {
+        let dict: any = {}
+        for(const card of cards){
+            let reg_date=card.reg_date
 
+            if(!(reg_date in dict)){
+                dict[reg_date]=[]
+            }
+            dict[reg_date].push(card)
+        }
+
+        return dict
     }
 
     showCard = (card: Card) => {
@@ -87,14 +107,44 @@ class CardGotten extends React.Component<{}, any> {
                 <img className="user-image" src={src} id={card.card_no} onClick={(e) => this.cardFront(e)}/>
                 <div className="user-text">{card.send}</div>
             </div>
-            )
+        )
+    }
+
+    getDayOfWeek(date: string){ //ex) getDayOfWeek('2022-06-13')
+        const week = ['일', '월', '화', '수', '목', '금', '토'];
+    
+        return  week[new Date(date).getDay()];
+    }
+    
+    showRegDate = (date: string) => {
+        const dayOfWeek = this.getDayOfWeek(date)
+        const arr = date.split("-");
+        
+        return (
+                <div className="CGrowText">{arr[1]}월 {arr[2]}일 {dayOfWeek}요일</div>
+        )
+    }
+
+    setAllCards = () => {
+        let arr: any=[]
+
+        Object.keys(this.state.cards).map(key=>{
+            arr.push(this.showRegDate(key))
+
+            this.state.cards[key].map((card: Card) =>{
+                arr.push(this.showCard(card))
+            })
+        }) 
+        return arr
+    
     }
 
     cardFront = (event: any) => {
         let clickedCard = this.getCardInfo(event.target.id)
+        console.log(clickedCard)
 
         this.setState({
-            showfront: true,
+            isClicked: !this.state.isClicked,
             card: {
                 card_no: clickedCard.card_no,
                 send: clickedCard.send,
@@ -114,17 +164,20 @@ class CardGotten extends React.Component<{}, any> {
     getCardInfo = (card_no: string) => {
         let clickedCard = {} as Card
 
-        this.state.cards.forEach(function(card: Card){
-            if(card.card_no === card_no){
-                clickedCard = card
-                return clickedCard
-            }
-        });
+        Object.keys(this.state.cards).map(key=>{
+            this.state.cards[key].map((card: Card) =>{
+                if(card.card_no === card_no) {
+                    clickedCard = card
+                    return clickedCard
+                }
+            })
+        }) 
+
         return clickedCard
     }
 
     render() {
-        if (this.state.showfront && this.state.card!=null) {
+        if (this.state.isClicked && this.state.card!=null) {
             return <GetCard1 card={this.state.card}/>
         }
         return(
@@ -142,10 +195,13 @@ class CardGotten extends React.Component<{}, any> {
     
             <div className="CGcards">
                 <div className="CGrow">
-                    {this.state.cards.length !== 0 
+                    {this.state.cards.length !== 0
+                        ? this.setAllCards()
+                        : ''}
+                    {/* {this.state.cards.length !== 0 
                         ? this.state.cards.map((card: Card) => 
                             this.showCard(card)) 
-                        : ''}
+                        : ''} */}
                     <div className="CGrowText">
                         9월 3일 토요일
                     </div>
