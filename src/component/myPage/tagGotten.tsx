@@ -35,7 +35,7 @@ class tagGotten extends React.Component<{}, any> {
             const param = {
                 id: id,
             }
-            service.anyService("/mypage1/taggotten", "get", this.getAllTagsCallBack, param)
+            service.anyService("/mypage/taggotten", "get", this.getAllTagsCallBack, param)
         } else {
             //id가 없으면?
         }

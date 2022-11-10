@@ -60,9 +60,9 @@ const App = () => {
           <Route path='/chooseTag/chooseTag2' element={<ChooseTag2/>}></Route>
           <Route path='/chooseTag/chooseTag3' element={<ChooseTag3/>}></Route>
           <Route path='/chooseTag/chooseTag4' element={<ChooseTag4/>}></Route> */}
-          <Route path='/getCard/getCard1' element={<GetCard1/>}></Route>
+          {/* <Route path='/getCard/getCard1' element={<GetCard1/>}></Route>
           <Route path='/getCard/getCard2' element={<GetCard2/>}></Route>
-          <Route path='/getCard/getCard3' element={<GetCard3/>}></Route>
+          <Route path='/getCard/getCard3' element={<GetCard3/>}></Route> */}
           <Route path='/signInFin/signInFin1' element={<SignInFin1/>}></Route>
           <Route path='/signInFin/signInFin2' element={<SignInFin2/>}></Route>
           <Route path='/signInFin/signInFin3' element={<SignInFin3/>}></Route>
