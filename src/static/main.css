@@ -10,19 +10,35 @@
     font-weight: 700;
     font-style: normal;
 }
+
 @font-face {
     font-family: 'PyeongChangPeace-Bold';
-    src: url('./font/PyeongChangPeace-Bold.otf') format('woff2');
-    /* font-weight: 300; */
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Bold.woff2') format('woff');
+    font-weight: 700;
     font-style: normal;
 }
 
-@font-face {
+/* @font-face {
+    font-family: 'PyeongChangPeace-Bold';
+    src: url('./font/PyeongChangPeace-Bold.otf') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+} */
+
+/* @font-face {
     font-family: 'GmarketSansLight';
     src: url('./font/GmarketSansLight.otf') format('woff');
     font-weight: normal;
     font-style: normal;
+} */
+
+@font-face {
+    font-family: 'GmarketSansLight';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
+
 @font-face {
     font-family: 'GmarketSansMedium';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
@@ -35,12 +51,19 @@
         font-weight: normal;
         font-style: normal;
     } */
-    @font-face {
+    /* @font-face {
         font-family: 'GmarketSansBold';
         src: url('./font/GmarketSansBold.otf') format('woff');
         font-weight: normal;
         font-style: normal;
-    }
+    } */
+@font-face {
+    font-family: 'GmarketSansBold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
     @font-face {
         font-family: 'Noto Sans KR';
         src : url('./font/NotoSansKR-Bold.otf');
