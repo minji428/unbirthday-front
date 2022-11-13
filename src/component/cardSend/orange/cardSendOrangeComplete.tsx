@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
-import '../../../static/cardSend/cardSendComplete.css';
+// import '../../../static/cardSend/cardSendComplete.css';
 import '../../../static/cardSend/cardSend4.css';
 
-class cardSendComplete extends React.Component<{}, any> {
+class cardSendCompleteOrange extends React.Component<{}, any> {
     constructor(props: any){
         super(props)
 
@@ -31,7 +31,7 @@ class cardSendComplete extends React.Component<{}, any> {
                 </div>
                     
                 <div className="CS4insideYellow">
-                    <div className='CS4personName'>
+                    <div className='CS4personName-orange'>
                         HAPPY<br></br>
                         UN-BIRTHDAY 은빈
                     </div>
@@ -120,4 +120,4 @@ class cardSendComplete extends React.Component<{}, any> {
         )
     }
 }
-export default cardSendComplete;
+export default cardSendCompleteOrange;

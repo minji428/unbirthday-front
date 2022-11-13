@@ -207,20 +207,36 @@ class CardGotten extends React.Component<{}, any> {
                     </div>
                     <div className="CGrowCard">
                         <div className="CGcard">
-                                <img className="CGeachCard" src="../img/newwhite.png"/>
-                                <div className="user-text">이름1</div>
+                                {/* 하얀색카드 */}
+                                <img className="CGeachCard" src="../img/card_empty_white.png"/>
+                                <div className="hubd-white">HAPPY<br></br>
+                                UN-BIRTHDAY<br></br>
+                                주연!</div>
+                                <div className="CGfrom-white">From.재현</div>
                         </div>
                         <div className="CGcard">
-                            <img className="CGeachCard" src="../img/pink.png"/>
-                            <div className="user-text">이름2</div>
+                            {/* 보라색카드 */}
+                            <img className="CGeachCard" src="../img/card_empty_purple.png"/>
+                            <div className="hubd-purple">HAPPY<br></br>
+                                UN-BIRTHDAY<br></br>
+                                아름이!</div>
+                                <div className="CGfrom-purple">From.지윤</div>
                         </div>    
                         <div className="CGcard">
-                                <img className="CGeachCard" src="../img/newwhite.png"/>
-                                <div className="user-text">이름3</div>
+                                {/* 노란색카드 */}
+                                <img className="CGeachCard" src="../img/card_empty_yellow.png"/>
+                                <div className="hubd-yellow">HAPPY<br></br>
+                                UN-BIRTHDAY<br></br>
+                                정혜!</div>
+                                <div className="CGfrom-yellow">From.소연이</div>
                         </div>
                         <div className="CGcard">
-                            <img className="CGeachCard" src="../img/pink.png"/>
-                            <div className="user-text">이름4</div>
+                            {/* 주황색카드 */}
+                            <img className="CGeachCard" src="../img/card_empty_orange.png"/>
+                            <div className="hubd-orange">HAPPY<br></br>
+                                UN-BIRTHDAY<br></br>
+                                지수!</div>
+                                <div className="CGfrom-orange">From.민규</div>
                         </div>  
                         
                     </div>
@@ -230,27 +246,41 @@ class CardGotten extends React.Component<{}, any> {
                 </div>
                 <div className="CGrowCard">
                     <div className="CGcard">
-                            <img className="CGeachCard" src="../img/newwhite.png"/>
-                            <div className="user-text">이름1</div>
+                                <img className="CGeachCard" src="../img/card_empty_white.png"/>
+                                <div className="hubd-white">HAPPY<br></br>
+                                UN-BIRTHDAY<br></br>
+                                주연!</div>
+                                <div className="CGfrom-white">From.재현</div>
                         </div>
                         <div className="CGcard">
-                            <img className="CGeachCard" src="../img/pink.png"/>
-                            <div className="user-text">이름2</div>
+                            <img className="CGeachCard" src="../img/card_empty_orange.png"/>
+                            <div className="hubd-orange">HAPPY<br></br>
+                                UN-BIRTHDAY<br></br>
+                                주연!</div>
+                                <div className="CGfrom-orange">From.재현</div>
                         </div>  
-                    <div className="CGcard">
-                        <img className="CGeachCard" src="../img/newwhite.png"/>
-                        <div className="user-text">이름3</div>
-                    </div>
+                        <div className="CGcard">
+                            {/* 보라색카드 */}
+                            <img className="CGeachCard" src="../img/card_empty_purple.png"/>
+                            <div className="hubd-purple">HAPPY<br></br>
+                                UN-BIRTHDAY<br></br>
+                                주연!</div>
+                                <div className="CGfrom-purple">From.재현</div>
+                        </div>    
                     </div>
                 </div>
                 <div className="CGrowText">
                     9월 5일 월요일
                 </div>
                 <div className="CGrowCard">
-                    <div className="CGcard">
-                            <img className="CGeachCard" src="../img/newwhite.png"/>
-                            <div className="user-text">이름1</div>
-                    </div>
+                <div className="CGcard">
+                                {/* 노란색카드 */}
+                                <img className="CGeachCard" src="../img/card_empty_yellow.png"/>
+                                <div className="hubd-yellow">HAPPY<br></br>
+                                UN-BIRTHDAY<br></br>
+                                주연!</div>
+                                <div className="CGfrom-yellow">From.재현</div>
+                        </div>
                 </div>
             </div>
            

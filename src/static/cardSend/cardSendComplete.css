@@ -140,13 +140,42 @@
         flex:0.7;
         margin-top: 6%;
         font-family:'PyeongChangPeace-Bold';
-        font-size: 20pt;
+        font-size: 18pt;
         font-weight:bold;
         text-align: left;
         color:rgba(201, 102, 211, 1);
         
     }
-    
+    .CS4personName-orange{
+        display: flex;
+        flex:0.7;
+        margin-top: 6%;
+        font-family:'PyeongChangPeace-Bold';
+        font-size: 20pt;
+        font-weight:bold;
+        text-align: left;
+        color:rgba(213, 250, 82, 1);
+    }
+    .CS4personName-white{
+        display: flex;
+        flex:0.7;
+        margin-top: 6%;
+        font-family:'PyeongChangPeace-Bold';
+        font-size: 20pt;
+        font-weight:bold;
+        text-align: left;
+        color:black;
+    }
+    .CS4personName-purple{
+        display: flex;
+        flex:0.7;
+        margin-top: 6%;
+        font-family:'PyeongChangPeace-Bold';
+        font-size: 20pt;
+        font-weight:bold;
+        text-align: left;
+        color:rgba(250, 233, 82, 1);
+    }
     .CS4tagMessage{
         display: flex;
         flex-direction: column;

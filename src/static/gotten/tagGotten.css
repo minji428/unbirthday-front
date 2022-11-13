@@ -316,12 +316,6 @@
         margin-top: 5%;
         width: 38%;
         height: 35%;
-        /* border:2px solid #DED2F9; */
-        border-radius: 50% / 50%;
-        border-style: solid;
-        border-width: 2px thin;
-        border-color: rgba(222, 210, 249, 1);
-        color:rgba(222, 210, 249, 1);
-
+ 
     }
 }

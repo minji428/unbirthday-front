@@ -173,7 +173,7 @@ class tagGotten extends React.Component<{}, any> {
                     <img className= "TGnoticeImg" src="../img/notice.png"/>
                     <div className="TGnoticeText">&emsp;&emsp;2번 이상 받은 태그는 색이 채워져요.</div>
                 </div>
-                <div className="TGshare">공유하기</div>
+                <img src="../../img/bt_share.png" className="TGshare"/>
             </div>
         </div>
   
