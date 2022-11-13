@@ -61,7 +61,7 @@
         position:relative;
         /* padding:15px; */
         position: fixed;
-        overflow: hidden;
+        overflow-y: scroll;
         padding-top:5%;
         padding-left: 3%;
         padding-right: 3%;
@@ -111,6 +111,7 @@
         position:relative;
         margin-left: 7%;
         margin-right: 7%;
+       
     }
     
     .CS4yelloBox img{
