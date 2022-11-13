@@ -212,21 +212,19 @@ class CardGotten extends React.Component<{}, any> {
                         </div>
                         <div className="CGcard">
                             <img className="CGeachCard" src="../img/pink.png"/>
-                            <div className="user-text">이름1</div>
+                            <div className="user-text">이름2</div>
                         </div>    
-                        
-                    </div>
-                    <div className="CGrowCard">
-                    <div className="CGcard">
+                        <div className="CGcard">
                                 <img className="CGeachCard" src="../img/newwhite.png"/>
-                                <div className="user-text">이름1</div>
+                                <div className="user-text">이름3</div>
                         </div>
                         <div className="CGcard">
                             <img className="CGeachCard" src="../img/pink.png"/>
-                            <div className="user-text">이름1</div>
+                            <div className="user-text">이름4</div>
                         </div>  
+                        
                     </div>
-                </div>
+               
                 <div className="CGrowText">
                     9월 4일 일요일
                 </div>
@@ -237,13 +235,12 @@ class CardGotten extends React.Component<{}, any> {
                         </div>
                         <div className="CGcard">
                             <img className="CGeachCard" src="../img/pink.png"/>
-                            <div className="user-text">이름1</div>
+                            <div className="user-text">이름2</div>
                         </div>  
-                    </div>
-                <div className="CGrowCard">
                     <div className="CGcard">
                         <img className="CGeachCard" src="../img/newwhite.png"/>
-                        <div className="user-text">이름1</div>
+                        <div className="user-text">이름3</div>
+                    </div>
                     </div>
                 </div>
                 <div className="CGrowText">
@@ -253,19 +250,10 @@ class CardGotten extends React.Component<{}, any> {
                     <div className="CGcard">
                             <img className="CGeachCard" src="../img/newwhite.png"/>
                             <div className="user-text">이름1</div>
-                        </div>
-                        <div className="CGcard">
-                            <img className="CGeachCard" src="../img/pink.png"/>
-                            <div className="user-text">이름1</div>
-                        </div>  
-                    </div>
-                
-                <div className="CGrowCard">
-                    <div className="CGcard">
-                        
                     </div>
                 </div>
             </div>
+           
         </div>
   
         )

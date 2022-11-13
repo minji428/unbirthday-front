@@ -306,7 +306,7 @@
     .MCeachCard{
         /* width: 40%; */
         position: relative;
-        height: fit-content;
+        height: 100%;
         margin-right: 3%;
         
    }
@@ -337,7 +337,7 @@
     }
       .card {
         width: 40%;
-        /* height: 50px; */
+        height: 100%;
         flex: 0 0 auto;
         margin-right: 3%;
         position: relative;

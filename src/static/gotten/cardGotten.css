@@ -97,7 +97,7 @@
         display: flex;
         flex:6;
         flex-direction: column;
-        overflow: scroll; 
+        overflow-y: scroll; 
         margin:5%;
         -ms-overflow-style: none;
     }
@@ -115,6 +115,7 @@
         flex-direction: row;
         justify-content: space-between;
         margin-bottom: 5%;
+        flex-wrap: wrap;
         
     }
     .CGrowText{
@@ -130,6 +131,7 @@
         height: fit-content;
         flex: 0 0 auto;
         position: relative;
+        margin-bottom: 1%;
       }
 
     .user-text{
