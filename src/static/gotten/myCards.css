@@ -49,6 +49,7 @@
         src : url('../font/NotoSansKR-Medium.otf');
         font-weight: 500;
     }
+    @media only screen and (min-device-width : 320px) and (max-device-width : 490px) {
      .MCmain {
         box-sizing: border-box;
         display: flex;
@@ -99,7 +100,7 @@
     .MCrow1{
         display: flex;
         flex-direction: column;
-        margin-bottom: 5%;
+        /* margin-bottom: 5%; */
         width: 100%;
     }
     .MCrow2{
@@ -130,36 +131,159 @@
         margin-left: 7%;
         overflow:auto;
         white-space: nowrap;
+        -ms-overflow-style:none; /* IE and Edge */
+        scrollbar-width:none; /* Firefox */
         /* background-color: aqua; */
+    }
+    .MCrowTag::-webkit-scrollbar {
+        display:none;/* Chrome , Safari , Opera */
     }
     .MCrowTags{
         display:flex;
         flex:1;
         flex-direction: row;
-        justify-content: space-between;
-        margin-bottom: 5%;
+        /* justify-content: space-between; */
+        /* margin-bottom: 5%; */
         /* background-color: aliceblue; */
         /* overflow:auto;
         white-space: nowrap; */
         
     }
-    .MCeachTag{
-        width: 40%;
-        height: fit-content;
-        margin-right: 3%;
-    }
 
+    .MCpink-BlankTag{
+        display:flex;
+        font-size: 13px;
+        font-family: 'GmarketSansMedium';
+        border-width: 1px;
+        color:rgba(221, 123, 231, 1);
+        border-style: solid;
+        border-color: rgba(221, 123, 231, 1);
+        border-radius: 15px 15px;
+        width:130px;
+        height:30px;
+        justify-content: center;
+        align-items: center;
+        /* margin-bottom : 4%; */
+        margin-right: 20px;
+    }
+    .MCgreen-BlankTag{
+        display:flex;
+        font-size: 13px;
+        font-family: 'GmarketSansMedium';
+        border-width: 1px;
+        color:rgba(35, 233, 180, 1);
+        border-style: solid;
+        border-color: rgba(35, 233, 180, 1);
+        border-radius: 15px 15px;
+        width:130px;
+        height:30px;
+        justify-content: center;
+        align-items: center;
+        margin-bottom : 4%;
+        margin-right: 20px;
+    }
+    .MCblue-BlankTag{
+        display:flex;
+        font-size: 13px;
+        font-family: 'GmarketSansMedium';
+        border-width: 1px;
+        color:rgba(145, 215, 224, 1);
+        border-style: solid;
+        border-color:rgba(145, 215, 224, 1);
+        border-radius: 15px 15px;
+        width:130px;
+        height:30px;
+        justify-content: center;
+        align-items: center;
+        margin-bottom : 4%;
+        margin-right: 20px;
+    }
+    .MCblue-Tag{
+        display:flex;
+        font-size: 13px;
+        font-family: 'GmarketSansMedium';
+        border-width: 1px;
+        color:black;
+        /* border-style: solid; */
+        background-color:rgba(145, 215, 224, 1);
+        border-radius: 15px 15px;
+        width:130px;
+        height:30px;
+        justify-content: center;
+        align-items: center;
+        margin-bottom : 4%;
+        margin-right:20px;
+    }
+    .MCgreen-Tag{
+        display:flex;
+        font-size: 13px;
+        font-family: 'GmarketSansMedium';
+        border-width: 1px;
+        color:black;
+        background-color:rgba(35, 233, 180, 1);
+        border-radius: 15px 15px;
+        width:130px;
+        height:30px;
+        justify-content: center;
+        align-items: center;
+        margin-bottom : 4%;
+        margin-right:20px;
+    }
+    .MCorange-BlankTag{
+        display:flex;
+        font-size: 13px;
+        font-family: 'GmarketSansMedium';
+        border-width: 1px;
+        color:rgba(255, 172, 75, 1);
+        border-style: solid;
+        border-color:rgba(255, 172, 75, 1);
+        border-radius: 15px 15px;
+        width:130px;
+        height:30px;
+        justify-content: center;
+        align-items: center;
+        margin-bottom : 4%;
+        margin-right:20px;
+    }
+    .MCorange-Tag{
+        display:flex;
+        font-size: 13px;
+        font-family: 'GmarketSansMedium';
+        border-width: 1px;
+        color:black;
+        background-color:rgba(255, 172, 75, 1);
+        border-radius: 15px 15px;
+        width:130px;
+        height:30px;
+        justify-content: center;
+        align-items: center;
+        margin-bottom : 4%;
+        margin-right:20px;
+    }
+    .MCpink-Tag{
+        display:flex;
+        font-size: 13px;
+        font-family: 'GmarketSansMedium';
+        border-width: 1px;
+        color:black;
+        background-color:rgba(221, 123, 231, 1);
+        border-radius: 15px 15px;
+        width:130px;
+        height:30px;
+        justify-content: center;
+        align-items: center;
+        margin-bottom : 4%;
+        margin-right:20px;
+    }
     
     /* -------------받은 카드----------- */
     .MCcards{
         display: flex;
         flex:3;
         flex-direction: column;
-        margin-top:5%;
+        margin-bottom: 5%;
         margin-left: 5%;
-        /* margin-right: 5%; */
-        /* background-color: rebeccapurple; */
-
+       
        
     }
     .MCrowText2{
@@ -176,41 +300,17 @@
     .MCrowCard{
         display: flex;
         flex-direction: row;
-        flex-wrap: nowrap;
-        white-space: nowrap;
-        overflow:auto;
         width: 100%;
-        /* background-color: coral; */
- 
     }
 
-
-    .MCroㄴwCards{
-        display:flex;
-        flex:1;
-        flex-direction: row;
-        overflow:auto;
-        white-space: nowrap;
-        justify-content: space-between;
-        /* margin-bottom: 5%; */
-        background-color: #393939;
-        
-    }
-
-    .user-wrap{
-        /* width:100%; */
-        /* margin-right: 5%; */
-        position:relative;
-        width: 40%;
+    .MCeachCard{
+        /* width: 40%; */
+        position: relative;
         height: fit-content;
         margin-right: 3%;
         
-    }
-    .user-wrap img{
-        /* width:50%;
-        margin-right: 5%;
-        vertical-align: middle; */
-    }
+   }
+
     .user-text{
         position:absolute;
         bottom: 5%;
@@ -224,15 +324,26 @@
         font-weight: 100;
         font-size: 10pt;
     }
-   /* .MCeachCard{
+  
+    .scroll-container {
+        display: flex;
+        flex-wrap: no-wrap;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        height: fit-content;
+    }
+    .scroll-container::-webkit-scrollbar {
+        display:none;/* Chrome , Safari , Opera */
+    }
+      .card {
         width: 40%;
-        height: fit-content;
+        /* height: 50px; */
+        flex: 0 0 auto;
         margin-right: 3%;
-   }
-   .MCeachCardEmpty{
-         width:40%;
-        height: fit-content;
-   } */
+        position: relative;
+       
+      }
+
    /* ---------------정보------------ */
    .MCinfos{
         display: flex;
@@ -279,3 +390,4 @@
     .MCnotices{
         margin-bottom: 2%;
     }
+}

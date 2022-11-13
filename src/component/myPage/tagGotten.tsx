@@ -94,33 +94,42 @@ class tagGotten extends React.Component<{}, any> {
                     <div className="TGrowText">
                         나의 평소 모습은?
                     </div>
-                    <div className="TGrowTag">
-                        {/* <div className="TGpink-BlankTag">#조각 같은</div>
-                        <div className="TGgreen-BlankTag">#모자르지만 착한</div> */}
-                        { this.state.tags.first_tag && Object.keys(this.state.tags.first_tag).length > 0
-                            ? Object.keys(this.state.tags.first_tag).map(key =>  
-                                this.showTag(1, {tag: key, num: this.state.tags.first_tag[key]})
-                            )
-                            : ''
-                        }
-                   
-                    </div>
+                        <div className="TGrowTag">
+                            <div className="TGpink-Tag">#조각 같은</div>
+                            <div className="TGgreen-Tag">#모자르지만 착한</div>
+                            <div className="TGpink-BlankTag">#조각 같은</div>
+                            <div className="TGgreen-BlankTag">#모자르지만 착한</div>
+                            <div className="TGpink-BlankTag">#조각 같은</div>
+                            <div className="TGpink-BlankTag">#조각 같은</div>
+                            <div className="TGpink-BlankTag">#조각 같은</div>
+                            { this.state.tags.first_tag && Object.keys(this.state.tags.first_tag).length > 0
+                                ? Object.keys(this.state.tags.first_tag).map(key =>  
+                                    this.showTag(1, {tag: key, num: this.state.tags.first_tag[key]})
+                                )
+                                : ''
+                            }
+                        </div>
                 </div>
     
                 <div className="TGrow">
                     <div className="TGrowText">
                         나만의 분위기는?
                     </div>
+
                     <div className="TGrowTag">
-                        {/* <div className="TGblue-BlankTag">#시크한</div>
-                        <div className="TGblue-Tag">#빛이 나는</div> */}
-                        { this.state.tags.first_tag && Object.keys(this.state.tags.first_tag).length > 0 
-                            ? Object.keys(this.state.tags.second_tag).map(key =>  
-                                this.showTag(2, {tag: key, num: this.state.tags.second_tag[key]})
-                        )
-                            : ''
-                        }
-                    </div>
+                        <div className="TGblue-Tag">#시크한</div>
+                        <div className="TGblue-BlankTag">#빛이 나는</div>
+                        <div className="TGblue-BlankTag">#시크한</div>
+                        <div className="TGblue-BlankTag">#빛이 나는</div>
+                        <div className="TGblue-BlankTag">#빛이 나는</div>
+                            { this.state.tags.first_tag && Object.keys(this.state.tags.first_tag).length > 0 
+                                ? Object.keys(this.state.tags.second_tag).map(key =>  
+                                    this.showTag(2, {tag: key, num: this.state.tags.second_tag[key]})
+                            )
+                                : ''
+                            }
+                        </div>
+                        
                 </div>
     
                 <div className="TGrow">
@@ -128,15 +137,16 @@ class tagGotten extends React.Component<{}, any> {
                         사람들이 좋아하는 나의 모습은?
                     </div>
                     <div className="TGrowTag">
-                        {/* <div className="TGgreen-Tag">#당당하고</div>
-                        <div className="TGBlankTag"></div> */}
-                        { this.state.tags.first_tag && Object.keys(this.state.tags.first_tag).length > 0 
-                            ? Object.keys(this.state.tags.third_tag).map(key =>  
-                                this.showTag(3, {tag: key, num: this.state.tags.third_tag[key]})
-                            )
-                            : ''
-                        }
+                            <div className="TGgreen-BlankTag">#당당하고</div>
+                            <div className="TGBlankTag"></div>
+                            { this.state.tags.first_tag && Object.keys(this.state.tags.first_tag).length > 0 
+                                ? Object.keys(this.state.tags.third_tag).map(key =>  
+                                    this.showTag(3, {tag: key, num: this.state.tags.third_tag[key]})
+                                )
+                                : ''
+                            }
                     </div>
+                    
                 </div>
     
                 <div className="TGrow">
@@ -144,8 +154,10 @@ class tagGotten extends React.Component<{}, any> {
                         나는 매사에 어떤 사람?
                     </div>
                     <div className="TGrowTag">
-                        {/* <div className="TGorange-BlankTag">#현명한</div>
-                        <div className="TGBlankTag"></div> */}
+                        <div className="TGorange-Tag">#현명한</div>
+                        <div className="TGorange-Tag">#빛이나는</div>
+                        <div className="TGorange-BlankTag">#현명한</div>
+                        {/* <div className="TGorange-BlankTag">#빛이나는</div> */}
                         { this.state.tags.first_tag && Object.keys(this.state.tags.first_tag).length > 0
                             ? Object.keys(this.state.tags.fourth_tag).map(key =>  
                                 this.showTag(4, {tag: key, num: this.state.tags.fourth_tag[key]})

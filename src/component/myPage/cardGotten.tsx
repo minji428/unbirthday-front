@@ -206,24 +206,64 @@ class CardGotten extends React.Component<{}, any> {
                         9월 3일 토요일
                     </div>
                     <div className="CGrowCard">
-                        <img className="CGeachCard" src="../img/newwhite.png"/>
-                        <img className="CGeachCard" src="../img/pink.png"/>
+                        <div className="CGcard">
+                                <img className="CGeachCard" src="../img/newwhite.png"/>
+                                <div className="user-text">이름1</div>
+                        </div>
+                        <div className="CGcard">
+                            <img className="CGeachCard" src="../img/pink.png"/>
+                            <div className="user-text">이름1</div>
+                        </div>    
+                        
                     </div>
                     <div className="CGrowCard">
-                        <img className="CGeachCard" src="../img/newwhite.png"/>
-                        <img className="CGeachCard" src="../img/pink.png"/>
+                    <div className="CGcard">
+                                <img className="CGeachCard" src="../img/newwhite.png"/>
+                                <div className="user-text">이름1</div>
+                        </div>
+                        <div className="CGcard">
+                            <img className="CGeachCard" src="../img/pink.png"/>
+                            <div className="user-text">이름1</div>
+                        </div>  
                     </div>
                 </div>
                 <div className="CGrowText">
-                    9월 3일 토요일
+                    9월 4일 일요일
                 </div>
                 <div className="CGrowCard">
-                    <img className="CGeachCard" src="../img/newwhite.png"/>
-                    <img className="CGeachCardEmpty"/>
+                    <div className="CGcard">
+                            <img className="CGeachCard" src="../img/newwhite.png"/>
+                            <div className="user-text">이름1</div>
+                        </div>
+                        <div className="CGcard">
+                            <img className="CGeachCard" src="../img/pink.png"/>
+                            <div className="user-text">이름1</div>
+                        </div>  
+                    </div>
+                <div className="CGrowCard">
+                    <div className="CGcard">
+                        <img className="CGeachCard" src="../img/newwhite.png"/>
+                        <div className="user-text">이름1</div>
+                    </div>
+                </div>
+                <div className="CGrowText">
+                    9월 5일 월요일
                 </div>
                 <div className="CGrowCard">
-                    <img className="CGeachCard" src="../img/newwhite.png"/>
-                    <img className="CGeachCard" src=""/>
+                    <div className="CGcard">
+                            <img className="CGeachCard" src="../img/newwhite.png"/>
+                            <div className="user-text">이름1</div>
+                        </div>
+                        <div className="CGcard">
+                            <img className="CGeachCard" src="../img/pink.png"/>
+                            <div className="user-text">이름1</div>
+                        </div>  
+                    </div>
+                
+                <div className="CGrowCard">
+                    <div className="CGcard">
+                        
+                    </div>
                 </div>
             </div>
         </div>

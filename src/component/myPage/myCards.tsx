@@ -1,6 +1,7 @@
 
 import React, {Component} from 'react';
 import '../../static/gotten/myCards.css';
+import '../../static/gotten/tagGotten.css'
 import * as service from '../../service/service'
 
 interface CardFront {
@@ -122,10 +123,14 @@ class MyCards extends React.Component<{}, any> {
                 <div className="MCrowTag">
                     {/* {this.state.tags.length !== 0 ? this.state.tags.slice(0, 3).map((tag: String) => <div className="MCblue-Tag">#{tag}</div>) : ''} */}
                     <div className="MCrowTags">
-                        <img className="MCeachTag" src="../img/tag_crazy.png"/>
-                        <img className="MCeachTag" src="../img/tag_likekid.png"/>
-                        <img className="MCeachTag" src="../img/tag_goodenergy.png"/>
-                        <img className="MCeachTag" src="../img/tag_goodenergy.png"/>
+                        <div className="MCpink-Tag">#확인용핑크</div>
+                        <div className="MCpink-BlankTag">#블랭크핑크</div>
+                        <div className="MCorange-Tag">#확인용주황</div>
+                        <div className="MCorange-BlankTag">#블랭크주황</div>
+                        <div className="MCblue-Tag">#확인용블루</div>
+                        <div className="MCblue-BlankTag">#블랭크블루</div>
+                        <div className="MCgreen-Tag">#확인용그린</div>
+                        <div className="MCgreen-BlankTag">#블랭크그린</div>
                         {/* 여기에 태그 이어서 들어감 */}
                     </div>
                 </div>
@@ -133,7 +138,6 @@ class MyCards extends React.Component<{}, any> {
         </div>
 
         <div className="MCcards">
-            <div className="MCrow2">
                 <div className="MCrowText2">
                     <div>받은 카드</div>
                     <div className="MCsmall2" onClick={this.handleClickCardDetail}>자세히 보기 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div> 
@@ -143,50 +147,32 @@ class MyCards extends React.Component<{}, any> {
                         ? this.state.cards.slice(0, 5).map((card: CardFront) => 
                             this.showCard(card)) 
                         : ''}
+                        <div className="scroll-container">
+                            <div className="card">
+                                <img className="MCeachCard" src="../img/newwhite.png"/>
+                                <div className="user-text">이름1</div>
+                            </div>
+                            <div className="card">
+                                <img className="MCeachCard" src="../img/newwhite.png"/>
+                                <div className="user-text">이름1</div>    
+                            </div>
+                            <div className="card">
+                                <img className="MCeachCard" src="../img/newwhite.png"/>
+                                <div className="user-text">이름1</div>    
+                            </div>
+                            <div className="card">
+                                <img className="MCeachCard" src="../img/newwhite.png"/>
+                                <div className="user-text">이름1</div>    
+                            </div>
+                            <div className="card">
+                                <img className="MCeachCard" src="../img/newwhite.png"/>
+                                <div className="user-text">이름1</div>    
+                            </div>
+                        </div>
 
-                {/* <img className="user-wrap" src="../img/tag_crazy.png"/>
-                <img className="user-wrap" src="../img/tag_crazy.png"/> */}
-                    {/* <div className="MCrowCards"> */}
-                        <div className="user-wrap">
-                            {/* <div className="user-image">  */}
-                                <img className="user-image"src="../img/newwhite.png"/>
-                            {/* </div> */}
-                            <div className="user-text">이름1
-                                {/* <div>이름1</div> */}
-                            </div>
-                        </div>
-                        <div className="user-wrap">
-                            <img className="user-image"src="../img/newwhite.png"/>
-                            <div className="user-text"> 이름2</div>
-                        </div>
-                        <div className="user-wrap">
-                            <img className="user-image"src="../img/newwhite.png"/>
-                            <div className="user-text"> 이름2</div>
-                        </div>
-                        {/* <div className="user-wrap">
-                            <div className="user-image"> 
-                                <img src="../img/newwhite.png"/>
-                            </div>
-                            <div className="user-text">
-                                <div>이름1</div>
-                            </div>
-                        </div>
-                        <div className="user-wrap">
-                            <div className="user-image"> 
-                                <img src="../img/newwhite.png"/>
-                            </div>
-                            <div className="user-text">
-                                <div>이름1</div>
-                            </div>
-                        </div> */}
-                    {/* </div> */}
-                    
-                    {/* <img className="MCeachCard" src="../img/pink.png"/>
-                    <div>이름2</div>
-                    <img className="MCeachCard" src="../img/newwhite.png"/>
-                    <div>이름3</div> */}
+
+                        
                 </div>
-            </div>
             
         </div>
 

@@ -49,6 +49,7 @@
         src : url('../font/NotoSansKR-Medium.otf');
         font-weight: 500;
     }
+    @media only screen and (min-device-width : 320px) and (max-device-width : 490px) {
      .TGmain {
         box-sizing: border-box;
         display: flex;
@@ -96,12 +97,20 @@
         flex:6;
         width: 100%;
         flex-direction: column;
+        overflow: auto;
+        justify-content: space-between;
+        -ms-overflow-style:none; /* IE and Edge */
+        scrollbar-width:none; /* Firefox */
+ 
         /* padding:2%; */
+    }
+    .TGtags::-webkit-scrollbar {
+        display:none;/* Chrome , Safari , Opera */
     }
     .TGrow{
         display: flex;
         flex-direction: column;
-        margin-bottom: 15%;
+        margin-bottom: 8%;
     }
     .TGrowText{
         display: flex;
@@ -112,26 +121,39 @@
         font-size: 17px;
         color:white;
     }
+    /* .TGrowTotal{
+        display: flex;
+        flex-direction: column;
+    } */
     .TGrowTag{
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
+        /* justify-content: space-around; */
+        margin-bottom: 5%;
+        flex-wrap: wrap;
     }
-  
+    .TGrowTag_temp{
+        display: flex;
+        flex-direction: row;
+        /* justify-content: space-around; */
+        margin-bottom: 5%;
+        flex-wrap: wrap;
+    }
     .TGpink-BlankTag{
         display:flex;
         font-size: 13px;
-        font-family: 'GmarketSansBold';
+        font-family: 'GmarketSansMedium';
         border-width: 1px;
         color:rgba(221, 123, 231, 1);
         border-style: solid;
         border-color: rgba(221, 123, 231, 1);
         border-radius: 15px 15px;
-        width:45%;
-        height:100%;
+        width:40%;
+        height:30px;
         justify-content: center;
         align-items: center;
         margin-bottom : 4%;
+        margin-left: 6%;
     }
     .TGgreen-BlankTag{
         display:flex;
@@ -142,11 +164,12 @@
         border-style: solid;
         border-color: rgba(35, 233, 180, 1);
         border-radius: 15px 15px;
-        width:45%;
-        height:100%;
+        width:40%;
+        height:30px;
         justify-content: center;
         align-items: center;
         margin-bottom : 4%;
+        margin-left:6%;
     }
     .TGblue-BlankTag{
         display:flex;
@@ -157,11 +180,12 @@
         border-style: solid;
         border-color:rgba(145, 215, 224, 1);
         border-radius: 15px 15px;
-        width:45%;
-        height:100%;
+        width:40%;
+        height:30px;
         justify-content: center;
         align-items: center;
         margin-bottom : 4%;
+        margin-left: 6%;
     }
     .TGblue-Tag{
         display:flex;
@@ -172,11 +196,12 @@
         /* border-style: solid; */
         background-color:rgba(145, 215, 224, 1);
         border-radius: 15px 15px;
-        width:45%;
-        height:100%;
+        width:40%;
+        height:30px;
         justify-content: center;
         align-items: center;
         margin-bottom : 4%;
+        margin-left: 6%;
     }
     .TGgreen-Tag{
         display:flex;
@@ -186,11 +211,12 @@
         color:black;
         background-color:rgba(35, 233, 180, 1);
         border-radius: 15px 15px;
-        width:45%;
-        height:100%;
+        width:40%;
+        height:30px;
         justify-content: center;
         align-items: center;
         margin-bottom : 4%;
+        margin-left: 6%;
     }
     .TGorange-BlankTag{
         display:flex;
@@ -201,11 +227,12 @@
         border-style: solid;
         border-color:rgba(255, 172, 75, 1);
         border-radius: 15px 15px;
-        width:45%;
-        height:100%;
+        width:40%;
+        height:30px;
         justify-content: center;
         align-items: center;
         margin-bottom : 4%;
+        margin-left: 6%;
     }
     .TGorange-Tag{
         display:flex;
@@ -215,11 +242,12 @@
         color:black;
         background-color:rgba(255, 172, 75, 1);
         border-radius: 15px 15px;
-        width:45%;
-        height:100%;
+        width:40%;
+        height:30px;
         justify-content: center;
         align-items: center;
         margin-bottom : 4%;
+        margin-left: 6%;
     }
     .TGpink-Tag{
         display:flex;
@@ -229,11 +257,12 @@
         color:black;
         background-color:rgba(221, 123, 231, 1);
         border-radius: 15px 15px;
-        width:45%;
-        height:100%;
+        width:40%;
+        height:30px;
         justify-content: center;
         align-items: center;
         margin-bottom : 4%;
+        margin-left: 6%;
     }
     .TGBlankTag{
         display:flex;
@@ -245,11 +274,13 @@
         border-color:transparent;
         border-radius: 15px 15px;
         background-color: transparent;
-        width:45%;
-        height:100%;
+        width: 40%;
+        height:30px;
+        height:fit-content;
         justify-content: center;
         align-items: center;
         margin-bottom : 4%;
+        margin-left: 6%;
     }
     .TGdirection{
         display: flex;
@@ -293,4 +324,4 @@
         color:rgba(222, 210, 249, 1);
 
     }
-    
+}
