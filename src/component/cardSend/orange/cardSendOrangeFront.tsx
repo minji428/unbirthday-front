@@ -73,7 +73,7 @@ class cardSendOrangeFront extends React.Component<{}, any> {
                 </div>
                     
                 <div className='CS2writeBack' >
-                    <div onClick={this.cardSendOrangeBack}>뒷장 쓰기</div>
+                    <img src="../../img/bt_write_back.png" onClick={this.cardSendOrangeBack}/>
                     {this.state.showback ? <CardSendOrangeBack toPerson={this.state.toPerson} fromPerson={this.state.fromPerson}/>: ''}
                 </div>
         </div>

@@ -72,7 +72,7 @@ class cardSendYellowFront extends React.Component<{}, any> {
                 </div>
                     
                 <div className='CS2writeBack' >
-                    <div onClick={this.cardSendYelloBack}>뒷장 쓰기</div>
+                    <img src="../../img/bt_write_back.png" onClick={this.cardSendYelloBack}></img>
                     {this.state.showback ? <CardSendYellowBack toPerson={this.state.toPerson} fromPerson={this.state.fromPerson}/>: ''}
                 </div>
         </div>

@@ -248,9 +248,7 @@ class cardSendOrangeBack extends React.Component<cardSendOrangeFrontProps, any> 
                     </div>
                     
                     <div className='CS3complete'>
-                        <div onClick={this.completeCard}>
-                            완성하기
-                        </div>
+                        <img src="../../img/bt_complete.png" onClick={this.completeCard}/>
                         {/* 완성하기 누르면 uuid 생성하고 그 url로 이동시킨 다음에 Complete 보여주기 */}
                     </div>
                 </div>

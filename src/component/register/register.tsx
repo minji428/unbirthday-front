@@ -91,13 +91,13 @@ class Register extends React.Component<{}, any> {
                         <div className="RSnameAccept">
                             <input type={'checkbox'} className='RScheckBtn' onChange={this.checkPrivacy}/>
                             <div className="RSaccept">
-                                축하를 받은 날 내 이름이 홈화면에 뜨는 것에 동의해요
+                                Un-Birthday를 축하받은 내 이름이 홈화면에 뜨는 것에 동의해요
                             </div>
                         </div>
                     </div>
                 </div>
                 <div className="LoginBtn">
-                    <div className = "logins" onClick={this.handleClickJoin}>회원가입</div>
+                    <img src="../img/bt_register.png" onClick={this.handleClickJoin}/>
                 </div>
                     
     

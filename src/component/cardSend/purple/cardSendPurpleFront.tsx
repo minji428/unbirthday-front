@@ -61,7 +61,7 @@ class cardSendPurpleFront extends React.Component<{}, any> {
                 </div>
                     
                 <div className='CS2writeBack' >
-                    <div onClick={this.cardSendYelloBack}>뒷장 쓰기</div>
+                    <img src="../../img/bt_write_back.png" onClick={this.cardSendYelloBack}/>
                     {this.state.showback ? <CardSendPurpleBack/>: ''}
                 </div>
         </div>

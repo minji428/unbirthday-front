@@ -145,9 +145,7 @@ class cardSendYellowComplete extends React.Component<{}, any> {
                 <div className="CS4notice">앞면 보기  </div>
                 
                 <div className='CS4complete'>
-                    <div>
-                        링크 복사하기
-                    </div>
+                    <img src="../../img/bt_copy_link.png"/>
                 </div>
             </div>
 

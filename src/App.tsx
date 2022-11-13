@@ -32,7 +32,6 @@ import CardCompletePurple from './component/cardSend/purple/cardSendPurpleComple
 import CardCompleteOrange from './component/cardSend/orange/cardSendOrangeComplete'
 import Receiver1 from './component/receiver/receiver1';
 import Receiver2 from './component/receiver/receiver2';
-
 const App = () => {
 
   return(

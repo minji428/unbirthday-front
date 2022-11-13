@@ -134,6 +134,7 @@
             flex:1;
             flex-direction: row;
             justify-content: space-between;
+            height: 100%;
             margin-bottom: 2%;
         }
     
@@ -142,6 +143,7 @@
             /* flex:1; */
             flex-direction: row;
             justify-content: space-between;
+            height: 100%;
             margin-bottom: 2%;
         }
     

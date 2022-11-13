@@ -83,8 +83,7 @@ class login extends React.Component<{}, any> {
                 </div>
                 
                 <div className="LoginBtn">
-                    <div className = "logins" onClick={this.handleClickLogin}>로그인</div>
-
+                    <img src="../img/bt_login.png" onClick={this.handleClickLogin}/>
                 </div>
     
                 <div className="login">
