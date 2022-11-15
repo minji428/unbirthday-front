@@ -97,8 +97,7 @@
         position: fixed;
         overflow: hidden;
         padding-Top: 10%;
-        padding-left: 5%;
-        padding-right: 5%;
+
         top: 0;
         left: 0;
     }
@@ -109,19 +108,20 @@
         flex:0.7;
     }
     .TGmainText{
-        margin-top: 10%;
-        font-size:20pt;
+        /* margin-top: 10%; */
+        font-size:20px;
         font-family:'Noto Sans KR';
-        font-weight: 700;
+        font-weight: 500;
         color:white;
         text-align: center;
-        margin-bottom: 10%;
+        border-bottom: 1px solid;
+        padding-bottom: 5%;
     }
     .TGbackBtn{
         position:absolute;
         width:2.5%;
         margin-left:5%;
-        margin-top: 10%;
+        margin-top: 5%;
         margin-bottom: 10%;
     }
     .TGdirection{
@@ -136,8 +136,7 @@
         justify-content: space-between;
         -ms-overflow-style:none; /* IE and Edge */
         scrollbar-width:none; /* Firefox */
- 
-        /* padding:2%; */
+        padding:2%;
     }
     .TGtags::-webkit-scrollbar {
         display:none;/* Chrome , Safari , Opera */
