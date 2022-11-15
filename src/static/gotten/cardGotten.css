@@ -119,12 +119,14 @@
         font-weight: 500;
         color:white;
         text-align: center;
+        border-bottom: 1px solid;
+        padding-bottom: 5%;
     }
     .CGbackBtn{
         position:absolute;
         width:2.5%;
         margin-left:5%;
-        margin-top: 10%;
+        margin-top: 5%;
     }
     .CGdirection{
         flex:1.5;

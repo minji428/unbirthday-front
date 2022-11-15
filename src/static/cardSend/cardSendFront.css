@@ -207,19 +207,23 @@
         width:35%;
         height: 18%;
         flex-direction: column;
-        background-color: white;
-        border-color: rgba(0, 0, 0, 0.5);
-        border-radius: 5px 5px;
-        border-style:solid;
-        border-width: 0.01px;
-        padding-left: 5%;
-        padding-right: 5%;
+        justify-content: center;
+        margin-bottom: 2%;
+    }
+    .CS2nameBox input[type=text] {
+        display: flex;
+        flex-direction: column;
         text-align: left;
         justify-content: center;
         font-family: 'Noto Sans KR';
         font-size: 11pt;
         color: rgba(0, 0, 0, 0.5);
-        /* margin-bottom: 2%; */
+
+        height: 100%;
+        width: 100%;
+        border: 1px solid #e0e0e0;
+        padding:10%;
+        border-radius: 15px;/* 굴곡 주면 padding 값도 그에 상응하게 적용하는 것이 좋음 */
     }
 
     .CS2writeBack{
