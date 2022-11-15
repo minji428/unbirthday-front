@@ -86,24 +86,25 @@ class MyCards extends React.Component<{}, any> {
     }
 
     showCard = (card: CardFront) => {
-        let src = ""
+        let src = `../img/card_empty_${card.card_color}.png`
+        let color_from = `CGfrom-${card.card_color}`
+        let color_to = `hubd-${card.card_color}`
         
-        //색 하나 더 필요함
-        if(card.card_color === "white"){
-            src = "../img/newwhite.png"
-        } else if(card.card_color === "pink"){
-            src = "../img/pink.png"
-        } else if(card.card_color === "yellow"){
-            src = "../img/_.png"
-        }
         return (
-            <div className="user-wrap">
-                <img className="user-image" src={src} id={card.card_no}/>
-                <div className="user-text">{card.send}</div>
+            <div className="card">
+                <img className="MCeachCard" src={src} id={card.card_no}/>
+                <div className={color_to}>HAPPY<br></br>
+                UN-BIRTHDAY<br></br>
+                {card.send}!</div>
+                <div className={color_from}>From.{card.receive}</div>
             </div>
             )
     }
 
+    showTag = () => {
+        
+    }
+    
     render() {
         return(
             <div className= 'MCmain'>
@@ -143,11 +144,11 @@ class MyCards extends React.Component<{}, any> {
                     <div className="MCsmall2" onClick={this.handleClickCardDetail}>자세히 보기 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div> 
                 </div>
                 <div className="MCrowCard">
-                    {this.state.cards.length !== 0 
-                        ? this.state.cards.slice(0, 5).map((card: CardFront) => 
-                            this.showCard(card)) 
-                        : ''}
                         <div className="scroll-container">
+                            {this.state.cards.length !== 0 
+                            ? this.state.cards.slice(0, 5).map((card: CardFront) => this.showCard(card))
+                            : ''}
+                            {/* 
                             <div className="card">
                                 <img className="MCeachCard" src="../img/card_empty_white.png"/>
                                 <div className="hubd-white">HAPPY<br></br>
@@ -183,6 +184,7 @@ class MyCards extends React.Component<{}, any> {
                                 주연!</div>
                                 <div className="CGfrom-white">From.재현</div>
                             </div>
+                             */}
                         </div>
 
 
