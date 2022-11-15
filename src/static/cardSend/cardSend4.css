@@ -104,6 +104,7 @@
         padding-top:5%;
         padding-left: 3%;
         padding-right: 3%;
+        padding-bottom: 15%;
         top: 0;
         left: 0;
         align-items:center;
@@ -130,7 +131,7 @@
         /* background-color; */
     }
     .CS4mainText{
-        font-size:20px;
+        font-size:17px;
         font-family:'Noto Sans KR';
         font-weight: 500;
         margin-left:7%;

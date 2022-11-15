@@ -100,10 +100,11 @@
         position:relative;
         /* padding:15px; */
         position: fixed;
-        overflow: hidden;
+        /* overflow-x: scroll; */
         padding-top:5%;
         padding-left: 3%;
         padding-right: 3%;
+        padding-bottom: 15%;
         top: 0;
         left: 0;
         align-items:center;
@@ -127,7 +128,7 @@
         justify-content: center;
         align-items: center;
         vertical-align:text-top;
-        font-size:18px;
+        font-size:17px;
         font-family:'Noto Sans KR';
         font-weight: 500;
         margin-left:7%;
