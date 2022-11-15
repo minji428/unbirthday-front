@@ -88,25 +88,19 @@ class CardGotten extends React.Component<{}, any> {
     }
 
     showCard = (card: Card) => {
-        let src = ""
-
-        if(card.card_color === "white"){
-            src = "../img/newwhite.png"
-        } else if(card.card_color === "pink"){
-            src = "../img/pink.png"
-        } else if(card.card_color === "yellow"){
-            src = "../img/_.png"
-        }
+        let src = `../img/card_empty_${card.card_color}.png`
+        let color_from = `CGfrom-${card.card_color}`
+        let color_to = `hubd-${card.card_color}`
 
         return (
-            // <div className="CGrowCard">
-            //             <img className="CGeachCard" src={src} id={card.card_no} onClick={(e) => this.cardFront(e)}/>
-            //             <img className="CGeachCard" src={src}/>
-            // </div>
-            <div className="user-wrap">
-                <img className="user-image" src={src} id={card.card_no} onClick={(e) => this.cardFront(e)}/>
-                <div className="user-text">{card.send}</div>
+            <div className="CGcard">
+                <img className="CGeachCard" src={src} id={card.card_no} onClick={(e) => this.cardFront(e)}/>
+                <div className={color_to}>HAPPY<br></br>
+                    UN-BIRTHDAY<br></br>
+                    {card.send}!</div>
+                <div className={color_from}>From.{card.receive}</div>
             </div>
+        
         )
     }
 
@@ -127,16 +121,22 @@ class CardGotten extends React.Component<{}, any> {
 
     setAllCards = () => {
         let arr: any=[]
+        let arr_cards: any=[]
 
         Object.keys(this.state.cards).map(key=>{
+            //날짜
             arr.push(this.showRegDate(key))
-
+            
+            //카드
             this.state.cards[key].map((card: Card) =>{
-                arr.push(this.showCard(card))
+                arr_cards.push(this.showCard(card))
             })
+            arr.push(<div className="CGrowCard">{arr_cards}</div>)
+            
+            arr_cards=[]
         }) 
+
         return arr
-    
     }
 
     cardFront = (event: any) => {
