@@ -32,6 +32,7 @@ import CardCompletePurple from './component/cardSend/purple/cardSendPurpleComple
 import CardCompleteOrange from './component/cardSend/orange/cardSendOrangeComplete'
 import Receiver1 from './component/receiver/receiver1';
 import Receiver2 from './component/receiver/receiver2';
+import Receiver3 from './component/receiver/receiver3';
 const App = () => {
 
   return(
@@ -65,8 +66,9 @@ const App = () => {
           <Route path='/signInFin/signInFin1' element={<SignInFin1/>}></Route>
           <Route path='/signInFin/signInFin2' element={<SignInFin2/>}></Route>
           <Route path='/signInFin/signInFin3' element={<SignInFin3/>}></Route>
-          <Route path='/receiver/receiver1' element={<Receiver1/>}></Route>
-          <Route path='/receiver/receiver2' element={<Receiver2/>}></Route>
+          <Route path='/cardReceive/:pathVariable' element={<Receiver1/>}></Route>
+          {/* <Route path='/receiver/receiver2' element={<Receiver2/>}></Route>
+          <Route path='/receiver/receiver3' element={<Receiver3/>}></Route> */}
         </Routes>
       </BrowserRouter>
     </div>
