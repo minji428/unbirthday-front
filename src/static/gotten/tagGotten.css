@@ -63,27 +63,31 @@
     font-weight: normal;
     font-style: normal;
 }
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
 
-    @font-face {
+.notosanskr * { 
+ font-family: 'Noto Sans KR', sans-serif;
+}
+    /* @font-face {
         font-family: 'Noto Sans KR';
-        src : url('../font/NotoSansKR-Bold.otf');
+        src : url('../font/NotoSansKR-Bold.otf') format('otf');
         font-weight: 700;
     }
     @font-face {
         font-family: 'Noto Sans KR';
-        src : url('../font/NotoSansKR-Light.otf');
+        src : url('../font/NotoSansKR-Light.otf') format('otf');
         font-weight: 300;
     }
     @font-face {
         font-family: 'Noto Sans KR';
-        src : url('../font/NotoSansKR-Regular.otf');
+        src : url('../font/NotoSansKR-Regular.otf')format('otf');
         font-weight: 400;
     }
     @font-face {
         font-family: 'Noto Sans KR';
-        src : url('../font/NotoSansKR-Medium.otf');
+        src : url('../font/NotoSansKR-Medium.otf') format('otf');
         font-weight: 500;
-    }
+    } */
     @media only screen and (min-device-width : 320px) and (max-device-width : 490px) {
      .TGmain {
         box-sizing: border-box;
@@ -97,8 +101,7 @@
         position: fixed;
         overflow: hidden;
         padding-Top: 10%;
-        padding-left: 5%;
-        padding-right: 5%;
+
         top: 0;
         left: 0;
     }
@@ -109,19 +112,20 @@
         flex:0.7;
     }
     .TGmainText{
-        margin-top: 10%;
-        font-size:20pt;
+        /* margin-top: 10%; */
+        font-size:20px;
         font-family:'Noto Sans KR';
-        font-weight: 700;
+        font-weight: 500;
         color:white;
         text-align: center;
-        margin-bottom: 10%;
+        border-bottom: 1px solid;
+        padding-bottom: 5%;
     }
     .TGbackBtn{
         position:absolute;
         width:2.5%;
         margin-left:5%;
-        margin-top: 10%;
+        margin-top: 5%;
         margin-bottom: 10%;
     }
     .TGdirection{
@@ -136,8 +140,7 @@
         justify-content: space-between;
         -ms-overflow-style:none; /* IE and Edge */
         scrollbar-width:none; /* Firefox */
- 
-        /* padding:2%; */
+        padding:2%;
     }
     .TGtags::-webkit-scrollbar {
         display:none;/* Chrome , Safari , Opera */

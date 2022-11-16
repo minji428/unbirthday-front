@@ -63,28 +63,31 @@
     font-weight: normal;
     font-style: normal;
 }
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
 
-    @font-face {
+.notosanskr * { 
+ font-family: 'Noto Sans KR', sans-serif;
+}
+    /* @font-face {
         font-family: 'Noto Sans KR';
-        src : url('./font/NotoSansKR-Bold.otf');
+        src : url('../font/NotoSansKR-Bold.otf') format('otf');
         font-weight: 700;
     }
     @font-face {
         font-family: 'Noto Sans KR';
-        src : url('./font/NotoSansKR-Light.otf');
+        src : url('../font/NotoSansKR-Light.otf') format('otf');
         font-weight: 300;
     }
     @font-face {
         font-family: 'Noto Sans KR';
-        src : url('./font/NotoSansKR-Regular.otf');
+        src : url('../font/NotoSansKR-Regular.otf')format('otf');
         font-weight: 400;
     }
     @font-face {
         font-family: 'Noto Sans KR';
-        src : url('./font/NotoSansKR-Medium.otf');
+        src : url('../font/NotoSansKR-Medium.otf') format('otf');
         font-weight: 500;
-    }
-
+    } */
     .LoginMain {
         box-sizing: border-box;
         display: flex;
@@ -156,17 +159,42 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        color : black;
-        font-family: 'Noto Sans KR';
-        font-size: 12px;
-        border-radius:10px;
         width:95%;
         height:36px;
-        background-color:#ffffff;
-        border:1px solid #c5c5c5;
-        padding-left: 3;
+  
+        /* padding-left: ; */
         left:0px;
         margin-bottom:15px;
+    }
+    .Loginnumber input[type=text] {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        justify-content: center;
+        font-family: 'Noto Sans KR';
+        font-size: 12pt;
+        color: rgba(0, 0, 0, 0.5);
+
+        height: 36px;
+        width: 95%;
+        border: 1px solid #e0e0e0;
+        padding:3%;
+        border-radius: 10px;/* 굴곡 주면 padding 값도 그에 상응하게 적용하는 것이 좋음 */
+    }
+    .Loginnumber input[type=password] {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        justify-content: center;
+        font-family: 'Noto Sans KR';
+        font-size: 12pt;
+        color: rgba(0, 0, 0, 0.5);
+
+        height: 36px;
+        width: 95%;
+        border: 1px solid #e0e0e0;
+        padding:3%;
+        border-radius: 10px;/* 굴곡 주면 padding 값도 그에 상응하게 적용하는 것이 좋음 */
     }
     .LoginBtn{
         display: flex;

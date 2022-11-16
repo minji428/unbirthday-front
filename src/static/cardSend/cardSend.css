@@ -81,8 +81,12 @@
     font-weight: normal;
     font-style: normal;
 }
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
 
-    @font-face {
+.notosanskr * { 
+ font-family: 'Noto Sans KR', sans-serif;
+}
+    /* @font-face {
         font-family: 'Noto Sans KR';
         src : url('../font/NotoSansKR-Bold.otf') format('otf');
         font-weight: 700;
@@ -101,7 +105,7 @@
         font-family: 'Noto Sans KR';
         src : url('../font/NotoSansKR-Medium.otf') format('otf');
         font-weight: 500;
-    }
+    } */
     /* * [type="font"] {
         -webkit-appearance: none;   
     } */
@@ -124,6 +128,7 @@
         padding-top:5%;
         padding-left: 5%;
         padding-right: 5%;
+        padding-bottom: 15%;
         top: 0;
         left: 0;
         /* align-items: center; */
@@ -146,7 +151,7 @@
         text-align: center;
         justify-content:center;
         align-items: center;
-        font-size:20px;
+        font-size:18px;
         font-family:'Noto Sans KR' ;
         font-weight: 500;
         color:#ffffff;
@@ -160,6 +165,7 @@
         flex-direction: column;
         flex:5;
         margin-bottom: 5%;
+        overflow-y: scroll;
     }
     .CS1card{
         width: 48.5%;

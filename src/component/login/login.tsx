@@ -69,7 +69,7 @@ class login extends React.Component<{}, any> {
                         </div>
                         <div className="LogininfoText">비밀번호</div>
                         <div className="Loginnumber">
-                            <input type={'password'} name='pw' placeholder='아이디를 입력하세요.' onChange={this.getPassword}/>
+                            <input type={'password'} name='pw' placeholder='비밀번호를 입력하세요.' onChange={this.getPassword}/>
                         </div>
                         <div className="Loginfind">
                             <div>

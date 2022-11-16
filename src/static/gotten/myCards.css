@@ -63,27 +63,31 @@
     font-weight: normal;
     font-style: normal;
 }
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
 
-    @font-face {
+.notosanskr * { 
+ font-family: 'Noto Sans KR', sans-serif;
+}
+    /* @font-face {
         font-family: 'Noto Sans KR';
-        src : url('../font/NotoSansKR-Bold.otf');
+        src : url('../font/NotoSansKR-Bold.otf') format('otf');
         font-weight: 700;
     }
     @font-face {
         font-family: 'Noto Sans KR';
-        src : url('../font/NotoSansKR-Light.otf');
+        src : url('../font/NotoSansKR-Light.otf') format('otf');
         font-weight: 300;
     }
     @font-face {
         font-family: 'Noto Sans KR';
-        src : url('../font/NotoSansKR-Regular.otf');
+        src : url('../font/NotoSansKR-Regular.otf')format('otf');
         font-weight: 400;
     }
     @font-face {
         font-family: 'Noto Sans KR';
-        src : url('../font/NotoSansKR-Medium.otf');
+        src : url('../font/NotoSansKR-Medium.otf') format('otf');
         font-weight: 500;
-    }
+    } */
     @media only screen and (min-device-width : 320px) and (max-device-width : 490px) {
      .MCmain {
         box-sizing: border-box;
@@ -150,7 +154,7 @@
         margin-bottom: 3%;
         font-family: 'Noto Sans KR';
         font-weight: 500;
-        font-size:17pt;
+        font-size:15pt;
         color:white;
         margin-left: 5%;
     }
@@ -328,7 +332,7 @@
         margin-bottom: 5%;
         font-family: 'Noto Sans KR';
         font-weight: 500;
-        font-size: 17pt;
+        font-size: 15pt;
         color:white;
     }
 
