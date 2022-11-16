@@ -26,7 +26,7 @@ import GetCard3 from './component/getCard/getCard3';
 import SignInFin1 from './component/signInFin/signInFin1';
 import SignInFin2 from './component/signInFin/signInFin2';
 import SignInFin3 from './component/signInFin/signInFin3';
-import CardComplete from './component/cardSend/yellow/cardSendYellowComplete'
+import CardCompleteYellow from './component/cardSend/yellow/cardSendYellowComplete'
 import CardCompleteWhite from './component/cardSend/white/cardSendWhiteComplete'
 import CardCompletePurple from './component/cardSend/purple/cardSendPurpleComplete'
 import CardCompleteOrange from './component/cardSend/orange/cardSendOrangeComplete'
@@ -44,13 +44,12 @@ const App = () => {
           <Route path='/cardsend/cardsend4' element={<CardSend4/>}></Route>
           <Route path='/cardsend/yellow' element={<CardSendYellow/>}></Route>
           <Route path='/cardsend/orange' element={<CardSendOrange/>}></Route>
-          <Route path='/cardsend/orange/orange_complete' element={<CardCompleteOrange/>}></Route>
           <Route path='/cardsend/white' element={<CardSendWhite/>}></Route>
-          <Route path='/cardsend/white/white_complete' element={<CardCompleteWhite/>}></Route>
           <Route path='/cardsend/purple' element={<CardSendPurple/>}></Route>
-          <Route path='/cardsend/purple/purple_complete' element={<CardCompletePurple/>}></Route>
-          
-          <Route path='/cardsend/yellow/:pathvariable' element={<CardComplete/>}></Route>
+          <Route path='/cardsend/yellow/:pathvariable' element={<CardCompleteYellow/>}></Route>
+          <Route path='/cardsend/orange/:pathvariable' element={<CardCompleteOrange/>}></Route>
+          <Route path='/cardsend/white/:pathvariable' element={<CardCompleteWhite/>}></Route>
+          <Route path='/cardsend/purple/:pathvariable' element={<CardCompletePurple/>}></Route>
           <Route path='/login' element={<Login/>}></Route>
           <Route path='/register' element={<Register/>}></Route>
           <Route path='/gotten/taggotten' element={<TagGotten/>}></Route>
