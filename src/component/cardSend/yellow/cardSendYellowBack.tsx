@@ -4,7 +4,6 @@ import '../../../static/cardSend/cardSendBack.css';
 import * as service from '../../../service/service'
 
 import ChooseTagFirst from './chooseTag/chooseTag1';
-// import ChooseTagFirst from '../../chooseTag/chooseTag1'
 import ChooseTagSecond from './chooseTag/chooseTag2'
 import ChooseTagThird from './chooseTag/chooseTag3'
 import ChooseTagFourth from './chooseTag/chooseTag4'

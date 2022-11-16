@@ -8,17 +8,19 @@ class cardSendWhiteFront extends React.Component<{}, any> {
         super(props)
 
         this.state = {
-            showback : false
+            showback : false,
+            toPerson : "",
+            fromPerson : "",
         }
 
-        this.cardSendYelloBack = this.cardSendYelloBack.bind(this)
+        this.cardSendWhiteBack = this.cardSendWhiteBack.bind(this)
     }
 
     componentDidUpdate = (prevProps:any, prevState:any, snapshot:any) => {
 
     }
 
-    cardSendYelloBack(){
+    cardSendWhiteBack(){
         this.setState({
             showback : true
         })
@@ -26,6 +28,16 @@ class cardSendWhiteFront extends React.Component<{}, any> {
 
     backButton(){
         window.location.href = '/cardsend'
+    }
+
+    getToPerson=(event: any) => {
+        let getToPerson = event.target.value
+        this.setState({toPerson : getToPerson})
+    }
+
+    getFromPerson=(event: any) => {
+        let getFromPerson = event.target.value
+        this.setState({fromPerson : getFromPerson})
     }
 
     render() {
@@ -44,15 +56,15 @@ class cardSendWhiteFront extends React.Component<{}, any> {
                         
                     <div className="CS2insideYellow">
                         <div className="CS2write">
-                           <div className="CS2toPerson">
+                            <div className="CS2toPerson">
                                 <div className="CS2nameBox">
-                                    <input type="text" className="form-control" name="keyword" placeholder='받는 사람'/>
+                                    <input type={'text'} className="form-control" name="toPerson" placeholder='받는 사람' onChange={this.getToPerson}/>
                                 </div>
                                 <div className="CS2notice">3자 이내로 입력해주세요.</div>
                             </div>
                             <div className="CS2fromPerson">
                                 <div className="CS2nameBox">
-                                    보내는 사람
+                                <input type={'text'} className="form-control" name="fromPerson" placeholder='보내는 사람' onChange={this.getFromPerson}/>
                                 </div>
                             </div>
                         </div> 
@@ -61,8 +73,8 @@ class cardSendWhiteFront extends React.Component<{}, any> {
                 </div>
                     
                 <div className='CS2writeBack' >
-                    <img src="../../img/bt_write_back.png" onClick={this.cardSendYelloBack}/>
-                    {this.state.showback ? <CardSendWhiteBack/>: ''}
+                    <img src="../../img/bt_write_back.png" onClick={this.cardSendWhiteBack}/>
+                    {this.state.showback ? <CardSendWhiteBack toPerson={this.state.toPerson} fromPerson={this.state.fromPerson}/>: ''}
                 </div>
         </div>
 
