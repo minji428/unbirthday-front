@@ -121,7 +121,7 @@ class cardSendWhiteBack extends React.Component<cardSendYellowFrontProps, any> {
             thirdTag : this.state.thirdTag,
             fourthTag : this.state.fourthTag,
             memo : this.state.memo,
-            cardColor : "yellow",
+            cardColor : "white",
             sendId : sessionStorage.getItem("id")
         }
 
@@ -133,7 +133,7 @@ class cardSendWhiteBack extends React.Component<cardSendYellowFrontProps, any> {
         console.log(response.data)
         var cardUUID = response.data.data
         sessionStorage.setItem("cardUUID", cardUUID)
-        window.location.href = '/cardsend/yellow/' + cardUUID
+        window.location.href = '/cardsend/white/' + cardUUID
     }
 
     render() {
