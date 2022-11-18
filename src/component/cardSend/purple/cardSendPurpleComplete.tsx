@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import * as service from '../../../service/service'
 // import '../../../static/cardSend/cardSendComplete.css';
 // import '../../../static/cardSend/cardSend4.css';
 class cardSendComplete extends React.Component<{}, any> {
@@ -6,8 +7,38 @@ class cardSendComplete extends React.Component<{}, any> {
         super(props)
 
         this.state = {
-
+            cardNo: "",
+            cardColor : "",
+            firstTag : "",
+            secondTag : "",
+            thirdTag : "",
+            fourthTag : "",
+            memo : "",
+            receive : "",
+            send : ""
         }
+
+    }
+
+    componentDidMount = () => {
+        service.anyService("/card/info/"+sessionStorage.getItem("cardUUID"), "get", this.didMountCallback)
+    }
+
+    didMountCallback = (response: any) => {
+        console.log(response.data)
+        const data = response.data.data
+        console.log(data)
+        this.setState({
+            cardNo: data.card_no,
+            cardColor : data.card_color,
+            firstTag : data.first_tag,
+            secondTag : data.second_tag,
+            thirdTag : data.third_tag,
+            fourthTag : data.fourth_tag,
+            memo : data.memo,
+            receive : data.receive,
+            send : data.send
+        })
     }
 
     render() {
