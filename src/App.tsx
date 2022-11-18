@@ -4,6 +4,7 @@ import React from 'react';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import Main from './component/main/main'
+import CardSend from './component/cardSend/cardSend'
 import CardSendYellow from './component/cardSend/yellow/cardSendYellowFrame'
 import CardSendOrange from './component/cardSend/orange/cardSendOrangeFrame'
 import CardSendWhite from './component/cardSend/white/cardSendWhiteFrame'
@@ -33,6 +34,7 @@ const App = () => {
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Main/>}></Route>
+          <Route path='/cardsend' element={<CardSend/>}></Route>
           <Route path='/cardsend/yellow' element={<CardSendYellow/>}></Route>
           <Route path='/cardsend/orange' element={<CardSendOrange/>}></Route>
           <Route path='/cardsend/white' element={<CardSendWhite/>}></Route>
