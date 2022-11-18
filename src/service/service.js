@@ -1,12 +1,12 @@
 import axios from 'axios';
 import * as httpStatus from '../util/httpErrorStatusMsgUtil'
-let defaultUrl = 'http://localhost:8080'
+let defaultUrl = 'http://3.37.70.125:8080'
 
 export function anyService(requestURL, requestMethod, callbackFunc, param) {
     console.log(requestURL)
     var axiosBody = {
-        // url : defaultUrl + requestURL,
-        url : requestURL,
+        url : defaultUrl + requestURL,
+        // url : requestURL,
         method : requestMethod,
     }
 
