@@ -4,19 +4,12 @@ import React from 'react';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import Main from './component/main/main'
-import CardSend from './component/cardSend/cardSend'
 import CardSendYellow from './component/cardSend/yellow/cardSendYellowFrame'
 import CardSendOrange from './component/cardSend/orange/cardSendOrangeFrame'
 import CardSendWhite from './component/cardSend/white/cardSendWhiteFrame'
 import CardSendPurple from './component/cardSend/purple/cardSendPurpleFrame'
-import CardSend3 from './component/cardSend/cardSend3'
-import CardSend4 from './component/cardSend/cardSend4'
 import Login from './component/login/login'
 import Register from './component/register/register';
-import ChooseTag1 from './component/chooseTag/chooseTag1';
-import ChooseTag2 from './component/chooseTag/chooseTag2';
-import ChooseTag3 from './component/chooseTag/chooseTag3';
-import ChooseTag4 from './component/chooseTag/chooseTag4';
 import TagGotten from './component/myPage/tagGotten';
 import CardGotten from './component/myPage/cardGotten';
 import MyCards from './component/myPage/myCards';
@@ -40,8 +33,6 @@ const App = () => {
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Main/>}></Route>
-          <Route path='/cardsend' element={<CardSend/>}></Route>
-          <Route path='/cardsend/cardsend4' element={<CardSend4/>}></Route>
           <Route path='/cardsend/yellow' element={<CardSendYellow/>}></Route>
           <Route path='/cardsend/orange' element={<CardSendOrange/>}></Route>
           <Route path='/cardsend/white' element={<CardSendWhite/>}></Route>
@@ -55,10 +46,6 @@ const App = () => {
           <Route path='/gotten/taggotten' element={<TagGotten/>}></Route>
           <Route path='/gotten/cardgotten' element={<CardGotten/>}></Route>
           <Route path='/mypage' element={<MyCards/>}></Route>
-          {/* <Route path='/chooseTag/chooseTag1' element={<ChooseTag1/>}></Route>
-          <Route path='/chooseTag/chooseTag2' element={<ChooseTag2/>}></Route>
-          <Route path='/chooseTag/chooseTag3' element={<ChooseTag3/>}></Route>
-          <Route path='/chooseTag/chooseTag4' element={<ChooseTag4/>}></Route> */}
           {/* <Route path='/getCard/getCard1' element={<GetCard1/>}></Route>
           <Route path='/getCard/getCard2' element={<GetCard2/>}></Route>
           <Route path='/getCard/getCard3' element={<GetCard3/>}></Route> */}
