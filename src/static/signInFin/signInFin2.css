@@ -134,18 +134,10 @@
         display: flex;
         flex-direction: row;
         margin: 5%;
-        border-radius: 50% / 50%;
-        border-style: solid;
-        border-width: 3px;
-        border-color: rgba(100, 175, 251, 1);
         width: 40%;
         height: 25%;
         justify-content: center;
         align-items: center;
-        font-family: 'GmarketSansMedium';
-        font-size: 25px;
-        color:rgba(100, 175, 251, 1)
-
 
     }
     .SF2cakes{

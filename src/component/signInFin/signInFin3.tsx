@@ -27,7 +27,7 @@ class SignInFin3 extends React.Component<{}, any> {
                      가입 완료
                 </div>
                 <div className="SF3btn">
-                    카드 보내기
+                    <img src="../img/bt_send_card_blue.png"></img>
                 </div>
     
             </div>
