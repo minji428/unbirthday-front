@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
-import { Card } from '../myPage/cardGotten'
+import { Card } from '../../myPage/cardGotten'
 import Receiver2 from './receiver2';
 
-import '../../static/getCard/getCard3.css';
+import '../../../static/getCard/getCard3.css';
 {/* <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet"></link> */}
 
 interface receiver2Props {
@@ -45,11 +45,11 @@ class Receiver3 extends React.Component<receiver2Props, any> {
             </div>
                 <div className="GC3yelloBox">
                     <div>
-                        <img className="GC3card" src="../img/yellowBack.png"/>
+                        <img className="GC3card" src="../../img/orangeBack.png"/>
                     </div>
                         
                     <div className="GC3insideYellow" onClick={this.cardFront}>
-                        <div className='GC3personNameYellow'>
+                        <div className='GC3personNameOrange'>
                             HAPPY<br></br>
                             UN-BIRTHDAY {this.props.card.receive}!
                             {/* UN-BIRTHDAY 은빈! */}
@@ -62,7 +62,7 @@ class Receiver3 extends React.Component<receiver2Props, any> {
                                     </span>
                                  </div>
                                 <div className="GC3textSpace">
-                                    <div className='GC3subTextYellow'>
+                                    <div className='GC3subText'>
                                         {this.props.card.receive}(이)는
                                     </div>
                                 </div>
@@ -134,10 +134,10 @@ class Receiver3 extends React.Component<receiver2Props, any> {
                     
                     <div className="GC2btns">
                         <div className="GC2btn">
-                                <img src="../img/bt_reply.png"></img>
+                                <img src="../../img/bt_reply.png"></img>
                             </div>
                             <div className="GC2btn">
-                                <img src="../img/bt_save_card.png"></img>
+                                <img src="../../img/bt_save_card.png"></img>
                             </div>
                         </div>
                 </div>

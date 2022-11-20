@@ -47,7 +47,7 @@ class GetCard3 extends React.Component<getCard2Props, any> {
                     </div>
                         
                     <div className="GC3insideYellow" onClick={(e) => this.cardFront(e)}>
-                        <div className='GC3personName'>
+                        <div className='GC3personNameYellow'>
                             HAPPY<br></br>
                             UN-BIRTHDAY {this.props.card.receive}!
                         </div>

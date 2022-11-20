@@ -126,11 +126,12 @@
         text-align:center;
         align-items: center;
         vertical-align:text-top;
-        font-size:17px;
+        /* font-size:17px; */
         font-family:'Noto Sans KR';
         font-weight: 500;
         margin-left:7%;
         margin-right:7%;
+        margin-bottom:5%;
         color:#ffffff;
     }
 

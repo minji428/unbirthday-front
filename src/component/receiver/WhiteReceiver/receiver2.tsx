@@ -1,8 +1,8 @@
 
 import React, {Component} from 'react';
-import { Card } from '../myPage/cardGotten'
+import { Card } from '../../myPage/cardGotten'
 
-import '../../static/getCard/getCard2.css';
+import '../../../static/getCard/getCard2.css';
 import Receiver3 from './receiver3';
 
 {/* <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet"></link> */}
@@ -65,17 +65,17 @@ class Receiver2 extends React.Component<receiver1Props, any> {
             </div>
                 <div className="GC2yelloBox">
                     <div>
-                        <img className="GC2card" src="../img/cardNormal.png"/>
+                        <img className="GC2card" src="../../img/card_empty_white.png"/>
                     </div>
     
                     <div className="GC2insideYellow" onClick={this.cardBack}> 
-                        <div className='GC2personNameYellow'>
+                        <div className='GC2personNameWhite'>
                             HAPPY<br></br>
                             UN-BIRTHDAY<br></br>
                             {this.props.card.receive}
                             {/* 은빈! */}
                         </div>
-                        <div className="GC2subTextYellow">
+                        <div className="GC2subTextWhite">
                             From. {this.props.card.send}
                             {/* From. 수수 */}
                         </div>
@@ -84,10 +84,10 @@ class Receiver2 extends React.Component<receiver1Props, any> {
                     
                     <div className="GC2btns">
                         <div className="GC2btn">
-                            <img src="../img/bt_reply.png"></img>
+                            <img src="../../img/bt_reply.png"></img>
                         </div>
                         <div className="GC2btn">
-                            <img src="../img/bt_save_card.png"></img>
+                            <img src="../../img/bt_save_card.png"></img>
                         </div>
                     </div>
                 </div>

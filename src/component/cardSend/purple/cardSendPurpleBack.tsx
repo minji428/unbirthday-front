@@ -226,8 +226,10 @@ class cardSendPurpleBack extends React.Component<cardSendYellowFrontProps, any> 
                             </div> 
                         
                         
-                            <textarea name="memo" cols={10} rows={6} onChange={this.writeMemo} placeholder={"생일에나 할 수 있는 얘기를 오늘 해보네!\n낯간지럽지만 꼭 해주고 싶은 말이야.\n매일이 생일처럼 특별했으면 좋겠어.\n오늘도 해피 언버스데이 :) "}/>
-                            <div className="CS3notice">최소 1자 이상 입력해주세요.</div>
+                            <div className="CS3writeMessage">
+                                <textarea className="memo" cols={10} rows={5} onChange={this.writeMemo} placeholder={"생일에나 할 수 있는 얘기를 오늘 해보네!\n낯간지럽지만 꼭 해주고 싶은 말이야.\n매일이 생일처럼 특별했으면 좋겠어.\n오늘도 해피 언버스데이 :) "}/>
+                            </div>
+                                <div className="CS3notice">최소 1자 이상 입력해주세요.</div>
     
     
                         </div>

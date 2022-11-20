@@ -164,7 +164,7 @@
         padding:6%;
         text-align: center;
     }
-    .GC2personName{
+    .GC2personNameYellow{
         display: flex;
         flex:0.7;
         margin-top: 6%;
@@ -175,8 +175,37 @@
         color:rgba(201, 102, 211, 1);
         
     }
-  
-    .GC2subText{
+    .GC2personNameOrange{
+        display: flex;
+        flex:0.7;
+        margin-top: 6%;
+        font-family:'PyeongChangPeace-Bold';
+        font-size: 20pt;
+        font-weight:bold;
+        text-align: left;
+        color:rgba(213, 250, 82, 1);
+    }
+    .GC2personNamePurple{
+        display: flex;
+        flex:0.7;
+        margin-top: 6%;
+        font-family:'PyeongChangPeace-Bold';
+        font-size: 20pt;
+        font-weight:bold;
+        text-align: left;
+        color:rgba(250, 233, 82, 1);
+    }
+    .GC2personNameWhite{
+        display: flex;
+        flex:0.7;
+        margin-top: 6%;
+        font-family:'PyeongChangPeace-Bold';
+        font-size: 20pt;
+        font-weight:bold;
+        text-align: left;
+        color:black;
+    }
+    .GC2subTextYellow{
         display: flex;
         flex:0.7;
         flex-direction: row;
@@ -189,8 +218,42 @@
         margin-bottom: 5%;
     }
    
-    
-
+    .GC2subTextOrange{
+        display: flex;
+        flex:0.7;
+        flex-direction: row;
+        align-items:flex-end;
+        font-family:'PyeongChangPeace-Light';
+        font-size: 17pt;
+        font-weight:bold;
+        text-align: left;
+        color:rgba(213, 250, 82, 1);
+        margin-bottom: 5%;
+    }
+    .GC2subTextPurple{
+        display: flex;
+        flex:0.7;
+        flex-direction: row;
+        align-items:flex-end;
+        font-family:'PyeongChangPeace-Light';
+        font-size: 17pt;
+        font-weight:bold;
+        text-align: left;
+        color:rgba(250, 233, 82, 1);
+        margin-bottom: 5%;
+    }
+    .GC2subTextWhite{
+        display: flex;
+        flex:0.7;
+        flex-direction: row;
+        align-items:flex-end;
+        font-family:'PyeongChangPeace-Light';
+        font-size: 17pt;
+        font-weight:bold;
+        text-align: left;
+        color:black;
+        margin-bottom: 5%;
+    }
     .GC2btns{
         display: flex;
         flex-direction: column;

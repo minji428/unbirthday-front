@@ -1,17 +1,16 @@
 
 import React, {Component} from 'react';
-import { Card } from '../myPage/cardGotten'
-
-import '../../static/getCard/getCard2.css';
-import Receiver3 from './receiver3';
+import { Card } from '../../myPage/cardGotten'
+import '../../../static/getCard/getCard2.css';
+import GetCard3 from './getCard3';
 
 {/* <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet"></link> */}
 
-interface receiver1Props {
+interface cardGottenProps {
     card: Card,
 }
 
-class Receiver2 extends React.Component<receiver1Props, any> {
+class GetCard2 extends React.Component<cardGottenProps, any> {
     constructor(props: any){
         super(props)
 
@@ -19,7 +18,7 @@ class Receiver2 extends React.Component<receiver1Props, any> {
             isFlipped: false,
             card: {} as Card,
         }
-        
+
         this.setCard = this.setCard.bind(this)
         this.cardBack = this.cardBack.bind(this)
     }
@@ -48,9 +47,10 @@ class Receiver2 extends React.Component<receiver1Props, any> {
             }
         })
     }
+
     render() {
         if (this.state.isFlipped && this.state.card!=null) {
-            return <Receiver3 card={this.state.card} setCard={this.setCard}/>
+            return <GetCard3 card={this.state.card} setCard={this.setCard}/>
         }
         return(
             <div className= 'GC2main'>
@@ -58,37 +58,32 @@ class Receiver2 extends React.Component<receiver1Props, any> {
                 <div className='GC2mainText'>
                    짜잔~ 축하받은 걸 축하해요!
                 </div>
-                <div className="GC2subTexts">
-                    카드를 저장하면 내가 받은 #태그를 분석해줘요.
-                </div>
-                
+                {/* <div className="GC2subTexts">
+                    카드를 저장하면 내가 받은 #태그도 모아볼 수 있어요.
+                </div> */}
             </div>
                 <div className="GC2yelloBox">
                     <div>
-                        <img className="GC2card" src="../img/cardNormal.png"/>
+                        <img className="GC2card" src="../../img/card_empty_purple.png"/>
                     </div>
     
-                    <div className="GC2insideYellow" onClick={this.cardBack}> 
-                        <div className='GC2personNameYellow'>
+                    <div className="GC2insideYellow" onClick={(e) => this.cardBack(e)}>
+                        <div className='GC2personNamePurple'>
                             HAPPY<br></br>
                             UN-BIRTHDAY<br></br>
                             {this.props.card.receive}
-                            {/* 은빈! */}
                         </div>
-                        <div className="GC2subTextYellow">
-                            From. {this.props.card.send}
-                            {/* From. 수수 */}
+                        <div className="GC2subTextPurple">
+                         From. {this.props.card.send}
                         </div>
                        </div>
                     </div>
                     
                     <div className="GC2btns">
                         <div className="GC2btn">
-                            <img src="../img/bt_reply.png"></img>
+                            <img src="../../img/bt_reply.png"></img>
                         </div>
-                        <div className="GC2btn">
-                            <img src="../img/bt_save_card.png"></img>
-                        </div>
+                        
                     </div>
                 </div>
     
@@ -96,4 +91,4 @@ class Receiver2 extends React.Component<receiver1Props, any> {
         )
     }
 }
-export default Receiver2;
+export default GetCard2;
