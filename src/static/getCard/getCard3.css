@@ -162,17 +162,44 @@
     padding:5%;
     text-align: center;
 }
-.GC3personName{
+.GC3personNameYellow{
     display: flex;
     flex:0.7;
     margin-top: 6%;
     font-family:'PyeongChangPeace-Bold';
-    font-size: 19pt;
+    font-size: 17pt;
     text-align: left;
     color:rgba(201, 102, 211, 1);
     
 }
+.GC3personNameOrange{
+    display: flex;
+    flex:0.7;
+    margin-top: 6%;
+    font-family:'PyeongChangPeace-Bold';
+    font-size: 17pt;
+    text-align: left;
+    color:rgba(213, 250, 82, 1);
+}
+.GC3personNamePurple{
+    display: flex;
+    flex:0.7;
+    margin-top: 6%;
+    font-family:'PyeongChangPeace-Bold';
+    font-size: 17pt;
+    text-align: left;
+    color:rgba(250, 233, 82, 1);
+}
 
+.GC3personNameWhite{
+    display: flex;
+    flex:0.7;
+    margin-top: 6%;
+    font-family:'PyeongChangPeace-Bold';
+    font-size: 17pt;
+    text-align: left;
+    color:black;
+}
 .GC3tagMessage{
     display: flex;
     flex-direction: column;

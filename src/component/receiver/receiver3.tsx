@@ -1,24 +1,23 @@
-import React, {Component, ReactPropTypes} from 'react';
+import React, {Component} from 'react';
 import { Card } from '../myPage/cardGotten'
+import Receiver2 from './receiver2';
 
 import '../../static/getCard/getCard3.css';
-import GetCard2 from './getCard2';
 {/* <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet"></link> */}
 
-//재사용할 수 있는 방법 찾아보기
-interface getCard2Props {
+interface receiver2Props {
     card: Card,
     setCard: (card:Card) => void,
 }
 
-class GetCard3 extends React.Component<getCard2Props, any> {
+class Receiver3 extends React.Component<receiver2Props, any> {
     constructor(props: any){
         super(props)
 
         this.state = {
             isFlipped: true,
         }
-        
+
         this.cardFront = this.cardFront.bind(this)
     }
 
@@ -31,14 +30,17 @@ class GetCard3 extends React.Component<getCard2Props, any> {
 
     render() {
         if (!this.state.isFlipped && this.props.card!=null) {
-            return <GetCard2 card={this.state.card}/>
+            return <Receiver2 card={this.state.card}/>
         }
-        
+
         return(
             <div className= 'GC3main'>
             <div className="GC3texts">
                 <div className='GC3mainText'>
                    짜잔~ 축하받은 걸 축하해요!
+                </div>
+                <div className="GC2subTexts">
+                    카드를 저장하면 내가 받은 #태그를 분석해줘요.
                 </div>
             </div>
                 <div className="GC3yelloBox">
@@ -46,10 +48,11 @@ class GetCard3 extends React.Component<getCard2Props, any> {
                         <img className="GC3card" src="../img/yellowBack.png"/>
                     </div>
                         
-                    <div className="GC3insideYellow" onClick={(e) => this.cardFront(e)}>
+                    <div className="GC3insideYellow" onClick={this.cardFront}>
                         <div className='GC3personNameYellow'>
                             HAPPY<br></br>
                             UN-BIRTHDAY {this.props.card.receive}!
+                            {/* UN-BIRTHDAY 은빈! */}
                         </div>
                         <div className="GC3tagMessage">
                             <div className="GC3temp">
@@ -59,8 +62,8 @@ class GetCard3 extends React.Component<getCard2Props, any> {
                                     </span>
                                  </div>
                                 <div className="GC3textSpace">
-                                    <div className='GC3subText'>
-                                    {this.props.card.receive}(이)는
+                                    <div className='GC3subTextYellow'>
+                                        {this.props.card.receive}(이)는
                                     </div>
                                 </div>
                             </div>
@@ -77,8 +80,9 @@ class GetCard3 extends React.Component<getCard2Props, any> {
                                         <div>{this.props.card.second_tag}
                                             
                                         </div>
-                                    </span>
-                                </div>
+                                        </span>
+    
+                                    </div>
                                     
                                     <div className="GC3textSpace">
                                         <div className='GC3subText'>
@@ -94,7 +98,7 @@ class GetCard3 extends React.Component<getCard2Props, any> {
                                     
                                     <div className="GC3textSpace">
                                         <div className='GC3subText'>
-                                        {this.props.card.receive}(이)의 </div>
+                                            {this.props.card.receive}(이)의 </div>
                                     </div>
                                     
                                     <div className="GC3tagSpace">
@@ -118,27 +122,28 @@ class GetCard3 extends React.Component<getCard2Props, any> {
     
                             </div> 
                              <div className="GC3writeMessage" >
-                                {/* 
-                                <div>생일에나 할 수 있는 얘기를 오늘 해보네! </div>
+                                {this.props.card.memo}
+                                {/* <div>생일에나 할 수 있는 얘기를 오늘 해보네! </div>
                                 <div>낯간지럽지만 꼭 해주고 싶은 말이야.</div> 
                                 <div>매일이 생일처럼 특별했으면 좋겠어.</div> 
-                                <div>오늘도 해피 언버스데이 :)  </div>           
-                                */}
-                                {this.props.card.memo}
+                                <div>오늘도 해피 언버스데이 :)  </div>           */}
                             </div>
     
                         </div>
                     </div>
                     
-                    <div className="GC3btns">
-                        <div className="GC3btn">
-                            <img src="../img/bt_reply.png"></img>
+                    <div className="GC2btns">
+                        <div className="GC2btn">
+                                <img src="../img/bt_reply.png"></img>
+                            </div>
+                            <div className="GC2btn">
+                                <img src="../img/bt_save_card.png"></img>
+                            </div>
                         </div>
-                    </div>
                 </div>
     
 
         )
     }
 }
-export default GetCard3;
+export default Receiver3;

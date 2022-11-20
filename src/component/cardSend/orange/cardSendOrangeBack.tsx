@@ -67,92 +67,94 @@ class cardSendOrangeBack extends React.Component<cardSendOrangeFrontProps, any> 
         window.location.href = '/cardsend/orange'
     }
 
-        // 첫번째 태그 선택하는 화면
-        chooseTagFirst(){
-            this.setState({
-                chooseFirstTag: true
-            })
+    // 첫번째 태그 선택하는 화면
+    chooseTagFirst(){
+        this.setState({
+            chooseFirstTag: true
+        })
+    }
+
+    // 두번째 태그 선택하는 화면
+    chooseTagSecond(){
+        this.setState({
+            chooseSecondTag: true
+        })
+    }
+
+    // 세번째 태그 선택하는 화면
+    chooseTagThird(){
+        this.setState({
+            chooseThirdTag: true
+        })
+    }
+
+    // 네번째 태그 선택하는 화면
+    chooseTagFourth(){
+        this.setState({
+            chooseFourthTag: true
+        })
+    }
+
+    // 첫번째 태그 선택 완료
+    clickFirst = (data: any) => {
+        this.setState({
+            firstTag : data,
+            chooseFirstTag : false
+        })
+    }
+
+    // 두번째 태그 선택 완료
+    clickSecond = (data: any) => {
+        this.setState({
+            secondTag : data,
+            chooseSecondTag : false
+        })
+    }
+
+    // 세번째 태그 선택 완료
+    clickThird = (data: any) => {
+        this.setState({
+            thirdTag : data,
+            chooseThirdTag : false
+        })
+    }
+
+    // 네번째 태그 선택 완료
+    clickFourth = (data: any) => {
+        this.setState({
+            fourthTag : data,
+            chooseFourthTag : false
+        })
+    }
+
+    writeMemo = (data: any) => {
+        this.setState({
+            memo : data.target.value
+        })
+    }
+
+    completeCard = async(e: any) => {
+        const param = {
+            send : this.props.fromPerson,
+            receive : this.props.toPerson,
+            firstTag : this.state.firstTag,
+            secondTag : this.state.secondTag,
+            thirdTag : this.state.thirdTag,
+            fourthTag : this.state.fourthTag,
+            memo : this.state.memo,
+            cardColor : "orange"
         }
-    
-        // 두번째 태그 선택하는 화면
-        chooseTagSecond(){
-            this.setState({
-                chooseSecondTag: true
-            })
-        }
-    
-        // 세번째 태그 선택하는 화면
-        chooseTagThird(){
-            this.setState({
-                chooseThirdTag: true
-            })
-        }
-    
-        // 네번째 태그 선택하는 화면
-        chooseTagFourth(){
-            this.setState({
-                chooseFourthTag: true
-            })
-        }
-    
-        // 첫번째 태그 선택 완료
-        clickFirst = (data: any) => {
-            this.setState({
-                firstTag : data,
-                chooseFirstTag : false
-            })
-        }
-    
-        // 두번째 태그 선택 완료
-        clickSecond = (data: any) => {
-            this.setState({
-                secondTag : data,
-                chooseSecondTag : false
-            })
-        }
-    
-        // 세번째 태그 선택 완료
-        clickThird = (data: any) => {
-            this.setState({
-                thirdTag : data,
-                chooseThirdTag : false
-            })
-        }
-    
-        // 네번째 태그 선택 완료
-        clickFourth = (data: any) => {
-            this.setState({
-                fourthTag : data,
-                chooseFourthTag : false
-            })
-        }
-    
-        writeMemo = (data: any) => {
-            this.setState({
-                memo : data.target.value
-            })
-        }
-    
-        completeCard = async(e: any) => {
-            const param = {
-                send : this.props.fromPerson,
-                receive : this.props.toPerson,
-                firstTag : this.state.firstTag,
-                secondTag : this.state.secondTag,
-                thirdTag : this.state.thirdTag,
-                fourthTag : this.state.fourthTag,
-                memo : this.state.memo,
-                cardColor : "orange"
-            }
-    
-            service.anyService("/card/send/complete", "post", this.handleCompleteCard, param)
-        }
-    
-        handleCompleteCard = (response: any) => {
-            console.log(response)
-            console.log(response.data)
-            window.location.href = '/cardsend/orange/{reponse.data.data}'
-        }
+
+        service.anyService("/card/send/complete", "post", this.handleCompleteCard, param)
+    }
+
+    handleCompleteCard = (response: any) => {
+        console.log(response)
+        console.log(response.data)
+        var cardUUID = response.data.data
+        sessionStorage.setItem("cardUUID", cardUUID)
+        window.location.href = '/cardsend/purple/' + cardUUID
+    }
 
     render() {
         return(
@@ -240,9 +242,10 @@ class cardSendOrangeBack extends React.Component<cardSendOrangeFrontProps, any> 
                             </div> 
                         
                         
-                            <textarea name="memo" cols={10} rows={6} onChange={this.writeMemo} placeholder={"생일에나 할 수 있는 얘기를 오늘 해보네!\n낯간지럽지만 꼭 해주고 싶은 말이야.\n매일이 생일처럼 특별했으면 좋겠어.\n오늘도 해피 언버스데이 :) "}/>
-                            <div className="CS3notice">최소 1자 이상 입력해주세요.</div>
-    
+                            <div className="CS3writeMessage">
+                                <textarea className="memo" cols={10} rows={5} onChange={this.writeMemo} placeholder={"생일에나 할 수 있는 얘기를 오늘 해보네!\n낯간지럽지만 꼭 해주고 싶은 말이야.\n매일이 생일처럼 특별했으면 좋겠어.\n오늘도 해피 언버스데이 :) "}/>
+                            </div>
+                                <div className="CS3notice">최소 1자 이상 입력해주세요.</div>
     
                         </div>
                     </div>

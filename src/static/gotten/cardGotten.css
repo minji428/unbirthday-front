@@ -191,7 +191,8 @@
         position:absolute;
         bottom:5%;
         text-align: right;
-        right:10%;
+        right:15%;
+        font-size:13px;
         font-family: 'GmarketSansMedium';
         
     }
@@ -221,7 +222,8 @@
         position:absolute;
         bottom:5%;
         text-align: right;
-        right:10%;
+        right:15%;
+        font-size:13px;
         color:rgba(250, 233, 82, 1);
         font-family: 'GmarketSansMedium';
         
@@ -231,7 +233,8 @@
         position:absolute;
         bottom:5%;
         text-align: right;
-        right:10%;
+        right:15%;
+        font-size:13px;
         font-family: 'GmarketSansMedium';
         color:rgba(201, 102, 211, 1);
         
@@ -251,7 +254,8 @@
         position:absolute;
         bottom:5%;
         text-align: right;
-        right:10%;
+        right:15%;
+        font-size:13px;
         font-family: 'GmarketSansMedium';
         color:rgba(213, 250, 82, 1);
         

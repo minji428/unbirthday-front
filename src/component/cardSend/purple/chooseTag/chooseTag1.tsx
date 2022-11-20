@@ -1,7 +1,11 @@
 import React, {Component} from 'react';
-import '../../static/chooseTag/chooseTag.css';
+import '../../../../static/chooseTag/chooseTag.css';
 
-class ChooseTag1 extends React.Component<{}, any> {
+interface cardSendYellowBackFrame{
+    clickFirst: any,
+}
+
+class ChooseTag1 extends React.Component<cardSendYellowBackFrame, any> {
     constructor(props: any){
         super(props)
 
@@ -16,6 +20,7 @@ class ChooseTag1 extends React.Component<{}, any> {
         this.setState({
             clickFirstTag : event.target.innerHTML
         })
+        this.props.clickFirst(event.target.innerHTML)
     }
 
     render() {
@@ -23,7 +28,9 @@ class ChooseTag1 extends React.Component<{}, any> {
             <div className= 'CTmain'>
             <div className="CTpart1"></div>
              <div className="CTwhiteBox">
-                <img className="CTxIcon" src="../img/xIcon.png"/>
+                <div className="CTxIcon">
+                    <img className="CTxIconBtn" src="../img/xIcon.png" onClick={(e) => this.clickTag(e)}/>
+                </div>
                 <div className="CTmainText">#태그 선택</div>
                 <div className="CTsubText">그 사람의 모습은 어떤가요?💬</div>
                 <div className="CTtags">

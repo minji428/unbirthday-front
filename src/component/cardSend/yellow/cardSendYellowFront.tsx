@@ -51,7 +51,7 @@ class cardSendYellowFront extends React.Component<{}, any> {
                 </div>
                 <div className="CS2yelloBox">
                     <div>
-                        <img src="../img/cardFront.png" className="CS2card"/>
+                        <img src="../img/cardFrontYellow.png" className="CS2card"/>
                     </div>
                         
                     <div className="CS2insideYellow">

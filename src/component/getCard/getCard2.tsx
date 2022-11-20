@@ -68,12 +68,12 @@ class GetCard2 extends React.Component<cardGottenProps, any> {
                     </div>
     
                     <div className="GC2insideYellow" onClick={(e) => this.cardBack(e)}>
-                        <div className='GC2personName'>
+                        <div className='GC2personNameYellow'>
                             HAPPY<br></br>
                             UN-BIRTHDAY<br></br>
                             {this.props.card.receive}
                         </div>
-                        <div className="GC2subText">
+                        <div className="GC2subTextYellow">
                          From. {this.props.card.send}
                         </div>
                        </div>

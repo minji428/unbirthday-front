@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import '../../static/chooseTag/chooseTag.css';
+import '../../../../static/chooseTag/chooseTag.css';
 
 interface cardSendYellowBackFrame{
     clickFourth: any,
@@ -27,8 +27,8 @@ class ChooseTag4 extends React.Component<cardSendYellowBackFrame, any> {
             <div className= 'CTmain'>
             <div className="CTpart1"></div>
              <div className="CTwhiteBox">
-                <div className="CTxIcon">
-                    <img className="CTxIconBtn" src="../img/xIcon.png"/>
+             <div className="CTxIcon">
+                    <img className="CTxIconBtn" src="../img/xIcon.png" onClick={(e) => this.clickTag(e)}/>
                 </div>
                 <div className="CTmainText">#태그 선택</div>
                 <div className="CTsubText">그 사람은 매사에 어떤 사람이라고 말해주고 싶나요?💬</div>

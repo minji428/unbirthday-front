@@ -1,7 +1,7 @@
 import React, {Component, ReactPropTypes} from 'react';
-import { Card } from '../myPage/cardGotten'
+import { Card } from '../../myPage/cardGotten'
 
-import '../../static/getCard/getCard3.css';
+import '../../../static/getCard/getCard3.css';
 import GetCard2 from './getCard2';
 {/* <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet"></link> */}
 
@@ -43,11 +43,11 @@ class GetCard3 extends React.Component<getCard2Props, any> {
             </div>
                 <div className="GC3yelloBox">
                     <div>
-                        <img className="GC3card" src="../img/yellowBack.png"/>
+                        <img className="GC3card" src="../../img/whiteBack.png"/>
                     </div>
                         
                     <div className="GC3insideYellow" onClick={(e) => this.cardFront(e)}>
-                        <div className='GC3personNameYellow'>
+                        <div className='GC3personNameWhite'>
                             HAPPY<br></br>
                             UN-BIRTHDAY {this.props.card.receive}!
                         </div>
@@ -132,7 +132,7 @@ class GetCard3 extends React.Component<getCard2Props, any> {
                     
                     <div className="GC3btns">
                         <div className="GC3btn">
-                            <img src="../img/bt_reply.png"></img>
+                            <img src="../../img/bt_reply.png"></img>
                         </div>
                     </div>
                 </div>
