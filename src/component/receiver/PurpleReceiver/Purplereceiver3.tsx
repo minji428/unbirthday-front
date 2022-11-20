@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import { Card } from '../../myPage/cardGotten'
-import Receiver2 from './receiver2';
+import Receiver2 from './Purplereceiver2';
 
 import '../../../static/getCard/getCard3.css';
 {/* <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet"></link> */}
@@ -10,7 +10,7 @@ interface receiver2Props {
     setCard: (card:Card) => void,
 }
 
-class Receiver3 extends React.Component<receiver2Props, any> {
+class PurpleReceiver3 extends React.Component<receiver2Props, any> {
     constructor(props: any){
         super(props)
 
@@ -45,11 +45,11 @@ class Receiver3 extends React.Component<receiver2Props, any> {
             </div>
                 <div className="GC3yelloBox">
                     <div>
-                        <img className="GC3card" src="../../img/whiteBack.png"/>
+                        <img className="GC3card" src="../../img/purpleBack.png"/>
                     </div>
                         
                     <div className="GC3insideYellow" onClick={this.cardFront}>
-                        <div className='GC3personNameWhite'>
+                        <div className='GC3personNamePurple'>
                             HAPPY<br></br>
                             UN-BIRTHDAY {this.props.card.receive}!
                             {/* UN-BIRTHDAY 은빈! */}
@@ -146,4 +146,4 @@ class Receiver3 extends React.Component<receiver2Props, any> {
         )
     }
 }
-export default Receiver3;
+export default PurpleReceiver3;

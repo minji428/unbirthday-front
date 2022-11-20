@@ -115,8 +115,12 @@ class main extends React.Component<{}, any> {
                 </div>
 
                 <div className="btns">
-                    <img src="../img/bt_send_card.png" onClick={this.cardSend}></img>
-                    <img src="../img/bt_mycards.png"></img>
+                    <div className="btn1">
+                        <img src="../img/bt_send_card.png" onClick={this.cardSend}></img>
+                    </div>
+                    <div className="btn2">
+                        <img src="../img/bt_mycards.png"onClick={this.cardSend}></img>
+                    </div>
                 </div>
             </div>
   
