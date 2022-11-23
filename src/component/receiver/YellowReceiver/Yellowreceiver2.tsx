@@ -1,17 +1,16 @@
-
 import React, {Component} from 'react';
-import { Card } from '../myPage/cardGotten'
+import { Card } from '../../myPage/cardGotten'
 
-import '../../static/getCard/getCard2.css';
-import Receiver3 from './receiver3';
+import '../../../static/getCard/getCard2.css';
+import YellowReceiver3 from './Yellowreceiver3';
 
 {/* <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet"></link> */}
 
-interface receiver1Props {
+export interface receiver1Props {
     card: Card,
 }
 
-class Receiver2 extends React.Component<receiver1Props, any> {
+class YellowReceiver2 extends React.Component<receiver1Props, any> {
     constructor(props: any){
         super(props)
 
@@ -50,7 +49,7 @@ class Receiver2 extends React.Component<receiver1Props, any> {
     }
     render() {
         if (this.state.isFlipped && this.state.card!=null) {
-            return <Receiver3 card={this.state.card} setCard={this.setCard}/>
+            return <YellowReceiver3 card={this.state.card} setCard={this.setCard}/>
         }
         return(
             <div className= 'GC2main'>
@@ -96,4 +95,4 @@ class Receiver2 extends React.Component<receiver1Props, any> {
         )
     }
 }
-export default Receiver2;
+export default YellowReceiver2;

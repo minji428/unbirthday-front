@@ -1,16 +1,16 @@
 import React, {Component} from 'react';
-import { Card } from '../myPage/cardGotten'
-import Receiver2 from './receiver2';
+import { Card } from '../../myPage/cardGotten'
+import YellowReceiver2 from './Yellowreceiver2';
 
-import '../../static/getCard/getCard3.css';
+import '../../../static/getCard/getCard3.css';
 {/* <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet"></link> */}
 
-interface receiver2Props {
+export interface receiver2Props {
     card: Card,
     setCard: (card:Card) => void,
 }
 
-class Receiver3 extends React.Component<receiver2Props, any> {
+class YellowReceiver3 extends React.Component<receiver2Props, any> {
     constructor(props: any){
         super(props)
 
@@ -30,7 +30,7 @@ class Receiver3 extends React.Component<receiver2Props, any> {
 
     render() {
         if (!this.state.isFlipped && this.props.card!=null) {
-            return <Receiver2 card={this.state.card}/>
+            return <YellowReceiver2 card={this.state.card}/>
         }
 
         return(
@@ -146,4 +146,4 @@ class Receiver3 extends React.Component<receiver2Props, any> {
         )
     }
 }
-export default Receiver3;
+export default YellowReceiver3;

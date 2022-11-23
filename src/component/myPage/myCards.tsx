@@ -12,13 +12,26 @@ interface CardFront {
     card_color: string,
 }
 
+export interface Tag {
+    tag: string,
+    num: number,
+}
+
+export interface TagGotten {
+    first_tag: Tag[],
+    second_tag: Tag[],
+    third_tag: Tag[],
+    fourth_tag: Tag[],
+}
+
+
 class MyCards extends React.Component<{}, any> {
     constructor(props: any){
         super(props)
 
         this.state = {
             cards: [] as CardFront[],
-            tags: [],
+            tags: {} as TagGotten,
         }
     }
 
@@ -34,7 +47,7 @@ class MyCards extends React.Component<{}, any> {
             const param = {
                 id: id,
             }
-            service.anyService("/mypage/tags", "get", this.getTagsCallBack, param)
+            service.anyService("/mypage/taggotten", "get", this.getTagsCallBack, param)
         } else {
             //id가 없으면
         }
@@ -46,7 +59,12 @@ class MyCards extends React.Component<{}, any> {
 
         if(rData.rtCode === "00" || rData.rtCode === "09") {
             this.setState({
-                tags: rData.data
+                tags: {
+                    first_tag: rData.data.first_tag,
+                    second_tag: rData.data.second_tag,
+                    third_tag: rData.data.third_tag,
+                    fourth_tag: rData.data.fourth_tag,
+                }
             })
         } else {
             alert(rData.rtMsg)
@@ -93,16 +111,29 @@ class MyCards extends React.Component<{}, any> {
         return (
             <div className="card">
                 <img className="MCeachCard" src={src} id={card.card_no}/>
-                <div className={color_to}>HAPPY<br></br>
-                UN-BIRTHDAY<br></br>
-                {card.send}!</div>
+                <div className={color_to}>
+                    HAPPY<br></br>
+                    UN-BIRTHDAY<br></br>
+                    {card.send}!
+                </div>
                 <div className={color_from}>From.{card.receive}</div>
             </div>
             )
     }
 
-    showTag = () => {
+    showTag = (index: number, tag: Tag) => {
+        let color=""
+
+        if(index === 0) color = "pink"
+        else if(index === 1) color = "blue"
+        else if(index === 2) color = "green"
+        else color = "orange"
+
+        tag.num > 1 ? color=`MC${color}-Tag` : color=`MC${color}-BlankTag`
         
+        return (
+            <div className={color}>{tag.tag}</div>
+        )
     }
     
     render() {
@@ -122,8 +153,16 @@ class MyCards extends React.Component<{}, any> {
                     <div className="MCsmall1" onClick={this.handleClickTagDetail}>자세히 보기</div>
                 </div>
                 <div className="MCrowTag">
-                    {/* {this.state.tags.length !== 0 ? this.state.tags.slice(0, 3).map((tag: String) => <div className="MCblue-Tag">#{tag}</div>) : ''} */}
                     <div className="MCrowTags">
+                        {this.state.tags.length !== 0 
+                            ? Object.keys(this.state.tags).map((key, index) => this.showTag(index, {
+                                        tag: Object.keys(this.state.tags[key])[0], 
+                                        num:  Number(Object.values(this.state.tags[key])[0])
+                                    }
+                                ))
+                            : ''}
+                        
+                        {/* 
                         <div className="MCpink-Tag">#확인용핑크</div>
                         <div className="MCpink-BlankTag">#블랭크핑크</div>
                         <div className="MCorange-Tag">#확인용주황</div>
@@ -131,8 +170,10 @@ class MyCards extends React.Component<{}, any> {
                         <div className="MCblue-Tag">#확인용블루</div>
                         <div className="MCblue-BlankTag">#블랭크블루</div>
                         <div className="MCgreen-Tag">#확인용그린</div>
-                        <div className="MCgreen-BlankTag">#블랭크그린</div>
+                        <div className="MCgreen-BlankTag">#블랭크그린</div> 
+                        */}
                         {/* 여기에 태그 이어서 들어감 */}
+                        
                     </div>
                 </div>
             </div>

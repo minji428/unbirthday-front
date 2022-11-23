@@ -1,7 +1,10 @@
 
 import React, {Component} from 'react';
 import { Card } from '../myPage/cardGotten'
-import Receiver2 from '../receiver/receiver2';
+import Orangereceiver2 from './OrangeReceiver/Orangereceiver2';
+import Purplereceiver2 from './PurpleReceiver/Purplereceiver2';
+import Whitereceiver2 from './WhiteReceiver/Whitereceiver2';
+import Yellowreceiver2 from './YellowReceiver/Yellowreceiver2';
 
 import '../../static/getCard/getCard1.css';
 import * as service from '../../service/service'
@@ -32,10 +35,8 @@ class Receiver1 extends React.Component<{}, any> {
     }
 
     getCard = async() => {
-        const cardUrl=window.location.href.split('/').pop()
-        console.log(cardUrl)
         const param = {
-            cardUrl: cardUrl,
+            cardUrl: window.location.href.split('/').pop(),
         }
         service.anyService("/card/receive", "get", this.getCardsCallBack, param)
 
@@ -66,7 +67,15 @@ class Receiver1 extends React.Component<{}, any> {
     
     render() {
         if (this.state.isClicked && this.state.card!=null) {
-            return <Receiver2 card={this.state.card} />
+            if(this.state.card.card_color === 'orange') {
+                return <Orangereceiver2 card={this.state.card} />
+            } else if(this.state.card.card_color === 'purple') {
+                return <Purplereceiver2 card={this.state.card} />
+            } else if(this.state.card.card_color === 'white') {
+                return <Whitereceiver2 card={this.state.card} />
+            } else if(this.state.card.card_color === 'yellow') {
+                return <Yellowreceiver2 card={this.state.card} />
+            }
         }
 
         return(

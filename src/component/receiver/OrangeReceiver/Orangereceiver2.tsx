@@ -1,15 +1,12 @@
 
 import React, {Component} from 'react';
 import { Card } from '../../myPage/cardGotten'
+import { receiver1Props } from '../YellowReceiver/Yellowreceiver2';
 
 import '../../../static/getCard/getCard2.css';
-import Receiver3 from './Orangereceiver3';
+import OrangeReceiver3 from './Orangereceiver3';
 
 {/* <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet"></link> */}
-
-interface receiver1Props {
-    card: Card,
-}
 
 class OrangeReceiver2 extends React.Component<receiver1Props, any> {
     constructor(props: any){
@@ -50,7 +47,7 @@ class OrangeReceiver2 extends React.Component<receiver1Props, any> {
     }
     render() {
         if (this.state.isFlipped && this.state.card!=null) {
-            return <Receiver3 card={this.state.card} setCard={this.setCard}/>
+            return <OrangeReceiver3 card={this.state.card} setCard={this.setCard}/>
         }
         return(
             <div className= 'GC2main'>

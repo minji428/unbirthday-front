@@ -58,12 +58,6 @@ class CardGotten extends React.Component<{}, any> {
             this.setState({
                 cards: this.setCards(rData.data)
             })
-            Object.keys(this.state.cards).map((key) =>{
-                console.log(key)
-            })
-            Object.values(this.state.cards).map(key => {
-                console.log(key)
-            })
         } else {
             alert(rData.rtMsg)
         }
@@ -115,7 +109,7 @@ class CardGotten extends React.Component<{}, any> {
         const arr = date.split("-");
         
         return (
-                <div className="CGrowText">{arr[1]}월 {arr[2]}일 {dayOfWeek}요일</div>
+                <div className="CGrowText">{arr[0].slice(-2)}년 {arr[1]}월 {arr[2]}일 {dayOfWeek}요일</div>
         )
     }
 

@@ -1,26 +1,15 @@
 import React, {Component} from 'react';
+import {Tag, TagGotten} from './myCards'
 // import {StyleSheet} from 'react-native';
 import '../../static/gotten/tagGotten.css';
 import * as service from '../../service/service'
-
-type Tag = {
-    tag: string,
-    num: number,
-}
-
-type TagGotten = {
-    first_tag: Tag[],
-    second_tag: Tag[],
-    third_tag: Tag[],
-    fourth_tag: Tag[],
-}
 
 class tagGotten extends React.Component<{}, any> {
     constructor(props: any){
         super(props)
 
         this.state = {
-            tags: [] as TagGotten[],
+            tags: {} as TagGotten,
         }
     }
 
