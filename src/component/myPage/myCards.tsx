@@ -1,5 +1,6 @@
 
 import React, {Component} from 'react';
+import TagGotten from './tagGotten';
 import '../../static/gotten/myCards.css';
 import '../../static/gotten/tagGotten.css'
 import * as service from '../../service/service'
@@ -17,7 +18,7 @@ export interface Tag {
     num: number,
 }
 
-export interface TagGotten {
+export interface AllTags {
     first_tag: Tag[],
     second_tag: Tag[],
     third_tag: Tag[],
@@ -31,7 +32,8 @@ class MyCards extends React.Component<{}, any> {
 
         this.state = {
             cards: [] as CardFront[],
-            tags: {} as TagGotten,
+            tags: {} as AllTags,
+            isClicked: false,
         }
     }
 
@@ -100,7 +102,10 @@ class MyCards extends React.Component<{}, any> {
     }
 
     handleClickTagDetail = async(e: any) => {
-        window.location.href="/gotten/taggotten"
+        //window.location.href="/gotten/taggotten"
+        this.setState({
+            isClicked: !this.state.isClicked,
+        })
     }
 
     showCard = (card: CardFront) => {
@@ -137,6 +142,9 @@ class MyCards extends React.Component<{}, any> {
     }
     
     render() {
+        if(this.state.isClicked) {
+            return <TagGotten tags={this.state.tags}/>
+        }
         return(
             <div className= 'MCmain'>
         <div className="MCstatus">

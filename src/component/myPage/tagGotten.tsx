@@ -1,45 +1,20 @@
 import React, {Component} from 'react';
-import {Tag, TagGotten} from './myCards'
+import {Tag, AllTags} from './myCards'
+
 // import {StyleSheet} from 'react-native';
 import '../../static/gotten/tagGotten.css';
 import * as service from '../../service/service'
 
-class tagGotten extends React.Component<{}, any> {
+interface MyCardsProps {
+    tags: AllTags,
+}
+
+class TagGotten extends React.Component<MyCardsProps, any> {
     constructor(props: any){
         super(props)
 
         this.state = {
-            tags: {} as TagGotten,
-        }
-    }
-
-    componentDidMount() {
-        const id = sessionStorage.getItem("id")
-
-        this.getAllTags(id)
-    }
-
-    getAllTags = async(id: unknown) => {
-        if(typeof id === 'string') {
-            const param = {
-                id: id,
-            }
-            service.anyService("/mypage/taggotten", "get", this.getAllTagsCallBack, param)
-        } else {
-            //id가 없으면?
-        }
-    }
-
-    getAllTagsCallBack = (response: any) => {
-        console.log(response)
-        let rData = response.data
-
-        if(rData.rtCode === "00" || rData.rtCode === "09") {
-            this.setState({
-                tags: rData.data
-            })
-        } else {
-            alert(rData.rtMsg)
+            tags: this.props.tags
         }
     }
 
@@ -160,4 +135,4 @@ class tagGotten extends React.Component<{}, any> {
         
     }
 }
-export default tagGotten;
+export default TagGotten;
