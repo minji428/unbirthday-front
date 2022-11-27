@@ -26,7 +26,11 @@ class OrangeReceiver2 extends React.Component<receiver1Props, any> {
             isFlipped: false,
             card: card,
         })
-    }; 
+    }
+
+    cardsend = (event: any) => {
+        window.location.href = '/cardsend'
+    }
 
     cardBack = (event: any) => {
         this.setState({
@@ -81,7 +85,7 @@ class OrangeReceiver2 extends React.Component<receiver1Props, any> {
                     
                     <div className="GC2btns">
                         <div className="GC2btn">
-                            <img src="../../img/bt_reply.png"></img>
+                            <img src="../../img/bt_reply.png" onClick={this.cardsend}></img>
                         </div>
                         <div className="GC2btn">
                             <img src="../../img/bt_save_card.png"></img>

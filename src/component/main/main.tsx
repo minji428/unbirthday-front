@@ -17,6 +17,16 @@ class main extends React.Component<{}, any> {
         window.location.href = '/cardsend'
     }
 
+    mycards() {
+        console.log(sessionStorage.getItem("id"))
+        if(sessionStorage.getItem("id") === null) {
+            window.location.href = '/login'
+        } else {
+            window.location.href = '/mypage'
+        }
+        
+    }
+
     render() {
         return(
             <div className= 'HomeMain'>
@@ -119,7 +129,7 @@ class main extends React.Component<{}, any> {
                         <img src="../img/bt_send_card.png" onClick={this.cardSend}></img>
                     </div>
                     <div className="btn2">
-                        <img src="../img/bt_mycards.png"onClick={this.cardSend}></img>
+                        <img src="../img/bt_mycards.png" onClick={this.mycards}></img>
                     </div>
                 </div>
             </div>

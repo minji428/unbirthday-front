@@ -24,6 +24,10 @@ class WhiteReceiver3 extends React.Component<receiver2Props, any> {
         this.props.setCard(this.props.card); 
     }
 
+    cardsend = (event: any) => {
+        window.location.href = '/cardsend'
+    }
+
     render() {
         if (!this.state.isFlipped && this.props.card!=null) {
             return <Receiver2 card={this.state.card}/>
@@ -130,7 +134,7 @@ class WhiteReceiver3 extends React.Component<receiver2Props, any> {
                     
                     <div className="GC2btns">
                         <div className="GC2btn">
-                                <img src="../../img/bt_reply.png"></img>
+                                <img src="../../img/bt_reply.png" onClick={this.cardsend}></img>
                             </div>
                             <div className="GC2btn">
                                 <img src="../../img/bt_save_card.png"></img>

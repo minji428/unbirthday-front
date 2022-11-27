@@ -45,6 +45,11 @@ class PurpleReceiver2 extends React.Component<receiver1Props, any> {
             }
         })
     }
+    
+    cardsend = (event: any) => {
+        window.location.href = '/cardsend'
+    }
+    
     render() {
         if (this.state.isFlipped && this.state.card!=null) {
             return <PurpleReceiver3 card={this.state.card} setCard={this.setCard}/>
