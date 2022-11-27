@@ -51,7 +51,7 @@ const App = () => {
           <Route path='/cardsend/purple/:pathvariable' element={<CardCompletePurple/>}></Route>
           <Route path='/login' element={<Login/>}></Route>
           <Route path='/register' element={<Register/>}></Route>
-          <Route path='/gotten/taggotten' element={<TagGotten/>}></Route>
+          {/* <Route path='/gotten/taggotten' element={<TagGotten/>}></Route> */}
           <Route path='/gotten/cardgotten' element={<CardGotten/>}></Route>
           <Route path='/mypage' element={<MyCards/>}></Route>
           {/* <Route path='/chooseTag/chooseTag1' element={<ChooseTag1/>}></Route>
