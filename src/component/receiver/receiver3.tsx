@@ -1,6 +1,10 @@
 import React, {Component} from 'react';
 import { Card } from '../myPage/cardGotten'
-import Receiver2 from './receiver2';
+import Orangereceiver2 from './OrangeReceiver/Orangereceiver2';
+import Purplereceiver2 from './PurpleReceiver/Purplereceiver2';
+import Whitereceiver2 from './WhiteReceiver/Whitereceiver2';
+import Yellowreceiver2 from './YellowReceiver/Yellowreceiver2';
+
 
 import '../../static/getCard/getCard3.css';
 {/* <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet"></link> */}
@@ -30,8 +34,16 @@ class Receiver3 extends React.Component<receiver2Props, any> {
 
     render() {
         if (!this.state.isFlipped && this.props.card!=null) {
-            return <Receiver2 card={this.state.card}/>
-        }
+            
+            if(this.props.card.card_color === 'orange') {
+                return <Orangereceiver2 card={this.state.card} />
+            } else if(this.state.card.card_color === 'purple') {
+                return <Purplereceiver2 card={this.state.card} />
+            } else if(this.state.card.card_color === 'white') {
+                return <Whitereceiver2 card={this.state.card} />
+            } else if(this.state.card.card_color === 'yellow') {
+                return <Yellowreceiver2 card={this.state.card} />
+            }        }
 
         return(
             <div className= 'GC3main'>
