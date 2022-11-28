@@ -1,17 +1,11 @@
 import React, {Component, ReactPropTypes} from 'react';
-import { Card } from '../../myPage/cardGotten'
+import { getCard2Props } from '../YellowGetCard/getCard3';
 
 import '../../../static/getCard/getCard3.css';
 import GetCard2 from './getCard2';
 {/* <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet"></link> */}
 
-//재사용할 수 있는 방법 찾아보기
-interface getCard2Props {
-    card: Card,
-    setCard: (card:Card) => void,
-}
-
-class GetCard3 extends React.Component<getCard2Props, any> {
+class PurpleGetCard3 extends React.Component<getCard2Props, any> {
     constructor(props: any){
         super(props)
 
@@ -29,6 +23,10 @@ class GetCard3 extends React.Component<getCard2Props, any> {
         this.props.setCard(this.props.card); 
     }
 
+    cardsend = (event: any) => {
+        window.location.href = '/cardsend'
+    }
+    
     render() {
         if (!this.state.isFlipped && this.props.card!=null) {
             return <GetCard2 card={this.state.card}/>
@@ -132,7 +130,7 @@ class GetCard3 extends React.Component<getCard2Props, any> {
                     
                     <div className="GC3btns">
                         <div className="GC3btn">
-                            <img src="../../img/bt_reply.png"></img>
+                           <img src="../img/bt_reply.png" onClick={this.cardsend} />
                         </div>
                     </div>
                 </div>
@@ -141,4 +139,4 @@ class GetCard3 extends React.Component<getCard2Props, any> {
         )
     }
 }
-export default GetCard3;
+export default PurpleGetCard3;

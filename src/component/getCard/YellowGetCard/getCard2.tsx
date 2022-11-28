@@ -1,16 +1,16 @@
 
 import React, {Component} from 'react';
-import { Card } from '../myPage/cardGotten'
-import '../../static/getCard/getCard2.css';
+import { Card } from '../../myPage/cardGotten'
+import '../../../static/getCard/getCard2.css';
 import GetCard3 from './getCard3';
 
 {/* <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet"></link> */}
 
-interface cardGottenProps {
+export interface cardGottenProps {
     card: Card,
 }
 
-class GetCard2 extends React.Component<cardGottenProps, any> {
+class YellowGetCard2 extends React.Component<cardGottenProps, any> {
     constructor(props: any){
         super(props)
 
@@ -28,7 +28,7 @@ class GetCard2 extends React.Component<cardGottenProps, any> {
             isFlipped: false,
             card: card,
         })
-    }; 
+    } 
 
     cardBack = (event: any) => {
         this.setState({
@@ -48,6 +48,10 @@ class GetCard2 extends React.Component<cardGottenProps, any> {
         })
     }
 
+    cardsend = (event: any) => {
+        window.location.href = '/cardsend'
+    }
+    
     render() {
         if (this.state.isFlipped && this.state.card!=null) {
             return <GetCard3 card={this.state.card} setCard={this.setCard}/>
@@ -81,7 +85,7 @@ class GetCard2 extends React.Component<cardGottenProps, any> {
                     
                     <div className="GC2btns">
                         <div className="GC2btn">
-                            <img src="../img/bt_reply.png"></img>
+                            <img src="../img/bt_reply.png" onClick={this.cardsend} />
                         </div>
                         
                     </div>
@@ -91,4 +95,4 @@ class GetCard2 extends React.Component<cardGottenProps, any> {
         )
     }
 }
-export default GetCard2;
+export default YellowGetCard2;

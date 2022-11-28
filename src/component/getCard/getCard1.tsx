@@ -1,7 +1,10 @@
 
 import React, {Component} from 'react';
 import { Card } from '../myPage/cardGotten'
-import GetCard2 from '../getCard/getCard2';
+import YellowGetCard2 from './YellowGetCard/getCard2';
+import OrangeGetCard2 from './OrangeGetCard/getCard2';
+import WhiteGetCard2 from './WhiteGetCard/getCard2';
+import PurpleGetCard2 from './PurpleGetCard/getCard2';
 
 import '../../static/getCard/getCard1.css';
 import { anyService } from '../../service/service';
@@ -44,7 +47,15 @@ class GetCard1 extends React.Component<cardGottenProps, any> {
 
     render() {
         if (this.state.isClicked && this.props.card!=null) {
-            return <GetCard2 card={this.props.card} />
+            if(this.props.card.card_color === 'orange') {
+                return <OrangeGetCard2 card={this.props.card} />
+            } else if(this.props.card.card_color === 'purple') {
+                return <PurpleGetCard2 card={this.props.card} />
+            } else if(this.props.card.card_color === 'white') {
+                return <WhiteGetCard2 card={this.props.card} />
+            } else if(this.props.card.card_color === 'yellow') {
+                return <YellowGetCard2 card={this.props.card} />
+            }
         }
         return(
             <div className= 'GC1main' onClick={this.getCard2}>
