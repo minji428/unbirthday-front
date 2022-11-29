@@ -58,6 +58,7 @@ class YellowGetCard2 extends React.Component<cardGottenProps, any> {
         }
         return(
             <div className= 'GC2main'>
+            <img src="../img/back.png" className="GC2backBtn" />
             <div className="GC2texts">
                 <div className='GC2mainText'>
                    짜잔~ 축하받은 걸 축하해요!
@@ -68,7 +69,7 @@ class YellowGetCard2 extends React.Component<cardGottenProps, any> {
             </div>
                 <div className="GC2yelloBox">
                     <div>
-                        <img className="GC2card" src="../img/cardNormal.png"/>
+                        <img className="GC2card" src="../img/card_empty_yellow.png"/>
                     </div>
     
                     <div className="GC2insideYellow" onClick={(e) => this.cardBack(e)}>

@@ -2,6 +2,7 @@ import React, {Component, ReactPropTypes} from 'react';
 import { getCard2Props } from '../YellowGetCard/getCard3';
 
 import '../../../static/getCard/getCard3.css';
+import '../../../static/getCard/getCard2.css';
 import GetCard2 from './getCard2';
 {/* <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet"></link> */}
 
@@ -33,15 +34,17 @@ class WhiteGetCard3 extends React.Component<getCard2Props, any> {
         }
         
         return(
-            <div className= 'GC3main'>
-            <div className="GC3texts">
-                <div className='GC3mainText'>
+            <div className= 'GC2main'>
+               <img src="../img/back.png" className="GC3backBtn" /> 
+            <div className="GC2texts">
+                <div className='GC2mainText'>
                    짜잔~ 축하받은 걸 축하해요!
                 </div>
+
             </div>
-                <div className="GC3yelloBox">
+                <div className="GC2yelloBox">
                     <div>
-                        <img className="GC3card" src="../../img/whiteBack.png"/>
+                        <img className="GC2card" src="../../img/whiteBack.png"/>
                     </div>
                         
                     <div className="GC3insideYellow" onClick={(e) => this.cardFront(e)}>
@@ -128,8 +131,8 @@ class WhiteGetCard3 extends React.Component<getCard2Props, any> {
                         </div>
                     </div>
                     
-                    <div className="GC3btns">
-                        <div className="GC3btn">
+                    <div className="GC2btns">
+                        <div className="GC2btn">
                             <img src="../img/bt_reply.png" onClick={this.cardsend} />
                         </div>
                     </div>

@@ -95,9 +95,9 @@ class Receiver1 extends React.Component<{}, any> {
                     </div>
                 </div>
             </div>
-            {/* <div className="GC1btns">
-                <div className="GC1btn">뭐지?</div>
-            </div> */}
+            <div className="GC1btns">
+                <img className="GC1btn" src="../img/bt_what.png"></img>
+            </div>
            
         </div>
         )

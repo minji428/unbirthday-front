@@ -56,13 +56,12 @@ class WhiteGetCard2 extends React.Component<cardGottenProps, any> {
         }
         return(
             <div className= 'GC2main'>
+            <img src="../img/back.png" className="GC2backBtn" />
             <div className="GC2texts">
                 <div className='GC2mainText'>
                    짜잔~ 축하받은 걸 축하해요!
                 </div>
-                {/* <div className="GC2subTexts">
-                    카드를 저장하면 내가 받은 #태그도 모아볼 수 있어요.
-                </div> */}
+
             </div>
                 <div className="GC2yelloBox">
                     <div>

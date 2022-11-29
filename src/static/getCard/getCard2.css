@@ -1,9 +1,4 @@
-/* @font-face {
-    font-family: 'PyeongChangPeace-Light';
-    src: url('./font/PyeongChangPeace-Light.otf') format('woff2');
-    font-weight: 300;
-    font-style: normal;
-} */
+
 @font-face {
     font-family: 'PyeongChangPeace-Light';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Light.woff2') format('woff');
@@ -18,20 +13,6 @@
     font-style: normal;
 }
 
-/* @font-face {
-    font-family: 'PyeongChangPeace-Bold';
-    src: url('./font/PyeongChangPeace-Bold.otf') format('woff2');
-    font-weight: 300;
-    font-style: normal;
-} */
-
-/* @font-face {
-    font-family: 'GmarketSansLight';
-    src: url('./font/GmarketSansLight.otf') format('woff');
-    font-weight: normal;
-    font-style: normal;
-} */
-
 @font-face {
     font-family: 'GmarketSansLight';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
@@ -45,18 +26,7 @@
     font-weight: normal;
     font-style: normal;
 }
-    /* @font-face {
-        font-family: 'GmarketSansMedium';
-        src: url('./font/GmarketSansMedium.otf') format('woff');
-        font-weight: normal;
-        font-style: normal;
-    } */
-    /* @font-face {
-        font-family: 'GmarketSansBold';
-        src: url('./font/GmarketSansBold.otf') format('woff');
-        font-weight: normal;
-        font-style: normal;
-    } */
+
 @font-face {
     font-family: 'GmarketSansBold';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
@@ -69,26 +39,7 @@
 .notosanskr * { 
  font-family: 'Noto Sans KR', sans-serif;
 }
-    /* @font-face {
-        font-family: 'Noto Sans KR';
-        src : url('../font/NotoSansKR-Bold.otf') format('otf');
-        font-weight: 700;
-    }
-    @font-face {
-        font-family: 'Noto Sans KR';
-        src : url('../font/NotoSansKR-Light.otf') format('otf');
-        font-weight: 300;
-    }
-    @font-face {
-        font-family: 'Noto Sans KR';
-        src : url('../font/NotoSansKR-Regular.otf')format('otf');
-        font-weight: 400;
-    }
-    @font-face {
-        font-family: 'Noto Sans KR';
-        src : url('../font/NotoSansKR-Medium.otf') format('otf');
-        font-weight: 500;
-    } */
+
     .GC2main {
         box-sizing: border-box;
         display: flex;
@@ -109,7 +60,13 @@
         left: 0;
         align-items:center;
     }
-
+    .GC2backBtn{
+        position:absolute;
+        align-self: start;
+        width:2.5%;
+        margin-left:5%;
+        /* margin-top: 5%; */
+    }
     .GC2texts{
         display: flex;
         flex-direction: column;
@@ -135,6 +92,7 @@
         font-family:'Noto Sans KR';
         font-weight: 700;
         color:#ffffff;
+        margin-bottom: 3%;
     }
     .GC2yelloBox{
         display: flex;
@@ -206,7 +164,7 @@
         color:black;
     }
     .GC2subTextYellow{
-        display: flex;
+        /* display: flex;
         flex:0.7;
         flex-direction: row;
         align-items:flex-end;
@@ -215,11 +173,18 @@
         font-weight:bold;
         text-align: left;
         color:rgba(201, 102, 211, 1);
-        margin-bottom: 5%;
+        margin-bottom: 5%; */
+        position:absolute;
+        bottom:10%;
+        text-align: right;
+        right:15%;
+        font-size:17pt;
+        font-family: 'GmarketSansMedium';
+        color:rgba(201, 102, 211, 1);
     }
-   
+
     .GC2subTextOrange{
-        display: flex;
+        /* display: flex;
         flex:0.7;
         flex-direction: row;
         align-items:flex-end;
@@ -228,10 +193,18 @@
         font-weight:bold;
         text-align: left;
         color:rgba(213, 250, 82, 1);
-        margin-bottom: 5%;
+        margin-bottom: 5%; */
+
+        position:absolute;
+        bottom:10%;
+        text-align: right;
+        right:15%;
+        font-size:17pt;
+        color:rgba(213, 250, 82, 1);
+        font-family: 'GmarketSansMedium';
     }
     .GC2subTextPurple{
-        display: flex;
+        /* display: flex;
         flex:0.7;
         flex-direction: row;
         align-items:flex-end;
@@ -240,10 +213,18 @@
         font-weight:bold;
         text-align: left;
         color:rgba(250, 233, 82, 1);
-        margin-bottom: 5%;
+        margin-bottom: 5%; */
+
+        position:absolute;
+        bottom:10%;
+        text-align: right;
+        right:15%;
+        font-size:17pt;
+        color:rgba(250, 233, 82, 1);
+        font-family: 'GmarketSansMedium';
     }
     .GC2subTextWhite{
-        display: flex;
+        /* display: flex;
         flex:0.7;
         flex-direction: row;
         align-items:flex-end;
@@ -252,7 +233,15 @@
         font-weight:bold;
         text-align: left;
         color:black;
-        margin-bottom: 5%;
+        margin-bottom: 5%; */
+
+        position:absolute;
+        bottom:10%;
+        text-align: right;
+        right:15%;
+        font-size:17pt;
+        color:black;
+        font-family: 'GmarketSansMedium';
     }
     .GC2btns{
         display: flex;
@@ -263,7 +252,7 @@
         height: 30%;
         align-items: center;
         justify-content: center;
-        margin-top: -5%;
+        /* margin-top: -5%; */
         margin-bottom: 20%;
         
     }
