@@ -120,6 +120,14 @@
     justify-content: center;
     vertical-align:text-top;
 }
+
+.GC3backBtn{
+    position:absolute;
+    align-self: start;
+    width:2.5%;
+    margin-left:5%;
+    /* margin-top: 5%; */
+}
 .GC3mainText{
     font-size:19px;
     font-family:'Noto Sans KR';

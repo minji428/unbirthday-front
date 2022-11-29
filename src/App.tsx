@@ -21,8 +21,8 @@ import TagGotten from './component/myPage/tagGotten';
 import CardGotten from './component/myPage/cardGotten';
 import MyCards from './component/myPage/myCards';
 import GetCard1 from './component/getCard/getCard1';
-import GetCard2 from './component/getCard/getCard2';
-import GetCard3 from './component/getCard/getCard3';
+//import GetCard2 from './component/getCard/YellowGetCard/getCard2';
+//import GetCard3 from './component/getCard/YellowGetCard/getCard3';
 import SignInFin1 from './component/signInFin/signInFin1';
 import SignInFin2 from './component/signInFin/signInFin2';
 import SignInFin3 from './component/signInFin/signInFin3';
@@ -51,7 +51,7 @@ const App = () => {
           <Route path='/cardsend/purple/:pathvariable' element={<CardCompletePurple/>}></Route>
           <Route path='/login' element={<Login/>}></Route>
           <Route path='/register' element={<Register/>}></Route>
-          <Route path='/gotten/taggotten' element={<TagGotten/>}></Route>
+          {/* <Route path='/gotten/taggotten' element={<TagGotten/>}></Route> */}
           <Route path='/gotten/cardgotten' element={<CardGotten/>}></Route>
           <Route path='/mypage' element={<MyCards/>}></Route>
           {/* <Route path='/chooseTag/chooseTag1' element={<ChooseTag1/>}></Route>

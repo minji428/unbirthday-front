@@ -178,8 +178,6 @@ class CardGotten extends React.Component<{}, any> {
             <div className= 'CGmain'>
             <div className="CGstatus">
                 <img src="../img/back.png" className="CGbackBtn" onClick={this.backButton} />
-
-
                 <div className="CGmainText">
                     받은 언버스데이 카드
                 </div>

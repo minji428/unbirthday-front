@@ -3,6 +3,7 @@ import { Card } from '../../myPage/cardGotten'
 import { receiver2Props } from '../YellowReceiver/Yellowreceiver3';
 import Receiver2 from './Orangereceiver2';
 
+import '../../../static/getCard/getCard2.css';
 import '../../../static/getCard/getCard3.css';
 {/* <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet"></link> */}
 
@@ -24,24 +25,28 @@ class OrangeReceiver3 extends React.Component<receiver2Props, any> {
         this.props.setCard(this.props.card); 
     }
 
+    cardsend = (event: any) => {
+        window.location.href = '/cardsend'
+    }
+    
     render() {
         if (!this.state.isFlipped && this.props.card!=null) {
             return <Receiver2 card={this.state.card}/>
         }
 
         return(
-            <div className= 'GC3main'>
-            <div className="GC3texts">
-                <div className='GC3mainText'>
+            <div className= 'GC2main'>
+            <div className="GC2texts">
+                <div className='GC2mainText'>
                    짜잔~ 축하받은 걸 축하해요!
                 </div>
                 <div className="GC2subTexts">
                     카드를 저장하면 내가 받은 #태그를 분석해줘요.
                 </div>
             </div>
-                <div className="GC3yelloBox">
+                <div className="GC2yelloBox">
                     <div>
-                        <img className="GC3card" src="../../img/orangeBack.png"/>
+                        <img className="GC2card" src="../../img/orangeBack.png"/>
                     </div>
                         
                     <div className="GC3insideYellow" onClick={this.cardFront}>
@@ -130,12 +135,12 @@ class OrangeReceiver3 extends React.Component<receiver2Props, any> {
                     
                     <div className="GC2btns">
                         <div className="GC2btn">
-                                <img src="../../img/bt_reply.png"></img>
-                            </div>
-                            <div className="GC2btn">
-                                <img src="../../img/bt_save_card.png"></img>
-                            </div>
+                            <img src="../../img/bt_reply.png" onClick={this.cardsend} />
                         </div>
+                        <div className="GC2btn">
+                            <img src="../../img/bt_save_card.png"></img>
+                        </div>
+                    </div>
                 </div>
     
 
