@@ -2,6 +2,7 @@
 import React, {Component} from 'react';
 import { Card } from '../../myPage/cardGotten'
 import { receiver1Props } from '../YellowReceiver/Yellowreceiver2';
+import * as service from '../../../service/service'
 
 import '../../../static/getCard/getCard2.css';
 import WhiteReceiver3 from './Whitereceiver3';
@@ -46,9 +47,37 @@ class WhiteReceiver2 extends React.Component<receiver1Props, any> {
         })
     }
 
-    
     cardsend = (event: any) => {
         window.location.href = '/cardsend'
+    }
+
+    saveCard = (event: any) => {
+        //로그인된 상태라면 카드 저장
+        if(sessionStorage.getItem("id") !== null) {
+            const param = {
+                card_no: this.props.card.card_no,
+                receive_id : sessionStorage.getItem("id")
+            }
+            console.log(param)
+            service.anyService("/card", "patch", this.saveCardCallBack, param)
+        }
+
+        //로그인이 안 된 상태라면
+        //sessionStorage.setItem("card", this.props.card.card_no)
+        
+        window.location.href = '/login'
+    }
+
+    saveCardCallBack = (response: any) => {
+        console.log(response)
+        let rData = response.data
+
+        //이미 저장된 카드면?
+        if(rData.rtCode === "00") {
+            window.location.href = "/mypage"
+        } else {
+            alert(rData.rtMsg)
+        }
     }
 
     render() {
@@ -90,7 +119,7 @@ class WhiteReceiver2 extends React.Component<receiver1Props, any> {
                             <img src="../../img/bt_reply.png" onClick={this.cardsend}></img>
                         </div>
                         <div className="GC2btn">
-                            <img src="../../img/bt_save_card.png"></img>
+                            <img src="../../img/bt_save_card.png" onClick={this.saveCard} />
                         </div>
                     </div>
                 </div>

@@ -49,14 +49,18 @@ class OrangeGetCard2 extends React.Component<cardGottenProps, any> {
     cardsend = (event: any) => {
         window.location.href = '/cardsend'
     }
-    
+
+    toCardGotten = (event: any) => {
+        window.location.href = '/gotten/cardGotten'
+    }
+
     render() {
         if (this.state.isFlipped && this.state.card!=null) {
             return <GetCard3 card={this.state.card} setCard={this.setCard}/>
         }
         return(
             <div className= 'GC2main'>
-            <img src="../img/back.png" className="GC2backBtn" />
+            <img src="../img/back.png" className="GC2backBtn" onClick={this.toCardGotten} />
             <div className="GC2texts">
                 <div className='GC2mainText'>
                    짜잔~ 축하받은 걸 축하해요!
