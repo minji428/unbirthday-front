@@ -73,7 +73,7 @@ class YellowGetCard2 extends React.Component<cardGottenProps, any> {
             </div>
                 <div className="GC2yelloBox">
                     <div>
-                        <img className="GC2card" src="../img/card_empty_yellow.png"/>
+                        <img className="GC2card" src="../../img/card_empty_yellow.png"/>
                     </div>
     
                     <div className="GC2insideYellow" onClick={(e) => this.cardBack(e)}>
