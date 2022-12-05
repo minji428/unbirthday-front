@@ -125,6 +125,10 @@
         text-align:center;
     }
     .SF1mainText{
+        animation: fadeInUp 2s;
+        /* animation-delay: 1500ms; */
+        animation-fill-mode: none, forwards;
+        -webkit-backface-visibility: hidden;
         font-size:35px;
         font-family:'Noto Sans KR';
         font-weight: 700;
@@ -132,6 +136,7 @@
         margin-bottom: 3%;
     }
     .SF1subText{
+        animation: fadeInUp 4500ms;
         font-size:19px;
         font-family:'Noto Sans KR';
         font-weight: 400;
@@ -139,6 +144,9 @@
         margin-bottom: 5%;
     }
     .SF1cakes{
+        animation: slideUp 1500ms;
+        animation-timing-function: ease-in;
+        -webkit-backface-visibility: hidden;
         display: flex;
         /* flex-direction: row; */
         width: 100%;
@@ -174,4 +182,29 @@
         border-style: solid;
         border-width: 2px;
     }
-   
+@keyframes slideUp {
+    0%,
+    50% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+        
+    60%,
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+    }
+    70% {
+        opacity: 0;
+        transform: translate3d(0, 100%, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translateZ(0);
+    }
+}
