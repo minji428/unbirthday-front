@@ -1,6 +1,7 @@
 
 import React, {Component} from 'react';
 import { Card } from '../../myPage/cardGotten'
+import { Slide, toast, ToastContainer } from "react-toastify";
 import { receiver1Props } from '../YellowReceiver/Yellowreceiver2';
 import * as service from '../../../service/service'
 
@@ -63,9 +64,10 @@ class OrangeReceiver2 extends React.Component<receiver1Props, any> {
         }
 
         //로그인이 안 된 상태라면
-        //sessionStorage.setItem("card", this.props.card.card_no)
-        
-        window.location.href = '/login'
+        else {
+            sessionStorage.setItem("card", this.props.card.card_no)
+            window.location.href = '/login'
+        }
     }
 
     saveCardCallBack = (response: any) => {
@@ -74,10 +76,24 @@ class OrangeReceiver2 extends React.Component<receiver1Props, any> {
 
         //이미 저장된 카드면?
         if(rData.rtCode === "00") {
-            window.location.href = "/mypage"
+            if(sessionStorage.getItem('id') != null){
+                toast("💌 카드가 저장됐어요. 내 카드함으로 가보실래요?", {
+                    position: 'top-center',
+                    closeButton: false,
+                    className: 'SF3alerts-toast',
+                    draggablePercent: 60,
+                    draggableDirection: 'y',
+                    autoClose: false,
+                    transition: Slide,
+                })
+            }
         } else {
             alert(rData.rtMsg)
         }
+    }
+
+    toMyPage = (event: any) => {
+        window.location.href = "/mypage"
     }
 
     render() {
@@ -86,6 +102,10 @@ class OrangeReceiver2 extends React.Component<receiver1Props, any> {
         }
         return(
             <div className= 'GC2main'>
+                <ToastContainer 
+                    onClick={this.toMyPage}
+                    limit={1}
+                />
             <div className="GC2texts">
                 <div className='GC2mainText'>
                    짜잔~ 축하받은 걸 축하해요!

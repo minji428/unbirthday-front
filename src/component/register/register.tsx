@@ -2,6 +2,7 @@
 import React, {Component} from 'react';
 import '../../static/register.css';
 import * as service from '../../service/service'
+import SignInFin1 from '../signInFin/signInFin1';
 
 class Register extends React.Component<{}, any> {
     constructor(props: any){
@@ -10,7 +11,8 @@ class Register extends React.Component<{}, any> {
         this.state = {
             id : "",
             pw : "",
-            checkPrivacy : false
+            checkPrivacy : false,
+            isDone: false,
         }
 
         this.handleClickJoin = this.handleClickJoin.bind(this)
@@ -62,9 +64,11 @@ class Register extends React.Component<{}, any> {
     handleClickJoinCallback = (response: any) => {
         console.log(response)
         let rData = response.data
+        
         if(rData.rtCode === "00") {
-            alert('회원가입이 완료되었습니다.\n로그인을 진행해주세요.')
-            window.location.href = "/login"
+            this.setState({isDone: true})
+            //alert('회원가입이 완료되었습니다.\n로그인을 진행해주세요.')
+            //window.location.href = "/login"
         }
     }
 
@@ -73,6 +77,9 @@ class Register extends React.Component<{}, any> {
     }
     
     render() {
+        if(this.state.isDone){
+            return <SignInFin1 />
+        }
         return(
             <div className= 'RSmain'>
             <div className='RSmainText'>

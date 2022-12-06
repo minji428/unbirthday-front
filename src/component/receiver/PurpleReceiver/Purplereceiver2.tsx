@@ -63,9 +63,10 @@ class PurpleReceiver2 extends React.Component<receiver1Props, any> {
         }
 
         //로그인이 안 된 상태라면
-        //sessionStorage.setItem("card", this.props.card.card_no)
-        
-        window.location.href = '/login'
+        else {
+            sessionStorage.setItem("card", this.props.card.card_no)
+            window.location.href = '/login'
+        }           
     }
 
     saveCardCallBack = (response: any) => {
