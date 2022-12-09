@@ -78,17 +78,15 @@ class YellowReceiver2 extends React.Component<receiver1Props, any> {
 
         //이미 저장된 카드면?
         if(rData.rtCode === "00") {
-            if(sessionStorage.getItem('id') != null){
-                toast("💌 카드가 저장됐어요. 내 카드함으로 가보실래요?", {
-                    position: 'top-center',
-                    closeButton: false,
-                    className: 'SF3alerts-toast',
-                    draggablePercent: 60,
-                    draggableDirection: 'y',
-                    autoClose: false,
-                    transition: Slide,
-                })
-            }
+            toast("💌 카드가 저장됐어요. 내 카드함으로 가보실래요?", {
+                position: 'top-center',
+                closeButton: false,
+                className: 'SF3alerts-toast',
+                draggablePercent: 60,
+                draggableDirection: 'y',
+                autoClose: false,
+                transition: Slide,
+            })
         } else {
             alert(rData.rtMsg)
         }
