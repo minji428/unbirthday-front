@@ -32,15 +32,15 @@ class SignInFin1 extends React.Component<{}, any> {
 
     }
 
-    toMyPage = (event: any) => {
-        window.location.href = "/mypage"
+    toLogin = (event: any) => {
+        window.location.href = "/login"
     }
     
     render() {
         return(
             <div className= 'SF1main'>
                 <ToastContainer 
-                    onClick={this.toMyPage}
+                    onClick={this.toLogin}
                     limit={1}
                 />
             <div className="SF1colors">
