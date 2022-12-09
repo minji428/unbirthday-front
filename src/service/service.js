@@ -1,6 +1,6 @@
 import axios from 'axios';
 import * as httpStatus from '../util/httpErrorStatusMsgUtil'
-let defaultUrl = 'https://cors-anywhere.herokuapp.com/https://unbirthday-api.kr'
+let defaultUrl = 'https://unbirthday-api.kr'
 
 export function anyService(requestURL, requestMethod, callbackFunc, param) {
     console.log(requestURL)
