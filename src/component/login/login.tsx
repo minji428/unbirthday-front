@@ -1,6 +1,7 @@
 import React, {Component, useEffect} from 'react';
+import { Slide, toast, ToastContainer } from "react-toastify";
 import '../../static/login.css';
-import * as service from '../../service/service'
+import * as service from '../../service/service';
 
 class login extends React.Component<{}, any> {
     constructor(props: any){
@@ -42,19 +43,40 @@ class login extends React.Component<{}, any> {
         let rData = response.data
 
         if(rData.rtCode === "00") {
-
             sessionStorage.setItem('id', this.state.id);
             
-            window.location.href = "/mypage"
+            if(sessionStorage.getItem('card') !== null) {
+                
+                // toast("💌 카드가 저장됐어요. 내 카드함으로 가보실래요?", {
+                //         position: 'top-center',
+                //         closeButton: false,
+                //         className: 'SF3alerts-toast',
+                //         draggablePercent: 60,
+                //         draggableDirection: 'y',
+                //         autoClose: false,
+                //         transition: Slide,
+                //     })
+                window.location.href = `/cardreceive/${sessionStorage.getItem('card')}`
+                sessionStorage.removeItem('card')
+            } else{
+                window.location.href = "/mypage"
+            }
         } else {
             alert(rData.rtMsg)
         }
     }
 
+    toMyPage = (event: any) => {
+        window.location.href = "/mypage"
+    }
+
     render() {
-        console.log(this.state)
         return(
             <div className= 'LoginMain'>
+                {/* <ToastContainer 
+                    onClick={this.toMyPage}
+                    limit={1}
+                /> */}
             <text className='LoginmainText'>
                 오늘도<br/>
                 해피 언버스데이- 👋

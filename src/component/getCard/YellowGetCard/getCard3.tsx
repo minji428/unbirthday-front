@@ -34,6 +34,10 @@ class YellowGetCard3 extends React.Component<getCard2Props, any> {
         window.location.href = '/cardsend'
     }
     
+    toCardGotten = (event: any) => {
+        window.location.href = '/gotten/cardGotten'
+    }
+
     render() {
         if (!this.state.isFlipped && this.props.card!=null) {
             return <GetCard2 card={this.state.card}/>
@@ -41,7 +45,7 @@ class YellowGetCard3 extends React.Component<getCard2Props, any> {
         
         return(
             <div className= 'GC2main'>
-                   <img src="../img/back.png" className="GC3backBtn" />
+                <img src="../img/back.png" className="GC3backBtn" onClick={this.toCardGotten} />
             <div className="GC2texts">
                 <div className='GC2mainText'>
                    짜잔~ 축하받은 걸 축하해요!

@@ -23,6 +23,15 @@ class Receiver1 extends React.Component<{}, any> {
     }
 
     componentDidMount(): void {
+        //PC 유입 시
+        let details = navigator.userAgent
+        let regexp = /android|iphone|kindle|ipad/i
+        let isMobileDevice = regexp.test(details)
+        
+        if (!isMobileDevice) {
+            alert('모바일을 이용하면 더 편하게 카드를 주고받을 수 있어요 :)')
+        }
+
         this.getCard()
 
         let newTimerId = window.setInterval(() => {
@@ -38,7 +47,7 @@ class Receiver1 extends React.Component<{}, any> {
         const param = {
             cardUrl: window.location.href.split('/').pop(),
         }
-        service.anyService("/card/receive", "get", this.getCardsCallBack, param)
+        service.anyService("/card1/receive", "get", this.getCardsCallBack, param)
 
     }
     

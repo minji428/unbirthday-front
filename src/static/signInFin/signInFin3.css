@@ -104,6 +104,16 @@
         left: 0;
         align-items: center; 
     }
+    .SF3alerts-toast{
+        font-family: 'Noto Sans KR';
+        font-weight: 500;
+        background-color: rgba(222, 210, 249, 1);
+        border-radius: 10px;
+        padding: 4px 2px;
+        position: relative;
+        top: -1rem !important;
+
+    }
     .SF3alerts{
         display: flex;
         justify-content: center;

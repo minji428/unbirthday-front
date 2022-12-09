@@ -13,6 +13,17 @@ class main extends React.Component<{}, any> {
         this.cardSend = this.cardSend.bind(this)
     }
 
+    componentDidMount(): void {
+        //PC 유입 시
+        let details = navigator.userAgent
+        let regexp = /android|iphone|kindle|ipad/i
+        let isMobileDevice = regexp.test(details)
+        
+        if (!isMobileDevice) {
+            alert('모바일을 이용하면 더 편하게 카드를 주고받을 수 있어요 :)')
+        }
+    }
+
     cardSend(){
         window.location.href = '/cardsend'
     }

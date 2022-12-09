@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import { Card } from '../../myPage/cardGotten'
+import { Slide, toast, ToastContainer } from "react-toastify";
+import * as service from '../../../service/service'
 
 import '../../../static/getCard/getCard2.css';
 import YellowReceiver3 from './Yellowreceiver3';
@@ -51,6 +53,48 @@ class YellowReceiver2 extends React.Component<receiver1Props, any> {
     cardsend = (event: any) => {
         window.location.href = '/cardsend'
     }
+
+    saveCard = (event: any) => {
+        //로그인된 상태라면 카드 저장
+        if(sessionStorage.getItem("id") !== null) {
+            const param = {
+                card_no: this.props.card.card_no,
+                receive_id : sessionStorage.getItem("id")
+            }
+            service.anyService("/card", "patch", this.saveCardCallBack, param)
+        }
+
+        //로그인이 안 된 상태라면
+        else {
+            sessionStorage.setItem("card", this.props.card.card_no)
+            window.location.href = '/login'
+        }
+        
+    }
+
+    saveCardCallBack = (response: any) => {
+        console.log(response)
+        let rData = response.data
+
+        //이미 저장된 카드면?
+        if(rData.rtCode === "00") {
+            toast("💌 카드가 저장됐어요. 내 카드함으로 가보실래요?", {
+                position: 'top-center',
+                closeButton: false,
+                className: 'SF3alerts-toast',
+                draggablePercent: 60,
+                draggableDirection: 'y',
+                autoClose: false,
+                transition: Slide,
+            })
+        } else {
+            alert(rData.rtMsg)
+        }
+    }
+
+    toMyPage = (event: any) => {
+        window.location.href = "/mypage"
+    }
     
     render() {
         if (this.state.isFlipped && this.state.card!=null) {
@@ -58,6 +102,10 @@ class YellowReceiver2 extends React.Component<receiver1Props, any> {
         }
         return(
             <div className= 'GC2main'>
+                <ToastContainer 
+                    onClick={this.toMyPage}
+                    limit={1}
+                />
             <div className="GC2texts">
                 <div className='GC2mainText'>
                    짜잔~ 축하받은 걸 축하해요!
@@ -69,7 +117,7 @@ class YellowReceiver2 extends React.Component<receiver1Props, any> {
             </div>
                 <div className="GC2yelloBox">
                     <div>
-                        <img className="GC2card" src="../img/cardNormal.png"/>
+                        <img className="GC2card" src="../../img/card_empty_yellow.png"/>
                     </div>
     
                     <div className="GC2insideYellow" onClick={this.cardBack}> 
@@ -91,7 +139,7 @@ class YellowReceiver2 extends React.Component<receiver1Props, any> {
                             <img src="../../img/bt_reply.png" onClick={this.cardsend} />
                         </div>
                         <div className="GC2btn">
-                            <img src="../../img/bt_save_card.png"></img>
+                            <img src="../../img/bt_save_card.png" onClick={this.saveCard} />
                         </div>
                     </div>
                 </div>
