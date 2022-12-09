@@ -5,8 +5,9 @@ let defaultUrl = 'https://unbirthday-api.kr'
 export function anyService(requestURL, requestMethod, callbackFunc, param) {
     console.log(requestURL)
     var axiosBody = {
+        headers : {'Accept': '*/*'},
         url : defaultUrl + requestURL,
-        url : requestURL,
+        // url : requestURL,
         method : requestMethod,
     }
 
