@@ -59,8 +59,8 @@ class main extends React.Component<{}, any> {
                 </div>
                 <div className="names">
                     <div className="NameRow"> 
-                        <div>{this.state.receiverName[0]}</div>
-                        <div>{this.state.receiverName[1]}</div>
+                        <div>김윤재</div>
+                        <div>김채윤</div>
                     </div>
                     <div className="NameRow">
                         <div className="insideRow2">
