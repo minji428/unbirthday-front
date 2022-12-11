@@ -1,13 +1,15 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
 import '../../static/main.css';
+import * as service from '../../service/service';
+
 
 class main extends React.Component<{}, any> {
     constructor(props: any){
         super(props)
 
         this.state = {
-
+            receiverName : []
         }
 
         this.cardSend = this.cardSend.bind(this)
@@ -22,6 +24,17 @@ class main extends React.Component<{}, any> {
         if (!isMobileDevice) {
             alert('모바일을 이용하면 더 편하게 카드를 주고받을 수 있어요 :)')
         }
+
+        service.anyService("/main", "get", this.mainCallback)
+    }
+
+    mainCallback = (response: any) => {
+        console.log(response)
+        console.log(response.data)
+
+        this.setState({
+            receiverName : response.data
+        })
     }
 
     cardSend(){
@@ -46,8 +59,8 @@ class main extends React.Component<{}, any> {
                 </div>
                 <div className="names">
                     <div className="NameRow"> 
-                        <div>김채윤</div>
-                        <div>김윤채</div>
+                        <div>{this.state.receiverName[0]}</div>
+                        <div>{this.state.receiverName[1]}</div>
                     </div>
                     <div className="NameRow">
                         <div className="insideRow2">
