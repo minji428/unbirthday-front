@@ -162,7 +162,7 @@ class MyCards extends React.Component<{}, any> {
                 </div>
                 <div className="MCrowTag">
                     <div className="MCrowTags">
-                        {this.state.tags.length !== 0 
+                        {this.state.tags !== null
                             ? Object.keys(this.state.tags).map((key, index) => this.showTag(index, {
                                         tag: Object.keys(this.state.tags[key])[0], 
                                         num:  Number(Object.values(this.state.tags[key])[0])
@@ -194,7 +194,7 @@ class MyCards extends React.Component<{}, any> {
                 </div>
                 <div className="MCrowCard">
                         <div className="scroll-container">
-                            {this.state.cards.length !== 0 
+                            {this.state.cards !== null
                             ? this.state.cards.slice(0, 5).map((card: CardFront) => this.showCard(card))
                             : ''}
                             {/* 
