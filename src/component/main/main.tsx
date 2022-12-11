@@ -33,7 +33,7 @@ class main extends React.Component<{}, any> {
         console.log(response.data)
 
         this.setState({
-            receiverName : response.data
+            receiverName : response.data.data
         })
     }
 
