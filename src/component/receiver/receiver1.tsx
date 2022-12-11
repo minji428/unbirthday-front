@@ -47,7 +47,7 @@ class Receiver1 extends React.Component<{}, any> {
         const param = {
             cardUrl: window.location.href.split('/').pop(),
         }
-        service.anyService("/card1/receive", "get", this.getCardsCallBack, param)
+        service.anyService("/card/receive", "get", this.getCardsCallBack, param)
 
     }
     
