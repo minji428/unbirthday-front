@@ -113,19 +113,29 @@ class cardSendPurpleBack extends React.Component<cardSendYellowFrontProps, any> 
     }
 
     completeCard = async(e: any) => {
-        const param = {
-            send : this.props.fromPerson,
-            receive : this.props.toPerson,
-            firstTag : this.state.firstTag,
-            secondTag : this.state.secondTag,
-            thirdTag : this.state.thirdTag,
-            fourthTag : this.state.fourthTag,
-            memo : this.state.memo,
-            cardColor : "purple",
-            sendId : sessionStorage.getItem("id")
-        }
+        if (this.state.firstTag == "") {
+            alert("첫번째 태그를 선택해주세요.")
+        } else if (this.state.secondTag == "") {
+            alert("두번째 태그를 선택해주세요.")
+        } else if (this.state.thirdTag == "") {
+            alert("세번째 태그를 선택해주세요.")
+        } else if (this.state.fourthTag == "") {
+            alert("네번째 태그를 선택해주세요.")
+        } else {
+            const param = {
+                send : this.props.fromPerson,
+                receive : this.props.toPerson,
+                firstTag : this.state.firstTag,
+                secondTag : this.state.secondTag,
+                thirdTag : this.state.thirdTag,
+                fourthTag : this.state.fourthTag,
+                memo : this.state.memo,
+                cardColor : "purple",
+                sendId : sessionStorage.getItem("id")
+            }
 
-        service.anyService("/card/send/complete", "post", this.handleCompleteCard, param)
+            service.anyService("/card/send/complete", "post", this.handleCompleteCard, param)
+        }
     }
 
     handleCompleteCard = (response: any) => {
