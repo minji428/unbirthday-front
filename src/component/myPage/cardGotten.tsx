@@ -187,7 +187,7 @@ class CardGotten extends React.Component<{}, any> {
     
             <div className="CGcards">
                 <div className="CGrow">
-                    {this.state.cards.length !== 0
+                    {this.state.cards !== null
                         ? this.setAllCards()
                         : ''}
                     {/* {this.state.cards.length !== 0 

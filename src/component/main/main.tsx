@@ -29,11 +29,14 @@ class main extends React.Component<{}, any> {
     }
 
     mainCallback = (response: any) => {
-        console.log(response)
-        console.log(response.data)
+        let arr = new Array();
+        const receiver = response.data.data
 
+        receiver.forEach((element: any) => {
+          arr.push(element.name)
+        })
         this.setState({
-            receiverName : response.data.data
+            receiverName : arr
         })
     }
 
@@ -59,42 +62,42 @@ class main extends React.Component<{}, any> {
                 </div>
                 <div className="names">
                     <div className="NameRow"> 
-                        <div>김윤재</div>
-                        <div>김채윤</div>
+                        <div>{this.state.receiverName[0]}</div>
+                        <div>{this.state.receiverName[1]}</div>
                     </div>
                     <div className="NameRow">
                         <div className="insideRow2">
-                            <div>Dino</div>
-                            <div>김채윤</div>
+                            <div>{this.state.receiverName[2]}</div>
+                            <div>{this.state.receiverName[3]}</div>
                         </div> 
                         <div className="insideRow2">
-                            <div>장원영</div>
-                            <div>김채윤</div>
+                            <div>{this.state.receiverName[4]}</div>
+                            <div>{this.state.receiverName[5]}</div>
                         </div>
                     </div>
                     <div className="NameRow"> 
                         <div className="insideRow3">
-                            <div>장원영</div>
-                            <div>김채윤</div>
-                            <div>장영채</div>
-                            <div>김채윤</div>
-                            <div>장원희</div>
-                            <div>halley</div>
+                            <div>{this.state.receiverName[6]}</div>
+                            <div>{this.state.receiverName[7]}</div>
+                            <div>{this.state.receiverName[8]}</div>
+                            <div>{this.state.receiverName[9]}</div>
+                            <div>{this.state.receiverName[10]}</div>
+                            <div>{this.state.receiverName[11]}</div>
                         </div>
                     </div>
                     <div className="NameRow"> 
                         <div className="insideRow3">
-                            <div>장원영</div>
-                            <div>김채윤</div>
-                            <div>장원영</div>
-                            <div>김윤채</div>
-                            <div>영지영</div>
-                            <div>김채윤</div>
+                            <div>{this.state.receiverName[12]}</div>
+                            <div>{this.state.receiverName[13]}</div>
+                            <div>{this.state.receiverName[14]}</div>
+                            <div>{this.state.receiverName[15]}</div>
+                            <div>{this.state.receiverName[16]}</div>
+                            <div>{this.state.receiverName[17]}</div>
                         </div>
                     </div>
                     <div className="rowSpecial">
                         <div>
-                            장원영
+                        {this.state.receiverName[18]}
                         </div>
                         <div className="ment">
                             <div>
@@ -105,45 +108,45 @@ class main extends React.Component<{}, any> {
                             </div>
                         </div>
                         <div>
-                            홍김킴
+                            {this.state.receiverName[19]}
                         </div>
                     </div>
 
                     <div className="NameRow"> 
                         <div className="insideRow6">
-                            <div>영영영</div>
-                            <div>김윤희</div>
-                            <div>장원영</div>
-                            <div>김채윤</div>
-                            <div>장원영</div>
+                            <div>{this.state.receiverName[20]}</div>
+                            <div>{this.state.receiverName[21]}</div>
+                            <div>{this.state.receiverName[22]}</div>
+                            <div>{this.state.receiverName[23]}</div>
+                            <div>{this.state.receiverName[24]}</div>
                         </div>
                     </div>
 
                     <div className="NameRow"> 
                         <div className="insideRow7">
-                            <div>장원영</div>
-                            <div>김채희</div>
-                            <div>장원영</div>
-                            <div>김김김</div>
+                            <div>{this.state.receiverName[25]}</div>
+                            <div>{this.state.receiverName[26]}</div>
+                            <div>{this.state.receiverName[27]}</div>
+                            <div>{this.state.receiverName[28]}</div>
                         </div>
                     </div>
 
                     <div className="NameRow"> 
                         <div className="insideRow8">
-                            <div>장원영</div>
-                            <div>김윤희</div>
-                            <div>Luke</div>
+                            <div>{this.state.receiverName[29]}</div>
+                            <div>{this.state.receiverName[30]}</div>
+                            <div>{this.state.receiverName[31]}</div>
                         </div>
                     </div>
                     <div className="NameRow"> 
                         <div className="insideRow9">
-                            <div>장원영</div>
-                            <div>김채윤</div>
+                            <div>{this.state.receiverName[32]}</div>
+                            <div>{this.state.receiverName[33]}</div>
                         </div>
                     </div>
                     <div className="NameRow"> 
                         <div className="insideRow3">
-                            <div>장원영</div>
+                            <div>{this.state.receiverName[34]}</div>
                         </div>
                     </div>
                 </div>
