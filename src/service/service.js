@@ -1,6 +1,7 @@
 import axios from 'axios';
 import * as httpStatus from '../util/httpErrorStatusMsgUtil'
-let defaultUrl = 'http://localhost:8080'
+
+let defaultUrl = 'https://unbirthday-api.kr'
 
 export function anyService(requestURL, requestMethod, callbackFunc, param) {
     console.log(requestURL)
