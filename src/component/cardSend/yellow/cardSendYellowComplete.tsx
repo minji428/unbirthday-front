@@ -26,11 +26,10 @@ class cardSendYellowComplete extends React.Component<{}, any> {
     }
 
     didMountCallback = (response: any) => {
-        console.log(response.data)
         const data = response.data.data
-        console.log(data)
+        
         this.setState({
-            cardNo: data.card_no,
+            cardNo: data.card_no.replaceAll("-",""),
             cardColor : data.card_color,
             firstTag : data.first_tag,
             secondTag : data.second_tag,
@@ -40,6 +39,16 @@ class cardSendYellowComplete extends React.Component<{}, any> {
             receive : data.receive,
             send : data.send
         })
+    }
+
+    handleCopyClipBoard = async (text: string) => {
+        try{
+            await navigator.clipboard.writeText(text);
+
+            alert('링크가 복사되었습니다. 친구에게 공유해주세요!');
+        }catch(error){
+            alert('링크 복사를 실패했습니다.')
+        }
     }
 
     render() {
@@ -144,7 +153,7 @@ class cardSendYellowComplete extends React.Component<{}, any> {
                 <div className="CS4notice">앞면 보기</div>
                 
                 <div className='CS4complete'>
-                    <img src="../../img/bt_copy_link.png"/>
+                    <img src="../../img/bt_copy_link.png" onClick={()=>this.handleCopyClipBoard('https://unbirthday.kr/cardreceive/'+this.state.cardNo)}/>
                 </div>
             </div>
 
