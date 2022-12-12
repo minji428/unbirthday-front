@@ -6,7 +6,6 @@ import * as service from '../../../service/service'
 
 import '../../../static/getCard/getCard2.css';
 import '../../../static/getCard/getCard3.css';
-{/* <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet"></link> */}
 
 class WhiteReceiver3 extends React.Component<receiver2Props, any> {
     constructor(props: any){
@@ -99,7 +98,6 @@ class WhiteReceiver3 extends React.Component<receiver2Props, any> {
                         <div className='GC3personNameWhite'>
                             HAPPY<br></br>
                             UN-BIRTHDAY {this.props.card.receive}!
-                            {/* UN-BIRTHDAY 은빈! */}
                         </div>
                         <div className="GC3tagMessage">
                             <div className="GC3temp">
@@ -170,10 +168,6 @@ class WhiteReceiver3 extends React.Component<receiver2Props, any> {
                             </div> 
                              <div className="GC3writeMessage" >
                                 {this.props.card.memo}
-                                {/* <div>생일에나 할 수 있는 얘기를 오늘 해보네! </div>
-                                <div>낯간지럽지만 꼭 해주고 싶은 말이야.</div> 
-                                <div>매일이 생일처럼 특별했으면 좋겠어.</div> 
-                                <div>오늘도 해피 언버스데이 :)  </div>           */}
                             </div>
     
                         </div>

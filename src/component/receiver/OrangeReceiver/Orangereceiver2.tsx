@@ -8,8 +8,6 @@ import * as service from '../../../service/service'
 import '../../../static/getCard/getCard2.css';
 import OrangeReceiver3 from './Orangereceiver3';
 
-{/* <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet"></link> */}
-
 class OrangeReceiver2 extends React.Component<receiver1Props, any> {
     constructor(props: any){
         super(props)

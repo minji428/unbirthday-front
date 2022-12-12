@@ -141,6 +141,12 @@ class MyCards extends React.Component<{}, any> {
         )
     }
     
+    logout(){
+        sessionStorage.clear()
+        window.location.href="/"
+    }
+
+
     render() {
         if(this.state.isClicked) {
             return <TagGotten tags={this.state.tags}/>
@@ -252,7 +258,7 @@ class MyCards extends React.Component<{}, any> {
                     <div className="MCuser">{sessionStorage.getItem("id")}</div>
                 </div>
                 <div className="MCnoticeText">
-                    <div className="MCnotices">로그아웃하기</div>
+                    <div className="MCnotices" onClick={this.logout}>로그아웃하기</div>
                     <div className="MCnotices">FAQ, 이런 기능은 없나요?</div>
                 </div>
             </div>

@@ -97,7 +97,6 @@ class Receiver1 extends React.Component<{}, any> {
                 <div className="GC1texts">
                     <div className="GC1subText">
                         {this.state.card.receive}님 오늘도
-                      {/* 은빈님 오늘도 */}
                     </div>
                     <div className="GC1subText">
                       언버스데이 축하해요&nbsp;💌
