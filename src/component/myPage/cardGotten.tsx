@@ -44,7 +44,7 @@ class CardGotten extends React.Component<{}, any> {
             const param = {
                 id: id,
             }
-            service.anyService("/mypage1/cardgotten", "get", this.getCardsCallBack, param)
+            service.anyService("/mypage/cardgotten", "get", this.getCardsCallBack, param)
         } else {
             //id가 없으면?,,
         }
