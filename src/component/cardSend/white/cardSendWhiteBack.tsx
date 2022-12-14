@@ -157,7 +157,7 @@ class cardSendWhiteBack extends React.Component<cardSendYellowFrontProps, any> {
                 </div>
                 <div className="CS3yelloBox">
                     <div>
-                        <img className="CS3card" src="../img/WhiteBack.png"/>
+                        <img className="CS3card" src="../img/whiteBack.png"/>
                     </div>
                         
                     <div className="CS3insideYellow">

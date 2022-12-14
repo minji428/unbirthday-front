@@ -177,7 +177,7 @@ class cardSendOrangeBack extends React.Component<cardSendOrangeFrontProps, any> 
                 </div>
                 <div className="CS3yelloBox">
                     <div>
-                        <img className="CS3card" src="../img/OrangeBack.png"/>
+                        <img className="CS3card" src="../img/orangeBack.png"/>
                     </div>
                         
                     <div className="CS3insideYellow">
