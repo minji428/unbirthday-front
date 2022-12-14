@@ -18,19 +18,6 @@
     font-style: normal;
 }
 
-/* @font-face {
-    font-family: 'PyeongChangPeace-Bold';
-    src: url('./font/PyeongChangPeace-Bold.otf') format('woff2');
-    font-weight: 300;
-    font-style: normal;
-} */
-
-/* @font-face {
-    font-family: 'GmarketSansLight';
-    src: url('./font/GmarketSansLight.otf') format('woff');
-    font-weight: normal;
-    font-style: normal;
-} */
 
 @font-face {
     font-family: 'GmarketSansLight';
@@ -42,24 +29,6 @@
 @font-face {
     font-family: 'GmarketSansMedium';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-    /* @font-face {
-        font-family: 'GmarketSansMedium';
-        src: url('./font/GmarketSansMedium.otf') format('woff');
-        font-weight: normal;
-        font-style: normal;
-    } */
-    /* @font-face {
-        font-family: 'GmarketSansBold';
-        src: url('./font/GmarketSansBold.otf') format('woff');
-        font-weight: normal;
-        font-style: normal;
-    } */
-@font-face {
-    font-family: 'GmarketSansBold';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -96,7 +65,7 @@
         flex-direction: row;
         width:100%;
         padding-left:10%;
-        padding-top: 5%;
+        padding-top: 2%;
     }
     .CS3backBtn{
         width:3.5%;
@@ -111,6 +80,7 @@
         font-size:17px;
         font-family:'Noto Sans KR';
         font-weight: 500;
+        margin-top:10%;
         margin-left:7%;
         margin-right:7%;
         margin-bottom:5%;
