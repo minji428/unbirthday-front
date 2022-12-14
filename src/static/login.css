@@ -99,7 +99,7 @@
         position:relative;
         /* padding:15px; */
         position: fixed;
-        overflow: hidden;
+        overflow:scroll;
         padding-top: 10%;
         padding-left: 5%;
         padding-right: 5%;
