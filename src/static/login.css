@@ -99,7 +99,7 @@
         position:relative;
         /* padding:15px; */
         position: fixed;
-        overflow:scroll;
+        overflow-y: scroll;
         padding-top: 10%;
         padding-left: 5%;
         padding-right: 5%;
@@ -231,7 +231,7 @@
     .Logintexts{
         color: white;
         margin-right: 2%;
-        margin-bottom: 10%;
+        margin-bottom: 14%;
 
     }
     .loginText{
