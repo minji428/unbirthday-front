@@ -13,7 +13,6 @@ class cardCompleteWhite extends React.Component<{}, any> {
             firstTag : "",
             secondTag : "",
             thirdTag : "",
-            fourthTag : "",
             memo : "",
             receive : "",
             send : ""

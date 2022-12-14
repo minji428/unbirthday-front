@@ -98,7 +98,7 @@
         position:relative;
         position: fixed;
         overflow: hidden;
-        padding-top: 5%;
+        padding-top: 10%;
         padding-bottom: 15%;
         top: 0;
         left: 0;
@@ -137,6 +137,8 @@
     }
     .SF3color{
         width: 100%;
+        margin-top: -30%;
+        z-index: -1;
     }
     .SF3texts{
         display: flex;
