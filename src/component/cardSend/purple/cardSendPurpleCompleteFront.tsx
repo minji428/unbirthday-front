@@ -54,6 +54,9 @@ class cardCompleteWhite extends React.Component<{}, any> {
     render() {
         return(
             <div className= 'CS4main'>
+                <div className='logo'>
+                    <img src="../../img/bt_logo.png"/>
+                </div>
         <div className="CS4btn">
             <img src="../../img/back.png" className="CS4backBtn"/>
         </div>

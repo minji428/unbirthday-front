@@ -153,8 +153,11 @@ class MyCards extends React.Component<{}, any> {
         }
         return(
             <div className= 'MCmain'>
+                <div className='logo'>
+                    <img src="../../img/bt_logo.png"/>
+                </div>
         <div className="MCstatus">
-            <img className="MClogo" src="../img/logo.png"/>
+            {/* <img className="MClogo" src="../img/logo.png"/> */}
             <div className="MCmainText">
                 내 카드함
             </div>

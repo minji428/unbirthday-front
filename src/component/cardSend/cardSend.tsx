@@ -39,6 +39,9 @@ class cardSend extends React.Component<{}, any> {
     render() {
         return(
             <div className= 'CS1main'>
+                <div className='logo'>
+                    <img src="../../img/bt_logo.png"/>
+                </div>
                 <div className="CS1btn">
                     <img src="../img/back.png" className="CS1backBtn" onClick={this.backButton}/>
                 </div>
