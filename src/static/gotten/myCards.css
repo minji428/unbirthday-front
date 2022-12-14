@@ -18,19 +18,7 @@
     font-style: normal;
 }
 
-/* @font-face {
-    font-family: 'PyeongChangPeace-Bold';
-    src: url('./font/PyeongChangPeace-Bold.otf') format('woff2');
-    font-weight: 300;
-    font-style: normal;
-} */
 
-/* @font-face {
-    font-family: 'GmarketSansLight';
-    src: url('./font/GmarketSansLight.otf') format('woff');
-    font-weight: normal;
-    font-style: normal;
-} */
 
 @font-face {
     font-family: 'GmarketSansLight';
@@ -45,18 +33,7 @@
     font-weight: normal;
     font-style: normal;
 }
-    /* @font-face {
-        font-family: 'GmarketSansMedium';
-        src: url('./font/GmarketSansMedium.otf') format('woff');
-        font-weight: normal;
-        font-style: normal;
-    } */
-    /* @font-face {
-        font-family: 'GmarketSansBold';
-        src: url('./font/GmarketSansBold.otf') format('woff');
-        font-weight: normal;
-        font-style: normal;
-    } */
+
 @font-face {
     font-family: 'GmarketSansBold';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
@@ -68,26 +45,7 @@
 .notosanskr * { 
  font-family: 'Noto Sans KR', sans-serif;
 }
-    /* @font-face {
-        font-family: 'Noto Sans KR';
-        src : url('../font/NotoSansKR-Bold.otf') format('otf');
-        font-weight: 700;
-    }
-    @font-face {
-        font-family: 'Noto Sans KR';
-        src : url('../font/NotoSansKR-Light.otf') format('otf');
-        font-weight: 300;
-    }
-    @font-face {
-        font-family: 'Noto Sans KR';
-        src : url('../font/NotoSansKR-Regular.otf')format('otf');
-        font-weight: 400;
-    }
-    @font-face {
-        font-family: 'Noto Sans KR';
-        src : url('../font/NotoSansKR-Medium.otf') format('otf');
-        font-weight: 500;
-    } */
+
     @media only screen and (min-device-width : 320px) and (max-device-width : 490px) {
      .MCmain {
         box-sizing: border-box;
@@ -115,17 +73,12 @@
         margin-bottom: 5%;
         position:relative;
     }
-    .MClogo{
-        position:absolute;
-        width: 10%;
-        margin-top: 8%;
-        margin-left: 5%;
-    }
     .MCmainText{
-        margin-top: 10%;
-        font-size:25px;
+        margin-top: 5%;
+        font-size:20px;
         font-family:'Noto Sans KR';
         font-weight: 500;
+        margin-top:10%;
         color:white;
         text-align: center;
     }
@@ -154,7 +107,7 @@
         margin-bottom: 3%;
         font-family: 'Noto Sans KR';
         font-weight: 500;
-        font-size:15pt;
+        font-size:13pt;
         color:white;
         margin-left: 5%;
     }
@@ -332,7 +285,7 @@
         margin-bottom: 5%;
         font-family: 'Noto Sans KR';
         font-weight: 500;
-        font-size: 15pt;
+        font-size: 13pt;
         color:white;
     }
 

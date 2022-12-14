@@ -36,19 +36,6 @@
     font-style: normal;
 }
 
-/* @font-face {
-    font-family: 'PyeongChangPeace-Bold';
-    src: url('./font/PyeongChangPeace-Bold.otf') format('woff2');
-    font-weight: 300;
-    font-style: normal;
-} */
-
-/* @font-face {
-    font-family: 'GmarketSansLight';
-    src: url('./font/GmarketSansLight.otf') format('woff');
-    font-weight: normal;
-    font-style: normal;
-} */
 
 @font-face {
     font-family: 'GmarketSansLight';
@@ -63,18 +50,6 @@
     font-weight: normal;
     font-style: normal;
 }
-    /* @font-face {
-        font-family: 'GmarketSansMedium';
-        src: url('./font/GmarketSansMedium.otf') format('woff');
-        font-weight: normal;
-        font-style: normal;
-    } */
-    /* @font-face {
-        font-family: 'GmarketSansBold';
-        src: url('./font/GmarketSansBold.otf') format('woff');
-        font-weight: normal;
-        font-style: normal;
-    } */
 @font-face {
     font-family: 'GmarketSansBold';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
@@ -86,29 +61,7 @@
 .notosanskr * { 
  font-family: 'Noto Sans KR', sans-serif;
 }
-    /* @font-face {
-        font-family: 'Noto Sans KR';
-        src : url('../font/NotoSansKR-Bold.otf') format('otf');
-        font-weight: 700;
-    }
-    @font-face {
-        font-family: 'Noto Sans KR';
-        src : url('../font/NotoSansKR-Light.otf') format('otf');
-        font-weight: 300;
-    }
-    @font-face {
-        font-family: 'Noto Sans KR';
-        src : url('../font/NotoSansKR-Regular.otf')format('otf');
-        font-weight: 400;
-    }
-    @font-face {
-        font-family: 'Noto Sans KR';
-        src : url('../font/NotoSansKR-Medium.otf') format('otf');
-        font-weight: 500;
-    } */
-    /* * [type="font"] {
-        -webkit-appearance: none;   
-    } */
+   
 
     /* 아이폰 SE */
 
@@ -134,14 +87,20 @@
         /* align-items: center; */
         align-content:space-around;
     }
+    /* .CS1logo{
+        width: 100px;
+        margin-left: 35%;
+    } */
     .CS1btn{
         display: flex;
         flex-direction: row;
         width:100%;
         padding-left:3%;
-        padding-top: 5.1%;
+        padding-top: 2%;
+        /* background-color: yellow; */
     }
     .CS1backBtn{
+        /* align-self: center; */
         width:3.5%;
     }
     .CS1mainText{
@@ -157,6 +116,7 @@
         color:#ffffff;
         /* background-color: lightblue; */
         margin-bottom: 5%;
+        margin-top:5%;
     }
 
     .CS1cards{
