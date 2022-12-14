@@ -176,6 +176,9 @@ class CardGotten extends React.Component<{}, any> {
         }
         return(
             <div className= 'CGmain'>
+                                <div className='logo'>
+                    <img src="../../img/bt_logo.png"/>
+                </div>
             <div className="CGstatus">
                 <img src="../img/back.png" className="CGbackBtn" onClick={this.backButton} />
                 <div className="CGmainText">

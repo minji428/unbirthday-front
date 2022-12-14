@@ -82,6 +82,9 @@ class Register extends React.Component<{}, any> {
         }
         return(
             <div className= 'RSmain'>
+                <div className='logo'>
+                    <img src="../../img/bt_logo.png"/>
+                </div>
             <div className='RSmainText'>
                 가입하고<br></br>
                 364일의 언버스데이<br></br>

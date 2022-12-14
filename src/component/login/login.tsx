@@ -77,6 +77,9 @@ class login extends React.Component<{}, any> {
                     onClick={this.toMyPage}
                     limit={1}
                 /> */}
+                <div className='logo'>
+                    <img src="../../img/bt_logo.png"/>
+                </div>
             <text className='LoginmainText'>
                 오늘도<br/>
                 해피 언버스데이- 👋

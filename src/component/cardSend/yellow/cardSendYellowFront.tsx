@@ -84,6 +84,9 @@ class cardSendYellowFront extends React.Component<{}, any> {
     render() {
         return(
             <div className= 'CS2main'>
+                <div className='logo'>
+                    <img src="../../img/bt_logo.png"/>
+                </div>
                 <div className="CS2btnBack">
                     <img src="../img/back.png" className="CS2backBtn" onClick={this.backButton}/>
                 </div>

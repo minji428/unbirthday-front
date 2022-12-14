@@ -169,6 +169,9 @@ class cardSendOrangeBack extends React.Component<cardSendOrangeFrontProps, any> 
     render() {
         return(
             <div className= 'CS3main'>
+                                <div className='logo'>
+                    <img src="../../img/bt_logo.png"/>
+                </div>
             <div className="CS3btn">
                 <img src="../img/back.png" className="CS3backBtn" onClick={this.backButton}/>
             </div>
