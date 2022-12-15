@@ -60,7 +60,7 @@ class YellowReceiver2 extends React.Component<receiver1Props, any> {
                 card_no: this.props.card.card_no,
                 receive_id : sessionStorage.getItem("id")
             }
-            service.anyService("/card", "patch", this.saveCardCallBack, param)
+            service.anyService("/card/save", "patch", this.saveCardCallBack, param)
         }
 
         //로그인이 안 된 상태라면
