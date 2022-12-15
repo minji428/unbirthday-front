@@ -265,7 +265,7 @@ class MyCards extends React.Component<{}, any> {
                 </div>
                 <div className="MCnoticeText">
                     <div className="MCnotices" onClick={this.logout}>로그아웃하기</div>
-                    <div className="MCnotices">FAQ, 이런 기능은 없나요?</div>
+                    <div className="MCnotices">문의하기</div>
                 </div>
             </div>
             

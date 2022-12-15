@@ -190,7 +190,7 @@ class cardSendOrangeBack extends React.Component<cardSendOrangeFrontProps, any> 
                     <div className="CS3insideYellow">
                         <div className='CS3personNameforOrange'>
                             HAPPY<br></br>
-                            UN-BIRTHDAY {this.props.toPerson}
+                            UN-BIRTHDAY {this.props.toPerson}!
                         </div>
                         <div className="CS3tagMessage">
                             <div className="CS3temp">

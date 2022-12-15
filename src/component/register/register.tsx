@@ -101,7 +101,7 @@ class Register extends React.Component<{}, any> {
                         <div className="RSinfoText">아이디*</div>
                             <input type={'text'} name='id' className='RSnumber' placeholder='영문, 숫자 5자 이상 입력해주세요.' onChange={this.getId}/>
                         <div className="RSinfoText">비밀번호*</div>
-                           <input type={'text'} name='password' className='RSnumber' placeholder='6자 이상 입력해주세요.' onChange={this.getPassword}/>
+                           <input type={'password'} name='password' className='RSnumber' placeholder='6자 이상 입력해주세요.' onChange={this.getPassword}/>
                         <div className="RSnameAccept">
                             <input type={'checkbox'} className='RScheckBtn' onChange={this.checkPrivacy}/>
                             <div className="RSaccept">

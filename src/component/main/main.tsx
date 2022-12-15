@@ -101,10 +101,10 @@ class main extends React.Component<{}, any> {
                         </div>
                         <div className="ment">
                             <div>
-                                바로 어제 비생일 축하를 받은 사람들
+                                바로 지금 언버스데이를 축하받은 사람들
                             </div>
                             <div>
-                                오늘도 비생일 축하해!
+                                생일이 아닌 오늘을 축하해!
                             </div>
                         </div>
                         <div>
