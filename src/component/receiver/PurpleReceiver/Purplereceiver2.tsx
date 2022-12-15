@@ -58,7 +58,7 @@ class PurpleReceiver2 extends React.Component<receiver1Props, any> {
                 receive_id : sessionStorage.getItem("id")
             }
             console.log(param)
-            service.anyService("/card", "patch", this.saveCardCallBack, param)
+            service.anyService("/card/save", "patch", this.saveCardCallBack, param)
         }
 
         //로그인이 안 된 상태라면
