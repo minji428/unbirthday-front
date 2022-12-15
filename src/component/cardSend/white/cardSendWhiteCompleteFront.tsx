@@ -3,7 +3,13 @@ import '../../../static/cardSend/cardSendComplete.css';
 import '../../../static/cardSend/cardSend4.css';
 import * as service from '../../../service/service'
 
-class cardCompleteWhite extends React.Component<{}, any> {
+interface cardSendWhiteCompleteProps{
+    receivePerson: any,
+    sendPerson: any,
+    clickFunction: any
+}
+
+class cardCompleteWhite extends React.Component<cardSendWhiteCompleteProps, any> {
     constructor(props: any){
         super(props)
 
@@ -19,26 +25,6 @@ class cardCompleteWhite extends React.Component<{}, any> {
             send : ""
         }
 
-    }
-
-    componentDidMount = () => {
-        service.anyService("/card/info/"+sessionStorage.getItem("cardUUID"), "get", this.didMountCallback)
-    }
-
-    didMountCallback = (response: any) => {
-        const data = response.data.data
-        
-        this.setState({
-            cardNo: data.card_no.replaceAll("-",""),
-            cardColor : data.card_color,
-            firstTag : data.first_tag,
-            secondTag : data.second_tag,
-            thirdTag : data.third_tag,
-            fourthTag : data.fourth_tag,
-            memo : data.memo,
-            receive : data.receive,
-            send : data.send
-        })
     }
 
     handleCopyClipBoard = async (text: string) => {
@@ -77,16 +63,14 @@ class cardCompleteWhite extends React.Component<{}, any> {
                         <div className='GC2personNameWhite'>
                             HAPPY<br></br>
                             UN-BIRTHDAY<br></br>
-                            {/* {this.props.card.receive} */}
-                            은빈!
+                            {this.props.receivePerson}!
                         </div>
                         <div className="GC2subTextWhite">
-                            {/* From. {this.props.card.send} */}
-                            From. 수수
+                            From. {this.props.sendPerson}
                         </div>
                        </div>
                 </div>
-                <div className="CS4notice">뒷면 보기  </div>
+                <div className="CS4notice" onClick={this.props.clickFunction}>뒷면 보기  </div>
                 
                 <div className='CS4complete'>
                     <img src="../../img/bt_copy_link.png" onClick={()=>this.handleCopyClipBoard('https://unbirthday.kr/cardreceive/'+this.state.cardNo)}/>

@@ -3,6 +3,8 @@ import '../../../static/cardSend/cardSendComplete.css';
 import '../../../static/cardSend/cardSend4.css';
 import * as service from '../../../service/service'
 
+import CardSendWhiteCompleteFront from './cardSendWhiteCompleteFront'
+
 class cardCompleteWhite extends React.Component<{}, any> {
     constructor(props: any){
         super(props)
@@ -15,8 +17,11 @@ class cardCompleteWhite extends React.Component<{}, any> {
             thirdTag : "",
             memo : "",
             receive : "",
-            send : ""
+            send : "",
+            showFront : false
         }
+
+        this.cardSendWhiteCompleteFront = this.cardSendWhiteCompleteFront.bind(this)
 
     }
 
@@ -47,6 +52,18 @@ class cardCompleteWhite extends React.Component<{}, any> {
             alert('링크가 복사되었습니다. 친구에게 공유해주세요!');
         }catch(error){
             alert('링크 복사를 실패했습니다.')
+        }
+    }
+
+    cardSendWhiteCompleteFront(){
+        if(this.state.showFront == true) {
+            this.setState({
+                showFront : false
+            })
+        } else {
+            this.setState({
+                showFront : true
+            })
         }
     }
 
@@ -152,7 +169,10 @@ class cardCompleteWhite extends React.Component<{}, any> {
 
                     </div>
                 </div>
-                <div className="CS4notice">앞면 보기  </div>
+                <div className="CS4notice" onClick={this.cardSendWhiteCompleteFront}>
+                    앞면 보기
+                    {this.state.showFront ? <CardSendWhiteCompleteFront receivePerson={this.state.receive} sendPerson={this.state.send} clickFunction = {this.cardSendWhiteCompleteFront}/> :''}
+                </div>
                 
                 <div className='CS4complete'>
                     <img src="../../img/bt_copy_link.png" onClick={()=>this.handleCopyClipBoard('https://unbirthday.kr/cardreceive/'+this.state.cardNo)}/>
