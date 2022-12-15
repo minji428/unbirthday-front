@@ -70,6 +70,10 @@ class login extends React.Component<{}, any> {
         window.location.href = "/mypage"
     }
 
+    clickLogo(){
+        window.location.href = 'https://unbirthday.kr'
+    }
+
     render() {
         return(
             <div className= 'LoginMain'>
@@ -77,7 +81,7 @@ class login extends React.Component<{}, any> {
                     onClick={this.toMyPage}
                     limit={1}
                 /> */}
-                <div className='logo'>
+                <div className='logo' onClick={this.clickLogo}>
                     <img src="../../img/bt_logo.png"/>
                 </div>
             <text className='LoginmainText'>

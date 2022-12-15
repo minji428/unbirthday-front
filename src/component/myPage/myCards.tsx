@@ -146,6 +146,9 @@ class MyCards extends React.Component<{}, any> {
         window.location.href="/"
     }
 
+    clickLogo(){
+        window.location.href = 'https://unbirthday.kr'
+    }
 
     render() {
         if(this.state.isClicked) {
@@ -153,7 +156,7 @@ class MyCards extends React.Component<{}, any> {
         }
         return(
             <div className= 'MCmain'>
-                <div className='logo'>
+                <div className='logo' onClick={this.clickLogo}>
                     <img src="../../img/bt_logo.png"/>
                 </div>
         <div className="MCstatus">

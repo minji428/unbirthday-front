@@ -168,15 +168,19 @@ class cardSendYellowBack extends React.Component<cardSendYellowFrontProps, any> 
     }
 
 
+    clickLogo(){
+        window.location.href = 'https://unbirthday.kr'
+    }
+
     render() {
         return(
             <div className= 'CS3main'>
-                <div className='logo'>
+                <div className='logo' onClick={this.clickLogo}>
                     <img src="../../img/bt_logo.png"/>
                 </div>
-            <div className="CS3btn">
-                <img src="../img/back.png" className="CS3backBtn" onClick={this.backButton}/>
-            </div>
+                <div className="CS3btn">
+                    <img src="../img/back.png" className="CS3backBtn" onClick={this.backButton}/>
+                </div>
                 <div className='CS3mainText'>
                     그 사람을 생각하며 채워주세요.
                 </div>

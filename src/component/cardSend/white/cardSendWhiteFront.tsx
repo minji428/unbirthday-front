@@ -11,6 +11,8 @@ class cardSendWhiteFront extends React.Component<{}, any> {
             showback : false,
             toPerson : "",
             fromPerson : "",
+            isFromPersonValid: true,
+            isToPersonValid: true,
         }
 
         this.cardSendWhiteBack = this.cardSendWhiteBack.bind(this)
@@ -31,19 +33,62 @@ class cardSendWhiteFront extends React.Component<{}, any> {
     }
 
     getToPerson=(event: any) => {
+        if(!this.isValid(event.target.value)) {
+            this.setState({isToPersonValid: false})
+        }
+        event.target.value = this.handleName(event.target.value)
+
         let getToPerson = event.target.value
         this.setState({toPerson : getToPerson})
     }
 
     getFromPerson=(event: any) => {
+        if(!this.isValid(event.target.value)) {
+            this.setState({isFromPersonValid: false})
+        } 
+        // else {
+        //     this.setState({isFromPersonValid: true})
+        // }
+        event.target.value = this.handleName(event.target.value)
+
         let getFromPerson = event.target.value
         this.setState({fromPerson : getFromPerson})
     }
 
+    handleName=(string: string) => {
+        if(this.doesContainKorean(string) && string.length > 3) {
+            return string.substring(0, 3)
+        }
+        else if(!this.doesContainKorean(string) && string.length > 4) {
+            return string.substring(0, 4)
+        }
+        else {
+            return string
+        }
+    }
+
+    isValid=(string: string) => {
+        if((this.doesContainKorean(string) && string.length > 3) 
+            || (!this.doesContainKorean(string) && string.length > 4)) {
+                return false
+        }
+
+        return true
+    }
+
+    doesContainKorean=(string: string) => {
+        const korean = /[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/
+        return korean.test(string)
+    }
+
+    clickLogo(){
+        window.location.href = 'https://unbirthday.kr'
+    }
+
     render() {
         return(
-            <div className= 'CS2main'>
-                <div className='logo'>
+            <div className= 'CS3main'>
+                <div className='logo' onClick={this.clickLogo}>
                     <img src="../../img/bt_logo.png"/>
                 </div>
                 <div className="CS2btnBack">
@@ -63,12 +108,13 @@ class cardSendWhiteFront extends React.Component<{}, any> {
                                 <div className="CS2nameBox">
                                     <input type={'text'} className="form-control" name="toPerson" placeholder='받는 사람' onChange={this.getToPerson}/>
                                 </div>
-                                <div className="CS2notice">3자 이내로 입력해주세요.</div>
+                                {this.state.isToPersonValid ? '' : <div className="CS2notice">3자 이내로 입력해주세요.</div>}
                             </div>
                             <div className="CS2fromPerson">
                                 <div className="CS2nameBox">
                                 <input type={'text'} className="form-control" name="fromPerson" placeholder='보내는 사람' onChange={this.getFromPerson}/>
                                 </div>
+                                {this.state.isFromPersonValid ? '' : <div className="CS2notice">3자 이내로 입력해주세요.</div>}
                             </div>
                         </div> 
                     </div>

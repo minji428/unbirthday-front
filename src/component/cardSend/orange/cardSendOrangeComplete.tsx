@@ -3,6 +3,8 @@ import React, {Component} from 'react';
 import '../../../static/cardSend/cardSend4.css';
 import * as service from '../../../service/service'
 
+import CardSendOrangeCompleteFront from './cardSendOrangeCompleteFront'
+
 class cardSendCompleteOrange extends React.Component<{}, any> {
     constructor(props: any){
         super(props)
@@ -16,7 +18,8 @@ class cardSendCompleteOrange extends React.Component<{}, any> {
             fourthTag : "",
             memo : "",
             receive : "",
-            send : ""
+            send : "",
+            showFront : false
         }
 
     }
@@ -39,35 +42,55 @@ class cardSendCompleteOrange extends React.Component<{}, any> {
             receive : data.receive,
             send : data.send
         })
+
+        this.cardSendOrangeCompleteFront = this.cardSendOrangeCompleteFront.bind(this)
+
     }
 
     handleCopyClipBoard = async (text: string) => {
-        try{
-            await navigator.clipboard.writeText(text);
-
-            alert('링크가 복사되었습니다. 친구에게 공유해주세요!');
-        }catch(error){
-            alert('링크 복사를 실패했습니다.')
+        if(navigator.share) {
+            navigator.share({
+                title: 'HAPPY UNBIRTHDAY!',
+                url: text
+            })
+        } else {
+            alert("공유하기가 지원되지 않는 환경입니다.")
         }
+    }
+
+    cardSendOrangeCompleteFront(){
+        if(this.state.showFront == true) {
+            this.setState({
+                showFront : false
+            })
+        } else {
+            this.setState({
+                showFront : true
+            })
+        }
+    }
+
+    clickLogo(){
+        window.location.href = 'https://unbirthday.kr'
     }
 
     render() {
         return(
-            <div className= 'CS4main'>
-                <div className='logo'>
+            <div className= 'CS3main'>
+                <div className='logo' onClick={this.clickLogo}>
                     <img src="../../img/bt_logo.png"/>
                 </div>
-        <div className="CS4btn">
-            <img src="../../img/back.png" className="CS4backBtn"/>
-        </div>
-        <div className="CS4texts">
-            <div className='CS4mainText'>
-                카드가 완성됐어요!
+            <div className="CS4btn">
+                <img src="../../img/back.png" className="CS4backBtn"/>
             </div>
-            <div className="CS4subTexts">
-                링크를 전해주면 카드를 읽고 #태그를 간직할 수 있어요.
+            <div className="CS4texts">
+                <div className='CS4mainText'>
+                    카드가 완성됐어요!
+                </div>
+                <div className="CS4subTexts">
+                    링크를 전해주면 카드를 읽고 #태그를 간직할 수 있어요.
+                </div>
             </div>
-        </div>
             <div className="CS4yelloBox">
                 <div>
                     <img className="CS4card" src="../../img/orangeBack.png"/>
@@ -153,7 +176,10 @@ class cardSendCompleteOrange extends React.Component<{}, any> {
 
                     </div>
                 </div>
-                <div className="CS4notice">앞면 보기  </div>
+                <div className="CS4notice" onClick={this.cardSendOrangeCompleteFront}>
+                    앞면 보기
+                    {this.state.showFront ? <CardSendOrangeCompleteFront receivePerson={this.state.receive} sendPerson={this.state.send} clickFunction = {this.cardSendOrangeCompleteFront}/> :''}
+                </div>
                 
                 <div className='CS4complete'>
                     <img src="../../img/bt_copy_link.png" onClick={()=>this.handleCopyClipBoard('https://unbirthday.kr/cardreceive/'+this.state.cardNo)}/>

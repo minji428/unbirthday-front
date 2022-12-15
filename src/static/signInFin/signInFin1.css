@@ -18,19 +18,7 @@
     font-style: normal;
 }
 
-/* @font-face {
-    font-family: 'PyeongChangPeace-Bold';
-    src: url('./font/PyeongChangPeace-Bold.otf') format('woff2');
-    font-weight: 300;
-    font-style: normal;
-} */
 
-/* @font-face {
-    font-family: 'GmarketSansLight';
-    src: url('./font/GmarketSansLight.otf') format('woff');
-    font-weight: normal;
-    font-style: normal;
-} */
 
 @font-face {
     font-family: 'GmarketSansLight';
@@ -45,18 +33,7 @@
     font-weight: normal;
     font-style: normal;
 }
-    /* @font-face {
-        font-family: 'GmarketSansMedium';
-        src: url('./font/GmarketSansMedium.otf') format('woff');
-        font-weight: normal;
-        font-style: normal;
-    } */
-    /* @font-face {
-        font-family: 'GmarketSansBold';
-        src: url('./font/GmarketSansBold.otf') format('woff');
-        font-weight: normal;
-        font-style: normal;
-    } */
+
 @font-face {
     font-family: 'GmarketSansBold';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
@@ -69,26 +46,7 @@
 .notosanskr * { 
  font-family: 'Noto Sans KR', sans-serif;
 }
-    /* @font-face {
-        font-family: 'Noto Sans KR';
-        src : url('../font/NotoSansKR-Bold.otf') format('otf');
-        font-weight: 700;
-    }
-    @font-face {
-        font-family: 'Noto Sans KR';
-        src : url('../font/NotoSansKR-Light.otf') format('otf');
-        font-weight: 300;
-    }
-    @font-face {
-        font-family: 'Noto Sans KR';
-        src : url('../font/NotoSansKR-Regular.otf')format('otf');
-        font-weight: 400;
-    }
-    @font-face {
-        font-family: 'Noto Sans KR';
-        src : url('../font/NotoSansKR-Medium.otf') format('otf');
-        font-weight: 500;
-    } */
+    
     .SF1main {
         box-sizing: border-box;
         display: flex;
@@ -145,6 +103,28 @@
         font-weight: 400;
         color:#ffffff;
         margin-bottom: 5%;
+    }
+    .SF1subTextCombine{
+        animation: fadeInUp 4500ms;
+        -webkit-animation: fadeInUp 4500ms;
+        font-size:19px;
+        font-family:'Noto Sans KR';
+        font-weight: 400;
+        color:#ffffff;
+        margin-bottom: 5%;
+        position:relative;
+    }
+
+    .SF2btnCombine{
+        display: flex;
+        flex-direction: row;
+        margin-top: 10%;
+        width: 40%;
+        height: 25%;
+        justify-content: center;
+        align-items: center;
+        position:absolute;
+
     }
     .SF1cakes{
         /* animation: slideUp 1500ms; */
