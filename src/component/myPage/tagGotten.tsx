@@ -36,7 +36,7 @@ class TagGotten extends React.Component<MyCardsProps, any> {
     render() {
         return(
             <div className= 'TGmain'>
-                                <div className='logo'>
+                <div className='logo'>
                     <img src="../../img/bt_logo.png"/>
                 </div>
             <div className ="TGstatus">
