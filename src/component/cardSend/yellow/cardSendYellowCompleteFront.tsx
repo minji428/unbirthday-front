@@ -59,12 +59,12 @@ class cardCompleteWhite extends React.Component<cardSendYellowCompleteProps, any
                     </div>
     
                     <div className="GC2insideYellow" > 
-                        <div className='GC2personNameWhite'>
+                        <div className='GC2personNameYellow'>
                             HAPPY<br></br>
                             UN-BIRTHDAY<br></br>
                             {this.props.receivePerson}!
                         </div>
-                        <div className="GC2subTextWhite">
+                        <div className="GC2subTextYellow">
                             From. {this.props.sendPerson}
                         </div>
                        </div>
