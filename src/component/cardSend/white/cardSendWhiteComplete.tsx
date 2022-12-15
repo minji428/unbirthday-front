@@ -68,23 +68,27 @@ class cardCompleteWhite extends React.Component<{}, any> {
         }
     }
 
+    clickLogo(){
+        window.location.href = 'https://unbirthday.kr'
+    }
+
     render() {
         return(
-            <div className= 'CS4main'>
-                                <div className='logo'>
+            <div className= 'CS3main'>
+                <div className='logo' onClick={this.clickLogo}>
                     <img src="../../img/bt_logo.png"/>
                 </div>
-        <div className="CS4btn">
-            <img src="../../img/back.png" className="CS4backBtn"/>
-        </div>
-        <div className="CS4texts">
-            <div className='CS4mainText'>
-                카드가 완성됐어요!
+            <div className="CS4btn">
+                <img src="../../img/back.png" className="CS4backBtn"/>
             </div>
-            <div className="CS4subTexts">
-                링크를 전해주면 카드를 읽고 #태그를 간직할 수 있어요.
+            <div className="CS4texts">
+                <div className='CS4mainText'>
+                    카드가 완성됐어요!
+                </div>
+                <div className="CS4subTexts">
+                    링크를 전해주면 카드를 읽고 #태그를 간직할 수 있어요.
+                </div>
             </div>
-        </div>
             <div className="CS4yelloBox">
                 <div>
                     <img className="CS4card" src="../../img/whiteBack.png"/>

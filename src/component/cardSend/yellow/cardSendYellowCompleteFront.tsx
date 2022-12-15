@@ -32,16 +32,20 @@ class cardCompleteWhite extends React.Component<cardSendYellowCompleteProps, any
 
     }
 
+    clickLogo(){
+        window.location.href = 'https://unbirthday.kr'
+    }
+
     render() {
         return(
-            <div className= 'CS4main'>
-                                <div className='logo'>
+            <div className= 'CS3main'>
+                <div className='logo' onClick={this.clickLogo}>
                     <img src="../../img/bt_logo.png"/>
                 </div>
-        <div className="CS4btn">
-            <img src="../../img/back.png" className="CS4backBtn"/>
-        </div>
-        <div className="CS4texts">
+            <div className="CS4btn">
+                <img src="../../img/back.png" className="CS4backBtn"/>
+            </div>
+            <div className="CS4texts">
             <div className='CS4mainText'>
                 카드가 완성됐어요!
             </div>

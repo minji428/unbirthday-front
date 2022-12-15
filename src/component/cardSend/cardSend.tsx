@@ -36,10 +36,14 @@ class cardSend extends React.Component<{}, any> {
         window.location.href = '/'
     }
 
+    clickLogo(){
+        window.location.href = 'https://unbirthday.kr'
+    }
+
     render() {
         return(
-            <div className= 'CS1main'>
-                <div className='logo'>
+            <div className= 'CS3main'>
+                <div className='logo' onClick={this.clickLogo}>
                     <img src="../../img/bt_logo.png"/>
                 </div>
                 <div className="CS1btn">

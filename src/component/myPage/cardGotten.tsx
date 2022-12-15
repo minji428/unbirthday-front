@@ -170,13 +170,17 @@ class CardGotten extends React.Component<{}, any> {
         return clickedCard
     }
 
+    clickLogo(){
+        window.location.href = 'https://unbirthday.kr'
+    }
+
     render() {
         if (this.state.isClicked && this.state.card!=null) {
             return <GetCard1 card={this.state.card}/>
         }
         return(
             <div className= 'CGmain'>
-                                <div className='logo'>
+                <div className='logo' onClick={this.clickLogo}>
                     <img src="../../img/bt_logo.png"/>
                 </div>
             <div className="CGstatus">

@@ -33,10 +33,14 @@ class TagGotten extends React.Component<MyCardsProps, any> {
         window.location.href="/mypage"
     }
     
+    clickLogo(){
+        window.location.href = 'https://unbirthday.kr'
+    }
+    
     render() {
         return(
             <div className= 'TGmain'>
-                <div className='logo'>
+                <div className='logo' onClick={this.clickLogo}>
                     <img src="../../img/bt_logo.png"/>
                 </div>
             <div className ="TGstatus">

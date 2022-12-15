@@ -81,10 +81,14 @@ class cardSendOrangeFront extends React.Component<{}, any> {
         return korean.test(string)
     }
 
+    clickLogo(){
+        window.location.href = 'https://unbirthday.kr'
+    }
+
     render() {
         return(
-            <div className= 'CS2main'>
-                <div className='logo'>
+            <div className= 'CS3main'>
+                <div className='logo' onClick={this.clickLogo}>
                     <img src="../../img/bt_logo.png"/>
                 </div>
                 <div className="CS2btnBack">
