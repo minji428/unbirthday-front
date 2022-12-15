@@ -76,13 +76,17 @@ class Register extends React.Component<{}, any> {
         window.location.href = "/login"
     }
     
+    clickLogo(){
+        window.location.href = 'https://unbirthday.kr'
+    }
+
     render() {
         if(this.state.isDone){
             return <SignInFin1 />
         }
         return(
             <div className= 'RSmain'>
-                <div className='logo'>
+                <div className='logo' onClick={this.clickLogo}>
                     <img src="../../img/bt_logo.png"/>
                 </div>
             <div className='RSmainText'>

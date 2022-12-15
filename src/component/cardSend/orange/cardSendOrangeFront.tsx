@@ -23,9 +23,15 @@ class cardSendOrangeFront extends React.Component<{}, any> {
     }
 
     cardSendOrangeBack(){
-        this.setState({
-            showback : true
-        })
+        if (this.state.toPerson == "") {
+            alert("받는사람을 입력해주세요.")
+        } else if (this.state.fromPerson == "") {
+            alert("보내는사람을 입력해주세요.")
+        } else {
+            this.setState({
+                showback : true
+            })
+        }
     }
 
     backButton(){
