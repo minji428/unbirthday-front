@@ -163,7 +163,7 @@ class cardSendOrangeBack extends React.Component<cardSendOrangeFrontProps, any> 
         console.log(response.data)
         var cardUUID = response.data.data
         sessionStorage.setItem("cardUUID", cardUUID)
-        window.location.href = '/cardsend/purple/' + cardUUID
+        window.location.href = '/cardsend/orange/' + cardUUID
     }
 
     clickLogo(){
