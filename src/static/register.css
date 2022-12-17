@@ -1,9 +1,4 @@
-/* @font-face {
-    font-family: 'PyeongChangPeace-Light';
-    src: url('./font/PyeongChangPeace-Light.otf') format('woff2');
-    font-weight: 300;
-    font-style: normal;
-} */
+
 @font-face {
     font-family: 'PyeongChangPeace-Light';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Light.woff2') format('woff');
@@ -18,19 +13,7 @@
     font-style: normal;
 }
 
-/* @font-face {
-    font-family: 'PyeongChangPeace-Bold';
-    src: url('./font/PyeongChangPeace-Bold.otf') format('woff2');
-    font-weight: 300;
-    font-style: normal;
-} */
 
-/* @font-face {
-    font-family: 'GmarketSansLight';
-    src: url('./font/GmarketSansLight.otf') format('woff');
-    font-weight: normal;
-    font-style: normal;
-} */
 
 @font-face {
     font-family: 'GmarketSansLight';
@@ -45,18 +28,7 @@
     font-weight: normal;
     font-style: normal;
 }
-    /* @font-face {
-        font-family: 'GmarketSansMedium';
-        src: url('./font/GmarketSansMedium.otf') format('woff');
-        font-weight: normal;
-        font-style: normal;
-    } */
-    /* @font-face {
-        font-family: 'GmarketSansBold';
-        src: url('./font/GmarketSansBold.otf') format('woff');
-        font-weight: normal;
-        font-style: normal;
-    } */
+
 @font-face {
     font-family: 'GmarketSansBold';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
@@ -68,26 +40,7 @@
 .notosanskr * { 
  font-family: 'Noto Sans KR', sans-serif;
 }
-    /* @font-face {
-        font-family: 'Noto Sans KR';
-        src : url('../font/NotoSansKR-Bold.otf') format('otf');
-        font-weight: 700;
-    }
-    @font-face {
-        font-family: 'Noto Sans KR';
-        src : url('../font/NotoSansKR-Light.otf') format('otf');
-        font-weight: 300;
-    }
-    @font-face {
-        font-family: 'Noto Sans KR';
-        src : url('../font/NotoSansKR-Regular.otf')format('otf');
-        font-weight: 400;
-    }
-    @font-face {
-        font-family: 'Noto Sans KR';
-        src : url('../font/NotoSansKR-Medium.otf') format('otf');
-        font-weight: 500;
-    } */
+
     .RSmain {
         box-sizing: border-box;
         display: flex;
@@ -100,7 +53,8 @@
         /* padding:15px; */
         position: fixed;
         overflow: hidden;
-        padding-top: 10%;
+        /* padding-top: 10%; */
+        padding-top:5%;
         padding-left: 5%;
         padding-right: 5%;
         top: 0;
@@ -109,7 +63,10 @@
     }
     .RSmainText{
         display: flex;
-        flex:1;
+        margin-top:5%;
+        margin-bottom:-4%;
+        flex:0.8;
+        /* flex:1; */
         flex-direction: row;
         align-items: center;
         width:100%;
@@ -202,8 +159,18 @@
         align-items: center;
         margin-bottom: 10%;
         justify-content:center;
+        margin-left:-5%;
         
     }
+    .RStexts{
+        color: white;
+        margin-right: 2%;
+
+    }
+    .RSloginText{
+        color: #91d7e0;
+    }
+
     .LoginBtn{
         display: flex;
         flex-direction: row;
@@ -220,8 +187,6 @@
         border-radius: 50%/50%;
         border-style: solid;
         border-width: 2px thin;
-        border-color: rgba(222, 210, 249, 1);
-        color:rgba(222, 210, 249, 1);
         padding: 3%;
     }
     .login{
@@ -235,13 +200,4 @@
         align-self: center;
         margin-bottom: 10%;
         justify-content:center;
-        
-    }
-    .RStexts{
-        color: white;
-        margin-right: 2%;
-
-    }
-    .RSloginText{
-        color: #91d7e0;
     }
