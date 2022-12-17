@@ -38,10 +38,8 @@ class cardCompleteWhite extends React.Component<cardSendYellowCompleteProps, any
 
     render() {
         return(
-            <div className= 'CS1main'>
-                <div className='logo' onClick={this.clickLogo}>
-                    <img src="../../img/bt_logo.png"/>
-                </div>
+            <div className= 'CS4main'>
+               
             <div className="CS4btn">
                 <img src="../../img/back.png" className="CS4backBtn"/>
             </div>
