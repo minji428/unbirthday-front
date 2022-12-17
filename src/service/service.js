@@ -13,7 +13,7 @@ export function anyService(requestURL, requestMethod, callbackFunc, param) {
     }
 
     if(typeof param !== "undefined" || param !== null){
-        if(requestMethod.toUpperCase() === "POST" || requestMethod.toUpperCase() === "PATCH") {
+        if(requestMethod.toUpperCase() === "POST" || requestMethod.toUpperCase() === "PATCH" || requestMethod.toUpperCase === "PUT") {
             axiosBody.data = param
         } else {
             axiosBody.params = param
