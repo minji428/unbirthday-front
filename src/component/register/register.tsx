@@ -103,9 +103,14 @@ class Register extends React.Component<{}, any> {
                         <div className="RSinfoText">비밀번호*</div>
                            <input type={'password'} name='password' className='RSnumber' placeholder='6자 이상 입력해주세요.' onChange={this.getPassword}/>
                         <div className="RSnameAccept">
-                            <input type={'checkbox'} className='RScheckBtn' onChange={this.checkPrivacy}/>
+                            {/* <input type={'checkbox'} className='RScheckBtn' onChange={this.checkPrivacy}/> */}
                             <div className="RSaccept">
-                                Un-Birthday를 축하받은 내 이름이 홈화면에 뜨는 것에 동의해요
+                                <div>
+                                    아이디/비밀번호 외 정보를 수집하지 않아 계정 찾기가 불가합니다.
+                                </div>
+                                <div>
+                                    계정을 잘 기억해주세요:)
+                                </div>
                             </div>
                         </div>
                     </div>
