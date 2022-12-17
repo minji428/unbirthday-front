@@ -46,23 +46,28 @@ class cardSendYellowComplete extends React.Component<{}, any> {
         })
     }
 
-    handleCopyClipBoard = async (text: string) => {
+    handleCopyClipBoard = async (url: string) => {
         if(navigator.share) {
             navigator.share({
                 title: 'HAPPY UNBIRTHDAY!',
-                url: text
+                text: '364일의 언버스데이 즐기기',
+                url: url
             })
         } else {
             alert("공유하기가 지원되지 않는 환경입니다.")
         }
-        // try{
-        //     await navigator.clipboard.writeText(text);
-
-        //     alert('링크가 복사되었습니다. 친구에게 공유해주세요!');
-        // }catch(error){
-        //     alert('링크 복사를 실패했습니다.')
-        // }
     }
+/*
+    handleCopyClipBoard = async (text: string) => {
+        try{
+            await navigator.clipboard.writeText(text);
+
+            alert('링크가 복사되었습니다. 친구에게 공유해주세요!');
+        }catch(error){
+            alert('링크 복사를 실패했습니다.')
+        }
+    }
+*/
 
     cardSendYellowCompleteFront(){
         if(this.state.showFront == true) {
