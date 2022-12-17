@@ -35,7 +35,11 @@ class SignInFin1 extends React.Component<{}, any> {
     toLogin = (event: any) => {
         window.location.href = "/login"
     }
-    
+
+    cardsend = (event: any) => {
+        window.location.href = '/cardsend'
+    }
+
     render() {
         return(
             <div className= 'SF1main'>
@@ -54,7 +58,9 @@ class SignInFin1 extends React.Component<{}, any> {
                   당신의 매일이 <br></br>
                   생일처럼 빛날 거예요-!
                 </div>
-    
+                <div className="SF2btnCombine" onClick={this.cardsend}>
+                    <img src="../img/bt_send_card_blue.png"></img>
+                </div>
             </div>
            <div className="SF1cakes">
                 <img className="SF1cake" src="../img/blueCake.png"/>
