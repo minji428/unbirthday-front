@@ -23,9 +23,15 @@ class cardSendYellowFront extends React.Component<{}, any> {
     }
 
     cardSendYelloBack(){
-        if (this.state.toPerson == "") {
+        if (this.state.toPerson == ""
+            || this.state.toPerson == " "
+            || this.state.toPerson == "   "
+            || this.state. toPerson == "    ") {
             alert("받는사람을 입력해주세요.")
-        } else if (this.state.fromPerson == "") {
+        } else if (this.state.fromPerson == ""
+            || this.state.fromPerson == " "
+            || this.state.fromPerson == "  "
+            || this.state.fromPerson == "   ") {
             alert("보내는사람을 입력해주세요.")
         } else {
             this.setState({
