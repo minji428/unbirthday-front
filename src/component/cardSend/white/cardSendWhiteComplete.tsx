@@ -45,11 +45,12 @@ class cardCompleteWhite extends React.Component<{}, any> {
         })
     }
 
-    handleCopyClipBoard = async (text: string) => {
+    handleCopyClipBoard = async (url: string) => {
         if(navigator.share) {
             navigator.share({
                 title: 'HAPPY UNBIRTHDAY!',
-                url: text
+                text: '364일의 언버스데이 즐기기',
+                url: url
             })
         } else {
             alert("공유하기가 지원되지 않는 환경입니다.")
