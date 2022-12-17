@@ -110,7 +110,7 @@ class YellowReceiver2 extends React.Component<receiver1Props, any> {
                    짜잔~ 축하받은 걸 축하해요!
                 </div>
                 <div className="GC2subTexts">
-                    카드를 저장하면 내가 받은 #태그를 분석해줘요.
+                    카드를 탭 해보세요!
                 </div>
                 
             </div>

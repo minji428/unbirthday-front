@@ -174,7 +174,7 @@ class cardSendYellowBack extends React.Component<cardSendYellowFrontProps, any> 
 
     render() {
         return(
-            <div className= 'CS3main'>
+            <div className= 'CS1main'>
                 <div className='logo' onClick={this.clickLogo}>
                     <img src="../../img/bt_logo.png"/>
                 </div>
@@ -192,7 +192,7 @@ class cardSendYellowBack extends React.Component<cardSendYellowFrontProps, any> 
                     <div className="CS3insideYellow">
                         <div className='CS3personName'>
                             HAPPY<br></br>
-                            UN-BIRTHDAY {this.props.toPerson}
+                            UN-BIRTHDAY {this.props.toPerson}!
                         </div>
                         <div className="CS3tagMessage">
                             <div className="CS3temp">

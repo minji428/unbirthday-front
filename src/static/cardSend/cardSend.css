@@ -64,25 +64,29 @@
         box-sizing: border-box;
         display: flex;
         flex-direction: column;
+        /* position: relative; */
         width: 100%;
         height: 100vh;
         flex-grow: 1;
         background-color:#393939;
         position:relative;
+        /* padding:15px; */
         position: fixed;
+        overflow-x: hidden;
         overflow-y: scroll;
         padding-top:5%;
-        padding-left: 5%;
-        padding-right: 5%;
-        padding-bottom: 15%;
+        padding-left: 3%;
+        padding-right: 3%;
+        padding-bottom:15%;
         top: 0;
         left: 0;
-        align-content:space-around;
+        align-items:center;
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
     }
-    /* .CS1logo{
-        width: 100px;
-        margin-left: 35%;
-    } */
+    .CS1main::-webkit-scrollbar {
+        display: none; /* Chrome, Safari, Opera*/
+    }
     .CS1btn{
         display: flex;
         flex-direction: row;

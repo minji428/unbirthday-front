@@ -75,7 +75,7 @@ class cardSendComplete extends React.Component<{}, any> {
 
     render() {
         return(
-            <div className= 'CS3main'>
+            <div className= 'CS1main'>
                 <div className='logo' onClick={this.clickLogo}>
                     <img src="../../img/bt_logo.png"/>
                 </div>
