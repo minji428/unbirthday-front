@@ -62,7 +62,7 @@
     .logo{
         height: 35px;
         width: 100px;
-        position:absolute;
+        /* position:absolute; */
         left:0; 
         right:0; 
         margin-left:auto;

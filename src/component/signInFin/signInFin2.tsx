@@ -16,6 +16,9 @@ class SignInFin2 extends React.Component<{}, any> {
     render() {
         return(
             <div className= 'SF2main'>
+                <div className='logo'>
+                    <img src="../../img/bt_logo.png"/>
+                </div>
             <div className="SF2colors">
                 <img className="SF2color" src="../img/colors.png"/>
             </div>

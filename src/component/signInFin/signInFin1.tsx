@@ -47,8 +47,19 @@ class SignInFin1 extends React.Component<{}, any> {
                     onClick={this.toLogin}
                     limit={1}
                 />
+             <div className='logo'>
+                <img src="../../img/bt_logo.png"/>
+            </div>
             <div className="SF1colors">
-                <img className="SF1color" src="../img/colors.png"/>
+                <img className='SF1-1' src="../img/line1.png"/>
+                <img className='SF1-2' src="../img/line2.png"/>
+                <img className='SF1-3' src="../img/line3.png"/>
+                <img className='SF1-4' src="../img/line4.png"/>
+                <img className='SF1-5' src="../img/line5.png"/>
+                <img className='SF1-6' src="../img/line6.png"/>
+                <img className='SF1-7' src="../img/line7.png"/>
+                <img className='SF1-8' src="../img/line8.png"/>
+                {/* <img className="SF1color" src="../img/colors.png"/> */}
             </div>
             <div className="SF1texts">
                 <div className="SF1mainText">
