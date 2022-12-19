@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
 import '../../static/main.css';
+import '../../static/pc_ver/pc_ver.css';
 import * as service from '../../service/service';
 
 
@@ -9,25 +10,26 @@ class main extends React.Component<{}, any> {
         super(props)
 
         this.state = {
-            receiverName : []
+            receiverName : [],
+            isOnMobile: false,
         }
 
         this.cardSend = this.cardSend.bind(this)
     }
 
     componentDidMount(): void {
-        //PC 유입 시
+        //PC 유입 확인
         let details = navigator.userAgent
         let regexp = /android|iphone|kindle|ipad/i
         let isMobileDevice = regexp.test(details)
-        
-        if (!isMobileDevice) {
-            alert('모바일을 이용하면 더 편하게 카드를 주고받을 수 있어요 :)')
+
+        if (isMobileDevice) {
+            this.setState({isMobileDevice: true})
         }
 
         service.anyService("/main", "get", this.mainCallback)
     }
-
+    
     mainCallback = (response: any) => {
         let arr = new Array();
         const receiver = response.data.data
@@ -55,6 +57,23 @@ class main extends React.Component<{}, any> {
     }
 
     render() {
+        if(!this.state.isOnMobile) {
+            return (
+                <div className='pcMain'>
+                    <div className="parties">
+                        <img src="../../img/colors.png"/>
+                        <img src="../../img/colors.png"/>
+                    </div>
+                    <div className="mains">
+                        <img className="pcLogo" src="../../img/bt_logo.png"/>
+                        <div className='texts'>
+                            생일이 아니더라도, 오늘을 축하해!<br></br>
+                            모바일로 언버스데이 카드를 주고 받아 보세요 :)
+                        </div>
+                    </div>
+                </div>
+            )
+        }
         return(
             <div className= 'HomeMain'>
                 <div className="happyUnbirthday">
