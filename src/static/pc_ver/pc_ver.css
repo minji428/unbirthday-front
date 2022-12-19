@@ -70,7 +70,7 @@
     margin-bottom: -15%;
 }
 .parties img{
-    width: 30%;
+    width: 40%;
     height: 30%;
 }
 .mains{
@@ -78,16 +78,18 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-left: 15%;
+    margin-right:15%;
 }
 .pcLogo{
-    width: 40%;
-    height: 30%;
+    width: 50%;
+    height: 40%;
     margin-bottom: 5%;
 }
 .texts{
     font-family: 'GmarketSansBold';
-    font-size: 50pt;
+    font-size: 35pt;
     color:white;
     text-align: center;
-    line-height: 80%;
+    line-height: 50%;
 }
