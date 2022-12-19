@@ -179,7 +179,7 @@ class cardSendCompleteOrange extends React.Component<{}, any> {
                     </div>
                 </div>
                 <div className="CS4notice" onClick={this.cardSendOrangeCompleteFront}>
-                    앞면 보기
+                    앞면
                     {this.state.showFront ? <CardSendOrangeCompleteFront receivePerson={this.state.receive} sendPerson={this.state.send} clickFunction = {this.cardSendOrangeCompleteFront}/> :''}
                 </div>
                 
