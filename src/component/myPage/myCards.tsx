@@ -35,6 +35,8 @@ class MyCards extends React.Component<{}, any> {
             tags: {} as AllTags,
             isClicked: false,
         }
+        
+        this.notion = this.notion.bind(this)
     }
 
     componentDidMount() {
@@ -153,6 +155,10 @@ class MyCards extends React.Component<{}, any> {
 
     clickLogo(){
         window.location.href = 'https://unbirthday.kr'
+    }
+
+    notion(){
+        window.location.href = 'https://www.notion.so/620ee737c47240e0a77faba2b831df24'
     }
 
     render() {
@@ -309,7 +315,7 @@ class MyCards extends React.Component<{}, any> {
                 </div>
                 <div className="MCnoticeText">
                     <div className="MCnotices" onClick={this.logout}>로그아웃하기</div>
-                    <div className="MCnotices">문의하기</div>
+                    <div className="MCnotices" onClick={this.notion}>문의하기</div>
                 </div>
             </div>
             

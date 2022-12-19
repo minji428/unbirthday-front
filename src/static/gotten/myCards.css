@@ -1,9 +1,4 @@
-/* @font-face {
-    font-family: 'PyeongChangPeace-Light';
-    src: url('./font/PyeongChangPeace-Light.otf') format('woff2');
-    font-weight: 300;
-    font-style: normal;
-} */
+
 @font-face {
     font-family: 'PyeongChangPeace-Light';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Light.woff2') format('woff');
@@ -61,8 +56,6 @@
         overflow-x: hidden;
         overflow-y: scroll;
         padding-top: 5%;
-        /* padding-left: 5px;
-        padding-right: 5px; */
         top: 0;
         left: 0;
         align-content:space-around;
@@ -105,9 +98,9 @@
         border-bottom-color: white;
     }
     .barImg{
-        width: 4%;
+        width: 5.4%;
         margin:3px;
-        margin-left: 2%;
+        margin-left: 5%;
     }
     .MCstatusBarText_empty{
         font-family: 'GmarketSansMedium';
@@ -139,7 +132,8 @@
         display: flex;
         flex:1;
         flex-direction: column;
-        margin-top:3%;
+        margin-top:2%;
+        margin-bottom: -3%;
         /* background-color: firebrick; */
     }
     .MCrow1{
@@ -328,16 +322,15 @@
         display: flex;
         flex:3;
         flex-direction: column;
-        margin-bottom: 5%;
+        margin-bottom: 4%;
         margin-left: 5%;
-       
        
     }
     .MCrowText2{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        margin-bottom: 5%;
+        margin-bottom: 3%;
         font-family: 'Noto Sans KR';
         font-weight: 700;
         font-size: 13pt;
@@ -408,6 +401,7 @@
    .MCidpw{
     display: flex;
     flex-direction: row;
+    margin-top: -2%;
     margin-bottom: 2%;
     align-items: center;
    }
@@ -432,7 +426,7 @@
         font-size: 13px;
         text-decoration:underline;
         color:white;
-        margin-top:5%;
+        margin-top:0%;
         margin-bottom: 2%;
         justify-content: left;
 
