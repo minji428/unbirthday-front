@@ -1,9 +1,4 @@
-/* @font-face {
-    font-family: 'PyeongChangPeace-Light';
-    src: url('./font/PyeongChangPeace-Light.otf') format('woff2');
-    font-weight: 300;
-    font-style: normal;
-} */
+
 @font-face {
     font-family: 'PyeongChangPeace-Light';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Light.woff2') format('woff');
@@ -105,9 +100,9 @@
         border-bottom-color: white;
     }
     .barImg{
-        width: 4%;
+        width: 5.4%;
         margin:3px;
-        margin-left: 2%;
+        margin-left: 5%;
     }
     .MCstatusBarText_empty{
         font-family: 'GmarketSansMedium';
