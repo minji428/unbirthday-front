@@ -40,9 +40,9 @@ class TagGotten extends React.Component<MyCardsProps, any> {
     render() {
         return(
             <div className= 'TGmain'>
-                <div className='logo' onClick={this.clickLogo}>
+                {/* <div className='logo' onClick={this.clickLogo}>
                     <img src="../../img/bt_logo.png"/>
-                </div>
+                </div> */}
             <div className ="TGstatus">
                 <img src="../img/back.png" className="TGbackBtn"/>
                 <img src="../img/back.png" className="TGbackBtn" onClick={this.handleClickBackBtn} />

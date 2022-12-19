@@ -165,6 +165,17 @@ class MyCards extends React.Component<{}, any> {
                 내 카드함
             </div>
         </div>
+        
+        {/* 받은 카드 없을 때  */}
+        {/* <div className='MCstatusBar_empty'>
+            <img className="barImg" src="../../img/bt_warn.png"/>
+            <div className='MCstatusBarText_empty'>아직 받은 카드가 없어요. 먼저 카드를 보내보는 건 어때요?</div>
+        </div> */}
+
+        {/* 받은 카드 있을 때 */}
+        <div className='MCstatusBar_full'>
+            <div className='MCstatusBarText_full'>생일이 아닌 오늘도 특별하길!</div>
+        </div>
 
         <div className="MCtags">
             <div className="MCrow1">

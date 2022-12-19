@@ -101,9 +101,9 @@
         color:#91d7e0;
         font-family: 'Noto Sans KR';
         font-weight: 400;
-        font-size: 12pt;
+        font-size: 12px;
         margin-bottom: 3%;
-        /* background-color: #ded2f9; */
+        font-weight: 700;
     }
     .RSnumAndpass{
         display:flex;
@@ -153,21 +153,25 @@
         flex-direction: row;
         width: 100%;
         position: absolute;
-        font-family:'Noto Sans KR';
-        font-size: 10pt;
         bottom: 0;
         align-items: center;
-        margin-bottom: 10%;
+        margin-bottom: 25%;
         justify-content:center;
         margin-left:-5%;
         
     }
     .RStexts{
+        font-family:'Noto Sans KR';
+        font-weight: 700;
+        font-size: 12px;
         color: white;
         margin-right: 2%;
 
     }
     .RSloginText{
+        font-family:'Noto Sans KR';
+        font-weight: 700;
+        font-size: 12px;
         color: #91d7e0;
     }
 
@@ -176,28 +180,4 @@
         flex-direction: row;
         justify-content: center;
     }
-    .logins{
-        display: flex;
-        font-family: 'GmarketSansMedium';
-        font-size: 20px;
-        justify-content: center;
-        align-items: center;
-        margin-top: 5%;
-        width: 40%;
-        border-radius: 50%/50%;
-        border-style: solid;
-        border-width: 2px thin;
-        padding: 3%;
-    }
-    .login{
-        display: flex;
-        flex-direction: row;
-        width: 100%;
-        position: absolute;
-        font-family:'Noto Sans KR';
-        font-size: 12px;
-        bottom: 0;
-        align-self: center;
-        margin-bottom: 10%;
-        justify-content:center;
-    }
+ 

@@ -85,7 +85,7 @@
         flex:0.3;
         text-align:center;
         align-items: center;
-        margin-top:10%;
+        /* margin-top:10%; */
         vertical-align:text-top;
         /* background-color; */
     }
@@ -98,7 +98,7 @@
         color:#ffffff;
     }
     .CS4subTexts{
-        font-size:15px;
+        font-size:14px;
         font-family:'Noto Sans KR';
         margin-top:3%;
         margin-bottom: 5%;
@@ -233,7 +233,6 @@
         flex:1;
         flex-direction: column;
         justify-content: space-around;
-
         padding-left: 5%;
         padding-right: 5%;
         text-align: left;
@@ -241,6 +240,7 @@
         font-weight: 100;
         font-size: 10pt;
         margin-bottom: 2%;
+        line-height:190%;
     }
     
     .CS4notice{

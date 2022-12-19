@@ -59,9 +59,9 @@ class cardCompleteWhite extends React.Component<cardSendYellowCompleteProps, any
     render() {
         return(
             <div className= 'CS1main'>
-                {/* <div className='logo' onClick={this.clickLogo}>
+                <div className='logo' onClick={this.clickLogo}>
                     <img src="../../img/bt_logo.png"/>
-                </div> */}
+                </div>
             <div className="CS4btn">
                 <img src="../../img/back.png" className="CS4backBtn"/>
             </div>
@@ -70,7 +70,8 @@ class cardCompleteWhite extends React.Component<cardSendYellowCompleteProps, any
                     카드가 완성됐어요!
                 </div>
                 <div className="CS4subTexts">
-                    링크를 전해주면 카드를 읽고 #태그를 간직할 수 있어요.
+                링크를 전해주면 홈 화면에 은빈(이)의 이름이 떠요.<br></br>
+                    얼른 은빈(이)를 놀래켜주세요!
                 </div>
             </div>
             <div className="CS4yelloBox">
