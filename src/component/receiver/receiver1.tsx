@@ -75,8 +75,16 @@ class Receiver1 extends React.Component<{}, any> {
         })
     }
     
+    isOnMobile(): boolean {
+        let details = navigator.userAgent
+        let regexp = /android|iphone|kindle|ipad/i
+        let isMobileDevice = regexp.test(details)
+
+        return isMobileDevice
+    }
+    
     render() {
-        if(!this.state.isOnMobile) {
+        if(!this.isOnMobile()) {
             return (
                 <div className='pcMain'>
                     <div className="parties">
