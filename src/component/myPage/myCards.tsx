@@ -98,14 +98,19 @@ class MyCards extends React.Component<{}, any> {
     }
 
     handleClickCardDetail = async(e: any) => {
-        window.location.href="/gotten/cardgotten"
+        if (this.state.cards !== null) {
+            window.location.href="/gotten/cardgotten"
+        }
     }
 
     handleClickTagDetail = async(e: any) => {
         //window.location.href="/gotten/taggotten"
-        this.setState({
-            isClicked: !this.state.isClicked,
-        })
+
+        if (Object.keys(this.state.tags).length !== 0) {
+            this.setState({
+                isClicked: !this.state.isClicked,
+            })
+        }
     }
 
     showCard = (card: CardFront) => {
@@ -165,17 +170,16 @@ class MyCards extends React.Component<{}, any> {
                 내 카드함
             </div>
         </div>
-        
-        {/* 받은 카드 없을 때  */}
-        {/* <div className='MCstatusBar_empty'>
-            <img className="barImg" src="../../img/bt_warn.png"/>
-            <div className='MCstatusBarText_empty'>아직 받은 카드가 없어요. 먼저 카드를 보내보는 건 어때요?</div>
-        </div> */}
-
-        {/* 받은 카드 있을 때 */}
-        <div className='MCstatusBar_full'>
-            <div className='MCstatusBarText_full'>생일이 아닌 오늘도 특별하길!</div>
-        </div>
+        {this.state.cards !== null ?
+            <div className='MCstatusBar_full'>
+                <div className='MCstatusBarText_full'>생일이 아닌 오늘도 특별하길!</div>
+            </div>
+            : 
+            <div className='MCstatusBar_empty'>
+                <img className="barImg" src="../../img/bt_warn.png"/>
+                <div className='MCstatusBarText_empty'>아직 받은 카드가 없어요. 먼저 카드를 보내보는 건 어때요?</div>
+            </div>
+        }
 
         <div className="MCtags">
             <div className="MCrow1">
@@ -185,14 +189,14 @@ class MyCards extends React.Component<{}, any> {
                 </div>
                 <div className="MCrowTag">
                     <div className="MCrowTags">
-                        {this.state.tags !== null
+                        { Object.keys(this.state.tags).length !== 0
                             ? Object.keys(this.state.tags).map((key, index) => this.showTag(index, {
                                         tag: Object.keys(this.state.tags[key])[0], 
                                         num:  Number(Object.values(this.state.tags[key])[0])
                                     }
                                 ))
-                            : ''}
-                        
+                            : ''
+                        }
                         {/* 
                         <div className="MCpink-Tag">#확인용핑크</div>
                         <div className="MCpink-BlankTag">#블랭크핑크</div>
@@ -203,9 +207,16 @@ class MyCards extends React.Component<{}, any> {
                         <div className="MCgreen-Tag">#확인용그린</div>
                         <div className="MCgreen-BlankTag">#블랭크그린</div> 
                         */}
-                        {/* 여기에 태그 이어서 들어감 */}
-                        
                     </div>
+                    { Object.keys(this.state.tags).length === 0
+                        ? <div className="MCrowTags">
+                            <div className="MCpink-Tag">#???</div>
+                            <div className="MCblue-Tag">#???</div>
+                            <div className="MCgreen-Tag">#???</div>
+                            <div className="MCorange-Tag">#???</div>
+                        </div>
+                        :  ''
+                        }
                 </div>
             </div>
         </div>
@@ -217,7 +228,7 @@ class MyCards extends React.Component<{}, any> {
                 </div>
                 <div className="MCrowCard">
                         <div className="scroll-container">
-                            {this.state.cards !== null
+                            { this.state.cards !== null
                             ? this.state.cards.slice(0, 5).map((card: CardFront) => this.showCard(card))
                             : ''}
                             {/* 
@@ -258,8 +269,30 @@ class MyCards extends React.Component<{}, any> {
                             </div>
                              */}
                         </div>
+                        {this.state.cards !== null
+                            ? ''
+                            : <div className="scroll-container">
+                                <div className="card">
+                                    <img className="MCeachCard" src="../img/card_empty_white.png"/>
+                                    <div className="hubd-white">
+                                    ???</div>
+                                    <div className="CGfrom-white">???</div>
+                                </div>
+                                <div className="card">
+                                    <img className="MCeachCard" src="../img/card_empty_yellow.png"/>
+                                    <div className="hubd-yellow">
+                                    ???</div>
+                                    <div className="CGfrom-yellow">???</div>
+                                </div>
+                                <div className="card">
+                                    <img className="MCeachCard" src="../img/card_empty_orange.png"/>
+                                    <div className="hubd-orange">
+                                    ???</div>
+                                    <div className="CGfrom-orange">???</div>
+                                </div>
+                            </div> 
 
-
+                             }
                         
                 </div>
             
