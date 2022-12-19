@@ -18,18 +18,19 @@ class Receiver1 extends React.Component<{}, any> {
         this.state = {
             isClicked: false,
             timerId: 0,
-            card: {} as Card
+            card: {} as Card,
+            isOnMobile: false,
         }
     }
 
     componentDidMount(): void {
-        //PC 유입 시
+        //PC 유입 확인
         let details = navigator.userAgent
         let regexp = /android|iphone|kindle|ipad/i
         let isMobileDevice = regexp.test(details)
-        
-        if (!isMobileDevice) {
-            alert('모바일을 이용하면 더 편하게 카드를 주고받을 수 있어요 :)')
+
+        if (isMobileDevice) {
+            this.setState({isMobileDevice: true})
         }
 
         this.getCard()
@@ -74,8 +75,33 @@ class Receiver1 extends React.Component<{}, any> {
         })
     }
     
+    isOnMobile(): boolean {
+        let details = navigator.userAgent
+        let regexp = /android|iphone|kindle|ipad/i
+        let isMobileDevice = regexp.test(details)
+
+        return isMobileDevice
+    }
+    
     render() {
-        if (this.state.isClicked && this.state.card!=null) {
+        if(!this.isOnMobile()) {
+            return (
+                <div className='pcMain'>
+                    <div className="parties">
+                        <img src="../../img/colors.png"/>
+                        <img src="../../img/colors.png"/>
+                    </div>
+                    <div className="mains">
+                        <img className="pcLogo" src="../../img/bt_logo.png"/>
+                        <div className='texts'>
+                            생일이 아니더라도, 오늘을 축하해!<br></br>
+                            모바일로 언버스데이 카드를 주고 받아 보세요 :)
+                        </div>
+                    </div>
+                </div>
+            )
+        }
+        else if (this.state.isClicked && this.state.card!==null) {
             if(this.state.card.card_color === 'orange') {
                 return <Orangereceiver2 card={this.state.card} />
             } else if(this.state.card.card_color === 'purple') {
@@ -90,7 +116,14 @@ class Receiver1 extends React.Component<{}, any> {
         return(
             <div className= 'GC1main'  onClick={this.getCard2}>
             <div className="GC1colors">
-                <img className="GC1color" src="../img/colors.png"/>
+                <img className='SF1-1' src="../img/line1.png"/>
+                <img className='SF1-2' src="../img/line2.png"/>
+                <img className='SF1-3' src="../img/line3.png"/>
+                <img className='SF1-4' src="../img/line4.png"/>
+                <img className='SF1-5' src="../img/line5.png"/>
+                <img className='SF1-6' src="../img/line6.png"/>
+                <img className='SF1-7' src="../img/line7.png"/>
+                <img className='SF1-8' src="../img/line8.png"/>
             </div>
             <div className="GC1cakes">
                 <img className="GC1cake" src="../img/pinkCake.png"/>

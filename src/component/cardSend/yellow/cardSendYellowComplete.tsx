@@ -99,8 +99,8 @@ class cardSendYellowComplete extends React.Component<{}, any> {
                     카드가 완성됐어요!
                 </div>
                 <div className="CS4subTexts">
-                    링크를 전해주면 홈 화면에 은빈(이)의 이름이 떠요.<br></br>
-                    얼른 은빈(이)를 놀래켜주세요!
+                    링크를 전해주면 홈 화면에 {this.state.receive}(이)의 이름이 떠요.<br></br>
+                    얼른 {this.state.receive}(이)를 놀래켜주세요!
                 </div>
             </div>
             <div className="CS4yelloBox">
@@ -189,7 +189,7 @@ class cardSendYellowComplete extends React.Component<{}, any> {
                     </div>
                 </div>
                 <div className="CS4notice" onClick={this.cardSendYellowCompleteFront}>
-                    앞면 보기
+                    앞면
                     {this.state.showFront ? <CardSendYellowCompleteFront receivePerson={this.state.receive} sendPerson={this.state.send} clickFunction = {this.cardSendYellowCompleteFront}/> :''}
                 </div>
                 

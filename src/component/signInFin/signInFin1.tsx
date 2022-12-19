@@ -40,6 +40,10 @@ class SignInFin1 extends React.Component<{}, any> {
         window.location.href = '/cardsend'
     }
 
+    clickLogo(){
+        window.location.href = 'https://unbirthday.kr'
+    }
+
     render() {
         return(
             <div className= 'SF1main'>
@@ -47,7 +51,7 @@ class SignInFin1 extends React.Component<{}, any> {
                     onClick={this.toLogin}
                     limit={1}
                 />
-             <div className='logo'>
+             <div className='logo signInFin-logo' onClick={this.clickLogo}>
                 <img src="../../img/bt_logo.png"/>
             </div>
             <div className="SF1colors">
