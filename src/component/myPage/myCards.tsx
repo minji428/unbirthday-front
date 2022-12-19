@@ -100,7 +100,7 @@ class MyCards extends React.Component<{}, any> {
     }
 
     handleClickCardDetail = async(e: any) => {
-        if (this.state.cards !== null) {
+        if (Object.keys(this.state.cards).length !== 0) {
             window.location.href="/gotten/cardgotten"
         }
     }
@@ -176,7 +176,7 @@ class MyCards extends React.Component<{}, any> {
                 내 카드함
             </div>
         </div>
-        {this.state.cards !== null ?
+        { Object.keys(this.state.tags).length !== 0 ?
             <div className='MCstatusBar_full'>
                 <div className='MCstatusBarText_full'>생일이 아닌 오늘도 특별하길!</div>
             </div>
@@ -222,7 +222,7 @@ class MyCards extends React.Component<{}, any> {
                             <div className="MCorange-Tag">#???</div>
                         </div>
                         :  ''
-                        }
+                    }
                 </div>
             </div>
         </div>
@@ -275,7 +275,7 @@ class MyCards extends React.Component<{}, any> {
                             </div>
                              */}
                         </div>
-                        {this.state.cards !== null
+                        { Object.keys(this.state.cards).length !== 0
                             ? ''
                             : <div className="scroll-container">
                                 <div className="card">
