@@ -46,18 +46,8 @@ class login extends React.Component<{}, any> {
             sessionStorage.setItem('id', this.state.id);
             
             if(sessionStorage.getItem('card') !== null) {
-                
-                // toast("💌 카드가 저장됐어요. 내 카드함으로 가보실래요?", {
-                //         position: 'top-center',
-                //         closeButton: false,
-                //         className: 'SF3alerts-toast',
-                //         draggablePercent: 60,
-                //         draggableDirection: 'y',
-                //         autoClose: false,
-                //         transition: Slide,
-                //     })
+
                 window.location.href = `/cardreceive/${sessionStorage.getItem('card')}`
-                sessionStorage.removeItem('card')
             } else{
                 window.location.href = "/mypage"
             }

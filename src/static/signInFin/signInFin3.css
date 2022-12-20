@@ -82,7 +82,7 @@
         padding: 4px 2px;
         position: relative;
         top: -1rem !important;
-
+        z-index: 99;
     }
     .SF3alerts{
         display: flex;

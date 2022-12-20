@@ -73,6 +73,7 @@ class Register extends React.Component<{}, any> {
             this.setState({isDone: true})
             //alert('회원가입이 완료되었습니다.\n로그인을 진행해주세요.')
             //window.location.href = "/login"
+            sessionStorage.setItem('id', this.state.id)
         } else {
             alert(rData.rtMsg)
         }

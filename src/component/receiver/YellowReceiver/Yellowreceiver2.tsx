@@ -24,6 +24,13 @@ class YellowReceiver2 extends React.Component<receiver1Props, any> {
         this.cardBack = this.cardBack.bind(this)
     }
 
+    componentDidMount(): void {        
+        if(sessionStorage.getItem('card') !== null) {
+            this.saveCard()
+            sessionStorage.removeItem('card')
+        }
+    }
+
     setCard  = (card: Card) => {
         this.setState({
             isFlipped: false,
@@ -53,7 +60,7 @@ class YellowReceiver2 extends React.Component<receiver1Props, any> {
         window.location.href = '/cardsend'
     }
 
-    saveCard = (event: any) => {
+    saveCard = () => {
         //로그인된 상태라면 카드 저장
         if(sessionStorage.getItem("id") !== null) {
             const param = {

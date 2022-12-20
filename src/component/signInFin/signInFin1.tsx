@@ -1,7 +1,7 @@
 
 import React, {Component} from 'react';
 import { Slide, toast, ToastContainer } from "react-toastify";
-
+import * as service from '../../service/service'
 import '../../static/signInFin/signInFin1.css';
 import '../../static/signInFin/signInFin3.css';
 {/* <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet"></link> */}
@@ -18,15 +18,8 @@ class SignInFin1 extends React.Component<{}, any> {
     componentDidMount(): void {
         if(sessionStorage.getItem('card') !== null) {
             let newTimerId = window.setInterval(() => {
-                toast("💌 카드가 저장됐어요. 내 카드함으로 가보실래요?", {
-                    position: 'top-center',
-                    closeButton: false,
-                    className: 'SF3alerts-toast',
-                    draggablePercent: 60,
-                    draggableDirection: 'y',
-                    autoClose: false,
-                    transition: Slide,
-                })
+                this.saveCard()
+                sessionStorage.removeItem('card')
             }, 5000);
         }
 
@@ -42,6 +35,43 @@ class SignInFin1 extends React.Component<{}, any> {
 
     clickLogo(){
         window.location.href = 'https://unbirthday.kr'
+    }
+
+    saveCard = () => {
+        if(sessionStorage.getItem("id") !== null) {
+            const param = {
+                card_no: sessionStorage.getItem('card'),
+                receive_id : sessionStorage.getItem("id")
+            }
+            service.anyService("/card/save", "PATCH", this.saveCardCallBack, param)
+        }
+
+        //로그인이 안 된 상태라면
+        // else {
+        //     sessionStorage.setItem("card", this.props.card.card_no)
+        //     window.location.href = '/login'
+        // }
+        
+    }
+
+    saveCardCallBack = (response: any) => {
+        console.log(response)
+        let rData = response.data
+
+        //이미 저장된 카드면?
+        if(rData.rtCode === "00") {
+            toast("💌 카드가 저장됐어요. 내 카드함으로 가보실래요?", {
+                position: 'top-center',
+                closeButton: false,
+                className: 'SF3alerts-toast',
+                draggablePercent: 60,
+                draggableDirection: 'y',
+                autoClose: false,
+                transition: Slide,
+            })
+        } else {
+            alert(rData.rtMsg)
+        }
     }
 
     render() {
