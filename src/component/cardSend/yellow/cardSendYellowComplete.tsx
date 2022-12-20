@@ -47,6 +47,8 @@ class cardSendYellowComplete extends React.Component<{}, any> {
     }
 
     handleCopyClipBoard = async (url: string) => {
+        this.checkItsShared(url)
+
         if(navigator.share) {
             navigator.share({
                 title: 'HAPPY UNBIRTHDAY!',
@@ -55,6 +57,25 @@ class cardSendYellowComplete extends React.Component<{}, any> {
             })
         } else {
             alert("공유하기가 지원되지 않는 환경입니다.")
+        }
+    }
+
+    checkItsShared = async(url: string) => {
+        const param = {
+            cardUrl: url
+        }
+
+        service.anyService("/card/share", "patch", this.checkItsSharedCallBack, param)
+    }
+
+    checkItsSharedCallBack = (response: any) => {
+        console.log(response)
+        let rData = response.data
+
+        if(rData.rtCode === "00") {
+            
+        } else {
+            //alert(rData.rtMsg)
         }
     }
 /*

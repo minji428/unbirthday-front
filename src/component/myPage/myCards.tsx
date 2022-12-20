@@ -42,6 +42,10 @@ class MyCards extends React.Component<{}, any> {
     componentDidMount() {
         const id = sessionStorage.getItem("id")
 
+        if(id === null) {
+            window.location.href = '/login'
+        }
+
         this.getTags(id)
         this.getCards(id)
     }
@@ -61,7 +65,7 @@ class MyCards extends React.Component<{}, any> {
         console.log(response)
         let rData = response.data
 
-        if(rData.rtCode === "00" || rData.rtCode === "09") {
+        if(rData.rtCode === "00") {
             this.setState({
                 tags: {
                     first_tag: rData.data.first_tag,
@@ -70,7 +74,7 @@ class MyCards extends React.Component<{}, any> {
                     fourth_tag: rData.data.fourth_tag,
                 }
             })
-        } else {
+        } else if(rData.rtCode !== "09") {
             alert(rData.rtMsg)
         }
     }
@@ -100,7 +104,7 @@ class MyCards extends React.Component<{}, any> {
     }
 
     handleClickCardDetail = async(e: any) => {
-        if (Object.keys(this.state.cards).length !== 0) {
+        if (this.state.cards !== null) {
             window.location.href="/gotten/cardgotten"
         }
     }
@@ -275,7 +279,7 @@ class MyCards extends React.Component<{}, any> {
                             </div>
                              */}
                         </div>
-                        { Object.keys(this.state.cards).length !== 0
+                        { this.state.cards !== null
                             ? ''
                             : <div className="scroll-container">
                                 <div className="card">
@@ -297,8 +301,7 @@ class MyCards extends React.Component<{}, any> {
                                     <div className="CGfrom-orange-null">???</div>
                                 </div>
                             </div> 
-
-                             }
+                        }
                         
                 </div>
             
