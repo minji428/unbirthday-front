@@ -151,9 +151,9 @@
         position:absolute;
         bottom:7%;
         text-align: right;
-        right:15%;
-        font-size:17px;
-        font-family: 'GmarketSansMedium';  
+        right:10%;
+        font-size:20px;
+        font-family: 'PyeongChangPeace-Bold';  
     }
     .hubd-white{
         position:absolute;
@@ -168,11 +168,11 @@
     .hubd-white-null{
         position:absolute;
         font-family: 'PyeongChangPeace-Bold';
-        top: 7%;
-        left:55%;
+        top: 15%;
+        left:60%;
         width:100%;
         transform:translate(-50%, -50%);
-        font-size: 17px;
+        font-size: 20px;
         text-align: left; 
     }
 
@@ -211,9 +211,9 @@
         position:absolute;
         bottom:7%;
         text-align: right;
-        right:15%;
-        font-size:17px;
-        font-family: 'GmarketSansMedium';
+        right:10%;
+        font-size:20px;
+        font-family: 'PyeongChangPeace-Bold';
         color:rgba(201, 102, 211, 1); 
     }
     .hubd-yellow{
@@ -230,11 +230,11 @@
     .hubd-yellow-null{
         position:absolute;
         font-family: 'PyeongChangPeace-Bold';
-        top: 7%;
-        left:55%;
+        top: 15%;
+        left:60%;
         width:100%;
         transform:translate(-50%, -50%);
-        font-size: 17px;
+        font-size: 20px;
         text-align: left; 
         color: rgba(201, 102, 211, 1);
     }
@@ -252,9 +252,9 @@
         position:absolute;
         bottom:7%;
         text-align: right;
-        right:15%;
-        font-size:17px;
-        font-family: 'GmarketSansMedium';
+        right:10%;
+        font-size:20px;
+        font-family: 'PyeongChangPeace-Bold';
         color:rgba(213, 250, 82, 1);
         
     }
@@ -272,11 +272,11 @@
     .hubd-orange-null{
         position:absolute;
         font-family: 'PyeongChangPeace-Bold';
-        top: 7%;
-        left:55%;
+        top: 15%;
+        left:60%;
         width:100%;
         transform:translate(-50%, -50%);
-        font-size: 17px;
+        font-size: 20px;
         text-align: left; 
         color: rgba(213, 250, 82, 1);
     }
