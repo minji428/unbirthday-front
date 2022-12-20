@@ -86,7 +86,7 @@
     .SF1-4{
         animation: explode-4 1.2s cubic-bezier(0.900, 0.075, 0.025, 0);
         height: 14px;
-        margin-top:5%;
+        margin-top:10%;
         margin-left: 12%;
     }
     .SF1-5{
