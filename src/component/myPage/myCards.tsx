@@ -280,21 +280,21 @@ class MyCards extends React.Component<{}, any> {
                             : <div className="scroll-container">
                                 <div className="card">
                                     <img className="MCeachCard" src="../img/card_empty_white.png"/>
-                                    <div className="hubd-white">
+                                    <div className="hubd-white-null">
                                     ???</div>
-                                    <div className="CGfrom-white">???</div>
+                                    <div className="CGfrom-white-null">???</div>
                                 </div>
                                 <div className="card">
                                     <img className="MCeachCard" src="../img/card_empty_yellow.png"/>
-                                    <div className="hubd-yellow">
+                                    <div className="hubd-yellow-null">
                                     ???</div>
-                                    <div className="CGfrom-yellow">???</div>
+                                    <div className="CGfrom-yellow-null">???</div>
                                 </div>
                                 <div className="card">
                                     <img className="MCeachCard" src="../img/card_empty_orange.png"/>
-                                    <div className="hubd-orange">
+                                    <div className="hubd-orange-null">
                                     ???</div>
-                                    <div className="CGfrom-orange">???</div>
+                                    <div className="CGfrom-orange-null">???</div>
                                 </div>
                             </div> 
 
