@@ -145,8 +145,15 @@
         text-align: right;
         right:15%;
         font-size:13px;
-        font-family: 'GmarketSansMedium';
-        
+        font-family: 'GmarketSansMedium';  
+    }
+    .CGfrom-white-null{
+        position:absolute;
+        bottom:7%;
+        text-align: right;
+        right:10%;
+        font-size:20px;
+        font-family: 'PyeongChangPeace-Bold';  
     }
     .hubd-white{
         position:absolute;
@@ -156,6 +163,16 @@
         width:100%;
         transform:translate(-50%, -50%);
         font-size: 17px;
+        text-align: left; 
+    }
+    .hubd-white-null{
+        position:absolute;
+        font-family: 'PyeongChangPeace-Bold';
+        top: 15%;
+        left:60%;
+        width:100%;
+        transform:translate(-50%, -50%);
+        font-size: 20px;
         text-align: left; 
     }
 
@@ -188,8 +205,16 @@
         right:15%;
         font-size:13px;
         font-family: 'GmarketSansMedium';
-        color:rgba(201, 102, 211, 1);
-        
+        color:rgba(201, 102, 211, 1); 
+    }
+    .CGfrom-yellow-null{
+        position:absolute;
+        bottom:7%;
+        text-align: right;
+        right:10%;
+        font-size:20px;
+        font-family: 'PyeongChangPeace-Bold';
+        color:rgba(201, 102, 211, 1); 
     }
     .hubd-yellow{
         position:absolute;
@@ -199,6 +224,17 @@
         width:100%;
         transform:translate(-50%, -50%);
         font-size: 17px;
+        text-align: left; 
+        color: rgba(201, 102, 211, 1);
+    }
+    .hubd-yellow-null{
+        position:absolute;
+        font-family: 'PyeongChangPeace-Bold';
+        top: 15%;
+        left:60%;
+        width:100%;
+        transform:translate(-50%, -50%);
+        font-size: 20px;
         text-align: left; 
         color: rgba(201, 102, 211, 1);
     }
@@ -212,6 +248,16 @@
         color:rgba(213, 250, 82, 1);
         
     }
+    .CGfrom-orange-null{
+        position:absolute;
+        bottom:7%;
+        text-align: right;
+        right:10%;
+        font-size:20px;
+        font-family: 'PyeongChangPeace-Bold';
+        color:rgba(213, 250, 82, 1);
+        
+    }
     .hubd-orange{
         position:absolute;
         font-family: 'PyeongChangPeace-Bold';
@@ -220,6 +266,17 @@
         width:100%;
         transform:translate(-50%, -50%);
         font-size: 17px;
+        text-align: left; 
+        color: rgba(213, 250, 82, 1);
+    }
+    .hubd-orange-null{
+        position:absolute;
+        font-family: 'PyeongChangPeace-Bold';
+        top: 15%;
+        left:60%;
+        width:100%;
+        transform:translate(-50%, -50%);
+        font-size: 20px;
         text-align: left; 
         color: rgba(213, 250, 82, 1);
     }
