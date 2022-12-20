@@ -38,7 +38,6 @@ class SignInFin1 extends React.Component<{}, any> {
     }
 
     saveCard = () => {
-        //로그인된 상태라면 카드 저장
         if(sessionStorage.getItem("id") !== null) {
             const param = {
                 card_no: sessionStorage.getItem('card'),
