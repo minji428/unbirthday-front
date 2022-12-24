@@ -177,7 +177,7 @@
         position:absolute;
         bottom:10%;
         text-align: right;
-        right:15%;
+        /* right:15%; */
         font-size:17pt;
         font-family: 'GmarketSansMedium';
         color:rgba(201, 102, 211, 1);
@@ -198,7 +198,7 @@
         position:absolute;
         bottom:10%;
         text-align: right;
-        right:15%;
+        /* right:15%; */
         font-size:17pt;
         color:rgba(213, 250, 82, 1);
         font-family: 'GmarketSansMedium';
@@ -218,7 +218,7 @@
         position:absolute;
         bottom:10%;
         text-align: right;
-        right:15%;
+        /* right:15%; */
         font-size:17pt;
         color:rgba(250, 233, 82, 1);
         font-family: 'GmarketSansMedium';

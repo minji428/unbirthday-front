@@ -198,7 +198,7 @@ class cardSendComplete extends React.Component<{}, any> {
                     </div>
                 </div>
                 <div className="CS4notice" onClick={this.cardSendPurpleCompleteFront}>
-                    앞면
+                앞면 &gt;
                     {this.state.showFront ? <CardSendPurpleCompleteFront receivePerson={this.state.receive} sendPerson={this.state.send} clickFunction = {this.cardSendPurpleCompleteFront}/> :''}
                 </div>
                 

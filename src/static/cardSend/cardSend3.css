@@ -160,14 +160,14 @@
         
     }
     .CS3subText{
-        font-family: 'PyeongChangPeace-Light';
+        font-family: 'GmarketSansMedium';
         font-size: 10pt;
     }
     .CS3tag{
         display: flex;
         justify-content: center;
         align-items: center;
-        font-family: 'Noto Sans KR';
+        font-family: 'GmarketSansMedium';
         font-weight: 500;
         font-size: 10pt;
         background-color: black;
@@ -193,7 +193,7 @@
         padding-left: 5%;
         padding-right: 5%;
         text-align: left;
-        font-family: 'Noto Sans KR';
+        font-family: 'GmarketSansMedium';
         font-weight: 100;
         font-size: 10pt;
         margin-bottom: 2%;
