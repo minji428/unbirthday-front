@@ -144,7 +144,7 @@
         bottom:5%;
         text-align: right;
         right:15%;
-        font-size:13px;
+        font-size:12px;
         font-family: 'GmarketSansMedium';  
     }
     .CGfrom-white-null{
@@ -158,11 +158,11 @@
     .hubd-white{
         position:absolute;
         font-family: 'PyeongChangPeace-Bold';
-        top: 20%;
+        top: 18%;
         left:55%;
         width:100%;
         transform:translate(-50%, -50%);
-        font-size: 17px;
+        font-size: 14px;
         text-align: left; 
     }
     .hubd-white-null{
@@ -179,11 +179,11 @@
     .hubd-purple{
         position:absolute;
         font-family: 'PyeongChangPeace-Bold';
-        top: 20%;
+        top: 18%;
         left:55%;
         width:100%;
         transform:translate(-50%, -50%);
-        font-size: 17px;
+        font-size: 14px;
         text-align: left; 
         color:rgba(250, 233, 82, 1)
     }
@@ -191,8 +191,8 @@
         position:absolute;
         bottom:5%;
         text-align: right;
-        right:15%;
-        font-size:13px;
+        right:50%;
+        font-size:12px;
         color:rgba(250, 233, 82, 1);
         font-family: 'GmarketSansMedium';
         
@@ -202,8 +202,9 @@
         position:absolute;
         bottom:5%;
         text-align: right;
-        right:15%;
-        font-size:13px;
+        right:50%;
+        /* margin-right: 5%; */
+        font-size:12px;
         font-family: 'GmarketSansMedium';
         color:rgba(201, 102, 211, 1); 
     }
@@ -219,11 +220,11 @@
     .hubd-yellow{
         position:absolute;
         font-family: 'PyeongChangPeace-Bold';
-        top: 20%;
+        top: 18%;
         left:55%;
         width:100%;
         transform:translate(-50%, -50%);
-        font-size: 17px;
+        font-size: 14px;
         text-align: left; 
         color: rgba(201, 102, 211, 1);
     }
@@ -234,7 +235,7 @@
         left:60%;
         width:100%;
         transform:translate(-50%, -50%);
-        font-size: 20px;
+        font-size: 14px;
         text-align: left; 
         color: rgba(201, 102, 211, 1);
     }
@@ -242,8 +243,8 @@
         position:absolute;
         bottom:5%;
         text-align: right;
-        right:15%;
-        font-size:13px;
+        right:50%;
+        font-size:12px;
         font-family: 'GmarketSansMedium';
         color:rgba(213, 250, 82, 1);
         
@@ -261,11 +262,11 @@
     .hubd-orange{
         position:absolute;
         font-family: 'PyeongChangPeace-Bold';
-        top: 20%;
+        top: 18%;
         left:55%;
         width:100%;
         transform:translate(-50%, -50%);
-        font-size: 17px;
+        font-size: 14px;
         text-align: left; 
         color: rgba(213, 250, 82, 1);
     }

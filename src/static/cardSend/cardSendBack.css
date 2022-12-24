@@ -219,6 +219,7 @@
         margin-bottom: 2%;
     }
     .memo{
+        position:relative;
         border-width: 0;
         background-color: rgba(246, 246, 246, 1);
         height: 80%;
@@ -230,10 +231,12 @@
         line-height:160%;
     }
     .CS3numCnt{
+        position:absolute;
         font-family: 'Noto Sans KR' ;
         color:rgba(0, 0, 0, 0.5);
         font-size: 8px;
-        margin-bottom:2%;
+        right: 10%;
+        bottom:11.5%;
     }
     .CS3notice{
         display: flex;
