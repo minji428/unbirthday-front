@@ -183,8 +183,8 @@
     .CS3writeMessage{
         display: flex;
         flex:1;
-        flex-direction: column;
-        justify-content: space-around;
+        flex-direction: row;
+        /* justify-content: space-around; */
         background-color: white;
         border-color: rgba(0, 0, 0, 0.5);
         border-style:solid;
@@ -199,6 +199,7 @@
         margin-bottom: 2%;
     }
     .CS3numCnt{
+        position:absolute;  
         font-family: 'Noto Sans KR' ;
         color:rgba(0, 0, 0, 0.5);
         font-size: 8px;
