@@ -97,7 +97,7 @@ class cardCompleteWhite extends React.Component<cardSendWhiteCompleteProps, any>
                         </div>
                        </div>
                 </div>
-                <div className="CS4notice" onClick={this.props.clickFunction}>앞면 &gt;  </div>
+                <div className="CS4notice" onClick={this.props.clickFunction}>뒷면 &gt;  </div>
                 
                 <div className='CS4complete'>
                     <img src="../../img/bt_copy_link.png" onClick={()=>this.handleCopyClipBoard('https://unbirthday.kr/cardreceive/'+this.state.cardNo)}/>
