@@ -77,8 +77,8 @@ class cardCompleteWhite extends React.Component<cardSendWhiteCompleteProps, any>
                     카드가 완성됐어요!
                 </div>
                 <div className="CS4subTexts">
-                링크를 전해주면 홈 화면에 은빈(이)의 이름이 떠요.<br></br>
-                    얼른 은빈(이)를 놀래켜주세요!
+                    링크를 전해주면 홈 화면에 '{this.props.receivePerson}'의 이름이 떠요.<br></br>
+                    얼른 {this.props.receivePerson}(이)를 놀래켜주세요!
                 </div>
             </div>
             <div className="CS4yelloBox">
