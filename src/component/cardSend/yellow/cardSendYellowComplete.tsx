@@ -52,7 +52,7 @@ class cardSendYellowComplete extends React.Component<{}, any> {
         if(navigator.share) {
             navigator.share({
                 title: 'HAPPY UNBIRTHDAY!',
-                text: '364일의 언버스데이 즐기기',
+                text: '당신에게 언버스데이 카드가 도착했어요!',
                 url: url
             })
         } else {
