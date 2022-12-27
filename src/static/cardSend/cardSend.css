@@ -112,7 +112,7 @@
         color:#ffffff;
         /* background-color: lightblue; */
         margin-bottom: 5%;
-        margin-top:5%;
+        /* margin-top:5%; */
     }
 
     .CS1cards{
@@ -121,18 +121,23 @@
         flex-direction: column;
         flex:5;
         margin-bottom: 5%;
+        /* background-color: aqua; */
         /* overflow-y: scroll; */
     }
     .CS1card{
-        width: 48.5%;
+        width: 45%;
+        height: 78%;
     }
     .CS1card-first{
         animation: fadeIn 0.375s;
         -webkit-animation: fadeIn 0.375s;
+        margin-right: 5%;
+        /* margin-left: 5%; */
     }
     .CS1card-fourth{
         animation: fadeIn 0.75s;
         -webkit-animation: fadeIn 0.75s;
+        
     }
     .CS1card-second{
         animation: fadeIn 0.125s;
@@ -141,23 +146,31 @@
     .CS1card-third{
         animation: fadeIn 1.5s;
         -webkit-animation: fadeIn 1.5s;
+        margin-right: 5%;
+        /* margin-left: 5%; */
     }
         .CS1card-1st{
             display:flex;
             flex:1;
             flex-direction: row;
-            justify-content: space-between;
+            /* justify-content: space-between; */
+            margin-top:5%;
             height: 100%;
             margin-bottom: 2%;
+            margin-left: 5%;
+            /* background-color: aqua; */
         }
     
-        .CS1card-2nd{
+        .CS1card-2nd{      
             display:flex;
-            /* flex:1; */
+            flex:1;
             flex-direction: row;
-            justify-content: space-between;
+            /* justify-content: space-between; */
             height: 100%;
+            margin-top:-15%;
             margin-bottom: 2%;
+            margin-left: 5%;
+            /* background-color:antiquewhite */
         }
     
     
