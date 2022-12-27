@@ -129,23 +129,23 @@
         height: 87%;
     }
     .CS1card-first{
-        animation: fadeIn 0.375s;
-        -webkit-animation: fadeIn 0.375s;
+        animation: fadeIn 2.1s;
+        -webkit-animation: fadeIn 2.1s;
         margin-right: 5%;
         /* margin-left: 5%; */
     }
     .CS1card-fourth{
-        animation: fadeIn 0.75s;
-        -webkit-animation: fadeIn 0.75s;
+        animation: fadeIn 2.4s;
+        -webkit-animation: fadeIn 2.4s;
         
     }
     .CS1card-second{
-        animation: fadeIn 0.125s;
-        -webkit-animation: fadeIn 1.125s;
+        animation: fadeIn 2.7s;
+        -webkit-animation: fadeIn 2.7s;
     }
     .CS1card-third{
-        animation: fadeIn 1.5s;
-        -webkit-animation: fadeIn 1.5s;
+        animation: fadeIn 3.0s;
+        -webkit-animation: fadeIn 3.0s;
         margin-right: 5%;
         /* margin-left: 5%; */
     }
