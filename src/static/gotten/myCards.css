@@ -136,7 +136,7 @@
         flex:1;
         flex-direction: column;
         margin-top:2%;
-        margin-bottom: -3%;
+        margin-bottom: 2%;
         /* background-color: firebrick; */
     }
     .MCrow1{
@@ -342,7 +342,7 @@
         display: flex;
         flex:3;
         flex-direction: column;
-        margin-bottom: 4%;
+        margin-bottom: 7%;
         margin-left: 5%;
        
     }
@@ -368,7 +368,6 @@
         position: relative;
         height: 100%;
         margin-right: 3%;
-        
    }
 
     .user-text{
@@ -417,12 +416,14 @@
    .MCrowInfo{
     display: flex;
     flex-direction: column;
+    margin-top:2%;
+    /* background-color: antiquewhite; */
    }
    .MCidpw{
     display: flex;
     flex-direction: row;
-    margin-top: -2%;
-    margin-bottom: 2%;
+    margin-top: 0%;
+    margin-bottom: 5%;
     align-items: center;
    }
    .MCname{
