@@ -52,8 +52,8 @@
         flex-grow: 1;
         background-color:#393939;
         position:relative;
-        position: fixed;
-        overflow-x: hidden;
+        /* position: fixed; */
+        /* overflow-x: hidden; */
         overflow-y: scroll;
         padding-top: 5%;
         top: 0;
@@ -99,16 +99,18 @@
         border-bottom-color: white; */
     }
     .barImg{
-        width: 5.4%;
-        margin:3px;
+        width: 17px;
+        height: 17px;
+        /* height: 4.5%; */
+        margin:5px;
         margin-left:5%;
     }
     .MCstatusBarText_empty{
         font-family: 'GmarketSansMedium';
         font-size : 9pt;
-        margin-top : 7px;
-        margin-bottom:3px;
-        margin-left:5px;
+        margin-top : 11px;
+        margin-bottom:13px;
+        margin-left:5%;
     }
 
     .MCstatusBar_full{

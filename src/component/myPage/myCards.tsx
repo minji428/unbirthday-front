@@ -186,8 +186,8 @@ class MyCards extends React.Component<{}, any> {
             </div>
             : 
             <div className='MCstatusBar_empty'>
-                <img className="barImg" src="../../img/bt_warn.png"/>
-                <div className='MCstatusBarText_empty'>아직 받은 카드가 없어요. 먼저 카드를 보내보는 건 어때요?</div>
+                {/* <img className="barImg" src="../../img/bt_warn.png"/> */}
+                <div className='MCstatusBarText_empty'> &nbsp; ✏️ &nbsp; 아직 받은 카드가 없어요. 먼저 카드를 보내보는 건 어때요?</div>
             </div>
         }
 
