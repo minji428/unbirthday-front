@@ -53,7 +53,7 @@ class TagGotten extends React.Component<MyCardsProps, any> {
             <div className="TGtags">
                 <div className="TGrow">
                     <div className="TGrowText">
-                        나의 평소 모습은?
+                        내 모습을 수식하는 단어는?
                     </div>
                         <div className="TGrowTag">
                             {/* <div className="TGpink-Tag">#조각 같은</div>
