@@ -125,8 +125,8 @@
         /* overflow-y: scroll; */
     }
     .CS1card{
-        width: 45%;
-        height: 78%;
+        width: 43%;
+        height: 87%;
     }
     .CS1card-first{
         animation: fadeIn 0.375s;
@@ -154,10 +154,10 @@
             flex:1;
             flex-direction: row;
             /* justify-content: space-between; */
-            margin-top:5%;
+            /* margin-top:5%; */
             height: 100%;
-            margin-bottom: 2%;
-            margin-left: 5%;
+            margin-bottom: 5%;
+            margin-left: 8%;
             /* background-color: aqua; */
         }
     
@@ -167,14 +167,11 @@
             flex-direction: row;
             /* justify-content: space-between; */
             height: 100%;
-            margin-top:-15%;
+            margin-top:-10%;
             margin-bottom: 2%;
-            margin-left: 5%;
+            margin-left: 8%;
             /* background-color:antiquewhite */
         }
-    
-    
-     
 }
 @keyframes fadeInUp1 {
     0% {

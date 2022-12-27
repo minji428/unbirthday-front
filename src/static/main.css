@@ -1,4 +1,5 @@
 
+
 @font-face {
     font-family: 'PyeongChangPeace-Light';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Light.woff2') format('woff');
@@ -90,8 +91,23 @@
         color : white;
         font-size: 12pt;
         margin-bottom: 5%;
+/* 
+        color: #f35626;
+        background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -webkit-animation: hue 10s infinite linear; */
 
     }
+
+    /* @-webkit-keyframes hue {
+        from {
+          -webkit-filter: hue-rotate(0deg);
+        }
+        to {
+          -webkit-filter: hue-rotate(-360deg);
+        }
+      } */
     .NameRow{
         display: flex;
         flex-direction: row;
