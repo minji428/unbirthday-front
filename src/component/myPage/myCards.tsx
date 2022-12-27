@@ -106,6 +106,8 @@ class MyCards extends React.Component<{}, any> {
     handleClickCardDetail = async(e: any) => {
         if (this.state.cards !== null) {
             window.location.href="/gotten/cardgotten"
+        }  else {
+            alert("받은 카드를 저장하면 기능이 오픈돼요")
         }
     }
 
@@ -116,6 +118,8 @@ class MyCards extends React.Component<{}, any> {
             this.setState({
                 isClicked: !this.state.isClicked,
             })
+        } else {
+            alert("받은 카드를 저장하면 기능이 오픈돼요")
         }
     }
 
