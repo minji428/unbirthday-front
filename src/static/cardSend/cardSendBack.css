@@ -66,6 +66,8 @@
         width:3.5%;
     }
     .CS3mainText{
+        animation: fadeInUp1 1.5s;
+        -webkit-animation: fadeInUp1 1.5s;
         display: flex;
         flex-direction: row;
         flex:0.3;

@@ -90,6 +90,8 @@
         /* background-color; */
     }
     .CS4mainText{
+        animation: fadeInUp1 1.5s;
+        -webkit-animation: fadeInUp1 1.5s;
         font-size:17px;
         font-family:'Noto Sans KR';
         font-weight: 500;
