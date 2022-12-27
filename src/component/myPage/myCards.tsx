@@ -220,10 +220,10 @@ class MyCards extends React.Component<{}, any> {
                     </div>
                     { Object.keys(this.state.tags).length === 0
                         ? <div className="MCrowTags">
-                            <div className="MCpink-Tag">#???</div>
-                            <div className="MCblue-Tag">#???</div>
-                            <div className="MCgreen-Tag">#???</div>
-                            <div className="MCorange-Tag">#???</div>
+                            <div className="MCTag-null">#???</div>
+                            <div className="MCTag-null">#???</div>
+                            <div className="MCTag-null">#???</div>
+                            <div className="MCTag-null">#???</div>
                         </div>
                         :  ''
                     }
