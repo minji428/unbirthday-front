@@ -109,7 +109,7 @@ class cardSendCompleteOrange extends React.Component<{}, any> {
                     카드가 완성됐어요!
                 </div>
                 <div className="CS4subTexts">
-                    링크를 전해주면 홈 화면에 {this.state.receive}(이)의 이름이 떠요.<br></br>
+                    링크를 전해주면 홈 화면에 '{this.state.receive}'의 이름이 떠요.<br></br>
                     얼른 {this.state.receive}(이)를 놀래켜주세요!
                 </div>
             </div>
