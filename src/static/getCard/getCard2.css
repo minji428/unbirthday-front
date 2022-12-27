@@ -79,6 +79,8 @@
         vertical-align:text-top;
     }
     .GC2mainText{
+        animation: fadeInUp1 1.5s;
+        -webkit-animation: fadeInUp1 1.5s;
         font-size:19px;
         font-family:'Noto Sans KR';
         font-weight: 700;
@@ -88,6 +90,8 @@
         color:#ffffff;
     }
     .GC2subTexts{
+        animation: fadeInUp1-sub 2s;
+        -webkit-animation: fadeInUp1-sub 2s;
         font-size:14px;
         font-family:'Noto Sans KR';
         font-weight: 700;

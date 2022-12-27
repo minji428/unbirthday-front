@@ -52,7 +52,7 @@ class cardSendComplete extends React.Component<{}, any> {
         if(navigator.share) {
             navigator.share({
                 title: 'HAPPY UNBIRTHDAY!',
-                text: '364일의 언버스데이 즐기기',
+                text: '당신에게 언버스데이 카드가 도착했어요!',
                 url: url
             })
         } else {
@@ -97,9 +97,9 @@ class cardSendComplete extends React.Component<{}, any> {
     render() {
         return(
             <div className= 'CS1main'>
-                <div className='logo' onClick={this.clickLogo}>
+                {/* <div className='logo' onClick={this.clickLogo}>
                     <img src="../../img/bt_logo.png"/>
-                </div>
+                </div> */}
             <div className="CS4btn">
                 <img src="../../img/back.png" className="CS4backBtn"/>
             </div>
@@ -125,7 +125,7 @@ class cardSendComplete extends React.Component<{}, any> {
                     <div className="CS4tagMessage">
                         <div className="CS4temp">
                             <div className="CS4tagSpace">
-                                <span className="CS4tag">
+                                <span className="CS4tag-purple">
                                     <div>{this.state.firstTag}</div>
                                 </span>
                              </div>
@@ -144,7 +144,7 @@ class cardSendComplete extends React.Component<{}, any> {
                             </div>
                 
                             <div className="CS4tagSpace">
-                                <span className="CS4tag">
+                                <span className="CS4tag-purple">
                                     <div>{this.state.secondTag}</div>
                                 </span>
 
@@ -171,7 +171,7 @@ class cardSendComplete extends React.Component<{}, any> {
                                 </div>
                                 
                                 <div className="CS4tagSpace">
-                                    <span className="CS4tag">
+                                    <span className="CS4tag-purple">
                                         <div>{this.state.thirdTag}</div>
                                     </span>
                                 </div>
@@ -179,7 +179,7 @@ class cardSendComplete extends React.Component<{}, any> {
         
                             <div className="CS4temp">
                                 <div className="CS4tagSpace">
-                                    <span className="CS4tag">
+                                    <span className="CS4tag-purple">
                                         <div>{this.state.fourthTag}</div>
                                     </span>
                                 </div>

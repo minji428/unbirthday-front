@@ -55,13 +55,13 @@ class cardSend extends React.Component<{}, any> {
                 </div>
                 <div className="CS1cards">
                     <div className="CS1card-1st">
-                        <img onClick={this.yelloCard} className="CS1card"  src="../img/yellow.png"/>
-                        <img onClick={this.orangeCard} className="CS1card"  src="../img/orange.png"/>
+                        <img onClick={this.yelloCard} className="CS1card CS1card-first"  src="../img/yellow.png"/>
+                        <img onClick={this.orangeCard} className="CS1card CS1card-second"  src="../img/orange.png"/>
                     </div>
                             
-                    <div className="CS1card-1st">
-                        <img onClick={this.whiteCard} className="CS1card" src="../img/newwhite.png"/>
-                        <img onClick={this.purpleCard} className="CS1card" src="../img/pink.png"/>
+                    <div className="CS1card-2nd">
+                        <img onClick={this.whiteCard} className="CS1card CS1card-third" src="../img/newwhite.png"/>
+                        <img onClick={this.purpleCard} className="CS1card CS1card-fourth" src="../img/pink.png"/>
                     </div>
                 </div>
                

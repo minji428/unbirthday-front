@@ -190,7 +190,7 @@ class cardSendPurpleBack extends React.Component<cardSendYellowFrontProps, any> 
                         <div className="CS3tagMessage">
                             <div className="CS3temp">
                                 <div className="CS3tagSpace">
-                                    <span className="CS3tag">
+                                    <span className="CS3tag-purple">
                                     <div onClick={this.chooseTagFirst}>{this.state.firstTag ? this.state.firstTag : "#태그선택"}</div>
                                         {this.state.chooseFirstTag ? <ChooseTagFirst clickFirst = {this.clickFirst}/>:''}
                                     </span>
@@ -210,7 +210,7 @@ class cardSendPurpleBack extends React.Component<cardSendYellowFrontProps, any> 
                                 </div>
                     
                                 <div className="CS3tagSpace">
-                                    <span className="CS3tag">
+                                    <span className="CS3tag-purple">
                                         <div onClick={this.chooseTagSecond}>{this.state.secondTag ? this.state.secondTag : "#태그선택"}</div>
                                         {this.state.chooseSecondTag ? <ChooseTagSecond clickSecond = {this.clickSecond}/>:''}
                                         </span>
@@ -235,7 +235,7 @@ class cardSendPurpleBack extends React.Component<cardSendYellowFrontProps, any> 
                                     </div>
                                     
                                     <div className="CS3tagSpace">
-                                        <span className="CS3tag">
+                                        <span className="CS3tag-purple">
                                         <div onClick={this.chooseTagThird}>{this.state.thirdTag ? this.state.thirdTag : "#태그선택"}</div>
                                             {this.state.chooseThirdTag ? <ChooseTagThird clickThird = {this.clickThird}/>:''}
                                         </span>
@@ -244,7 +244,7 @@ class cardSendPurpleBack extends React.Component<cardSendYellowFrontProps, any> 
             
                                 <div className="CS3temp">
                                     <div className="CS3tagSpace">
-                                        <span className="CS3tag">
+                                        <span className="CS3tag-purple">
                                         <div onClick={this.chooseTagFourth}>{this.state.fourthTag ? this.state.fourthTag : "#태그선택"}</div>
                                             {this.state.chooseFourthTag ? <ChooseTagFourth clickFourth = {this.clickFourth}/>:''}
                                         </span>

@@ -73,6 +73,8 @@
         width:3.5%;
     }
     .CS2mainText{
+        animation: fadeInUp1 1.5s;
+        -webkit-animation: fadeInUp1 1.5s;
         display: flex;
         flex-direction: row;
         flex:0.3;
@@ -86,8 +88,8 @@
         margin-left:7%;
         margin-right:7%;
         color:#ffffff;
-        margin-top : 5%;
-        margin-bottom: 5%;
+        margin-top : 2%;
+        margin-bottom: 6%;
     }
 
     .CS2yelloBox{
