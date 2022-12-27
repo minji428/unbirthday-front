@@ -46,9 +46,9 @@ class Register extends React.Component<{}, any> {
         let regexpChkPw = new RegExp(regPw)
         
         if (regexpChkId.test(this.state.id) === false) {
-            alert("아이디 양식을 맞춰주세요.")
+            alert("아이디는 영문, 숫자 6자 이상 입력해주세요.")
         } else if (regexpChkPw.test(this.state.pw) === false) {
-            alert("비밀번호 양식을 맞춰주세요.")
+            alert("비밀번호는 특수문자와 영문, 숫자를 포함하여 8자 이상 입력해주세요.")
         } else if(regexpChkId.test(this.state.id) === true &&
             regexpChkPw.test(this.state.pw) === true) {
             const param = {
@@ -106,7 +106,7 @@ class Register extends React.Component<{}, any> {
                 <div className="RSinfo">
                     <div className = "RSnumAndpass">
                         <div className="RSinfoText">아이디*</div>
-                            <input type={'text'} name='id' className='RSnumber' placeholder='영문, 숫자 5자 이상 입력해주세요.' onChange={this.getId}/>
+                            <input type={'text'} name='id' className='RSnumber' placeholder='영문, 숫자 6자 이상 입력해주세요.' onChange={this.getId}/>
                         <div className="RSinfoText">비밀번호*</div>
                            <input type={'password'} name='password' className='RSnumber' placeholder='특수문자와 영문, 숫자를 포함하여 8자 이상 입력해주세요.' onChange={this.getPassword}/>
                         <div className="RSnameAccept">

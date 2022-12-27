@@ -52,8 +52,8 @@
         flex-grow: 1;
         background-color:#393939;
         position:relative;
-        position: fixed;
-        overflow-x: hidden;
+        /* position: fixed; */
+        /* overflow-x: hidden; */
         overflow-y: scroll;
         padding-top: 5%;
         top: 0;
@@ -99,14 +99,18 @@
         border-bottom-color: white; */
     }
     .barImg{
-        width: 5.4%;
-        margin:3px;
-        margin-left: 5%;
+        width: 17px;
+        height: 17px;
+        /* height: 4.5%; */
+        margin:5px;
+        margin-left:5%;
     }
     .MCstatusBarText_empty{
         font-family: 'GmarketSansMedium';
-        font-size: 9pt;
-        margin:5px;
+        font-size : 9pt;
+        margin-top : 11px;
+        margin-bottom:13px;
+        margin-left:5%;
     }
 
     .MCstatusBar_full{
@@ -134,7 +138,7 @@
         flex:1;
         flex-direction: column;
         margin-top:2%;
-        margin-bottom: -3%;
+        margin-bottom: 2%;
         /* background-color: firebrick; */
     }
     .MCrow1{
@@ -340,7 +344,7 @@
         display: flex;
         flex:3;
         flex-direction: column;
-        margin-bottom: 4%;
+        margin-bottom: 7%;
         margin-left: 5%;
        
     }
@@ -366,7 +370,6 @@
         position: relative;
         height: 100%;
         margin-right: 3%;
-        
    }
 
     .user-text{
@@ -415,12 +418,14 @@
    .MCrowInfo{
     display: flex;
     flex-direction: column;
+    margin-top:2%;
+    /* background-color: antiquewhite; */
    }
    .MCidpw{
     display: flex;
     flex-direction: row;
-    margin-top: -2%;
-    margin-bottom: 2%;
+    margin-top: 0%;
+    margin-bottom: 5%;
     align-items: center;
    }
    .MCname{

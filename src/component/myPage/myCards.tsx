@@ -190,8 +190,8 @@ class MyCards extends React.Component<{}, any> {
             </div>
             : 
             <div className='MCstatusBar_empty'>
-                <img className="barImg" src="../../img/bt_warn.png"/>
-                <div className='MCstatusBarText_empty'>아직 받은 카드가 없어요. 먼저 카드를 보내보는 건 어때요?</div>
+                {/* <img className="barImg" src="../../img/bt_warn.png"/> */}
+                <div className='MCstatusBarText_empty'> &nbsp; ✏️ &nbsp; 아직 받은 카드가 없어요. 먼저 카드를 보내보는 건 어때요?</div>
             </div>
         }
 
@@ -287,22 +287,22 @@ class MyCards extends React.Component<{}, any> {
                             ? ''
                             : <div className="scroll-container">
                                 <div className="card">
-                                    <img className="MCeachCard" src="../img/card_empty_white.png"/>
-                                    <div className="hubd-white-null">
+                                    <img className="MCeachCard" src="../img/card_empty_white_null.png"/>
+                                    {/* <div className="hubd-white-null">
                                     ???</div>
-                                    <div className="CGfrom-white-null">???</div>
+                                    <div className="CGfrom-white-null">???</div> */}
                                 </div>
                                 <div className="card">
-                                    <img className="MCeachCard" src="../img/card_empty_yellow.png"/>
-                                    <div className="hubd-yellow-null">
+                                    <img className="MCeachCard" src="../img/card_empty_yellow_null.png"/>
+                                    {/* <div className="hubd-yellow-null">
                                     ???</div>
-                                    <div className="CGfrom-yellow-null">???</div>
+                                    <div className="CGfrom-yellow-null">???</div> */}
                                 </div>
                                 <div className="card">
-                                    <img className="MCeachCard" src="../img/card_empty_orange.png"/>
-                                    <div className="hubd-orange-null">
+                                    <img className="MCeachCard" src="../img/card_empty_orange_null.png"/>
+                                    {/* <div className="hubd-orange-null">
                                     ???</div>
-                                    <div className="CGfrom-orange-null">???</div>
+                                    <div className="CGfrom-orange-null">???</div> */}
                                 </div>
                             </div> 
                         }

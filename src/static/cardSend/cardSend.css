@@ -124,15 +124,22 @@
         /* overflow-y: scroll; */
     }
     .CS1card{
-        width: 48.5%;
+        /* width: 48.5%; */
+        width: 43%;
+        height: 75%;
     }
         .CS1card-1st{
             display:flex;
             flex:1;
             flex-direction: row;
-            justify-content: space-between;
+            justify-content: space-around;
             height: 100%;
             margin-bottom: 2%;
+            padding-left: 5%;
+            padding-right: 5%;
+            /* padding-top:2%; */
+            /* padding : 5%; */
+            /* background-color: aqua; */
         }
     
         .CS1card-2nd{
@@ -141,7 +148,7 @@
             flex-direction: row;
             justify-content: space-between;
             height: 100%;
-            margin-bottom: 2%;
+            margin-bottom: 5%;
         }
     
     
