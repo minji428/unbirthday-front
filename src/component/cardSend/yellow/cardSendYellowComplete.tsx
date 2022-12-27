@@ -134,7 +134,7 @@ class cardSendYellowComplete extends React.Component<{}, any> {
                     <div className="CS4tagMessage">
                         <div className="CS4temp">
                             <div className="CS4tagSpace">
-                                <span className="CS4tag">
+                                <span className="CS4tag-yellow">
                                     <div>{this.state.firstTag}</div>
                                 </span>
                              </div>
@@ -153,7 +153,7 @@ class cardSendYellowComplete extends React.Component<{}, any> {
                             </div>
                 
                             <div className="CS4tagSpace">
-                                <span className="CS4tag">
+                                <span className="CS4tag-yellow">
                                     <div>{this.state.secondTag}</div>
                                 </span>
 
@@ -180,7 +180,7 @@ class cardSendYellowComplete extends React.Component<{}, any> {
                                 </div>
                                 
                                 <div className="CS4tagSpace">
-                                    <span className="CS4tag">
+                                    <span className="CS4tag-yellow">
                                         <div>{this.state.thirdTag}</div>
                                     </span>
                                 </div>
@@ -188,7 +188,7 @@ class cardSendYellowComplete extends React.Component<{}, any> {
         
                             <div className="CS4temp">
                                 <div className="CS4tagSpace">
-                                    <span className="CS4tag">
+                                    <span className="CS4tag-yellow">
                                         <div>{this.state.fourthTag}</div>
                                     </span>
                                 </div>
