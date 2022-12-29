@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import '../../static/main.css';
 import '../../static/pc_ver/pc_ver.css';
 import * as service from '../../service/service';
+import styled from 'styled-components';
+import { keyframes } from "styled-components";
 
 class main extends React.Component<{}, any> {
     constructor(props: any){
@@ -73,17 +75,22 @@ class main extends React.Component<{}, any> {
             return(
                 <div className= 'HomeMain'>
                     <div className="happyUnbirthday">
-                        <img src="./img/mainText.png"/>
+                        <img src="./img/bt_logo.png"/>
                     </div>
                     <div className="names">
+                    
                         <div className="NameRow"> 
                             <div>{this.state.receiverName[0]}</div>
                             <div>{this.state.receiverName[1]}</div>
+                            {/* <AnimatedGradientText>{this.state.receiverName[0]}</AnimatedGradientText> */}
+                            {/* <div><AnimatedGradientText>{this.state.receiverName[1]}</AnimatedGradientText></div> */}
                         </div>
                         <div className="NameRow">
                             <div className="insideRow2">
-                                <div>{this.state.receiverName[2]}</div>
-                                <div>{this.state.receiverName[3]}</div>
+                            <div>{this.state.receiverName[2]}</div>
+                            <div>{this.state.receiverName[3]}</div>
+                                {/* <div><AnimatedGradientText>{this.state.receiverName[2]}</AnimatedGradientText></div>
+                                <div><AnimatedGradientText>{this.state.receiverName[3]}</AnimatedGradientText></div> */}
                             </div> 
                             <div className="insideRow2">
                                 <div>{this.state.receiverName[4]}</div>
@@ -182,3 +189,40 @@ class main extends React.Component<{}, any> {
     }
 }
 export default main;
+
+const hue = keyframes`
+ from {
+   -webkit-filter: hue-rotate(0deg);
+ }
+ to {
+   -webkit-filter: hue-rotate(-360deg);
+ }
+`;
+const AnimatedGradientText = styled.h1`
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* align-items: center; */
+    flex:1.5;
+    font-family: 'GmarketSansMedium','serif', 'sans-serif', 'monospace', 'X';
+    width: 100%;
+
+    font-size: 12pt;
+    margin-bottom: 5%;
+
+  color: #f35626;
+  background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: ${hue} 10s infinite linear;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-feature-settings: "kern";
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 48px;
+  overflow-wrap: break-word;
+  text-align: center;
+  text-rendering: optimizelegibility;
+  -moz-osx-font-smoothing: grayscale;
+`;
