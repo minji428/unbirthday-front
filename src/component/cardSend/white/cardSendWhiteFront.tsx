@@ -1,9 +1,13 @@
 import React, {Component} from 'react';
 import '../../../static/cardSend/cardSendFront.css';
-
+import { Card } from './cardSendWhiteFrame'
 import CardSendWhiteBack from './cardSendWhiteBack'
 
-class cardSendWhiteFront extends React.Component<{}, any> {
+interface cardSendBackProps {
+    card: Card,
+}
+
+class CardSendWhiteFront extends React.Component<cardSendBackProps, any> {
     constructor(props: any){
         super(props)
 
@@ -13,29 +17,43 @@ class cardSendWhiteFront extends React.Component<{}, any> {
             fromPerson : "",
             isFromPersonValid: true,
             isToPersonValid: true,
+            card: {} as Card,
         }
-
         this.cardSendWhiteBack = this.cardSendWhiteBack.bind(this)
     }
-
-    componentDidUpdate = (prevProps:any, prevState:any, snapshot:any) => {
-
+    
+    componentDidMount(): void {
+        console.log(this.props.card)
+        if(Object.keys(this.props.card).length !== 0){
+            this.setState({
+                toPerson: this.props.card.toPerson,
+                fromPerson: this.props.card.fromPerson,
+                firstTag: this.props.card.firstTag,
+                secondTag: this.props.card.secondTag,
+                thirdTag: this.props.card.thirdTag,
+                fourthTag: this.props.card.fourthTag,
+                memo: this.props.card.memo,
+            })
+        }
     }
 
     cardSendWhiteBack(){
-        if (this.state.toPerson == ""
-            || this.state.toPerson == " "
-            || this.state.toPerson == "   "
-            || this.state. toPerson == "    ") {
+        if (!this.state.toPerson.replace(/\s/g, '').length) {
             alert("받는사람을 입력해주세요.")
-        } else if (this.state.fromPerson == ""
-            || this.state.fromPerson == " "
-            || this.state.fromPerson == "  "
-            || this.state.fromPerson == "   ") {
+        } else if (!this.state.fromPerson.replace(/\s/g, '').length) {
             alert("보내는사람을 입력해주세요.")
         } else {
             this.setState({
-                showback : true
+                showback : true,
+                card: {
+                    fromPerson: this.state.fromPerson,
+                    toPerson: this.state.toPerson,
+                    firstTag: this.state.firstTag,
+                    secondTag: this.state.secondTag,
+                    thirdTag: this.state.thirdTag,
+                    fourthTag: this.state.fourthTag,
+                    memo: this.state.memo,
+                }
             })
         }
     }
@@ -118,13 +136,21 @@ class cardSendWhiteFront extends React.Component<{}, any> {
                         <div className="CS2write">
                             <div className="CS2toPerson">
                                 <div className="CS2nameBox">
-                                    <input type={'text'} className="form-control" name="toPerson" placeholder='받는 사람' onChange={this.getToPerson}/>
+                                    {Object.keys(this.props.card).length === 0
+                                        ? <input type={'text'} className="form-control" name="toPerson" placeholder='받는 사람' onChange={this.getToPerson}/>
+                                        : <input type={'text'} className="form-control" name="toPerson" value={this.props.card.toPerson} onChange={this.getToPerson}/>
+                                    }
+                                    {/* <input type={'text'} className="form-control" name="toPerson" placeholder='받는 사람' onChange={this.getToPerson}/> */}
                                 </div>
                                 {this.state.isToPersonValid ? '' : <div className="CS2notice">3자 이내로 입력해주세요.</div>}
                             </div>
                             <div className="CS2fromPerson">
                                 <div className="CS2nameBox">
-                                <input type={'text'} className="form-control" name="fromPerson" placeholder='보내는 사람' onChange={this.getFromPerson}/>
+                                    {Object.keys(this.props.card).length === 0 
+                                        ? <input type={'text'} className="form-control" name="fromPerson" placeholder='보내는 사람' onChange={this.getFromPerson}/>
+                                        : <input type={'text'} className="form-control" name="fromPerson" value={this.props.card.fromPerson} onChange={this.getFromPerson}/>
+                                    }
+                                {/* <input type={'text'} className="form-control" name="fromPerson" placeholder='보내는 사람' onChange={this.getFromPerson}/> */}
                                 </div>
                                 {this.state.isFromPersonValid ? '' : <div className="CS2notice">3자 이내로 입력해주세요.</div>}
                             </div>
@@ -135,11 +161,11 @@ class cardSendWhiteFront extends React.Component<{}, any> {
                     
                 <div className='CS2writeBack' >
                     <img src="../../img/bt_write_back.png" onClick={this.cardSendWhiteBack}/>
-                    {this.state.showback ? <CardSendWhiteBack toPerson={this.state.toPerson} fromPerson={this.state.fromPerson}/>: ''}
+                    {this.state.showback ? <CardSendWhiteBack card={this.state.card}/>: ''}
                 </div>
         </div>
 
         )
     }
 }
-export default cardSendWhiteFront;
+export default CardSendWhiteFront;
