@@ -42,6 +42,9 @@ class Receiver1 extends React.Component<{}, any> {
         this.setState({
             timerId: newTimerId
         })
+
+        // document.querySelector('meta[property="og:image"]')?.setAttribute("content")
+        document.querySelector('meta[property="og:url"]')?.setAttribute("content",window.location.href)
     }
 
     getCard = async() => {

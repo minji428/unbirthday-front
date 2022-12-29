@@ -166,7 +166,7 @@ class MyCards extends React.Component<{}, any> {
     }
 
     notion(){
-        window.location.href = 'https://www.notion.so/620ee737c47240e0a77faba2b831df24'
+        window.location.href = 'https://eminent-clavicle-a2a.notion.site/620ee737c47240e0a77faba2b831df24'
     }
 
     render() {

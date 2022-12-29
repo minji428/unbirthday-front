@@ -14,7 +14,10 @@
     "react-scripts": "5.0.1",
     "react-toastify": "^9.1.1",
     "reactstrap": "^9.1.4",
-    "web-vitals": "^2.1.4"
+    "styled-components": "^5.3.6",
+    "typescript": "^4.9.4",
+    "web-vitals": "^2.1.4",
+    "webpack": "^4.20.2"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -41,7 +44,7 @@
     ]
   },
   "devDependencies": {
-    "webpack": "^5.74.0",
+    "@types/styled-components": "^5.1.26",
     "webpack-cli": "^4.10.0"
   }
 }
