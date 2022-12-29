@@ -77,10 +77,11 @@ class OrangeReceiver3 extends React.Component<receiver2Props, any> {
 
         return(
             <div className= 'GC2main'>
-                <ToastContainer 
-                    onClick={this.toMyPage}
-                    limit={1}
-                />
+                <div onClick={this.toMyPage}>
+                    <ToastContainer 
+                        limit={1}
+                    />
+                </div>
             <div className="GC2texts">
                 <div className='GC2mainText'>
                    짜잔~ 축하받은 걸 축하해요!

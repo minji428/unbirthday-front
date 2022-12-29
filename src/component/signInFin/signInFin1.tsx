@@ -77,10 +77,11 @@ class SignInFin1 extends React.Component<{}, any> {
     render() {
         return(
             <div className= 'SF1main'>
-                <ToastContainer 
-                    onClick={this.toLogin}
-                    limit={1}
-                />
+                <div onClick={this.toLogin}>
+                    <ToastContainer 
+                        limit={1}
+                    />
+                </div>
              <div className='logo signInFin-logo' onClick={this.clickLogo}>
                 <img src="../../img/bt_logo.png"/>
             </div>
