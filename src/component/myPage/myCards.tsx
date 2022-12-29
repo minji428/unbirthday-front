@@ -129,7 +129,7 @@ class MyCards extends React.Component<{}, any> {
         let color_to = `hubd-${card.card_color}`
         
         return (
-            <div className="card">
+            <div className="card" onClick={this.showAlert}>
                 <img className="MCeachCard" src={src} id={card.card_no}/>
                 <div className={color_to}>
                     HAPPY<br></br>
@@ -139,6 +139,10 @@ class MyCards extends React.Component<{}, any> {
                 <div className={color_from}>From.{card.receive}</div>
             </div>
             )
+    }
+
+    showAlert = () => {
+        alert("자세히보기를 누르면 카드 확인이 가능해요")
     }
 
     showTag = (index: number, tag: Tag) => {
@@ -169,6 +173,14 @@ class MyCards extends React.Component<{}, any> {
         window.location.href = 'https://eminent-clavicle-a2a.notion.site/620ee737c47240e0a77faba2b831df24'
     }
 
+    cardSend = () => {
+        window.location.href = '/cardsend'
+    }
+
+    noCard = () => {
+        alert('카드함에 저장된 카드가 없어요')
+    }
+
     render() {
         if(this.state.isClicked) {
             return <TagGotten tags={this.state.tags}/>
@@ -191,7 +203,7 @@ class MyCards extends React.Component<{}, any> {
             : 
             <div className='MCstatusBar_empty'>
                 {/* <img className="barImg" src="../../img/bt_warn.png"/> */}
-                <div className='MCstatusBarText_empty'> &nbsp; ✏️ &nbsp; 아직 받은 카드가 없어요. 먼저 카드를 보내보는 건 어때요?</div>
+                <div className='MCstatusBarText_empty' onClick={this.cardSend}> &nbsp; ✏️ &nbsp; 아직 받은 카드가 없어요. 먼저 카드를 보내보는 건 어때요?</div>
             </div>
         }
 
@@ -224,10 +236,10 @@ class MyCards extends React.Component<{}, any> {
                     </div>
                     { Object.keys(this.state.tags).length === 0
                         ? <div className="MCrowTags">
-                            <div className="MCTag-null">#???</div>
-                            <div className="MCTag-null">#???</div>
-                            <div className="MCTag-null">#???</div>
-                            <div className="MCTag-null">#???</div>
+                            <div className="MCTag-null" onClick={this.noCard}>#???</div>
+                            <div className="MCTag-null" onClick={this.noCard}>#???</div>
+                            <div className="MCTag-null" onClick={this.noCard}>#???</div>
+                            <div className="MCTag-null" onClick={this.noCard}>#???</div>
                         </div>
                         :  ''
                     }
@@ -287,19 +299,19 @@ class MyCards extends React.Component<{}, any> {
                             ? ''
                             : <div className="scroll-container">
                                 <div className="card">
-                                    <img className="MCeachCard" src="../img/card_empty_white_null.png"/>
+                                    <img className="MCeachCard" src="../img/card_empty_white_null.png" onClick={this.noCard}/>
                                     {/* <div className="hubd-white-null">
                                     ???</div>
                                     <div className="CGfrom-white-null">???</div> */}
                                 </div>
                                 <div className="card">
-                                    <img className="MCeachCard" src="../img/card_empty_yellow_null.png"/>
+                                    <img className="MCeachCard" src="../img/card_empty_yellow_null.png" onClick={this.noCard}/>
                                     {/* <div className="hubd-yellow-null">
                                     ???</div>
                                     <div className="CGfrom-yellow-null">???</div> */}
                                 </div>
                                 <div className="card">
-                                    <img className="MCeachCard" src="../img/card_empty_orange_null.png"/>
+                                    <img className="MCeachCard" src="../img/card_empty_orange_null.png" onClick={this.noCard}/>
                                     {/* <div className="hubd-orange-null">
                                     ???</div>
                                     <div className="CGfrom-orange-null">???</div> */}
