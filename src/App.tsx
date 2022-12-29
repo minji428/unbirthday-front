@@ -47,7 +47,7 @@ const App = () => {
           <Route path='/cardsend/purple' element={<CardSendPurple/>}></Route>
           <Route path='/cardsend/yellow/:pathvariable' element={<CardCompleteYellow/>}></Route>
           <Route path='/cardsend/orange/:pathvariable' element={<CardCompleteOrange/>}></Route>
-          <Route path='/cardsend/white/:pathvariable' element={<CardCompleteWhite/>}></Route>
+          {/* <Route path='/cardsend/white/:pathvariable' element={<CardCompleteWhite/>}></Route> */}
           <Route path='/cardsend/purple/:pathvariable' element={<CardCompletePurple/>}></Route>
           <Route path='/login' element={<Login/>}></Route>
           <Route path='/register' element={<Register/>}></Route>
