@@ -159,7 +159,7 @@ class CardCompleteYellow extends React.Component<cardSendWhiteProps, any> {
         }
         return(
             <div className= 'CS1main'>
-                <div onClick={this.cardsend}>
+                <div className='div-toast' onClick={this.cardsend}>
                     <ToastContainer 
                         limit={1}
                     />

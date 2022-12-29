@@ -83,7 +83,7 @@ class YellowReceiver3 extends React.Component<receiver2Props, any> {
 
         return(
             <div className= 'GC2main'>
-                <div onClick={this.toMyPage}>
+                <div className='div-toast' onClick={this.toMyPage}>
                     <ToastContainer 
                         limit={1}
                     />

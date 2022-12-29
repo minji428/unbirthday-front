@@ -83,6 +83,7 @@
         position: relative;
         top: -1rem !important;
         z-index: 99;
+        padding-bottom: 6px;
     }
     .SF3alerts{
         display: flex;
@@ -94,6 +95,10 @@
         font-weight: 500;
         margin-bottom: 5%;
 
+    }
+    .div-toast {
+        padding-top: 10px;
+        width: 100%;
     }
     .SF3alerts div{
         margin:1%;

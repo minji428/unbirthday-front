@@ -77,7 +77,7 @@ class SignInFin1 extends React.Component<{}, any> {
     render() {
         return(
             <div className= 'SF1main'>
-                <div onClick={this.toLogin}>
+                <div className='div-toast' onClick={this.toLogin}>
                     <ToastContainer 
                         limit={1}
                     />
