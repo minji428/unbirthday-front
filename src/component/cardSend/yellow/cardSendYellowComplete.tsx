@@ -2,30 +2,22 @@ import React, {Component} from 'react';
 import '../../../static/cardSend/cardSendComplete.css';
 import '../../../static/cardSend/cardSend4.css';
 import * as service from '../../../service/service'
-
+import { Card } from '../white/cardSendWhiteFrame'
 import CardSendYellowCompleteFront from './cardSendYellowCompleteFront'
+import CardSendYellowBack from './cardSendYellowBack'
+import { cardSendWhiteProps } from '../white/cardSendWhiteComplete';
 
-class cardSendYellowComplete extends React.Component<{}, any> {
+class CardCompleteYellow extends React.Component<cardSendWhiteProps, any> {    
     constructor(props: any){
         super(props)
 
         this.state = {
-            cardNo: "",
-            cardColor : "",
-            firstTag : "",
-            secondTag : "",
-            thirdTag : "",
-            fourthTag : "",
-            memo : "",
-            receive : "",
-            send : "",
             showFront : false
         }
 
-        this.cardSendYellowCompleteFront = this.cardSendYellowCompleteFront.bind(this)
-
+        this.flip = this.flip.bind(this)
     }
-
+    /*
     componentDidMount = () => {
         service.anyService("/card/info/"+sessionStorage.getItem("cardUUID"), "get", this.didMountCallback)
     }
@@ -45,9 +37,9 @@ class cardSendYellowComplete extends React.Component<{}, any> {
             send : data.send
         })
     }
-
+    */
     handleCopyClipBoard = async (url: string) => {
-        this.checkItsShared(url)
+        //this.checkItsShared(url)
 
         if(navigator.share) {
             navigator.share({
@@ -59,7 +51,7 @@ class cardSendYellowComplete extends React.Component<{}, any> {
             alert("공유하기가 지원되지 않는 환경입니다.")
         }
     }
-
+    /*
     checkItsShared = async(url: string) => {
         const param = {
             cardUrl: url
@@ -78,6 +70,7 @@ class cardSendYellowComplete extends React.Component<{}, any> {
             //alert(rData.rtMsg)
         }
     }
+    */
 /*
     handleCopyClipBoard = async (text: string) => {
         try{
@@ -88,7 +81,6 @@ class cardSendYellowComplete extends React.Component<{}, any> {
             alert('링크 복사를 실패했습니다.')
         }
     }
-*/
 
     cardSendYellowCompleteFront(){
         if(this.state.showFront == true) {
@@ -101,24 +93,59 @@ class cardSendYellowComplete extends React.Component<{}, any> {
             })
         }
     }
+*/
+
+    flip(){
+        this.setState({showFront: !this.state.showFront})
+    }
 
     clickLogo(){
         window.location.href = 'https://unbirthday.kr'
     }
 
+    completeCard = async(e: any) => {
+        const param = {
+            send : this.props.card.fromPerson,
+            receive : this.props.card.toPerson,
+            firstTag : this.props.card.firstTag,
+            secondTag : this.props.card.secondTag,
+            thirdTag : this.props.card.thirdTag,
+            fourthTag : this.props.card.fourthTag,
+            memo : this.props.card.memo,
+            cardColor : "yellow",
+            sendId : sessionStorage.getItem("id")
+        }
+
+        service.anyService("/card/send/complete", "post", this.handleCompleteCard, param)
+    }
+
+    handleCompleteCard = (response: any) => {
+        console.log(response)
+        console.log(response.data)
+        var cardUUID = response.data.data
+        sessionStorage.setItem("cardUUID", cardUUID)
+        //window.location.href = '/cardsend/white/' + cardUUID
+
+        this.setState({cardUUID: cardUUID})
+        this.handleCopyClipBoard('https://unbirthday.kr/cardreceive/'+cardUUID)
+    }
+
     render() {
+        if (this.state.showFront){
+            return <CardSendYellowCompleteFront card={this.props.card} flip={this.flip} fixCard={this.props.fixCard} />
+        }
         return(
             <div className= 'CS1main'>
             <div className="CS4btn">
-                <img src="../../img/back.png" className="CS4backBtn"/>
+                <img src="../../img/back.png" className="CS4backBtn" onClick={this.props.fixCard}/>
             </div>
             <div className="CS4texts">
                 <div className='CS4mainText'>
                     카드가 완성됐어요!
                 </div>
                 <div className="CS4subTexts">
-                    링크를 전해주면 홈 화면에 '{this.state.receive}'의 이름이 떠요.<br></br>
-                    얼른 {this.state.receive}(이)를 놀래켜주세요!
+                    링크를 전해주면 홈 화면에 '{this.props.card.toPerson}'의 이름이 떠요.<br></br>
+                    얼른 {this.props.card.toPerson}(이)를 놀래켜주세요!
                 </div>
             </div>
             <div className="CS4yelloBox">
@@ -129,18 +156,18 @@ class cardSendYellowComplete extends React.Component<{}, any> {
                 <div className="CS4insideYellow">
                     <div className='CS4personName'>
                         HAPPY<br></br>
-                        UN-BIRTHDAY {this.state.receive}!
+                        UN-BIRTHDAY {this.props.card.toPerson}!
                     </div>
                     <div className="CS4tagMessage">
                         <div className="CS4temp">
                             <div className="CS4tagSpace">
                                 <span className="CS4tag-yellow">
-                                    <div>{this.state.firstTag}</div>
+                                    <div>{this.props.card.firstTag}</div>
                                 </span>
                              </div>
                             <div className="CS4textSpace">
                                 <div className='CS4subText'>
-                                    {this.state.receive}(이)는
+                                    {this.props.card.toPerson}(이)는
                                 </div>
                             </div>
                         </div>
@@ -154,7 +181,7 @@ class cardSendYellowComplete extends React.Component<{}, any> {
                 
                             <div className="CS4tagSpace">
                                 <span className="CS4tag-yellow">
-                                    <div>{this.state.secondTag}</div>
+                                    <div>{this.props.card.secondTag}</div>
                                 </span>
 
                             </div>
@@ -175,13 +202,13 @@ class cardSendYellowComplete extends React.Component<{}, any> {
                                 
                                 <div className="CS4textSpace">
                                     <div className='CS4subText'>
-                                        {this.state.receive}(이)의
+                                        {this.props.card.toPerson}(이)의
                                     </div>
                                 </div>
                                 
                                 <div className="CS4tagSpace">
                                     <span className="CS4tag-yellow">
-                                        <div>{this.state.thirdTag}</div>
+                                        <div>{this.props.card.thirdTag}</div>
                                     </span>
                                 </div>
                             </div>
@@ -189,7 +216,7 @@ class cardSendYellowComplete extends React.Component<{}, any> {
                             <div className="CS4temp">
                                 <div className="CS4tagSpace">
                                     <span className="CS4tag-yellow">
-                                        <div>{this.state.fourthTag}</div>
+                                        <div>{this.props.card.fourthTag}</div>
                                     </span>
                                 </div>
                                 <div className="CS4textSpace">
@@ -201,14 +228,13 @@ class cardSendYellowComplete extends React.Component<{}, any> {
 
                         </div> 
                          <div className="CS4writeMessage" >
-                            {this.state.memo}     
+                            {this.props.card.memo}     
                         </div>
 
                     </div>
                 </div>
-                <div className="CS4notice" onClick={this.cardSendYellowCompleteFront}>
+                <div className="CS4notice" onClick={this.flip}>
                     앞면 &gt;
-                    {this.state.showFront ? <CardSendYellowCompleteFront receivePerson={this.state.receive} sendPerson={this.state.send} clickFunction = {this.cardSendYellowCompleteFront}/> :''}
                 </div>
                 
                 <div className='CS4complete'>
@@ -221,4 +247,4 @@ class cardSendYellowComplete extends React.Component<{}, any> {
         )
     }
 }
-export default cardSendYellowComplete;
+export default CardCompleteYellow;

@@ -13,8 +13,7 @@ import ChooseTagFourth from './chooseTag/chooseTag4'
 import CardCompleteWhite from './cardSendWhiteComplete'
 import CardSendWhiteFront from './cardSendWhiteFront'
 
-
-interface cardSendFrontProps {
+export interface cardSendFrontProps {
     card: Card,
 }
 

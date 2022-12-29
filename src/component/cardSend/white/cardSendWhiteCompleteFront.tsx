@@ -7,7 +7,7 @@ import '../../../static/cardSend/cardSendComplete.css';
 import '../../../static/cardSend/cardSend4.css';
 import * as service from '../../../service/service'
 
-interface cardCompleteProps {
+export interface cardCompleteProps {
     card: Card,
     flip: any,
     fixCard: any,

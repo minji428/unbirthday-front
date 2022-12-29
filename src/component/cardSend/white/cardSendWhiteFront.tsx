@@ -3,7 +3,7 @@ import '../../../static/cardSend/cardSendFront.css';
 import { Card } from './cardSendWhiteFrame'
 import CardSendWhiteBack from './cardSendWhiteBack'
 
-interface cardSendBackProps {
+export interface cardSendBackProps {
     card: Card,
 }
 

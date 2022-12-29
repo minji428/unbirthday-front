@@ -2,17 +2,15 @@ import React, {Component} from 'react';
 import '../../../static/cardSend/cardSendBack.css';
 import * as service from '../../../service/service'
 
+import { Card } from '../white/cardSendWhiteFrame'
+import { cardSendFrontProps } from '../white/cardSendWhiteBack';
 import ChooseTagFirst from './chooseTag/chooseTag1';
 import ChooseTagSecond from './chooseTag/chooseTag2'
 import ChooseTagThird from './chooseTag/chooseTag3'
 import ChooseTagFourth from './chooseTag/chooseTag4'
 
-import CardSendComplete from './cardSendOrangeComplete'
-
-interface cardSendOrangeFrontProps {
-    toPerson: any,
-    fromPerson: any,
-}
+import CardCompleteOrange from './cardSendOrangeComplete'
+import CardSendOrangeFront from './cardSendOrangeFront'
 
 interface Tag{
     FirstTag : chooseTag1
@@ -34,11 +32,12 @@ interface chooseTag4 {
     FourthTag : any
 }
 
-class cardSendOrangeBack extends React.Component<cardSendOrangeFrontProps, any> {
+class CardSendOrangeBack extends React.Component<cardSendFrontProps, any> {
     constructor(props: any){
         super(props)
 
         this.state = {
+            card: {} as Card,
             chooseFirstTag : false,
             chooseSecondTag : false,
             chooseThirdTag : false,
@@ -48,6 +47,8 @@ class cardSendOrangeBack extends React.Component<cardSendOrangeFrontProps, any> 
             thirdTag : "",
             fourthTag : "",
             memo: "",
+            isCompleted: false,
+            showFront: false,
         }
 
         this.chooseTagFirst = this.chooseTagFirst.bind(this)
@@ -59,12 +60,48 @@ class cardSendOrangeBack extends React.Component<cardSendOrangeFrontProps, any> 
         this.clickThird = this.clickThird.bind(this)
         this.clickFourth = this.clickFourth.bind(this)
         this.writeMemo = this.writeMemo.bind(this)
+        this.backButton = this.backButton.bind(this)
     }
 
+    componentDidMount(): void {
+        const numOfTags = Object.keys(this.props.card).length
+        
+        if(numOfTags !== 0) {
+            this.setState({
+                firstTag: this.props.card.firstTag,
+                secondTag: this.props.card.secondTag,
+                thirdTag: this.props.card.thirdTag,
+                fourthTag: this.props.card.fourthTag,
+                memo: this.props.card.memo,
+                card: {
+                    fromPerson: this.props.card.fromPerson,
+                    toPerson: this.props.card.toPerson,
+                    firstTag: this.props.card.firstTag,
+                    secondTag: this.props.card.secondTag,
+                    thirdTag: this.props.card.thirdTag,
+                    fourthTag: this.props.card.fourthTag,
+                    memo: this.props.card.memo,
+                }
+            })
+        }
+    }
     backButton(){
         // location.href로 하면 새로고침 되어서 이전에 작성했던 내용들이 사라짐..
         // 뒷장 쓰기 했던 것 처럼 컴포넌트를 변경하는 방법 생각해보기
-        window.location.href = '/cardsend/orange'
+        //window.location.href = '/cardsend/white'
+
+        this.setState({
+            showFront: true,
+            card: {
+                fromPerson: this.props.card.fromPerson,
+                toPerson: this.props.card.toPerson,
+                firstTag: this.state.firstTag,
+                secondTag: this.state.secondTag,
+                thirdTag: this.state.thirdTag,
+                fourthTag: this.state.fourthTag,
+                memo: this.state.memo,
+            }
+        })    
     }
 
     // 첫번째 태그 선택하는 화면
@@ -143,21 +180,34 @@ class cardSendOrangeBack extends React.Component<cardSendOrangeFrontProps, any> 
     }
 
     completeCard = async(e: any) => {
-        if (this.state.firstTag == "") {
+        if (!this.state.firstTag) {
             alert("첫번째 태그를 선택해주세요.")
-        } else if (this.state.secondTag == "") {
+        } else if (!this.state.secondTag) {
             alert("두번째 태그를 선택해주세요.")
-        } else if (this.state.thirdTag == "") {
+        } else if (!this.state.thirdTag) {
             alert("세번째 태그를 선택해주세요.")
-        } else if (this.state.fourthTag == "") {
+        } else if (!this.state.fourthTag) {
             alert("네번째 태그를 선택해주세요.")
         } else {
             const memoByDefault = "생일에나 할 수 있는 얘기를 오늘 해보네!\n낯간지럽지만 꼭 해주고 싶은 말이야.\n매일이 생일처럼 특별했으면 좋겠어.\n오늘도 해피 언버스데이 :)";
             
-            if(this.state.memo.length === 0){
+            if(!this.state.memo){
                 this.setState({memo: memoByDefault})
-            } 
-            
+            }
+
+            this.setState({
+                isCompleted: true,
+                card: {
+                    toPerson: this.props.card.toPerson,
+                    fromPerson: this.props.card.fromPerson,
+                    firstTag: this.state.firstTag,
+                    secondTag: this.state.secondTag,
+                    thirdTag: this.state.thirdTag,
+                    fourthTag: this.state.fourthTag,
+                    memo: this.state.memo,
+                }
+            })
+            /*
             const param = {
                 send : this.props.fromPerson,
                 receive : this.props.toPerson,
@@ -170,6 +220,7 @@ class cardSendOrangeBack extends React.Component<cardSendOrangeFrontProps, any> 
             }
 
             service.anyService("/card/send/complete", "post", this.handleCompleteCard, param)
+            */
         }
     }
 
@@ -185,7 +236,17 @@ class cardSendOrangeBack extends React.Component<cardSendOrangeFrontProps, any> 
         window.location.href = 'https://unbirthday.kr'
     }
 
+    isCompleted = () => {
+        this.setState({isCompleted: !this.state.isCompleted})
+    }
+
     render() {
+        if(this.state.showFront) {
+            return <CardSendOrangeFront card={this.state.card} />
+        }
+        else if(this.state.isCompleted) {
+            return <CardCompleteOrange card={this.state.card} fixCard={this.isCompleted}/>
+        }
         return(
             <div className= 'CS1main'>
                 {/* <div className='logo' onClick={this.clickLogo}>
@@ -205,7 +266,7 @@ class cardSendOrangeBack extends React.Component<cardSendOrangeFrontProps, any> 
                     <div className="CS3insideYellow">
                         <div className='CS3personNameforOrange'>
                             HAPPY<br></br>
-                            UN-BIRTHDAY {this.props.toPerson}!
+                            UN-BIRTHDAY {this.props.card.toPerson}!
                         </div>
                         <div className="CS3tagMessage">
                             <div className="CS3temp">
@@ -217,7 +278,7 @@ class cardSendOrangeBack extends React.Component<cardSendOrangeFrontProps, any> 
                                  </div>
                                 <div className="CS3textSpace">
                                     <div className='CS3subText'>
-                                        {this.props.toPerson}(이)는
+                                        {this.props.card.toPerson}(이)는
                                     </div>
                                 </div>
                             </div>
@@ -247,7 +308,7 @@ class cardSendOrangeBack extends React.Component<cardSendOrangeFrontProps, any> 
                                     </div>
                                     
                                     <div className="CS3textSpace">
-                                        <div className='CS3subText'>{this.props.toPerson}(이)의</div>
+                                        <div className='CS3subText'>{this.props.card.toPerson}(이)의</div>
                                     </div>
                                     
                                     <div className="CS3tagSpace">
@@ -275,9 +336,11 @@ class cardSendOrangeBack extends React.Component<cardSendOrangeFrontProps, any> 
                         
                         
                             <div className="CS3writeMessage">
-                                <textarea className="memo" cols={10} rows={5} onChange={this.writeMemo} placeholder={"생일에나 할 수 있는 얘기를 오늘 해보네!\n낯간지럽지만 꼭 해주고 싶은 말이야.\n매일이 생일처럼 특별했으면 좋겠어.\n오늘도 해피 언버스데이 :) "}/>
-                                <div className="CS3numCnt">{this.state.memo.length}/50</div>
-                            </div>
+                                {!this.state.memo ?
+                                    <textarea className="memo" cols={10} rows={5} onChange={this.writeMemo} placeholder={"생일에나 할 수 있는 얘기를 오늘 해보네!\n낯간지럽지만 꼭 해주고 싶은 말이야.\n매일이 생일처럼 특별했으면 좋겠어.\n오늘도 해피 언버스데이 :) "} />
+                                    : <textarea className="memo" cols={10} rows={5} onChange={this.writeMemo} value={this.state.memo}/>
+                                }
+                                <div className="CS3numCnt">{this.state.memo ? this.state.memo.length : '0'}/50</div>                            </div>
                                 <div className="CS3notice">입력을 안 할 경우 예시 문구로 카드를 완성해드려요.</div>
     
                         </div>
@@ -292,4 +355,4 @@ class cardSendOrangeBack extends React.Component<cardSendOrangeFrontProps, any> 
         )
     }
 }
-export default cardSendOrangeBack;
+export default CardSendOrangeBack;

@@ -1,9 +1,10 @@
 import React, {Component} from 'react';
 import '../../../static/cardSend/cardSendFront.css';
-
+import { Card } from '../white/cardSendWhiteFrame'
+import { cardSendBackProps } from '../white/cardSendWhiteFront';
 import CardSendPurpleBack from './cardSendPurpleBack'
 
-class cardSendPurpleFront extends React.Component<{}, any> {
+class CardSendPurpleFront extends React.Component<cardSendBackProps, any> {
     constructor(props: any){
         super(props)
 
@@ -13,13 +14,24 @@ class cardSendPurpleFront extends React.Component<{}, any> {
             fromPerson : "",
             isFromPersonValid: true,
             isToPersonValid: true,
+            card: {} as Card,
         }
 
         this.cardSendPurpleBack = this.cardSendPurpleBack.bind(this)
     }
 
-    componentDidUpdate = (prevProps:any, prevState:any, snapshot:any) => {
-
+    componentDidMount(): void {
+        if(Object.keys(this.props.card).length !== 0){
+            this.setState({
+                toPerson: this.props.card.toPerson,
+                fromPerson: this.props.card.fromPerson,
+                firstTag: this.props.card.firstTag,
+                secondTag: this.props.card.secondTag,
+                thirdTag: this.props.card.thirdTag,
+                fourthTag: this.props.card.fourthTag,
+                memo: this.props.card.memo,
+            })
+        }
     }
 
     cardSendPurpleBack(){
@@ -35,7 +47,16 @@ class cardSendPurpleFront extends React.Component<{}, any> {
             alert("보내는사람을 입력해주세요.")
         } else {
             this.setState({
-                showback : true
+                showback : true,
+                card: {
+                    fromPerson: this.state.fromPerson,
+                    toPerson: this.state.toPerson,
+                    firstTag: this.state.firstTag,
+                    secondTag: this.state.secondTag,
+                    thirdTag: this.state.thirdTag,
+                    fourthTag: this.state.fourthTag,
+                    memo: this.state.memo,
+                }
             })
         }
     }
@@ -118,14 +139,18 @@ class cardSendPurpleFront extends React.Component<{}, any> {
                         <div className="CS2write">
                            <div className="CS2toPerson">
                                 <div className="CS2nameBox">
-                                <input type={'text'} className="form-control" name="toPerson" placeholder='받는 사람' onChange={this.getToPerson}/>
-                                </div>
+                                    {Object.keys(this.props.card).length === 0
+                                        ? <input type={'text'} className="form-control" name="toPerson" placeholder='받는 사람' onChange={this.getToPerson}/>
+                                        : <input type={'text'} className="form-control" name="toPerson" value={this.props.card.toPerson} onChange={this.getToPerson}/>
+                                    }                                </div>
                                 {this.state.isToPersonValid ? '' : <div className="CS2notice">3자 이내로 입력해주세요.</div>}
                             </div>
                             <div className="CS2fromPerson">
                                 <div className="CS2nameBox">
-                                <input type={'text'} className="form-control" name="fromPerson" placeholder='보내는 사람' onChange={this.getFromPerson}/>
-                                </div>
+                                    {Object.keys(this.props.card).length === 0 
+                                        ? <input type={'text'} className="form-control" name="fromPerson" placeholder='보내는 사람' onChange={this.getFromPerson}/>
+                                        : <input type={'text'} className="form-control" name="fromPerson" value={this.props.card.fromPerson} onChange={this.getFromPerson}/>
+                                    }                                </div>
                                 {this.state.isFromPersonValid ? '' : <div className="CS2notice">3자 이내로 입력해주세요.</div>}
                             </div>
                         </div> 
@@ -135,11 +160,11 @@ class cardSendPurpleFront extends React.Component<{}, any> {
                     
                 <div className='CS2writeBack' >
                     <img src="../../img/bt_write_back.png" onClick={this.cardSendPurpleBack}/>
-                    {this.state.showback ? <CardSendPurpleBack toPerson={this.state.toPerson} fromPerson={this.state.fromPerson}/>: ''}
+                    {this.state.showback ? <CardSendPurpleBack card={this.state.card}/>: ''}
                 </div>
         </div>
 
         )
     }
 }
-export default cardSendPurpleFront;
+export default CardSendPurpleFront;
