@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
+import { Slide, toast, ToastContainer } from "react-toastify";
+
 import '../../../static/cardSend/cardSendComplete.css';
 import '../../../static/cardSend/cardSend4.css';
 import * as service from '../../../service/service'
-import { Card } from '../white/cardSendWhiteFrame'
 import CardSendYellowCompleteFront from './cardSendYellowCompleteFront'
-import CardSendYellowBack from './cardSendYellowBack'
 import { cardSendWhiteProps } from '../white/cardSendWhiteComplete';
 
 class CardCompleteYellow extends React.Component<cardSendWhiteProps, any> {    
@@ -47,10 +47,28 @@ class CardCompleteYellow extends React.Component<cardSendWhiteProps, any> {
                 text: '당신에게 언버스데이 카드가 도착했어요!',
                 url: url
             })
+
+            //카드보내기 팝업
+            this.showAlert()
+
         } else {
             alert("공유하기가 지원되지 않는 환경입니다.")
         }
     }
+    
+    showAlert = () => {
+        toast("💌 다른 친구에게도 카드를 보내 볼까요?", {
+            position: 'top-center',
+            closeButton: false,
+            className: 'SF3alerts-toast',
+            draggablePercent: 60,
+            draggableDirection: 'y',
+            autoClose: false,
+            transition: Slide,
+            delay: 5000,
+        })
+    }
+
     /*
     checkItsShared = async(url: string) => {
         const param = {
@@ -128,6 +146,11 @@ class CardCompleteYellow extends React.Component<cardSendWhiteProps, any> {
 
         this.setState({cardUUID: cardUUID})
         this.handleCopyClipBoard('https://unbirthday.kr/cardreceive/'+cardUUID)
+
+    }
+
+    cardsend = () => {
+        window.location.href = '/cardsend'
     }
 
     render() {
@@ -136,6 +159,11 @@ class CardCompleteYellow extends React.Component<cardSendWhiteProps, any> {
         }
         return(
             <div className= 'CS1main'>
+                <div onClick={this.cardsend}>
+                    <ToastContainer 
+                        limit={1}
+                    />
+                </div>
             <div className="CS4btn">
                 <img src="../../img/back.png" className="CS4backBtn" onClick={this.props.fixCard}/>
             </div>
@@ -238,7 +266,7 @@ class CardCompleteYellow extends React.Component<cardSendWhiteProps, any> {
                 </div>
                 
                 <div className='CS4complete'>
-                    <img src="../../img/bt_copy_link.png" onClick={()=>this.handleCopyClipBoard('https://unbirthday.kr/cardreceive/'+this.state.cardNo)}/>
+                    <img src="../../img/bt_copy_link.png" onClick={this.completeCard}/>
                 </div>
             </div>
 

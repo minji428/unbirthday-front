@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
+import { Slide, toast, ToastContainer } from "react-toastify";
 import { Card } from './cardSendWhiteFrame'
-import { cardSendWhiteProps } from './cardSendWhiteComplete';
-import CardSendWhiteBack from './cardSendWhiteBack'
 
 import '../../../static/cardSend/cardSendComplete.css';
 import '../../../static/cardSend/cardSend4.css';
@@ -28,9 +27,25 @@ class CardCompleteWhite extends React.Component<cardCompleteProps, any> {
                 text: '당신에게 언버스데이 카드가 도착했어요!',
                 url: url
             })
+            //카드보내기 팝업
+            this.showAlert()
+
         } else {
             alert("공유하기가 지원되지 않는 환경입니다.")
         }
+    }
+
+    showAlert = () => {
+        toast("💌 다른 친구에게도 카드를 보내 볼까요?", {
+            position: 'top-center',
+            closeButton: false,
+            className: 'SF3alerts-toast',
+            draggablePercent: 60,
+            draggableDirection: 'y',
+            autoClose: false,
+            transition: Slide,
+            delay: 5000,
+        })
     }
 
     /*
@@ -85,9 +100,18 @@ class CardCompleteWhite extends React.Component<cardCompleteProps, any> {
         this.handleCopyClipBoard('https://unbirthday.kr/cardreceive/'+cardUUID)
     }
 
+    cardsend = () => {
+        window.location.href = '/cardsend'
+    }
+
     render() {
         return(
             <div className= 'CS1main'>
+                <div onClick={this.cardsend}>
+                    <ToastContainer 
+                        limit={1}
+                    />
+                </div>
                 <div className='logo' onClick={this.clickLogo}>
                     <img src="../../img/bt_logo.png"/>
                 </div>
