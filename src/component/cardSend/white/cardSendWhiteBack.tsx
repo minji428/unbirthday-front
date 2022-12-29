@@ -198,10 +198,6 @@ class CardSendWhiteBack extends React.Component<cardSendFrontProps, any> {
         } else {
             const memoByDefault = "생일에나 할 수 있는 얘기를 오늘 해보네!\n낯간지럽지만 꼭 해주고 싶은 말이야.\n매일이 생일처럼 특별했으면 좋겠어.\n오늘도 해피 언버스데이 :)";
             
-            if(!this.state.memo){
-                this.setState({memo: memoByDefault})
-            }
-
             this.setState({
                 isCompleted: true,
                 card: {
@@ -211,7 +207,7 @@ class CardSendWhiteBack extends React.Component<cardSendFrontProps, any> {
                     secondTag: this.state.secondTag,
                     thirdTag: this.state.thirdTag,
                     fourthTag: this.state.fourthTag,
-                    memo: this.state.memo,
+                    memo: this.state.memo ? this.state.memo : memoByDefault,
                 }
             })
             /*
