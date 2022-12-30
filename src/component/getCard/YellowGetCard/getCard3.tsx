@@ -40,7 +40,7 @@ class YellowGetCard3 extends React.Component<getCard2Props, any> {
 
     render() {
         if (!this.state.isFlipped && this.props.card!=null) {
-            return <GetCard2 card={this.state.card}/>
+            return <GetCard2 card={this.props.card}/>
         }
         
         return(

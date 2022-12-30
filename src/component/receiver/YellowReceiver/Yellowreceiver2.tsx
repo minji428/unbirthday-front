@@ -17,7 +17,6 @@ class YellowReceiver2 extends React.Component<receiver1Props, any> {
 
         this.state = {
             isFlipped: false,
-            card: {} as Card,
         }
         
         this.setCard = this.setCard.bind(this)
@@ -34,25 +33,12 @@ class YellowReceiver2 extends React.Component<receiver1Props, any> {
     setCard  = (card: Card) => {
         this.setState({
             isFlipped: false,
-            card: card,
         })
     }; 
 
     cardBack = (event: any) => {
         this.setState({
             isFlipped: true,
-            card: {
-                card_no: this.props.card.card_no,
-                send: this.props.card.send,
-                receive: this.props.card.receive,
-                first_tag: this.props.card.first_tag,
-                second_tag: this.props.card.second_tag,
-                third_tag: this.props.card.third_tag,
-                fourth_tag: this.props.card.fourth_tag,
-                memo: this.props.card.memo,
-                card_color: this.props.card.card_color,
-                reg_date: this.props.card.reg_date,
-            }
         })
     }
 
@@ -103,8 +89,8 @@ class YellowReceiver2 extends React.Component<receiver1Props, any> {
     }
     
     render() {
-        if (this.state.isFlipped && this.state.card!=null) {
-            return <YellowReceiver3 card={this.state.card} setCard={this.setCard}/>
+        if (this.state.isFlipped && this.props.card!=null) {
+            return <YellowReceiver3 card={this.props.card} setCard={this.setCard}/>
         }
         return(
             <div className= 'GC2main'>

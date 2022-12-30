@@ -78,7 +78,7 @@ class YellowReceiver3 extends React.Component<receiver2Props, any> {
 
     render() {
         if (!this.state.isFlipped && this.props.card!=null) {
-            return <YellowReceiver2 card={this.state.card}/>
+            return <YellowReceiver2 card={this.props.card}/>
         }
 
         return(

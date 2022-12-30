@@ -138,7 +138,6 @@ class CardGotten extends React.Component<{}, any> {
         console.log(clickedCard)
 
         this.setState({
-            isClicked: !this.state.isClicked,
             card: {
                 card_no: clickedCard.card_no,
                 send: clickedCard.send,
@@ -150,7 +149,8 @@ class CardGotten extends React.Component<{}, any> {
                 memo: clickedCard.memo,
                 card_color: clickedCard.card_color,
                 reg_date: clickedCard.reg_date,
-            }
+            },
+            isClicked: !this.state.isClicked,
         })
     }
 
