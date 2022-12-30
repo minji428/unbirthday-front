@@ -85,6 +85,8 @@
     }
 
     .CS3yelloBox{
+        animation: fadeInUp1 1.5s;
+        -webkit-animation: fadeInUp1 1.5s;
         display: flex;
         flex-direction: column;
         flex:1;
