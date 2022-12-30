@@ -63,52 +63,85 @@ class CardSendWhiteFront extends React.Component<cardSendBackProps, any> {
     }
 
     getToPerson=(event: any) => {
-        if(!this.isValid(event.target.value)) {
+        let toPerson = event.target.value
+
+        if(this.isInvalid(toPerson) === 1 || this.isInvalid(toPerson) === 2) {
             this.setState({isToPersonValid: false})
         }
-        event.target.value = this.handleName(event.target.value)
+        event.target.value = this.handleName(toPerson)
 
         let getToPerson = event.target.value
         this.setState({toPerson : getToPerson})
     }
 
     getFromPerson=(event: any) => {
-        if(!this.isValid(event.target.value)) {
+        let fromPerson = event.target.value
+        let isInvalid = this.isInvalid(fromPerson)
+
+        if(isInvalid === 1 || isInvalid === 2) {
             this.setState({isFromPersonValid: false})
-        } 
+        }
         // else {
         //     this.setState({isFromPersonValid: true})
         // }
-        event.target.value = this.handleName(event.target.value)
+        event.target.value = this.handleName(fromPerson)
 
-        let getFromPerson = event.target.value
-        this.setState({fromPerson : getFromPerson})
+        this.setState({fromPerson : event.target.value})
     }
 
     handleName=(string: string) => {
-        if(this.doesContainKorean(string) && string.length > 3) {
+        if(this.isInvalid(string) === 1) {
             return string.substring(0, 3)
         }
-        else if(!this.doesContainKorean(string) && string.length > 4) {
+        else if(this.isInvalid(string) === 2) {
             return string.substring(0, 4)
         }
-        else {
-            return string
+        return string
+    }
+
+    removeEmoji = (event: any) => {
+        let string = event.target.value
+
+        if(this.isInvalid(string) === 3) {
+            alert('이모티콘 사용은 불가해요😢')
+
+            //이모지 제거
+            event.target.value = string.replace(/([\uE000-\uF8FF]|\uD83C[\uDC00-\uDFFF]|\uD83D[\uDC00-\uDFFF]|[\u2011-\u26FF]|\uD83E[\uDD10-\uDDFF])/g, '');
+            
+            if(event.target.name === 'fromPerson') {
+                this.setState({fromPerson : event.target.value})
+            } else {
+                this.setState({toPerson : event.target.value})
+            }
         }
     }
 
-    isValid=(string: string) => {
-        if((this.doesContainKorean(string) && string.length > 3) 
-            || (!this.doesContainKorean(string) && string.length > 4)) {
-                return false
-        }
+    //유효: 0, 길이 초과(한글): 1, 길이 초과(영어): 2 이모지 포함: 2
+    isInvalid=(string: string) => {
+        const VALID: number = 0
+        const KOR: number = 1
+        const ENG: number = 2
+        const EMOJI: number = 3
 
-        return true
+        if(this.doesContainKorean(string) && string.length > 3) {
+            return KOR
+        } else if(!this.doesContainKorean(string) && string.length > 4) {
+            return ENG
+        } else if(this.doesStrContainEmoji(string)) {
+            return EMOJI
+        }
+        return VALID
     }
 
     doesContainKorean=(string: string) => {
         const korean = /[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/
         return korean.test(string)
+    }
+
+    doesStrContainEmoji = (string: string) => {
+        const regexExp = /(\u00a9|\u00ae|[\u2000-\u3300]|\ud83c[\ud000-\udfff]|\ud83d[\ud000-\udfff]|\ud83e[\ud000-\udfff])/gi;
+
+        return regexExp.test(string)
     }
 
     clickLogo(){
@@ -137,8 +170,8 @@ class CardSendWhiteFront extends React.Component<cardSendBackProps, any> {
                             <div className="CS2toPerson">
                                 <div className="CS2nameBox">
                                     {Object.keys(this.props.card).length === 0
-                                        ? <input type={'text'} className="form-control" name="toPerson" placeholder='받는 사람' onChange={this.getToPerson}/>
-                                        : <input type={'text'} className="form-control" name="toPerson" value={this.props.card.toPerson} onChange={this.getToPerson}/>
+                                        ? <input type={'text'} className="form-control" name="toPerson" placeholder='받는 사람' onChange={this.getToPerson} onBlur={this.removeEmoji}/>
+                                        : <input type={'text'} className="form-control" name="toPerson" value={this.props.card.toPerson} onChange={this.getToPerson} onBlur={this.removeEmoji}/>
                                     }
                                     {/* <input type={'text'} className="form-control" name="toPerson" placeholder='받는 사람' onChange={this.getToPerson}/> */}
                                 </div>
@@ -147,8 +180,8 @@ class CardSendWhiteFront extends React.Component<cardSendBackProps, any> {
                             <div className="CS2fromPerson">
                                 <div className="CS2nameBox">
                                     {Object.keys(this.props.card).length === 0 
-                                        ? <input type={'text'} className="form-control" name="fromPerson" placeholder='보내는 사람' onChange={this.getFromPerson}/>
-                                        : <input type={'text'} className="form-control" name="fromPerson" value={this.props.card.fromPerson} onChange={this.getFromPerson}/>
+                                        ? <input type={'text'} className="form-control" name="fromPerson" placeholder='보내는 사람' onChange={this.getFromPerson} onBlur={this.removeEmoji}/>
+                                        : <input type={'text'} className="form-control" name="fromPerson" value={this.props.card.fromPerson} onChange={this.getFromPerson} onBlur={this.removeEmoji}/>
                                     }
                                 {/* <input type={'text'} className="form-control" name="fromPerson" placeholder='보내는 사람' onChange={this.getFromPerson}/> */}
                                 </div>

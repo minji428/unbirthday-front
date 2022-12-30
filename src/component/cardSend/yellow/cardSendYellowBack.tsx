@@ -181,7 +181,26 @@ class CardSendYellowBack extends React.Component<cardSendFrontProps, any> {
 
         return string
     }
+ 
+    removeEmoji = (event: any) => {
+        let string = event.target.value
 
+        if(this.doesStrContainEmoji(string)) {
+            alert('이모티콘 사용은 불가해요😢')
+            event.target.value = string.replace(/([\uE000-\uF8FF]|\uD83C[\uDC00-\uDFFF]|\uD83D[\uDC00-\uDFFF]|[\u2011-\u26FF]|\uD83E[\uDD10-\uDDFF])/g, '');
+            
+            this.setState({
+                memo : event.target.value
+            })
+        }
+        
+    }
+
+    doesStrContainEmoji = (string: string) => {
+        const regexExp = /(\u00a9|\u00ae|[\u2000-\u3300]|\ud83c[\ud000-\udfff]|\ud83d[\ud000-\udfff]|\ud83e[\ud000-\udfff])/gi;
+
+        return regexExp.test(string)
+    }
 
     completeCard = async(e: any) => {
         if (!this.state.firstTag) {
@@ -324,8 +343,8 @@ class CardSendYellowBack extends React.Component<cardSendFrontProps, any> {
 
                             <div className="CS3writeMessage">
                                 {!this.state.memo ?
-                                    <textarea className="memo" cols={10} rows={5} onChange={this.writeMemo} placeholder={"생일에나 할 수 있는 얘기를 오늘 해보네!\n낯간지럽지만 꼭 해주고 싶은 말이야.\n매일이 생일처럼 특별했으면 좋겠어.\n오늘도 해피 언버스데이 :) "} />
-                                    : <textarea className="memo" cols={10} rows={5} onChange={this.writeMemo} value={this.state.memo}/>
+                                    <textarea className="memo" cols={10} rows={5} onChange={this.writeMemo} onBlur={this.removeEmoji} placeholder={"생일에나 할 수 있는 얘기를 오늘 해보네!\n낯간지럽지만 꼭 해주고 싶은 말이야.\n매일이 생일처럼 특별했으면 좋겠어.\n오늘도 해피 언버스데이 :) "} />
+                                    : <textarea className="memo" cols={10} rows={5} onChange={this.writeMemo} onBlur={this.removeEmoji} value={this.state.memo}/>
                                 }
                                 <div className="CS3numCnt">{this.state.memo ? this.state.memo.length : '0'}/50</div>                            </div>
                                 <div className="CS3notice">입력을 안 할 경우 예시 문구로 카드를 완성해드려요.</div>
