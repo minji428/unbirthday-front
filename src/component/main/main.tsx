@@ -77,13 +77,7 @@ class main extends React.Component<{}, any> {
                     <div className="happyUnbirthday">
                         <img src="./img/bt_logo.png"/>
                     </div>
-                    {/* <div className='heart'></div> */}
-                    <div className="up-heart">
-                        <div className="temp1"></div>
-                        <div className="temp2"></div>
-
-                    </div>
-                    <div className='temp3'></div>
+                   
                     <div className="name-heart">
                         <div className='heartimg'>
                             <img src='./img/heart.png'/>
