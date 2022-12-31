@@ -87,9 +87,6 @@ class CardCompletePurple extends React.Component<cardCompleteProps, any> {
                         limit={1}
                     />
                 </div>
-                <div className='logo' onClick={this.clickLogo}>
-                    <img src="../../img/bt_logo.png"/>
-                </div>
             <div className="CS4btn">
                 <img src="../../img/back.png" className="CS4backBtn" onClick={this.props.fixCard} />
             </div>
