@@ -57,7 +57,7 @@ class PurpleGetCard3 extends React.Component<getCard2Props, any> {
                         <div className="GC3tagMessage">
                             <div className="GC3temp">
                                 <div className="GC3tagSpace">
-                                    <span className="GC3tag">
+                                    <span className="GC3tag-purple">
                                         <div>{this.props.card.first_tag}</div>
                                     </span>
                                  </div>
@@ -76,7 +76,7 @@ class PurpleGetCard3 extends React.Component<getCard2Props, any> {
                                 </div>
                     
                                 <div className="GC3tagSpace">
-                                    <span className="GC3tag">
+                                    <span className="GC3tag-purple">
                                         <div>{this.props.card.second_tag}
                                             
                                         </div>
@@ -101,7 +101,7 @@ class PurpleGetCard3 extends React.Component<getCard2Props, any> {
                                     </div>
                                     
                                     <div className="GC3tagSpace">
-                                        <span className="GC3tag">
+                                        <span className="GC3tag-purple">
                                             <div>{this.props.card.third_tag}</div>
                                         </span>
                                     </div>
@@ -109,7 +109,7 @@ class PurpleGetCard3 extends React.Component<getCard2Props, any> {
             
                                 <div className="GC3temp">
                                     <div className="GC3tagSpace">
-                                        <span className="GC3tag">
+                                        <span className="GC3tag-purple">
                                             <div>{this.props.card.fourth_tag}</div>
                                         </span>
                                     </div>
