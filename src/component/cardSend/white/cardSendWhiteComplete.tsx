@@ -25,7 +25,7 @@ class CardCompleteWhite extends React.Component<cardSendWhiteProps, any> {
 
     }
     componentDidMount(): void {
-        console.log(this.props.card)
+        // console.log(this.props.card)
     }
     /*
     componentDidMount = () => {
@@ -80,32 +80,8 @@ class CardCompleteWhite extends React.Component<cardSendWhiteProps, any> {
         })
     }
 
-    /*
-    checkItsShared = async(url: string) => {
-        const param = {
-            cardUrl: url
-        }
-        service.anyService("/card/share", "patch", this.checkItsSharedCallBack, param)
-    }
-
-    checkItsSharedCallBack = (response: any) => {
-        console.log(response)
-        let rData = response.data
-
-        if(rData.rtCode === "00") {
-            
-        } else {
-            //alert(rData.rtMsg)
-        }
-    }
-    */
-
     flip(){
         this.setState({showFront: !this.state.showFront})
-    }
-
-    clickLogo(){
-        window.location.href = 'https://unbirthday.kr'
     }
 
     completeCard = async(e: any) => {
@@ -125,8 +101,6 @@ class CardCompleteWhite extends React.Component<cardSendWhiteProps, any> {
     }
 
     handleCompleteCard = (response: any) => {
-        console.log(response)
-        console.log(response.data)
         var cardUUID = response.data.data
         sessionStorage.setItem("cardUUID", cardUUID)
         //window.location.href = '/cardsend/white/' + cardUUID
@@ -150,9 +124,7 @@ class CardCompleteWhite extends React.Component<cardSendWhiteProps, any> {
                         limit={1}
                     />
                 </div>
-                {/* <div className='logo' onClick={this.clickLogo}>
-                    <img src="../../img/bt_logo.png"/>
-                </div>  */}
+
             <div className="CS4btn">
                 <img src="../../img/back.png" className="CS4backBtn" onClick={this.props.fixCard}/>
             </div>
@@ -205,7 +177,7 @@ class CardCompleteWhite extends React.Component<cardSendWhiteProps, any> {
                                 
                             <div className="CS4textSpace">
                                     <div className='CS4subText'>
-                                            사람이야.
+                                        사람이야.
                                     </div>
                             </div>
                             </div>

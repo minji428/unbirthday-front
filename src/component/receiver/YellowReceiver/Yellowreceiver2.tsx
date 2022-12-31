@@ -65,7 +65,6 @@ class YellowReceiver2 extends React.Component<receiver1Props, any> {
     }
 
     saveCardCallBack = (response: any) => {
-        console.log(response)
         let rData = response.data
 
         //이미 저장된 카드면?
@@ -118,11 +117,9 @@ class YellowReceiver2 extends React.Component<receiver1Props, any> {
                             HAPPY<br></br>
                             UN-BIRTHDAY<br></br>
                             {this.props.card.receive}
-                            {/* 은빈! */}
                         </div>
                         <div className="GC2subTextYellow">
                             From. {this.props.card.send}
-                            {/* From. 수수 */}
                         </div>
                        </div>
                     </div>

@@ -9,8 +9,6 @@ import Yellowreceiver2 from './YellowReceiver/Yellowreceiver2';
 import '../../static/getCard/getCard1.css';
 import * as service from '../../service/service'
 
-{/* <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet"></link> */}
-
 class Receiver1 extends React.Component<{}, any> {
     constructor(props: any){
         super(props)
@@ -56,7 +54,6 @@ class Receiver1 extends React.Component<{}, any> {
     }
     
     getCardsCallBack = (response: any) => {
-        console.log(response)
         let rData = response.data
 
         if(rData.rtCode === "00" || rData.rtCode === "09") {

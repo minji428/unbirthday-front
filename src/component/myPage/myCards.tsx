@@ -62,7 +62,6 @@ class MyCards extends React.Component<{}, any> {
     }
 
     getTagsCallBack = (response: any) => {
-        console.log(response)
         let rData = response.data
 
         if(rData.rtCode === "00") {
@@ -91,7 +90,6 @@ class MyCards extends React.Component<{}, any> {
     }
 
     getCardsCallBack = (response: any) => {
-        console.log(response)
         let rData = response.data
 
         if(rData.rtCode === "00" || rData.rtCode === "09") {
@@ -257,64 +255,18 @@ class MyCards extends React.Component<{}, any> {
                             { this.state.cards !== null
                             ? this.state.cards.slice(0, 5).map((card: CardFront) => this.showCard(card))
                             : ''}
-                            {/* 
-                            <div className="card">
-                                <img className="MCeachCard" src="../img/card_empty_white.png"/>
-                                <div className="hubd-white">HAPPY<br></br>
-                                UN-BIRTHDAY<br></br>
-                                주연!</div>
-                                <div className="CGfrom-white">From.재현</div>
-                            </div>
-                            <div className="card">
-                                <img className="MCeachCard" src="../img/card_empty_yellow.png"/>
-                                <div className="hubd-yellow">HAPPY<br></br>
-                                UN-BIRTHDAY<br></br>
-                                정혜!</div>
-                                <div className="CGfrom-yellow">From.소연이</div>
-                            </div>
-                            <div className="card">
-                                <img className="MCeachCard" src="../img/card_empty_purple.png"/>
-                                <div className="hubd-purple">HAPPY<br></br>
-                                UN-BIRTHDAY<br></br>
-                                아름이!</div>
-                                <div className="CGfrom-purple">From.지윤</div>
-                            </div>
-                            <div className="card">
-                                <img className="MCeachCard" src="../img/card_empty_orange.png"/>
-                                <div className="hubd-orange">HAPPY<br></br>
-                                UN-BIRTHDAY<br></br>
-                                지수!</div>
-                                <div className="CGfrom-orange">From.민규</div>
-                            </div>
-                            <div className="card">
-                                <img className="MCeachCard" src="../img/card_empty_white.png"/>
-                                <div className="hubd-white">HAPPY<br></br>
-                                UN-BIRTHDAY<br></br>
-                                주연!</div>
-                                <div className="CGfrom-white">From.재현</div>
-                            </div>
-                             */}
                         </div>
                         { this.state.cards !== null
                             ? ''
                             : <div className="scroll-container">
                                 <div className="card">
                                     <img className="MCeachCard" src="../img/card_empty_white_null.png" onClick={this.noCard}/>
-                                    {/* <div className="hubd-white-null">
-                                    ???</div>
-                                    <div className="CGfrom-white-null">???</div> */}
                                 </div>
                                 <div className="card">
                                     <img className="MCeachCard" src="../img/card_empty_yellow_null.png" onClick={this.noCard}/>
-                                    {/* <div className="hubd-yellow-null">
-                                    ???</div>
-                                    <div className="CGfrom-yellow-null">???</div> */}
                                 </div>
                                 <div className="card">
                                     <img className="MCeachCard" src="../img/card_empty_orange_null.png" onClick={this.noCard}/>
-                                    {/* <div className="hubd-orange-null">
-                                    ???</div>
-                                    <div className="CGfrom-orange-null">???</div> */}
                                 </div>
                             </div> 
                         }

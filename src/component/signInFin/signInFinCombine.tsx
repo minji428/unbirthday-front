@@ -4,8 +4,6 @@ import { Slide, toast, ToastContainer } from "react-toastify";
 
 import '../../static/signInFin/signInFin1.css';
 import '../../static/signInFin/signInFin3.css';
-{/* <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet"></link> */}
-
 
 class SignInFin1 extends React.Component<{}, any> {
     constructor(props: any){

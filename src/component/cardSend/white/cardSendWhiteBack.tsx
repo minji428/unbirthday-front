@@ -210,34 +210,13 @@ class CardSendWhiteBack extends React.Component<cardSendFrontProps, any> {
                     memo: this.state.memo ? this.state.memo : memoByDefault,
                 }
             })
-            /*
-            const param = {
-                send : this.props.fromPerson,
-                receive : this.props.toPerson,
-                firstTag : this.state.firstTag,
-                secondTag : this.state.secondTag,
-                thirdTag : this.state.thirdTag,
-                fourthTag : this.state.fourthTag,
-                memo : this.state.memo,
-                cardColor : "white",
-                sendId : sessionStorage.getItem("id")
-            }
-
-            service.anyService("/card/send/complete", "post", this.handleCompleteCard, param)
-            */
         }
     }
 
     handleCompleteCard = (response: any) => {
-        console.log(response)
-        console.log(response.data)
         var cardUUID = response.data.data
         sessionStorage.setItem("cardUUID", cardUUID)
         window.location.href = '/cardsend/white/' + cardUUID
-    }
-
-    clickLogo(){
-        window.location.href = 'https://unbirthday.kr'
     }
 
     isCompleted = () => {
@@ -253,9 +232,6 @@ class CardSendWhiteBack extends React.Component<cardSendFrontProps, any> {
         }
         return(
             <div className= 'CS1main'>
-                {/* <div className='logo' onClick={this.clickLogo}>
-                    <img src="../../img/bt_logo.png"/>
-                </div> */}
                 <div className="CS3btn">
                     <img src="../img/back.png" className="CS3backBtn" onClick={this.backButton}/>
                 </div>
@@ -347,7 +323,7 @@ class CardSendWhiteBack extends React.Component<cardSendFrontProps, any> {
                                 }
                                 <div className="CS3numCnt">{this.state.memo ? this.state.memo.length : '0'}/50</div>
                             </div>
-                                <div className="CS3notice">입력을 안 할 경우 예시 문구로 카드를 완성해드려요.</div>
+                            <div className="CS3notice">입력을 안 할 경우 예시 문구로 카드를 완성해드려요.</div>
     
     
                         </div>
@@ -355,7 +331,6 @@ class CardSendWhiteBack extends React.Component<cardSendFrontProps, any> {
                     
                     <div className='CS3complete'>
                     <img src="../img/bt_complete.png" onClick={this.completeCard}></img>
-                        {/* 완성하기 누르면 uuid 생성하고 그 url로 이동시킨 다음에 Complete 보여주기 */}
                     </div>
                 </div>
    

@@ -85,9 +85,6 @@ class CardSendYellowFront extends React.Component<cardSendBackProps, any> {
         if(isInvalid === 1 || isInvalid === 2) {
             this.setState({isFromPersonValid: false})
         }
-        // else {
-        //     this.setState({isFromPersonValid: true})
-        // }
         event.target.value = this.handleName(fromPerson)
 
         this.setState({fromPerson : event.target.value})
@@ -148,16 +145,9 @@ class CardSendYellowFront extends React.Component<cardSendBackProps, any> {
         return regexExp.test(string)
     }
 
-    clickLogo(){
-        window.location.href = 'https://unbirthday.kr'
-    }
-
     render() {
         return(
             <div className= 'CS1main'>
-                {/* <div className='logo' onClick={this.clickLogo}>
-                    <img src="../../img/bt_logo.png"/>
-                </div> */}
                 <div className="CS2btnBack">
                     <img src="../img/back.png" className="CS2backBtn" onClick={this.backButton}/>
                 </div>

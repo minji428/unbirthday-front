@@ -45,7 +45,6 @@ class main extends React.Component<{}, any> {
     }
 
     mycards() {
-        console.log(sessionStorage.getItem("id"))
         if(sessionStorage.getItem("id") === null) {
             window.location.href = '/login'
         } else {
@@ -122,22 +121,6 @@ class main extends React.Component<{}, any> {
                                     <div>{this.state.receiverName[17]}</div>
                                 </div>
                             </div>
-                            {/* <div className="rowSpecial">
-                                <div>
-                                {this.state.receiverName[18]}
-                                </div>
-                                <div className="ment">
-                                    <div>
-                                        바로 지금 언버스데이를 축하받은 사람들
-                                    </div>
-                                    <div>
-                                        생일이 아닌 오늘을 축하해!
-                                    </div>
-                                </div>
-                                <div>
-                                    {this.state.receiverName[19]}
-                                </div>
-                            </div> */}
                                 <div className="NameRow"> 
                                 <div className="insideRow3">
                                     <div>{this.state.receiverName[12]}</div>
@@ -192,10 +175,10 @@ class main extends React.Component<{}, any> {
                     </div>
                     <div className="ment">
                         <div>
-                                    바로 지금 언버스데이를 축하받은 사람들
+                            바로 지금 언버스데이를 축하받은 사람들
                         </div>
                         <div>
-                                    생일이 아닌 오늘을 축하해!
+                            생일이 아닌 오늘을 축하해!
                         </div>
                     </div>
 

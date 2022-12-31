@@ -69,50 +69,6 @@ class CardCompleteYellow extends React.Component<cardSendWhiteProps, any> {
         })
     }
 
-    /*
-    checkItsShared = async(url: string) => {
-        const param = {
-            cardUrl: url
-        }
-
-        service.anyService("/card/share", "patch", this.checkItsSharedCallBack, param)
-    }
-
-    checkItsSharedCallBack = (response: any) => {
-        console.log(response)
-        let rData = response.data
-
-        if(rData.rtCode === "00") {
-            
-        } else {
-            //alert(rData.rtMsg)
-        }
-    }
-    */
-/*
-    handleCopyClipBoard = async (text: string) => {
-        try{
-            await navigator.clipboard.writeText(text);
-
-            alert('링크가 복사되었습니다. 친구에게 공유해주세요!');
-        }catch(error){
-            alert('링크 복사를 실패했습니다.')
-        }
-    }
-
-    cardSendYellowCompleteFront(){
-        if(this.state.showFront == true) {
-            this.setState({
-                showFront : false
-            })
-        } else {
-            this.setState({
-                showFront : true
-            })
-        }
-    }
-*/
-
     flip(){
         this.setState({showFront: !this.state.showFront})
     }
@@ -138,8 +94,6 @@ class CardCompleteYellow extends React.Component<cardSendWhiteProps, any> {
     }
 
     handleCompleteCard = (response: any) => {
-        console.log(response)
-        console.log(response.data)
         var cardUUID = response.data.data
         sessionStorage.setItem("cardUUID", cardUUID)
         //window.location.href = '/cardsend/white/' + cardUUID
@@ -216,7 +170,7 @@ class CardCompleteYellow extends React.Component<cardSendWhiteProps, any> {
                                 
                             <div className="CS4textSpace">
                                     <div className='CS4subText'>
-                                            사람이야.
+                                        사람이야.
                                     </div>
                             </div>
                             </div>

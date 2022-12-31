@@ -4,7 +4,6 @@ import * as httpStatus from '../util/httpErrorStatusMsgUtil'
 let defaultUrl = 'https://unbirthday-api.kr'
 
 export function anyService(requestURL, requestMethod, callbackFunc, param) {
-    console.log(requestURL)
     var axiosBody = {
         headers : {'Accept': '*/*'},
         url : defaultUrl + requestURL,
@@ -25,7 +24,6 @@ export function anyService(requestURL, requestMethod, callbackFunc, param) {
         if(callbackFunc !== null || typeof callbackFunc !== "undefined") {
             callbackFunc(response)
         } else {
-            console.log("성공 결과값 확인")
             console.log(response);
         }
     })

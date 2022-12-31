@@ -39,7 +39,6 @@ class login extends React.Component<{}, any> {
     }
 
     handleClickLoginCallback = (response: any) => {
-        console.log(response)
         let rData = response.data
 
         if(rData.rtCode === "00") {
@@ -90,14 +89,6 @@ class login extends React.Component<{}, any> {
                         <div className="Loginnumber">
                             <input type={'password'} name='pw' placeholder='비밀번호를 입력하세요.' onChange={this.getPassword}/>
                         </div>
-                        {/* <div className="Loginfind">
-                            <div>
-                            아이디/비밀번호 외 정보를 수집하지 않아
-                            </div>
-                            <div>
-                            계정 찾기가 불가합니다. 계정을 잘 기억해주세요:)
-                            </div>
-                        </div> */}
                     </div>
                 </div>
                 

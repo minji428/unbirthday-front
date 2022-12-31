@@ -68,43 +68,9 @@ class CardCompleteOrange extends React.Component<cardSendWhiteProps, any> {
             delay: 5000,
         })
     }
-    /*
-    checkItsShared = async(url: string) => {
-        const param = {
-            cardUrl: url
-        }
-        service.anyService("/card/share", "patch", this.checkItsSharedCallBack, param)
-    }
-
-    checkItsSharedCallBack = (response: any) => {
-        console.log(response)
-        let rData = response.data
-
-        if(rData.rtCode === "00") {
-            
-        } else {
-            //alert(rData.rtMsg)
-        }
-    }
-    cardSendOrangeCompleteFront(){
-        if(this.state.showFront == true) {
-            this.setState({
-                showFront : false
-            })
-        } else {
-            this.setState({
-                showFront : true
-            })
-        }
-    }
-    */
 
     flip(){
         this.setState({showFront: !this.state.showFront})
-    }
-
-    clickLogo(){
-        window.location.href = 'https://unbirthday.kr'
     }
     
     completeCard = async(e: any) => {
@@ -124,8 +90,6 @@ class CardCompleteOrange extends React.Component<cardSendWhiteProps, any> {
     }
 
     handleCompleteCard = (response: any) => {
-        console.log(response)
-        console.log(response.data)
         var cardUUID = response.data.data
         sessionStorage.setItem("cardUUID", cardUUID)
         //window.location.href = '/cardsend/white/' + cardUUID
@@ -149,9 +113,6 @@ class CardCompleteOrange extends React.Component<cardSendWhiteProps, any> {
                         limit={1}
                     />
                 </div>
-                {/* <div className='logo' onClick={this.clickLogo}>
-                    <img src="../../img/bt_logo.png"/>
-                </div> */}
             <div className="CS4btn">
                 <img src="../../img/back.png" className="CS4backBtn" onClick={this.props.fixCard}/>
             </div>

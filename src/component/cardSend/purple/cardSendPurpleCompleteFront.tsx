@@ -46,25 +46,6 @@ class CardCompletePurple extends React.Component<cardCompleteProps, any> {
         })
     }
 
-    /*
-    checkItsShared = async(url: string) => {
-        const param = {
-            cardUrl: url
-        }
-        service.anyService("/card/share", "patch", this.checkItsSharedCallBack, param)
-    }
-
-    checkItsSharedCallBack = (response: any) => {
-        console.log(response)
-        let rData = response.data
-
-        if(rData.rtCode === "00") {
-            
-        } else {
-            //alert(rData.rtMsg)
-        }
-    }
-    */
     clickLogo(){
         window.location.href = 'https://unbirthday.kr'
     }
@@ -86,9 +67,6 @@ class CardCompletePurple extends React.Component<cardCompleteProps, any> {
     }
 
     handleCompleteCard = (response: any) => {
-        console.log(response)
-        console.log(response.data)
-
         var cardUUID = response.data.data
         sessionStorage.setItem("cardUUID", cardUUID)
         //window.location.href = '/cardsend/white/' + cardUUID
@@ -120,8 +98,8 @@ class CardCompletePurple extends React.Component<cardCompleteProps, any> {
                     카드가 완성됐어요!
                 </div>
                 <div className="CS4subTexts">
-                링크를 전해주면 홈 화면에 '{this.props.card.toPerson}'의 이름이 떠요.<br></br>
-                        얼른 {this.props.card.toPerson}(이)를 놀래켜주세요!
+                    링크를 전해주면 홈 화면에 '{this.props.card.toPerson}'의 이름이 떠요.<br></br>
+                    얼른 {this.props.card.toPerson}(이)를 놀래켜주세요!
                 </div>
             </div>
             <div className="CS4yelloBox">

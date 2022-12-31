@@ -4,7 +4,6 @@ import { Card } from '../../myPage/cardGotten'
 import '../../../static/getCard/getCard3.css';
 import '../../../static/getCard/getCard2.css';
 import GetCard2 from './getCard2';
-{/* <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet"></link> */}
 
 //재사용할 수 있는 방법 찾아보기
 export interface getCard2Props {
@@ -90,10 +89,10 @@ class YellowGetCard3 extends React.Component<getCard2Props, any> {
                                     </span>
                                 </div>
                                     
-                                    <div className="GC3textSpace">
-                                        <div className='GC3subText'>
-                                                사람이야.</div>
-                                         </div>
+                                <div className="GC3textSpace">
+                                    <div className='GC3subText'>
+                                        사람이야.</div>
+                                    </div>
                                 </div>
             
                                 <div className="GC3temp">
@@ -128,12 +127,6 @@ class YellowGetCard3 extends React.Component<getCard2Props, any> {
     
                             </div> 
                              <div className="GC3writeMessage" >
-                                {/* 
-                                <div>생일에나 할 수 있는 얘기를 오늘 해보네! </div>
-                                <div>낯간지럽지만 꼭 해주고 싶은 말이야.</div> 
-                                <div>매일이 생일처럼 특별했으면 좋겠어.</div> 
-                                <div>오늘도 해피 언버스데이 :)  </div>           
-                                */}
                                 {this.props.card.memo}
                             </div>
     
