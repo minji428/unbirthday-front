@@ -70,17 +70,123 @@
     }
 
     .happyUnbirthday{
-        flex:1;
-        width: 40%;
-        padding-top:14%;
+        /* flex:1; */
+        margin-top:0px;
+        width: 50%;
+        padding-top:8%;
         padding-left: 5%;
         padding-right: 5%;
+        margin-bottom: 10%;
+        color: rgba(222, 210, 249, 1);
+        background-image: -webkit-linear-gradient(92deg, rgba(201, 102, 211, 1), rgba(145, 215, 224, 1));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -webkit-animation: hue 5s infinite linear;
     }
 
     img{
         width: 100%;
         height: auto;
         /* padding: 30%; */
+    }
+    /* .heart {
+        width: 90px;
+        height: 90px;
+        background: #ea2027;
+        position: relative;
+        transform: rotate(45deg);
+      }
+      .heart::before {
+        content: "";
+        width: 90px;
+        height: 90px;
+        position: absolute;
+        left: -50%;
+        top:-3%;
+        border-radius: 50%;
+        background: #ea2027;
+      }
+      .heart::after {
+        content: "";
+        width: 90px;
+        height: 90px;
+        position: absolute;
+        top: -50%;
+        left:0%;
+        border-radius: 50%;
+        background: #ea2027;
+      } */
+    .heartimg{
+        position: absolute;
+        width: 85%;
+
+        margin-top:-8%;
+        color: rgba(222, 210, 249, 1);
+        background-image: -webkit-linear-gradient(92deg, rgba(201, 102, 211, 1), rgba(145, 215, 224, 1));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -webkit-animation: hue 5s infinite linear;
+
+    }
+    /* .up-heart{
+        display: flex;
+        flex-direction: row;
+        background-color: blue;
+     
+    }
+    .temp1{
+        width: 170px;
+        height: 90px;
+        border-radius:90px 85px 0 0;
+        margin-left:-46%;
+        margin-top: 5%;
+        
+        border: solid rgba(222, 210, 249, 1);
+        background-image: -webkit-linear-gradient(92deg, rgba(201, 102, 211, 1), rgba(145, 215, 224, 1));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -webkit-animation: hue 10s infinite linear;
+        border-bottom: 0;
+        position: absolute;
+    }
+
+    .temp2{
+        width: 170px;
+        height: 90px;
+        border-radius:95px 95px 0 0;
+        margin-top: 5%;
+        
+        border: solid rgba(222, 210, 249, 1);
+        background-image: -webkit-linear-gradient(92deg, rgba(201, 102, 211, 1), rgba(145, 215, 224, 1));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -webkit-animation: hue 10s infinite linear;
+        border-bottom: 0;
+        position: absolute;
+
+    }
+    .temp3{
+        width: 180px;
+        height: 180px;
+        position: relative;
+        transform: rotate(45deg);
+      
+        border: solid rgba(222, 210, 249, 1);
+        background-image: -webkit-linear-gradient(92deg, rgba(201, 102, 211, 1), rgba(145, 215, 224, 1));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -webkit-animation: hue 10s infinite linear;
+        border-top: 0;
+        border-left: 0;
+        top:30%;
+        right: 15%;
+
+    } */
+    .name-heart{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width:85%;
     }
     .names{
         display: flex;
@@ -89,16 +195,17 @@
         /* align-items: center; */
         flex:1.5;
         font-family: 'GmarketSansMedium','serif', 'sans-serif', 'monospace', 'X';
-        width: 100%;
-        color : white;
+        /* width: 95%; */
+        margin-top:0px;
+        /* color : white; */
         font-size: 12pt;
-        margin-bottom: 5%;
+        margin-bottom: 15%;
 
         color: rgba(222, 210, 249, 1);
         background-image: -webkit-linear-gradient(92deg, rgba(201, 102, 211, 1), rgba(145, 215, 224, 1));
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        -webkit-animation: hue 10s infinite linear;
+        -webkit-animation: hue 5s infinite linear;
     }
 
     @keyframes hue {
@@ -126,8 +233,16 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        font-size: 9pt;
-        color:rgba(247, 167, 255, 1);
+        margin-top:5%;
+        font-size: 10pt;
+
+        color: rgba(222, 210, 249, 1);
+        background-image: -webkit-linear-gradient(92deg, rgba(201, 102, 211, 1), rgba(145, 215, 224, 1));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -webkit-animation: hue 5s infinite linear;
+
+        font-family: 'GmarketSansMedium','serif', 'sans-serif', 'monospace', 'X';
     }
     .row2{
         display: flex;
