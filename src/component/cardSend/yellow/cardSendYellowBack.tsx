@@ -176,7 +176,7 @@ class CardSendYellowBack extends React.Component<cardSendFrontProps, any> {
     }
     
     limitString = (string: string) => {
-        const limit = 50
+        const limit = 90
         string.length > limit ? string = string.substring(0, limit) : string = string
 
         return string
