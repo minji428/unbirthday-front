@@ -4,8 +4,6 @@ import { Slide, toast, ToastContainer } from "react-toastify";
 import * as service from '../../service/service'
 import '../../static/signInFin/signInFin1.css';
 import '../../static/signInFin/signInFin3.css';
-{/* <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet"></link> */}
-
 
 class SignInFin1 extends React.Component<{}, any> {
     constructor(props: any){
@@ -55,7 +53,6 @@ class SignInFin1 extends React.Component<{}, any> {
     }
 
     saveCardCallBack = (response: any) => {
-        console.log(response)
         let rData = response.data
 
         //이미 저장된 카드면?
@@ -94,7 +91,6 @@ class SignInFin1 extends React.Component<{}, any> {
                 <img className='SF1-6' src="../img/line6.png"/>
                 <img className='SF1-7' src="../img/line7.png"/>
                 <img className='SF1-8' src="../img/line8.png"/>
-                {/* <img className="SF1color" src="../img/colors.png"/> */}
             </div>
             <div className="SF1texts">
                 <div className="SF1mainText">

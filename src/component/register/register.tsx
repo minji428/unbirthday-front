@@ -66,7 +66,6 @@ class Register extends React.Component<{}, any> {
     }
 
     handleClickJoinCallback = (response: any) => {
-        console.log(response)
         let rData = response.data
         
         if(rData.rtCode === "00") {
@@ -110,7 +109,6 @@ class Register extends React.Component<{}, any> {
                         <div className="RSinfoText">비밀번호*</div>
                            <input type={'password'} name='password' className='RSnumber' placeholder='특수문자와 영문, 숫자를 포함하여 8자 이상 입력해주세요.' onChange={this.getPassword}/>
                         <div className="RSnameAccept">
-                            {/* <input type={'checkbox'} className='RScheckBtn' onChange={this.checkPrivacy}/> */}
                             <div className="RSaccept">
                                 <div>
                                     아이디/비밀번호 외 정보를 수집하지 않아 계정 찾기가 불가합니다.

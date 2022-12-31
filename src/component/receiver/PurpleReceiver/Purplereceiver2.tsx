@@ -61,7 +61,6 @@ class PurpleReceiver2 extends React.Component<receiver1Props, any> {
     }
 
     saveCardCallBack = (response: any) => {
-        console.log(response)
         let rData = response.data
 
         if(rData.rtCode === "00") {
@@ -113,11 +112,9 @@ class PurpleReceiver2 extends React.Component<receiver1Props, any> {
                             HAPPY<br></br>
                             UN-BIRTHDAY<br></br>
                             {this.props.card.receive}
-                            {/* 은빈! */}
                         </div>
                         <div className="GC2subTextPurple">
                             From. {this.props.card.send}
-                            {/* From. 수수 */}
                         </div>
                        </div>
                     </div>

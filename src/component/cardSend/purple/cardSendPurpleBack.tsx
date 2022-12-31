@@ -205,34 +205,13 @@ class CardSendPurpleBack extends React.Component<cardSendFrontProps, any> {
                     memo: this.state.memo ? this.state.memo : memoByDefault,
                 }
             })
-            /*
-            const param = {
-                send : this.props.fromPerson,
-                receive : this.props.toPerson,
-                firstTag : this.state.firstTag,
-                secondTag : this.state.secondTag,
-                thirdTag : this.state.thirdTag,
-                fourthTag : this.state.fourthTag,
-                memo : this.state.memo,
-                cardColor : "purple",
-                sendId : sessionStorage.getItem("id")
-            }
-
-            service.anyService("/card/send/complete", "post", this.handleCompleteCard, param)
-            */
         }
     }
 
     handleCompleteCard = (response: any) => {
-        console.log(response)
-        console.log(response.data)
         var cardUUID = response.data.data
         sessionStorage.setItem("cardUUID", cardUUID)
         window.location.href = '/cardsend/purple/' + cardUUID
-    }
-
-    clickLogo(){
-        window.location.href = 'https://unbirthday.kr'
     }
 
     isCompleted = () => {
@@ -247,9 +226,6 @@ class CardSendPurpleBack extends React.Component<cardSendFrontProps, any> {
             return <CardCompletePurple card={this.state.card} fixCard={this.isCompleted}/>
         }        return(
             <div className= 'CS1main'>
-                {/* <div className='logo' onClick={this.clickLogo}>
-                    <img src="../../img/bt_logo.png"/>
-                </div> */}
             <div className="CS3btn">
                 <img src="../img/back.png" className="CS3backBtn" onClick={this.backButton}/>
             </div>
@@ -350,8 +326,7 @@ class CardSendPurpleBack extends React.Component<cardSendFrontProps, any> {
                     </div>
                     
                     <div className='CS3complete'>
-                    <img src="../img/bt_complete.png" onClick={this.completeCard}></img>
-                        {/* 완성하기 누르면 uuid 생성하고 그 url로 이동시킨 다음에 Complete 보여주기 */}
+                        <img src="../img/bt_complete.png" onClick={this.completeCard}></img>
                     </div>
                 </div>
    

@@ -4,8 +4,6 @@ import { Card } from '../../myPage/cardGotten'
 import '../../../static/getCard/getCard2.css';
 import GetCard3 from './getCard3';
 
-{/* <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet"></link> */}
-
 export interface cardGottenProps {
     card: Card,
 }
@@ -48,15 +46,12 @@ class YellowGetCard2 extends React.Component<cardGottenProps, any> {
         }
         return(
             <div className= 'GC2main'>
-            <img src="../img/back.png" className="GC2backBtn" onClick={this.toCardGotten} />
-            <div className="GC2texts">
-                <div className='GC2mainText'>
-                   짜잔~ 축하받은 걸 축하해요!
+                <img src="../img/back.png" className="GC2backBtn" onClick={this.toCardGotten} />
+                <div className="GC2texts">
+                    <div className='GC2mainText'>
+                    짜잔~ 축하받은 걸 축하해요!
+                    </div>
                 </div>
-                {/* <div className="GC2subTexts">
-                    카드를 저장하면 내가 받은 #태그도 모아볼 수 있어요.
-                </div> */}
-            </div>
                 <div className="GC2yelloBox">
                     <div>
                         <img className="GC2card" src="../../img/card_empty_yellow.png"/>
@@ -78,7 +73,6 @@ class YellowGetCard2 extends React.Component<cardGottenProps, any> {
                         <div className="GC2btn">
                             <img src="../img/bt_reply.png" onClick={this.cardsend} />
                         </div>
-                        
                     </div>
                 </div>
     

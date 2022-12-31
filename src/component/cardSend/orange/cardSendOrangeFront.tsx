@@ -147,16 +147,9 @@ class CardSendOrangeFront extends React.Component<cardSendBackProps, any> {    c
         return regexExp.test(string)
     }
 
-    clickLogo(){
-        window.location.href = 'https://unbirthday.kr'
-    }
-
     render() {
         return(
             <div className= 'CS1main'>
-                {/* <div className='logo' onClick={this.clickLogo}>
-                    <img src="../../img/bt_logo.png"/>
-                </div> */}
                 <div className="CS2btnBack">
                     <img src="../img/back.png" className="CS2backBtn" onClick={this.backButton}/>
                 </div>

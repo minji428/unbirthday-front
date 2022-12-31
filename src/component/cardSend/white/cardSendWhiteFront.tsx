@@ -23,7 +23,6 @@ class CardSendWhiteFront extends React.Component<cardSendBackProps, any> {
     }
     
     componentDidMount(): void {
-        console.log(this.props.card)
         if(Object.keys(this.props.card).length !== 0){
             this.setState({
                 toPerson: this.props.card.toPerson,
@@ -81,9 +80,6 @@ class CardSendWhiteFront extends React.Component<cardSendBackProps, any> {
         if(isInvalid === 1 || isInvalid === 2) {
             this.setState({isFromPersonValid: false})
         }
-        // else {
-        //     this.setState({isFromPersonValid: true})
-        // }
         event.target.value = this.handleName(fromPerson)
 
         this.setState({fromPerson : event.target.value})
@@ -144,16 +140,9 @@ class CardSendWhiteFront extends React.Component<cardSendBackProps, any> {
         return regexExp.test(string)
     }
 
-    clickLogo(){
-        window.location.href = 'https://unbirthday.kr'
-    }
-
     render() {
         return(
             <div className= 'CS1main'>
-                {/* <div className='logo' onClick={this.clickLogo}>
-                    <img src="../../img/bt_logo.png"/>
-                </div> */}
                 <div className="CS2btnBack">
                     <img src="../img/back.png" className="CS2backBtn" onClick={this.backButton}/>
                 </div>
@@ -173,7 +162,6 @@ class CardSendWhiteFront extends React.Component<cardSendBackProps, any> {
                                         ? <input type={'text'} className="form-control" name="toPerson" placeholder='받는 사람' onChange={this.getToPerson} onBlur={this.removeEmoji}/>
                                         : <input type={'text'} className="form-control" name="toPerson" value={this.props.card.toPerson} onChange={this.getToPerson} onBlur={this.removeEmoji}/>
                                     }
-                                    {/* <input type={'text'} className="form-control" name="toPerson" placeholder='받는 사람' onChange={this.getToPerson}/> */}
                                 </div>
                                 {this.state.isToPersonValid ? '' : <div className="CS2notice">3자 이내로 입력해주세요.</div>}
                             </div>
@@ -183,7 +171,6 @@ class CardSendWhiteFront extends React.Component<cardSendBackProps, any> {
                                         ? <input type={'text'} className="form-control" name="fromPerson" placeholder='보내는 사람' onChange={this.getFromPerson} onBlur={this.removeEmoji}/>
                                         : <input type={'text'} className="form-control" name="fromPerson" value={this.props.card.fromPerson} onChange={this.getFromPerson} onBlur={this.removeEmoji}/>
                                     }
-                                {/* <input type={'text'} className="form-control" name="fromPerson" placeholder='보내는 사람' onChange={this.getFromPerson}/> */}
                                 </div>
                                 {this.state.isFromPersonValid ? '' : <div className="CS2notice">3자 이내로 입력해주세요.</div>}
                             </div>
@@ -196,7 +183,7 @@ class CardSendWhiteFront extends React.Component<cardSendBackProps, any> {
                     <img src="../../img/bt_write_back.png" onClick={this.cardSendWhiteBack}/>
                     {this.state.showback ? <CardSendWhiteBack card={this.state.card}/>: ''}
                 </div>
-        </div>
+            </div>
 
         )
     }
