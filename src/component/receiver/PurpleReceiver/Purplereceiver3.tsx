@@ -36,7 +36,6 @@ class PurpleReceiver3 extends React.Component<receiver2Props, any> {
                 card_no: this.props.card.card_no,
                 receive_id : sessionStorage.getItem("id")
             }
-            console.log(param)
             service.anyService("/card/save", "patch", this.saveCardCallBack, param)
         }
 
@@ -49,7 +48,6 @@ class PurpleReceiver3 extends React.Component<receiver2Props, any> {
     }
 
     saveCardCallBack = (response: any) => {
-        console.log(response)
         let rData = response.data
 
         if(rData.rtCode === "00") {
@@ -73,16 +71,17 @@ class PurpleReceiver3 extends React.Component<receiver2Props, any> {
 
     render() {
         if (!this.state.isFlipped && this.props.card!=null) {
-            return <PurpleReceiver2 card={this.state.card}/>
+            return <PurpleReceiver2 card={this.props.card}/>
         }
 
         return(
             <div className= 'GC2main'>
-                <ToastContainer 
-                    onClick={this.toMyPage}
-                    limit={1}
-                />
-            <div className="GC2texts">
+                <div className='div-toast' onClick={this.toMyPage}>
+                    <ToastContainer 
+                        limit={1}
+                    />
+                </div>
+                <div className="GC2texts">
                 <div className='GC2mainText'>
                    짜잔~ 축하받은 걸 축하해요!
                 </div>

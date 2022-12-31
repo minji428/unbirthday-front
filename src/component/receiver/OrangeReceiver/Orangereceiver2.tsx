@@ -14,7 +14,6 @@ class OrangeReceiver2 extends React.Component<receiver1Props, any> {
 
         this.state = {
             isFlipped: false,
-            card: {} as Card,
         }
         
         this.setCard = this.setCard.bind(this)
@@ -31,7 +30,6 @@ class OrangeReceiver2 extends React.Component<receiver1Props, any> {
     setCard  = (card: Card) => {
         this.setState({
             isFlipped: false,
-            card: card,
         })
     }
 
@@ -42,18 +40,6 @@ class OrangeReceiver2 extends React.Component<receiver1Props, any> {
     cardBack = (event: any) => {
         this.setState({
             isFlipped: true,
-            card: {
-                card_no: this.props.card.card_no,
-                send: this.props.card.send,
-                receive: this.props.card.receive,
-                first_tag: this.props.card.first_tag,
-                second_tag: this.props.card.second_tag,
-                third_tag: this.props.card.third_tag,
-                fourth_tag: this.props.card.fourth_tag,
-                memo: this.props.card.memo,
-                card_color: this.props.card.card_color,
-                reg_date: this.props.card.reg_date,
-            }
         })
     }
     
@@ -75,7 +61,6 @@ class OrangeReceiver2 extends React.Component<receiver1Props, any> {
     }
 
     saveCardCallBack = (response: any) => {
-        console.log(response)
         let rData = response.data
 
         if(rData.rtCode === "00") {
@@ -98,15 +83,16 @@ class OrangeReceiver2 extends React.Component<receiver1Props, any> {
     }
 
     render() {
-        if (this.state.isFlipped && this.state.card!=null) {
-            return <OrangeReceiver3 card={this.state.card} setCard={this.setCard}/>
+        if (this.state.isFlipped && this.props.card!=null) {
+            return <OrangeReceiver3 card={this.props.card} setCard={this.setCard}/>
         }
         return(
             <div className= 'GC2main'>
-                <ToastContainer 
-                    onClick={this.toMyPage}
-                    limit={1}
-                />
+                <div className='div-toast' onClick={this.toMyPage}>
+                    <ToastContainer 
+                        limit={1}
+                    />
+                </div>
             <div className="GC2texts">
                 <div className='GC2mainText'>
                    짜잔~ 축하받은 걸 축하해요!
@@ -126,11 +112,9 @@ class OrangeReceiver2 extends React.Component<receiver1Props, any> {
                             HAPPY<br></br>
                             UN-BIRTHDAY<br></br>
                             {this.props.card.receive}
-                            {/* 은빈! */}
                         </div>
                         <div className="GC2subTextOrange">
                             From. {this.props.card.send}
-                            {/* From. 수수 */}
                         </div>
                        </div>
                     </div>

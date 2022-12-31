@@ -70,15 +70,48 @@
     }
 
     .happyUnbirthday{
-        flex:1;
-        padding-top:14%;
+        /* flex:1; */
+        margin-top:0px;
+        width: 50%;
+        padding-top:8%;
         padding-left: 5%;
         padding-right: 5%;
+        /* 테두리없 */
+        /* margin-bottom:10%; */
+        margin-bottom: 7%;
+        color: rgba(222, 210, 249, 1);
+        background-image: -webkit-linear-gradient(92deg, rgba(222, 210, 249, 1), rgb(161, 145, 224),rgb(247, 170, 193));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -webkit-animation: hue 5s infinite linear;
     }
+
     img{
         width: 100%;
         height: auto;
         /* padding: 30%; */
+    }
+
+    .heartimg{
+        position: absolute;
+        width: 85%;
+        margin-top:-8%;
+        color: rgba(222, 210, 249, 1);
+        background-image: -webkit-linear-gradient(92deg, rgba(222, 210, 249, 1), rgb(161, 145, 224),rgb(247, 170, 193));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -webkit-animation: hue 5s infinite linear;
+
+    }
+
+    .name-heart{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* 테두리없 */
+        width:85%;
+        /* width: 93%; */
+
     }
     .names{
         display: flex;
@@ -87,27 +120,30 @@
         /* align-items: center; */
         flex:1.5;
         font-family: 'GmarketSansMedium','serif', 'sans-serif', 'monospace', 'X';
-        width: 100%;
-        color : white;
+        /* width: 95%; */
+        margin-top:0px;
+        /* color : white; */
         font-size: 12pt;
-        margin-bottom: 5%;
-/* 
-        color: #f35626;
-        background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
+
+        /* 테두리없 */
+        margin-bottom: 15%;
+        /* margin-bottom: 5%; */
+
+        color: rgba(222, 210, 249, 1);
+        background-image: -webkit-linear-gradient(92deg, rgba(222, 210, 249, 1), rgb(161, 145, 224),rgb(247, 170, 193));
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        -webkit-animation: hue 10s infinite linear; */
-
+        -webkit-animation: hue 5s infinite linear;
     }
 
-    /* @-webkit-keyframes hue {
+    @keyframes hue {
         from {
           -webkit-filter: hue-rotate(0deg);
         }
         to {
           -webkit-filter: hue-rotate(-360deg);
         }
-      } */
+      }
     .NameRow{
         display: flex;
         flex-direction: row;
@@ -125,8 +161,17 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        font-size: 9pt;
-        color:rgba(247, 167, 255, 1);
+        margin-top:5%;
+        margin-bottom: 5%;
+        font-size: 10pt;
+
+        color: rgba(222, 210, 249, 1);
+        background-image: -webkit-linear-gradient(92deg, rgba(222, 210, 249, 1), rgb(161, 145, 224),rgb(247, 170, 193));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -webkit-animation: hue 5s infinite linear;
+
+        font-family: 'GmarketSansMedium','serif', 'sans-serif', 'monospace', 'X';
     }
     .row2{
         display: flex;

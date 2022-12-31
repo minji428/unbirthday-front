@@ -51,7 +51,6 @@ class CardGotten extends React.Component<{}, any> {
     }
 
     getCardsCallBack = (response: any) => {
-        console.log(response)
         let rData = response.data
 
         if(rData.rtCode === "00" || rData.rtCode === "09") {
@@ -135,10 +134,8 @@ class CardGotten extends React.Component<{}, any> {
 
     cardFront = (event: any) => {
         let clickedCard = this.getCardInfo(event.target.id)
-        console.log(clickedCard)
 
         this.setState({
-            isClicked: !this.state.isClicked,
             card: {
                 card_no: clickedCard.card_no,
                 send: clickedCard.send,
@@ -150,7 +147,8 @@ class CardGotten extends React.Component<{}, any> {
                 memo: clickedCard.memo,
                 card_color: clickedCard.card_color,
                 reg_date: clickedCard.reg_date,
-            }
+            },
+            isClicked: !this.state.isClicked,
         })
     }
 
@@ -170,110 +168,26 @@ class CardGotten extends React.Component<{}, any> {
         return clickedCard
     }
 
-    clickLogo(){
-        window.location.href = 'https://unbirthday.kr'
-    }
-
     render() {
         if (this.state.isClicked && this.state.card!=null) {
             return <GetCard1 card={this.state.card}/>
         }
         return(
             <div className= 'CGmain'>
-                {/* <div className='logo' onClick={this.clickLogo}>
-                    <img src="../../img/bt_logo.png"/>
-                </div> */}
-            <div className="CGstatus">
-                <img src="../img/back.png" className="CGbackBtn" onClick={this.backButton} />
-                <div className="CGmainText">
-                    받은 언버스데이 카드
+                <div className="CGstatus">
+                    <img src="../img/back.png" className="CGbackBtn" onClick={this.backButton} />
+                    <div className="CGmainText">
+                        받은 언버스데이 카드
+                    </div>
                 </div>
-            </div>
-    
-            <hr></hr>
-    
-            <div className="CGcards">
-                <div className="CGrow">
-                    {this.state.cards !== null
-                        ? this.setAllCards()
-                        : ''}
-                {/*                     
-                    <div className="CGrowText">
-                        9월 3일 토요일
+                <hr></hr>
+                <div className="CGcards">
+                    <div className="CGrow">
+                        {this.state.cards !== null
+                            ? this.setAllCards()
+                            : ''}
                     </div>
-                    <div className="CGrowCard">
-                        <div className="CGcard">
-                            <img className="CGeachCard" src="../img/card_empty_white.png"/>
-                            <div className="hubd-white">HAPPY<br></br>
-                            UN-BIRTHDAY<br></br>
-                            주연!</div>
-                            <div className="CGfrom-white">From.재현</div>
-                            </div>
-                        <div className="CGcard">
-                            <img className="CGeachCard" src="../img/card_empty_purple.png"/>
-                            <div className="hubd-purple">HAPPY<br></br>
-                                UN-BIRTHDAY<br></br>
-                                아름이!</div>
-                                <div className="CGfrom-purple">From.지윤</div>
-                        </div>    
-                        <div className="CGcard">
-                                <img className="CGeachCard" src="../img/card_empty_yellow.png"/>
-                                <div className="hubd-yellow">HAPPY<br></br>
-                                UN-BIRTHDAY<br></br>
-                                정혜!</div>
-                                <div className="CGfrom-yellow">From.소연이</div>
-                        </div>
-                        <div className="CGcard">
-                            <img className="CGeachCard" src="../img/card_empty_orange.png"/>
-                            <div className="hubd-orange">HAPPY<br></br>
-                                UN-BIRTHDAY<br></br>
-                                지수!</div>
-                                <div className="CGfrom-orange">From.민규</div>
-                        </div>  
-                        
-                    </div>
-                    <div className="CGrowText">
-                        9월 4일 일요일
-                    </div>
-                    <div className="CGrowCard">
-                        <div className="CGcard">
-                                    <img className="CGeachCard" src="../img/card_empty_white.png"/>
-                                    <div className="hubd-white">HAPPY<br></br>
-                                    UN-BIRTHDAY<br></br>
-                                    주연!</div>
-                                    <div className="CGfrom-white">From.재현</div>
-                            </div>
-                            <div className="CGcard">
-                                <img className="CGeachCard" src="../img/card_empty_orange.png"/>
-                                <div className="hubd-orange">HAPPY<br></br>
-                                    UN-BIRTHDAY<br></br>
-                                    주연!</div>
-                                    <div className="CGfrom-orange">From.재현</div>
-                            </div>  
-                            <div className="CGcard">
-                                <img className="CGeachCard" src="../img/card_empty_purple.png"/>
-                                <div className="hubd-purple">HAPPY<br></br>
-                                    UN-BIRTHDAY<br></br>
-                                    주연!</div>
-                                    <div className="CGfrom-purple">From.재현</div>
-                            </div>    
-                    </div>
-                    <div className="CGrowText">
-                        9월 5일 월요일
-                    </div>
-                    <div className="CGrowCard">
-                        <div className="CGcard">
-                            <img className="CGeachCard" src="../img/card_empty_yellow.png"/>
-                            <div className="hubd-yellow">HAPPY<br></br>
-                            UN-BIRTHDAY<br></br>
-                            주연!</div>
-                            <div className="CGfrom-yellow">From.재현</div>
-                        </div>
-                    </div>
-                */}
                 </div>
-            </div>
-           
         </div>
   
         )

@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import { Modal } from 'reactstrap';
+import { Card } from '../white/cardSendWhiteFrame'
+import { cardSendFrontProps } from '../white/cardSendWhiteBack';
 import '../../../static/cardSend/cardSendBack.css';
 import * as service from '../../../service/service'
 
@@ -8,12 +10,9 @@ import ChooseTagSecond from './chooseTag/chooseTag2'
 import ChooseTagThird from './chooseTag/chooseTag3'
 import ChooseTagFourth from './chooseTag/chooseTag4'
 
+import CardCompleteYellow from './cardSendYellowComplete'
+import CardSendYellowFront from './cardSendYellowFront'
 import CardSendComplete from './cardSendYellowComplete'
-
-interface cardSendYellowFrontProps {
-    toPerson: any,
-    fromPerson: any,
-}
 
 interface Tag{
     FirstTag : chooseTag1
@@ -35,11 +34,12 @@ interface chooseTag4 {
     FourthTag : any
 }
 
-class cardSendYellowBack extends React.Component<cardSendYellowFrontProps, any> {
+class CardSendYellowBack extends React.Component<cardSendFrontProps, any> {
     constructor(props: any){
         super(props)
 
         this.state = {
+            card: {} as Card,
             chooseFirstTag : false,
             chooseSecondTag : false,
             chooseThirdTag : false,
@@ -49,6 +49,8 @@ class cardSendYellowBack extends React.Component<cardSendYellowFrontProps, any> 
             thirdTag : "",
             fourthTag : "",
             memo: "",
+            isCompleted: false,
+            showFront: false,
         }
 
         this.chooseTagFirst = this.chooseTagFirst.bind(this)
@@ -60,12 +62,49 @@ class cardSendYellowBack extends React.Component<cardSendYellowFrontProps, any> 
         this.clickThird = this.clickThird.bind(this)
         this.clickFourth = this.clickFourth.bind(this)
         this.writeMemo = this.writeMemo.bind(this)
+        this.backButton = this.backButton.bind(this)
+    }
+
+    componentDidMount(): void {
+        const numOfTags = Object.keys(this.props.card).length
+        
+        if(numOfTags !== 0) {
+            this.setState({
+                firstTag: this.props.card.firstTag,
+                secondTag: this.props.card.secondTag,
+                thirdTag: this.props.card.thirdTag,
+                fourthTag: this.props.card.fourthTag,
+                memo: this.props.card.memo,
+                card: {
+                    fromPerson: this.props.card.fromPerson,
+                    toPerson: this.props.card.toPerson,
+                    firstTag: this.props.card.firstTag,
+                    secondTag: this.props.card.secondTag,
+                    thirdTag: this.props.card.thirdTag,
+                    fourthTag: this.props.card.fourthTag,
+                    memo: this.props.card.memo,
+                }
+            })
+        }
     }
 
     backButton(){
         // location.href로 하면 새로고침 되어서 이전에 작성했던 내용들이 사라짐..
         // 뒷장 쓰기 했던 것 처럼 컴포넌트를 변경하는 방법 생각해보기
-        window.location.href = '/cardsend/yellow'
+        //window.location.href = '/cardsend/white'
+
+        this.setState({
+            showFront: true,
+            card: {
+                fromPerson: this.props.card.fromPerson,
+                toPerson: this.props.card.toPerson,
+                firstTag: this.state.firstTag,
+                secondTag: this.state.secondTag,
+                thirdTag: this.state.thirdTag,
+                fourthTag: this.state.fourthTag,
+                memo: this.state.memo,
+            }
+        })   
     }
 
     // 첫번째 태그 선택하는 화면
@@ -142,57 +181,74 @@ class cardSendYellowBack extends React.Component<cardSendYellowFrontProps, any> 
 
         return string
     }
+ 
+    removeEmoji = (event: any) => {
+        let string = event.target.value
+
+        if(this.doesStrContainEmoji(string)) {
+            alert('이모티콘 사용은 불가해요😢')
+            event.target.value = string.replace(/([\uE000-\uF8FF]|\uD83C[\uDC00-\uDFFF]|\uD83D[\uDC00-\uDFFF]|[\u2011-\u26FF]|\uD83E[\uDD10-\uDDFF])/g, '');
+            
+            this.setState({
+                memo : event.target.value
+            })
+        }
+        
+    }
+
+    doesStrContainEmoji = (string: string) => {
+        const regexExp = /(\u00a9|\u00ae|[\u2000-\u3300]|\ud83c[\ud000-\udfff]|\ud83d[\ud000-\udfff]|\ud83e[\ud000-\udfff])/gi;
+
+        return regexExp.test(string)
+    }
 
     completeCard = async(e: any) => {
-        if (this.state.firstTag == "") {
+        if (!this.state.firstTag) {
             alert("첫번째 태그를 선택해주세요.")
-        } else if (this.state.secondTag == "") {
+        } else if (!this.state.secondTag) {
             alert("두번째 태그를 선택해주세요.")
-        } else if (this.state.thirdTag == "") {
+        } else if (!this.state.thirdTag) {
             alert("세번째 태그를 선택해주세요.")
-        } else if (this.state.fourthTag == "") {
+        } else if (!this.state.fourthTag) {
             alert("네번째 태그를 선택해주세요.")
         } else {
             const memoByDefault = "생일에나 할 수 있는 얘기를 오늘 해보네!\n낯간지럽지만 꼭 해주고 싶은 말이야.\n매일이 생일처럼 특별했으면 좋겠어.\n오늘도 해피 언버스데이 :)";
             
-            if(this.state.memo.length === 0){
-                this.setState({memo: memoByDefault})
-            } 
-            
-            const param = {
-                send : this.props.fromPerson,
-                receive : this.props.toPerson,
-                firstTag : this.state.firstTag,
-                secondTag : this.state.secondTag,
-                thirdTag : this.state.thirdTag,
-                fourthTag : this.state.fourthTag,
-                memo : this.state.memo,
-                cardColor : "yellow",
-                sendId : sessionStorage.getItem("id")
-            }
-            service.anyService("/card/send/complete", "post", this.handleCompleteCard, param)
+            this.setState({
+                isCompleted: true,
+                card: {
+                    toPerson: this.props.card.toPerson,
+                    fromPerson: this.props.card.fromPerson,
+                    firstTag: this.state.firstTag,
+                    secondTag: this.state.secondTag,
+                    thirdTag: this.state.thirdTag,
+                    fourthTag: this.state.fourthTag,
+                    memo: this.state.memo ? this.state.memo : memoByDefault,
+                }
+            })
+            //service.anyService("/card/send/complete", "post", this.handleCompleteCard, param)
         }
     }
 
     handleCompleteCard = (response: any) => {
-        console.log(response)
-        console.log(response.data)
         var cardUUID = response.data.data
         sessionStorage.setItem("cardUUID", cardUUID)
         window.location.href = '/cardsend/yellow/' + cardUUID
     }
 
-
-    clickLogo(){
-        window.location.href = 'https://unbirthday.kr'
+    isCompleted = () => {
+        this.setState({isCompleted: !this.state.isCompleted})
     }
 
     render() {
+        if(this.state.showFront) {
+            return <CardSendYellowFront card={this.state.card} />
+        }
+        else if(this.state.isCompleted) {
+            return <CardCompleteYellow card={this.state.card} fixCard={this.isCompleted}/>
+        }
         return(
             <div className= 'CS1main'>
-                {/* <div className='logo' onClick={this.clickLogo}>
-                    <img src="../../img/bt_logo.png"/>
-                </div> */}
                 <div className="CS3btn">
                     <img src="../img/back.png" className="CS3backBtn" onClick={this.backButton}/>
                 </div>
@@ -207,7 +263,7 @@ class cardSendYellowBack extends React.Component<cardSendYellowFrontProps, any> 
                     <div className="CS3insideYellow">
                         <div className='CS3personName'>
                             HAPPY<br></br>
-                            UN-BIRTHDAY {this.props.toPerson}!
+                            UN-BIRTHDAY {this.props.card.toPerson}!
                         </div>
                         <div className="CS3tagMessage">
                             <div className="CS3temp">
@@ -219,7 +275,7 @@ class cardSendYellowBack extends React.Component<cardSendYellowFrontProps, any> 
                                  </div>
                                 <div className="CS3textSpace">
                                     <div className='CS3subText'>
-                                        {this.props.toPerson}(이)는
+                                        {this.props.card.toPerson}(이)는
                                     </div>
                                 </div>
                             </div>
@@ -249,7 +305,7 @@ class cardSendYellowBack extends React.Component<cardSendYellowFrontProps, any> 
                                     </div>
                                     
                                     <div className="CS3textSpace">
-                                        <div className='CS3subText'>{this.props.toPerson}(이)의</div>
+                                        <div className='CS3subText'>{this.props.card.toPerson}(이)의</div>
                                     </div>
                                     
                                     <div className="CS3tagSpace">
@@ -276,20 +332,13 @@ class cardSendYellowBack extends React.Component<cardSendYellowFrontProps, any> 
                             </div> 
 
                             <div className="CS3writeMessage">
-                                <textarea className="memo" cols={10} rows={5} onChange={this.writeMemo} placeholder={"생일에나 할 수 있는 얘기를 오늘 해보네!\n낯간지럽지만 꼭 해주고 싶은 말이야.\n매일이 생일처럼 특별했으면 좋겠어.\n오늘도 해피 언버스데이 :) "}/>
-                                <div className="CS3numCnt">{this.state.memo.length}/50</div>
-                            </div>
+                                {!this.state.memo ?
+                                    <textarea className="memo" cols={10} rows={5} onChange={this.writeMemo} onBlur={this.removeEmoji} placeholder={"생일에나 할 수 있는 얘기를 오늘 해보네!\n낯간지럽지만 꼭 해주고 싶은 말이야.\n매일이 생일처럼 특별했으면 좋겠어.\n오늘도 해피 언버스데이 :) "} />
+                                    : <textarea className="memo" cols={10} rows={5} onChange={this.writeMemo} onBlur={this.removeEmoji} value={this.state.memo}/>
+                                }
+                                <div className="CS3numCnt">{this.state.memo ? this.state.memo.length : '0'}/50</div>
                                 <div className="CS3notice">입력을 안 할 경우 예시 문구로 카드를 완성해드려요.</div>
-                        
-                             {/* <div className="CS3writeMessage" > */}
-                                {/* <textarea name="memo" cols={10} rows={6} onChange={this.writeMemo} placeholder={"생일에나 할 수 있는 얘기를 오늘 해보네!\n낯간지럽지만 꼭 해주고 싶은 말이야.\n매일이 생일처럼 특별했으면 좋겠어.\n오늘도 해피 언버스데이 :) "}/> */}
-                                {/* <div className="CS3numCnt"> 
-                                    <div>80/90</div>
-                                </div> */}
-                            {/* </div> */}
-
-    
-    
+                            </div>
                         </div>
                     </div>
                     
@@ -302,4 +351,4 @@ class cardSendYellowBack extends React.Component<cardSendYellowFrontProps, any> 
         )
     }
 }
-export default cardSendYellowBack;
+export default CardSendYellowBack;

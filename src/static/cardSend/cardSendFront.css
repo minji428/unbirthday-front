@@ -93,6 +93,8 @@
     }
 
     .CS2yelloBox{
+        animation: fadeInUp1 1.5s;
+        -webkit-animation: fadeInUp1 1.5s;
         display: flex;
         flex-direction: column;
         flex:1;
@@ -201,4 +203,24 @@
     
         /* background-color: yellowgreen; */
     }
-    
+@keyframes fadeInUp1 {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+@-webkit-keyframes fadeInUp1 {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}

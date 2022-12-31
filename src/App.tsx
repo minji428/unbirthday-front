@@ -45,10 +45,10 @@ const App = () => {
           <Route path='/cardsend/orange' element={<CardSendOrange/>}></Route>
           <Route path='/cardsend/white' element={<CardSendWhite/>}></Route>
           <Route path='/cardsend/purple' element={<CardSendPurple/>}></Route>
-          <Route path='/cardsend/yellow/:pathvariable' element={<CardCompleteYellow/>}></Route>
-          <Route path='/cardsend/orange/:pathvariable' element={<CardCompleteOrange/>}></Route>
-          <Route path='/cardsend/white/:pathvariable' element={<CardCompleteWhite/>}></Route>
-          <Route path='/cardsend/purple/:pathvariable' element={<CardCompletePurple/>}></Route>
+          {/* <Route path='/cardsend/yellow/:pathvariable' element={<CardCompleteYellow/>}></Route> */}
+          {/* <Route path='/cardsend/orange/:pathvariable' element={<CardCompleteOrange/>}></Route> */}
+          {/* <Route path='/cardsend/white/:pathvariable' element={<CardCompleteWhite/>}></Route> */}
+          {/* <Route path='/cardsend/purple/:pathvariable' element={<CardCompletePurple/>}></Route> */}
           <Route path='/login' element={<Login/>}></Route>
           <Route path='/register' element={<Register/>}></Route>
           {/* <Route path='/gotten/taggotten' element={<TagGotten/>}></Route> */}
@@ -61,9 +61,9 @@ const App = () => {
           {/* <Route path='/getCard/getCard1' element={<GetCard1/>}></Route>
           <Route path='/getCard/getCard2' element={<GetCard2/>}></Route>
           <Route path='/getCard/getCard3' element={<GetCard3/>}></Route> */}
-          <Route path='/signInFin/signInFin1' element={<SignInFin1/>}></Route>
-          <Route path='/signInFin/signInFin2' element={<SignInFin2/>}></Route>
-          <Route path='/signInFin/signInFin3' element={<SignInFin3/>}></Route>
+          {/* <Route path='/signInFin/signInFin1' element={<SignInFin1/>}></Route> */}
+          {/* <Route path='/signInFin/signInFin2' element={<SignInFin2/>}></Route> */}
+          {/* <Route path='/signInFin/signInFin3' element={<SignInFin3/>}></Route> */}
           <Route path='/cardreceive/:cardUrl' element={<Receiver1/>}></Route>
           {/* <Route path='/receiver/receiver2' element={<Receiver2/>}></Route>
           <Route path='/receiver/receiver3' element={<Receiver3/>}></Route> */}

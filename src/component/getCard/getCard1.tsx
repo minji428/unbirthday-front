@@ -8,7 +8,6 @@ import PurpleGetCard2 from './PurpleGetCard/getCard2';
 
 import '../../static/getCard/getCard1.css';
 import { anyService } from '../../service/service';
-{/* <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet"></link> */}
 
 interface cardGottenProps {
     card: Card,
@@ -74,17 +73,12 @@ class GetCard1 extends React.Component<cardGottenProps, any> {
                 <div className="GC1texts">
                     <div className="GC1subText">
                         {this.props.card.receive}님 오늘도
-                      {/* 은빈님 오늘도 */}
                     </div>
                     <div className="GC1subText">
                       언버스데이 축하해요&nbsp;💌
                     </div>
                 </div>
             </div>
-            {/* <div className="GC1btns">
-                <div className="GC1btn">뭐지?</div>
-            </div> */}
-           
         </div>
         )
     }
