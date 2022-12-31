@@ -109,7 +109,7 @@ class CardSendPurpleFront extends React.Component<cardSendBackProps, any> {
             alert('이모티콘 사용은 불가해요😢')
 
             //이모지 제거
-            event.target.value = string.replace(/([\uE000-\uF8FF]|\uD83C[\uDC00-\uDFFF]|\uD83D[\uDC00-\uDFFF]|[\u2011-\u26FF]|\uD83E[\uDD10-\uDDFF])/g, '');
+            event.target.value = string.replace(/([\u2700-\u27BF]|[\uE000-\uF8FF]|\uD83C[\uDC00-\uDFFF]|\uD83D[\uDC00-\uDFFF]|[\u2011-\u26FF]|\uD83E[\uDD10-\uDDFF])/g, '');
             
             if(event.target.name === 'fromPerson') {
                 this.setState({fromPerson : event.target.value})
@@ -142,21 +142,15 @@ class CardSendPurpleFront extends React.Component<cardSendBackProps, any> {
     }
 
     doesStrContainEmoji = (string: string) => {
-        const regexExp = /(\u00a9|\u00ae|[\u2000-\u3300]|\ud83c[\ud000-\udfff]|\ud83d[\ud000-\udfff]|\ud83e[\ud000-\udfff])/gi;
-
+        // const regexExp = /(\u00a9|\u00ae|[\u2000-\u3300]|\ud83c[\ud000-\udfff]|\ud83d[\ud000-\udfff]|\ud83e[\ud000-\udfff])/gi;
+        const regexExp = /([\u2700-\u27BF]|[\uE000-\uF8FF]|\uD83C[\uDC00-\uDFFF]|\uD83D[\uDC00-\uDFFF]|[\u2011-\u26FF]|\uD83E[\uDD10-\uDDFF])/g
+        
         return regexExp.test(string)
-    }
-
-    clickLogo(){
-        window.location.href = 'https://unbirthday.kr'
     }
 
     render() {
         return(
             <div className= 'CS1main'>
-                {/* <div className='logo' onClick={this.clickLogo}>
-                    <img src="../../img/bt_logo.png"/>
-                </div> */}
                 <div className="CS2btnBack">
                     <img src="../img/back.png" className="CS2backBtn" onClick={this.backButton}/>
                 </div>

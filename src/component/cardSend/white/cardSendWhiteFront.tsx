@@ -102,7 +102,7 @@ class CardSendWhiteFront extends React.Component<cardSendBackProps, any> {
             alert('이모티콘 사용은 불가해요😢')
 
             //이모지 제거
-            event.target.value = string.replace(/([\uE000-\uF8FF]|\uD83C[\uDC00-\uDFFF]|\uD83D[\uDC00-\uDFFF]|[\u2011-\u26FF]|\uD83E[\uDD10-\uDDFF])/g, '');
+            event.target.value = string.replace(/([\u2700-\u27BF]|[\uE000-\uF8FF]|\uD83C[\uDC00-\uDFFF]|\uD83D[\uDC00-\uDFFF]|[\u2011-\u26FF]|\uD83E[\uDD10-\uDDFF])/g, '');
             
             if(event.target.name === 'fromPerson') {
                 this.setState({fromPerson : event.target.value})
@@ -135,7 +135,8 @@ class CardSendWhiteFront extends React.Component<cardSendBackProps, any> {
     }
 
     doesStrContainEmoji = (string: string) => {
-        const regexExp = /(\u00a9|\u00ae|[\u2000-\u3300]|\ud83c[\ud000-\udfff]|\ud83d[\ud000-\udfff]|\ud83e[\ud000-\udfff])/gi;
+        // const regexExp = /(\u00a9|\u00ae|[\u2000-\u3300]|\ud83c[\ud000-\udfff]|\ud83d[\ud000-\udfff]|\ud83e[\ud000-\udfff])/gi;
+        const regexExp = /([\u2700-\u27BF]|[\uE000-\uF8FF]|\uD83C[\uDC00-\uDFFF]|\uD83D[\uDC00-\uDFFF]|[\u2011-\u26FF]|\uD83E[\uDD10-\uDDFF])/g
 
         return regexExp.test(string)
     }
