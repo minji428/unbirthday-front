@@ -12,11 +12,17 @@ class CardCompleteYellow extends React.Component<cardSendWhiteProps, any> {
         super(props)
 
         this.state = {
-            showFront : false
+            showFront : false,
+            cardUUID: "",
         }
 
         this.flip = this.flip.bind(this)
     }
+    
+    isShared = (cardUUID: string) => {
+        this.setState({cardUUID: cardUUID})
+    }
+
     /*
     componentDidMount = () => {
         service.anyService("/card/info/"+sessionStorage.getItem("cardUUID"), "get", this.didMountCallback)
@@ -78,19 +84,25 @@ class CardCompleteYellow extends React.Component<cardSendWhiteProps, any> {
     }
 
     completeCard = async(e: any) => {
-        const param = {
-            send : this.props.card.fromPerson,
-            receive : this.props.card.toPerson,
-            firstTag : this.props.card.firstTag,
-            secondTag : this.props.card.secondTag,
-            thirdTag : this.props.card.thirdTag,
-            fourthTag : this.props.card.fourthTag,
-            memo : this.props.card.memo,
-            cardColor : "yellow",
-            sendId : sessionStorage.getItem("id")
+        
+        if(this.state.cardUUID === "") {
+            const param = {
+                send : this.props.card.fromPerson,
+                receive : this.props.card.toPerson,
+                firstTag : this.props.card.firstTag,
+                secondTag : this.props.card.secondTag,
+                thirdTag : this.props.card.thirdTag,
+                fourthTag : this.props.card.fourthTag,
+                memo : this.props.card.memo,
+                cardColor : "yellow",
+                sendId : sessionStorage.getItem("id")
+            }
+            service.anyService("/card/send/complete", "post", this.handleCompleteCard, param)
         }
-
-        service.anyService("/card/send/complete", "post", this.handleCompleteCard, param)
+        //이미 저장되었다면
+        else {
+            this.handleCopyClipBoard('https://unbirthday.kr/cardreceive/'+this.state.cardUUID)
+        }
     }
 
     handleCompleteCard = (response: any) => {
@@ -109,7 +121,13 @@ class CardCompleteYellow extends React.Component<cardSendWhiteProps, any> {
 
     render() {
         if (this.state.showFront){
-            return <CardSendYellowCompleteFront card={this.props.card} flip={this.flip} fixCard={this.props.fixCard} />
+            return <CardSendYellowCompleteFront
+                        card={this.props.card} 
+                        flip={this.flip} 
+                        fixCard={this.props.fixCard} 
+                        isShared={this.isShared}
+                        cardUUID={this.state.cardUUID}
+                    />
         }
         return(
             <div className= 'CS1main'>
