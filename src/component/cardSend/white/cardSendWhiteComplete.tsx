@@ -25,9 +25,6 @@ class CardCompleteWhite extends React.Component<cardSendWhiteProps, any> {
         this.flip = this.flip.bind(this)
 
     }
-    componentDidMount(): void {
-        console.log(this.state.cardUUID)
-    }
 
     isShared = (cardUUID: string) => {
         this.setState({cardUUID: cardUUID})
