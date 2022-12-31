@@ -36,7 +36,8 @@ class CardCompletePurple extends React.Component<cardSendWhiteProps, any> {    c
             this.showAlert()
 
         } else {
-            alert("공유하기가 지원되지 않는 환경입니다.")
+            await navigator.clipboard.writeText(url);
+            alert("링크가 복사되었어요!📃\n메신저 채팅창에 붙여넣기 해서 카드를 공유해보세요")
         }
     }
 
