@@ -174,6 +174,7 @@
     display: flex;
     flex:0.7;
     margin-top: 6%;
+    margin-left: 3%;
     font-family:'PyeongChangPeace-Bold';
     font-size: 17pt;
     text-align: left;
@@ -184,6 +185,7 @@
     display: flex;
     flex:0.7;
     margin-top: 6%;
+    margin-left: 3%;
     font-family:'PyeongChangPeace-Bold';
     font-size: 17pt;
     text-align: left;
@@ -193,6 +195,7 @@
     display: flex;
     flex:0.7;
     margin-top: 6%;
+    margin-left: 3%;
     font-family:'PyeongChangPeace-Bold';
     font-size: 17pt;
     text-align: left;
@@ -203,6 +206,7 @@
     display: flex;
     flex:0.7;
     margin-top: 6%;
+    margin-left: 3%;
     font-family:'PyeongChangPeace-Bold';
     font-size: 17pt;
     text-align: left;
@@ -242,7 +246,7 @@
     font-family: 'GmarketSansMedium';
     font-size: 10pt;
 }
-.GC3tag{
+.GC3tag-white{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -255,6 +259,52 @@
     margin-top:6%;
     margin-bottom: 6%;
     color:white;
+
+}
+.GC3tag-yellow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'GmarketSansBold';
+    font-size: 10pt;
+    background-color: rgba(201, 102, 211, 1);
+    border-radius: 20px 20px;
+    width: 100%;
+    height: 100%;
+    margin-top:6%;
+    margin-bottom: 6%;
+    color:white;
+
+}
+
+.GC3tag-purple{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'GmarketSansBold';
+    font-size: 10pt;
+    background-color: rgba(250, 233, 82, 1);
+    border-radius: 20px 20px;
+    width: 100%;
+    height: 100%;
+    margin-top:6%;
+    margin-bottom: 6%;
+    color:black;
+
+}
+.GC3tag{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'GmarketSansBold';
+    font-size: 10pt;
+    background-color: rgba(213, 250, 82, 1);
+    border-radius: 20px 20px;
+    width: 100%;
+    height: 100%;
+    margin-top:6%;
+    margin-bottom: 6%;
+    color:black;
 
 }
 

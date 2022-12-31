@@ -10,6 +10,8 @@ export interface cardCompleteProps {
     card: Card,
     flip: any,
     fixCard: any,
+    isShared: any,
+    cardUUID: any,
 }
 
 class CardCompleteWhite extends React.Component<cardCompleteProps, any> {
@@ -53,27 +55,33 @@ class CardCompleteWhite extends React.Component<cardCompleteProps, any> {
     }
 
     completeCard = async(e: any) => {
-        const param = {
-            send : this.props.card.fromPerson,
-            receive : this.props.card.toPerson,
-            firstTag : this.props.card.firstTag,
-            secondTag : this.props.card.secondTag,
-            thirdTag : this.props.card.thirdTag,
-            fourthTag : this.props.card.fourthTag,
-            memo : this.props.card.memo,
-            cardColor : "white",
-            sendId : sessionStorage.getItem("id")
-        }
 
-        service.anyService("/card/send/complete", "post", this.handleCompleteCard, param)
+        if(this.props.cardUUID === "") {
+            const param = {
+                send : this.props.card.fromPerson,
+                receive : this.props.card.toPerson,
+                firstTag : this.props.card.firstTag,
+                secondTag : this.props.card.secondTag,
+                thirdTag : this.props.card.thirdTag,
+                fourthTag : this.props.card.fourthTag,
+                memo : this.props.card.memo,
+                cardColor : "white",
+                sendId : sessionStorage.getItem("id")
+            }
+    
+            service.anyService("/card/send/complete", "post", this.handleCompleteCard, param)    
+        }
+        else {
+            this.handleCopyClipBoard('https://unbirthday.kr/cardreceive/'+this.props.cardUUID)
+        }
     }
 
     handleCompleteCard = (response: any) => {
         var cardUUID = response.data.data
-        sessionStorage.setItem("cardUUID", cardUUID)
+        //sessionStorage.setItem("cardUUID", cardUUID)
         //window.location.href = '/cardsend/white/' + cardUUID
 
-        this.setState({cardUUID: cardUUID})
+        this.props.isShared(cardUUID)
         this.handleCopyClipBoard('https://unbirthday.kr/cardreceive/'+cardUUID)
     }
 
@@ -89,9 +97,7 @@ class CardCompleteWhite extends React.Component<cardCompleteProps, any> {
                         limit={1}
                     />
                 </div>
-                <div className='logo' onClick={this.clickLogo}>
-                    <img src="../../img/bt_logo.png"/>
-                </div>
+
                 <div className="CS4btn">
                     <img src="../../img/back.png" className="CS4backBtn" onClick={this.props.fixCard} />
                 </div>

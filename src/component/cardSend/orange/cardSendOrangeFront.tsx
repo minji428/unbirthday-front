@@ -108,7 +108,7 @@ class CardSendOrangeFront extends React.Component<cardSendBackProps, any> {    c
             alert('이모티콘 사용은 불가해요😢')
 
             //이모지 제거
-            event.target.value = string.replace(/([\uE000-\uF8FF]|\uD83C[\uDC00-\uDFFF]|\uD83D[\uDC00-\uDFFF]|[\u2011-\u26FF]|\uD83E[\uDD10-\uDDFF])/g, '');
+            event.target.value = string.replace(/([\u2700-\u27BF]|[\uE000-\uF8FF]|\uD83C[\uDC00-\uDFFF]|\uD83D[\uDC00-\uDFFF]|[\u2011-\u26FF]|\uD83E[\uDD10-\uDDFF])/g, '');
             
             if(event.target.name === 'fromPerson') {
                 this.setState({fromPerson : event.target.value})
@@ -142,7 +142,8 @@ class CardSendOrangeFront extends React.Component<cardSendBackProps, any> {    c
     }
 
     doesStrContainEmoji = (string: string) => {
-        const regexExp = /(\u00a9|\u00ae|[\u2000-\u3300]|\ud83c[\ud000-\udfff]|\ud83d[\ud000-\udfff]|\ud83e[\ud000-\udfff])/gi;
+        // const regexExp = /(\u00a9|\u00ae|[\u2000-\u3300]|\ud83c[\ud000-\udfff]|\ud83d[\ud000-\udfff]|\ud83e[\ud000-\udfff])/gi;
+        const regexExp = /([\u2700-\u27BF]|[\uE000-\uF8FF]|\uD83C[\uDC00-\uDFFF]|\uD83D[\uDC00-\uDFFF]|[\u2011-\u26FF]|\uD83E[\uDD10-\uDDFF])/g
 
         return regexExp.test(string)
     }
@@ -167,7 +168,7 @@ class CardSendOrangeFront extends React.Component<cardSendBackProps, any> {    c
                                 <div className="CS2nameBox">
                                     {Object.keys(this.props.card).length === 0
                                         ? <input type={'text'} className="form-control" name="toPerson" placeholder='받는 사람' onChange={this.getToPerson} onBlur={this.removeEmoji}/>
-                                        : <input type={'text'} className="form-control" name="toPerson" value={this.props.card.toPerson} onChange={this.getToPerson} onBlur={this.removeEmoji}/>
+                                        : <input type={'text'} className="form-control" name="toPerson" defaultValue={this.props.card.toPerson} onChange={this.getToPerson} onBlur={this.removeEmoji}/>
                                     }                                </div>
                                 {this.state.isToPersonValid ? '' : <div className="CS2notice">3자 이내로 입력해주세요.</div>}
                             </div>
@@ -175,7 +176,7 @@ class CardSendOrangeFront extends React.Component<cardSendBackProps, any> {    c
                                 <div className="CS2nameBox">
                                     {Object.keys(this.props.card).length === 0 
                                         ? <input type={'text'} className="form-control" name="fromPerson" placeholder='보내는 사람' onChange={this.getFromPerson} onBlur={this.removeEmoji}/>
-                                        : <input type={'text'} className="form-control" name="fromPerson" value={this.props.card.fromPerson} onChange={this.getFromPerson} onBlur={this.removeEmoji}/>
+                                        : <input type={'text'} className="form-control" name="fromPerson" defaultValue={this.props.card.fromPerson} onChange={this.getFromPerson} onBlur={this.removeEmoji}/>
                                     }
                                 </div>
                                 {this.state.isFromPersonValid ? '' : <div className="CS2notice">3자 이내로 입력해주세요.</div>}

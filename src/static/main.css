@@ -78,7 +78,7 @@
         padding-right: 5%;
         /* 테두리없 */
         /* margin-bottom:10%; */
-        margin-bottom: 7%;
+        margin-bottom: 10%;
         color: rgba(222, 210, 249, 1);
         background-image: -webkit-linear-gradient(92deg, rgba(222, 210, 249, 1), rgb(161, 145, 224),rgb(247, 170, 193));
         -webkit-background-clip: text;
@@ -109,8 +109,8 @@
         justify-content: center;
         align-items: center;
         /* 테두리없 */
-        width:85%;
-        /* width: 93%; */
+        /* width:85%; */
+        width: 93%;
 
     }
     .names{
@@ -162,7 +162,7 @@
         justify-content: center;
         align-items: center;
         margin-top:5%;
-        margin-bottom: 5%;
+        /* margin-bottom: 5%; */
         font-size: 10pt;
 
         color: rgba(222, 210, 249, 1);
@@ -241,6 +241,12 @@
         height: 100%;
         justify-content: center;
         align-items: center;
+        color: rgba(222, 210, 249, 1);
+        background-image: -webkit-linear-gradient(92deg, rgba(222, 210, 249, 1), rgb(161, 145, 224),rgb(247, 170, 193));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -webkit-animation: hue 5s infinite linear;
+
     }
     .btn2{
         display: flex;
@@ -251,4 +257,10 @@
         height: 100%;
         justify-content: center;
         align-items: center;
+
+        color: rgba(222, 210, 249, 1);
+        background-image: -webkit-linear-gradient(92deg, rgba(222, 210, 249, 1), rgb(161, 145, 224),rgb(247, 170, 193));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -webkit-animation: hue 5s infinite linear;
     }
