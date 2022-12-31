@@ -79,7 +79,7 @@ class SignInFin1 extends React.Component<{}, any> {
                         limit={1}
                     />
                 </div>
-             <div className='signInFin-logo' onClick={this.clickLogo}>
+             <div className='logo signInFin-logo' onClick={this.clickLogo}>
                 <img src="../../img/bt_logo.png"/>
             </div>
             <div className="SF1colors">
