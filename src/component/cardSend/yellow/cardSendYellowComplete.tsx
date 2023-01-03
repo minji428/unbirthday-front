@@ -227,9 +227,7 @@ class CardCompleteYellow extends React.Component<cardSendWhiteProps, any> {
                             </div>
 
                         </div> 
-                         <div className="CS4writeMessage" >
-                            {this.props.card.memo}     
-                        </div>
+                        <pre className='CS4writeMessage'>{this.props.card.memo}</pre>
 
                     </div>
                 </div>
