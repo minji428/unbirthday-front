@@ -58,7 +58,7 @@ class CardCompleteOrange extends React.Component<cardSendWhiteProps, any> {
             this.showAlert()
 
         } else {
-            alert("공유하기가 지원되지 않는 환경입니다.")
+            alert("아래 링크를 복사해서 받는 사람에게 보내주세요:)\n" + url)
         }
     }
 
