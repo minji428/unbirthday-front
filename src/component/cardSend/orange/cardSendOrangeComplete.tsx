@@ -58,7 +58,7 @@ class CardCompleteOrange extends React.Component<cardSendWhiteProps, any> {
             this.showAlert()
 
         } else {
-            window.prompt("아래 링크를 복사해서 받는 사람에게 보내주세요:)\n" + url)
+            alert("아래 링크를 복사해서 받는 사람에게 보내주세요:)\n" + url)
         }
     }
 
