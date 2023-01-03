@@ -123,49 +123,49 @@ class main extends React.Component<{}, any> {
                             </div>
                                 <div className="NameRow"> 
                                 <div className="insideRow3">
-                                    <div>{this.state.receiverName[12]}</div>
-                                    <div>{this.state.receiverName[13]}</div>
-                                    <div>{this.state.receiverName[14]}</div>
-                                    <div>{this.state.receiverName[15]}</div>
-                                    <div>{this.state.receiverName[16]}</div>
+                                    <div>{this.state.receiverName[18]}</div>
+                                    <div>{this.state.receiverName[19]}</div>
+                                    <div>{this.state.receiverName[20]}</div>
+                                    <div>{this.state.receiverName[21]}</div>
+                                    <div>{this.state.receiverName[22]}</div>
                                     {/* <div>{this.state.receiverName[17]}</div> */}
                                 </div>
                             </div>
                             <div className="NameRow"> 
                                 <div className="insideRow6">
-                                    <div>{this.state.receiverName[20]}</div>
-                                    <div>{this.state.receiverName[21]}</div>
-                                    <div>{this.state.receiverName[22]}</div>
                                     <div>{this.state.receiverName[23]}</div>
                                     <div>{this.state.receiverName[24]}</div>
+                                    <div>{this.state.receiverName[25]}</div>
+                                    <div>{this.state.receiverName[26]}</div>
+                                    <div>{this.state.receiverName[27]}</div>
                                 </div>
                             </div>
         
                             <div className="NameRow"> 
                                 <div className="insideRow7">
-                                    <div>{this.state.receiverName[25]}</div>
-                                    <div>{this.state.receiverName[26]}</div>
-                                    <div>{this.state.receiverName[27]}</div>
                                     <div>{this.state.receiverName[28]}</div>
-                                </div>
-                            </div>
-        
-                            <div className="NameRow"> 
-                                <div className="insideRow8">
                                     <div>{this.state.receiverName[29]}</div>
                                     <div>{this.state.receiverName[30]}</div>
                                     <div>{this.state.receiverName[31]}</div>
                                 </div>
                             </div>
+        
                             <div className="NameRow"> 
-                                <div className="insideRow9">
+                                <div className="insideRow8">
                                     <div>{this.state.receiverName[32]}</div>
                                     <div>{this.state.receiverName[33]}</div>
+                                    <div>{this.state.receiverName[34]}</div>
+                                </div>
+                            </div>
+                            <div className="NameRow"> 
+                                <div className="insideRow9">
+                                    <div>{this.state.receiverName[35]}</div>
+                                    <div>{this.state.receiverName[36]}</div>
                                 </div>
                             </div>
                             <div className="NameRow"> 
                                 <div className="insideRow3">
-                                    <div>{this.state.receiverName[34]}</div>
+                                    <div>{this.state.receiverName[37]}</div>
                                 </div>
                             </div>
                         </div>
