@@ -132,9 +132,9 @@ class MyCards extends React.Component<{}, any> {
                 <div className={color_to}>
                     HAPPY<br></br>
                     UN-BIRTHDAY<br></br>
-                    {card.send}!
+                    {card.receive}!
                 </div>
-                <div className={color_from}>From.{card.receive}</div>
+                <div className={color_from}>From.{card.send}</div>
             </div>
             )
     }
