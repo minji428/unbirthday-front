@@ -196,8 +196,11 @@ class CardSendOrangeFront extends React.Component<cardSendBackProps, any> {    c
                            <div className="CS2toPerson">
                                 <div className="CS2nameBox">
                                     {Object.keys(this.props.card).length === 0
-                                        ? <input type={'text'} className="form-control"  name="toPerson" ref={searchInput} placeholder='받는 사람' onChange={this.getToPerson} onBlur={this.removeEmoji} onFocus={this.handleFocus} />
-                                        : <input type={'text'} className="form-control" name="toPerson" ref={searchInput} defaultValue={this.props.card.toPerson} onChange={this.getToPerson} onBlur={this.removeEmoji} onFocus={this.handleFocus}/>
+                                        ? <input type={'text'} className="form-control"  name="toPerson" placeholder='받는 사람' onChange={this.getToPerson} onBlur={this.removeEmoji} />
+                                        : <input type={'text'} className="form-control" name="toPerson" defaultValue={this.props.card.toPerson} onChange={this.getToPerson} onBlur={this.removeEmoji} />
+
+                                        // ? <input type={'text'} className="form-control"  name="toPerson" ref={searchInput} placeholder='받는 사람' onChange={this.getToPerson} onBlur={this.removeEmoji} onFocus={this.handleFocus} />
+                                        // : <input type={'text'} className="form-control" name="toPerson" ref={searchInput} defaultValue={this.props.card.toPerson} onChange={this.getToPerson} onBlur={this.removeEmoji} onFocus={this.handleFocus}/>
                                     }                                </div>
                                 {this.state.isToPersonValid ? '' : <div className="CS2notice">3자 이내로 입력해주세요.</div>}
                             </div>
