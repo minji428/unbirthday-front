@@ -4,7 +4,7 @@ import { Card } from '../white/cardSendWhiteFrame';
 import { cardSendBackProps } from '../white/cardSendWhiteFront';
 import CardSendOrangeBack from './cardSendOrangeBack'
 
-const searchInput = useRef(null);
+// const searchInput = useRef(null);
 // const [arr, setArr] = useState<any[]>([]);
 class CardSendOrangeFront extends React.Component<cardSendBackProps, any> {    constructor(props: any){
         super(props)
@@ -17,8 +17,8 @@ class CardSendOrangeFront extends React.Component<cardSendBackProps, any> {    c
             isToPersonValid: true,
             card: {} as Card,
         }
-        const [value, setValue] = useState("");
-        const inputRef = useRef();
+        // const [value, setValue] = useState("");
+        // const inputRef = useRef();
         this.cardSendOrangeBack = this.cardSendOrangeBack.bind(this)
     }
     
@@ -104,25 +104,25 @@ class CardSendOrangeFront extends React.Component<cardSendBackProps, any> {    c
         return string
     }
 
-    handleFocus=(e:FocusEvent<HTMLInputElement>)=>{
+    // handleFocus=(e:FocusEvent<HTMLInputElement>)=>{
         
-        if (searchInput.current!=null){
-            // (document.activeElement as HTMLElement).blur();
-            (searchInput.current as HTMLElement).blur(); // removing focus
-        }
+    //     if (searchInput.current!=null){
+    //         // (document.activeElement as HTMLElement).blur();
+    //         (searchInput.current as HTMLElement).blur(); // removing focus
+    //     }
 
-        // if (
-        //     document.activeElement === searchInput.current
-        //   ) {
-        //     document.activeElement.blur();
-        //   }
-        // let [value, state]=useState("");
-        // const inputRef=React.createRef();
-        // // this.setState({value:inputRef.current.value})
-        // e.preventDefault();
-        // inputRef.current.blur();
-        // inputRef.current.blur();
-    }
+    //     // if (
+    //     //     document.activeElement === searchInput.current
+    //     //   ) {
+    //     //     document.activeElement.blur();
+    //     //   }
+    //     // let [value, state]=useState("");
+    //     // const inputRef=React.createRef();
+    //     // // this.setState({value:inputRef.current.value})
+    //     // e.preventDefault();
+    //     // inputRef.current.blur();
+    //     // inputRef.current.blur();
+    // }
 
     removeEmoji = (event: any) => {
         // const [value, setValue] = useState("");
