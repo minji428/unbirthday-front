@@ -1,8 +1,9 @@
-import React, {Component} from 'react';
+import React, {Component, useRef}  from 'react';
 import '../../../static/cardSend/cardSendFront.css';
 import { Card } from '../white/cardSendWhiteFrame';
 import { cardSendBackProps } from '../white/cardSendWhiteFront';
 import CardSendOrangeBack from './cardSendOrangeBack'
+
 
 class CardSendOrangeFront extends React.Component<cardSendBackProps, any> {    constructor(props: any){
         super(props)
@@ -102,6 +103,8 @@ class CardSendOrangeFront extends React.Component<cardSendBackProps, any> {    c
     }
 
     removeEmoji = (event: any) => {
+        (document.activeElement as HTMLElement).blur()
+        
         let string = event.target.value
 
         if(this.isInvalid(string) === 3) {
