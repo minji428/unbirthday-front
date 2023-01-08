@@ -1,10 +1,11 @@
-import React, {Component, useRef,FocusEvent}  from 'react';
+import React, {Component, useRef,FocusEvent,useState}  from 'react';
 import '../../../static/cardSend/cardSendFront.css';
 import { Card } from '../white/cardSendWhiteFrame';
 import { cardSendBackProps } from '../white/cardSendWhiteFront';
 import CardSendOrangeBack from './cardSendOrangeBack'
 
-
+const searchInput = useRef(null);
+// const [arr, setArr] = useState<any[]>([]);
 class CardSendOrangeFront extends React.Component<cardSendBackProps, any> {    constructor(props: any){
         super(props)
 
@@ -16,10 +17,11 @@ class CardSendOrangeFront extends React.Component<cardSendBackProps, any> {    c
             isToPersonValid: true,
             card: {} as Card,
         }
-
+        const [value, setValue] = useState("");
+        const inputRef = useRef();
         this.cardSendOrangeBack = this.cardSendOrangeBack.bind(this)
     }
-
+    
     componentDidMount(): void {
         if(Object.keys(this.props.card).length !== 0){
             this.setState({
@@ -102,8 +104,24 @@ class CardSendOrangeFront extends React.Component<cardSendBackProps, any> {    c
         return string
     }
 
-    handleFocus=(event:FocusEvent<HTMLInputElement>)=>{
-        (document.activeElement as HTMLElement).blur()
+    handleFocus=(e:FocusEvent<HTMLInputElement>)=>{
+        
+        if (searchInput.current!=null){
+            // (document.activeElement as HTMLElement).blur();
+            (searchInput.current as HTMLElement).blur(); // removing focus
+        }
+
+        // if (
+        //     document.activeElement === searchInput.current
+        //   ) {
+        //     document.activeElement.blur();
+        //   }
+        // let [value, state]=useState("");
+        // const inputRef=React.createRef();
+        // // this.setState({value:inputRef.current.value})
+        // e.preventDefault();
+        // inputRef.current.blur();
+        // inputRef.current.blur();
     }
 
     removeEmoji = (event: any) => {
@@ -178,8 +196,8 @@ class CardSendOrangeFront extends React.Component<cardSendBackProps, any> {    c
                            <div className="CS2toPerson">
                                 <div className="CS2nameBox">
                                     {Object.keys(this.props.card).length === 0
-                                        ? <input type={'text'} className="form-control"  name="toPerson" placeholder='받는 사람' onChange={this.getToPerson} onBlur={this.removeEmoji} onFocus={this.handleFocus}/>
-                                        : <input type={'text'} className="form-control" name="toPerson" defaultValue={this.props.card.toPerson} onChange={this.getToPerson} onBlur={this.removeEmoji}/>
+                                        ? <input type={'text'} className="form-control"  name="toPerson" ref={searchInput} placeholder='받는 사람' onChange={this.getToPerson} onBlur={this.removeEmoji} onFocus={this.handleFocus} />
+                                        : <input type={'text'} className="form-control" name="toPerson" ref={searchInput} defaultValue={this.props.card.toPerson} onChange={this.getToPerson} onBlur={this.removeEmoji} onFocus={this.handleFocus}/>
                                     }                                </div>
                                 {this.state.isToPersonValid ? '' : <div className="CS2notice">3자 이내로 입력해주세요.</div>}
                             </div>
