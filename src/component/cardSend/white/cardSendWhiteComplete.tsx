@@ -66,7 +66,8 @@ class CardCompleteWhite extends React.Component<cardSendWhiteProps, any> {
             this.showAlert()
 
         } else {
-            alert("공유하기가 지원되지 않는 환경입니다.")
+            this.openModal()
+            // alert("아래 링크를 복사해서 받는 사람에게 보내주세요:)\n" + url)
         }
     }
 
@@ -127,6 +128,33 @@ class CardCompleteWhite extends React.Component<cardSendWhiteProps, any> {
         window.location.href = '/cardsend'
     }
 
+    selectAll = (e: any) => {
+        e.target.focus()
+        e.target.select()
+    }
+
+    openModal = () => {
+        let modal = document.getElementsByClassName("modal")[0] as HTMLElement
+        
+        if (modal !== null) { 
+            let parent = modal.parentNode as HTMLElement
+            if (parent !== null)
+                parent.style.overflow = 'hidden'
+            modal.style.display = "flex"
+        }
+    }
+
+    closeModal = (e: any) => {
+        let modal = document.getElementsByClassName("modal")[0] as HTMLElement
+        
+        if (modal !== null) {
+            let parent = modal.parentNode as HTMLElement
+            if (parent !== null)
+                parent.style.overflow = 'scroll'
+            modal.style.display="none"
+        }
+    }
+
     render() {
         if (this.state.showFront){
             return <CardSendWhiteCompleteFront 
@@ -144,7 +172,26 @@ class CardCompleteWhite extends React.Component<cardSendWhiteProps, any> {
                         limit={1}
                     />
                 </div>
-
+                {/* modal */}
+                <div className="modal" >
+                        <div className="modal-dialog" role="document">
+                            <div className="modal-content">
+                                <div className="modal-header">
+                                    <button type="button" className="close" onClick={this.closeModal}>
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div className="modal-body">
+                                    <div className='modal-body__column'>
+                                        아래 링크를 복사해서 받는 사람에게 보내주세요 :) 
+                                    </div>
+                                    <div className='modal-body__column'>
+                                        <input value={'https://unbirthday.kr/cardreceive/'+this.state.cardUUID } spellCheck="false" onClick={this.selectAll}/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
             <div className="CS4btn">
                 <img src="../../img/back.png" className="CS4backBtn" onClick={this.props.fixCard}/>
                 <img src="../../img/bt_grayhome.png" className="CS4home" onClick={this.clickLogo}/>
