@@ -58,7 +58,8 @@ class CardCompleteOrange extends React.Component<cardSendWhiteProps, any> {
             this.showAlert()
 
         } else {
-            alert("아래 링크를 복사해서 받는 사람에게 보내주세요:)\n" + url)
+            this.openModal()
+            // alert("아래 링크를 복사해서 받는 사람에게 보내주세요:)\n" + url)
         }
     }
 
@@ -115,6 +116,33 @@ class CardCompleteOrange extends React.Component<cardSendWhiteProps, any> {
         window.location.href = '/cardsend'
     }
 
+    selectAll = (e: any) => {
+        e.target.focus()
+        e.target.select()
+    }
+
+    openModal = () => {
+        let modal = document.getElementsByClassName("modal")[0] as HTMLElement
+        
+        if (modal !== null) { 
+            let parent = modal.parentNode as HTMLElement
+            if (parent !== null)
+                parent.style.overflow = 'hidden'
+            modal.style.display = "flex"
+        }
+    }
+
+    closeModal = (e: any) => {
+        let modal = document.getElementsByClassName("modal")[0] as HTMLElement
+        
+        if (modal !== null) {
+            let parent = modal.parentNode as HTMLElement
+            if (parent !== null)
+                parent.style.overflow = 'scroll'
+            modal.style.display="none"
+        }
+    }
+
     render() {
         if (this.state.showFront){
             return <CardSendOrangeCompleteFront 
@@ -127,6 +155,26 @@ class CardCompleteOrange extends React.Component<cardSendWhiteProps, any> {
         }
         return(
             <div className= 'CS1main'>
+                {/* modal */}
+                <div className="modal" >
+                    <div className="modal-dialog" role="document">
+                        <div className="modal-content">
+                            <div className="modal-header">
+                                <button type="button" className="close" onClick={this.closeModal}>
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div className="modal-body">
+                                <div className='modal-body__column'>
+                                    아래 링크를 복사해서 받는 사람에게 보내주세요 :) 
+                                </div>
+                                <div className='modal-body__column'>
+                                    <input value={'https://unbirthday.kr/cardreceive/'+this.state.cardUUID } spellCheck="false" onClick={this.selectAll}/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div className='div-toast' onClick={this.cardsend}>
                     <ToastContainer 
                         limit={1}
@@ -234,6 +282,7 @@ class CardCompleteOrange extends React.Component<cardSendWhiteProps, any> {
                 <div className='CS4complete'>
                     <img src="../../img/bt_copy_link.png" onClick={this.completeCard}/>
                 </div>
+
             </div>
         )
     }
