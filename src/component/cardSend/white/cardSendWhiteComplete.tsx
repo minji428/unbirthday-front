@@ -109,7 +109,11 @@ class CardCompleteWhite extends React.Component<cardSendWhiteProps, any> {
             this.handleCopyClipBoard('https://unbirthday.kr/cardreceive/'+this.state.cardUUID)
         }
     }
+    clickLogo(){
+        window.location.href = 'https://unbirthday.kr'
+    }
 
+    
     handleCompleteCard = (response: any) => {
         var cardUUID = response.data.data
         sessionStorage.setItem("cardUUID", cardUUID)
@@ -143,6 +147,8 @@ class CardCompleteWhite extends React.Component<cardSendWhiteProps, any> {
 
             <div className="CS4btn">
                 <img src="../../img/back.png" className="CS4backBtn" onClick={this.props.fixCard}/>
+                <img src="../../img/bt_grayhome.png" className="CS4home" onClick={this.clickLogo}/>
+
             </div>
             <div className="CS4texts">
                 <div className='CS4mainText'>
