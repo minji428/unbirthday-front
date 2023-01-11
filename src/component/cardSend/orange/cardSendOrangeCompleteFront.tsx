@@ -161,6 +161,7 @@ class CardCompleteOrange extends React.Component<cardCompleteProps, any> {
                                         value={'https://unbirthday.kr/cardreceive/'+this.props.cardUUID } 
                                         readOnly
                                         onClick={this.selectAll}
+                                        inputMode="none"
                                     />
                                 </div>
                             </div>
