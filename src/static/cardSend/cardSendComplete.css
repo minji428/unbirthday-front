@@ -361,8 +361,13 @@
 }
 .modal-body__column:last-child input {
     border: none;
-    width: 95%;
-    font-size: 10pt;
+    width: 180%;
+    font-size: 20pt;
+
+    transform: scale(0.5);
+    transform-origin: left top;
+    margin-left: 10px;
+    margin-top: 3px;
 }
 .modal-body__column:last-child input:focus {
     border: none;
