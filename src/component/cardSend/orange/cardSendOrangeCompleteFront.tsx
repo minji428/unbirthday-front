@@ -109,7 +109,7 @@ class CardCompleteOrange extends React.Component<cardCompleteProps, any> {
     }
 
     selectAll = (e: any) => {
-        e.target.focus()
+        //e.target.focus()
         e.target.select()
     }
 
