@@ -178,7 +178,7 @@ class CardCompleteYellow extends React.Component<cardSendWhiteProps, any> {
                                     아래 링크를 복사해서 받는 사람에게 보내주세요 :) 
                                 </div>
                                 <div className='modal-body__column'>
-                                    <input value={'https://unbirthday.kr/cardreceive/'+this.state.cardUUID } spellCheck="false" onClick={this.selectAll}/>
+                                    <input value={'https://unbirthday.kr/cardreceive/'+this.state.cardUUID } spellCheck="false" onClick={this.selectAll} inputMode="none"/>
                                 </div>
                             </div>
                         </div>
