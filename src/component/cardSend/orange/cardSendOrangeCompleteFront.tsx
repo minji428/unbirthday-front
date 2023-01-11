@@ -157,7 +157,11 @@ class CardCompleteOrange extends React.Component<cardCompleteProps, any> {
                                     아래 링크를 복사해서 받는 사람에게 보내주세요 :) 
                                 </div>
                                 <div className='modal-body__column'>
-                                    <input value={'https://unbirthday.kr/cardreceive/'+this.props.cardUUID } spellCheck="false" onClick={this.selectAll}/>
+                                    <input 
+                                        value={'https://unbirthday.kr/cardreceive/'+this.props.cardUUID } 
+                                        readOnly
+                                        onClick={this.selectAll}
+                                    />
                                 </div>
                             </div>
                         </div>
