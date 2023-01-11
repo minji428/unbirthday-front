@@ -38,8 +38,7 @@ class CardCompleteOrange extends React.Component<cardCompleteProps, any> {
     */
     handleCopyClipBoard = async (url: string) => {
         //this.checkItsShared(url)
-        this.openModal()
-/*
+
         if(navigator.share) {
             navigator.share({
                 title: 'HAPPY UNBIRTHDAY!',
@@ -53,7 +52,6 @@ class CardCompleteOrange extends React.Component<cardCompleteProps, any> {
             this.openModal()
             // alert("아래 링크를 복사해서 받는 사람에게 보내주세요:)\n" + url)
         }
-        */
     }
 
     showAlert = () => {
