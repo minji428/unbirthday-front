@@ -269,51 +269,85 @@
     
     .CS3writeMessage{
         display: flex;
-        flex:1;
+        /* flex:1.7; */
+        position:relative;
         flex-direction: column;
         justify-content: center;
         color:black;
         background-color:white;
         border-color: rgba(0, 0, 0, 0.5);
         border-style:solid;
+
         border-width: 0.01px;
+        /* border-width: 0.00625px; */
+
+        /* 3% */
         padding-left: 3%;
         padding-right: 3%;
         margin-left: 3%;
         margin-right:3%;
+
         font-weight: 100;
-        font-size: 10pt;
-        margin-bottom: 2%;
+        height: 35%;
+        /* font-size: 6.25pt; */
+        /* font-size: 16pt; */
+
+        /* 2% */
+        /* margin-bottom: 2%; */
+/* 
+        transform: scale(0.625);
+        transform-origin: left top; */
     }
     .memo{
         position:relative;
+        margin-top:3%;
         border-width: 0;
         background-color: rgba(246, 246, 246, 1);
         
-        height: 70%;
+        /* height: 70%; */
+        width: 177.8%;
+        height: 143.4%;
+
         text-align: left;
         font-family: 'GmarketSansMedium';
         padding-left: 5%;
+        /* padding-left: 8.9%; */
+        /* padding-right: 8.9%; */
+
         font-weight: 500;
-        font-size: 9pt;
-        line-height:160%;
+
+        /* font-size: 9pt; */
+        font-size: 16pt;
+
+        /* line-height:160%; */
+        line-height: 200.4%;
+
+        transform: scale(0.56);
+        transform-origin: left top;
+        /* margin-bottom: 5%; */
     }
+
     .CS3numCnt{
         position:absolute;
         font-family: 'Noto Sans KR' ;
         color:rgba(0, 0, 0, 0.5);
         font-size: 8px;
-        right: 10%;
-        bottom:11.5%;
+        right: 5%;
+        bottom:20%;
+
+        /* background-color: #393939; */
     }
     .CS3notice{
         display: flex;
+        /* background-color: black; */
         flex-direction: row;
         /* flex:0.4; */
         justify-content: flex-start;
         color:rgba(0, 0, 0, 0.5);
         font-family: 'Noto Sans KR';
-        font-size: 9px;
+        font-size: 8px;
+        margin-top:-35%;
+        /* background-color: #393939; */
     }
 
     .CS3complete{
