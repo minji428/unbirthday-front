@@ -107,7 +107,7 @@
     }
     
     .CS2yelloBox img{
-        width:100%;
+        width:90%;
         height: 100%;
     }
     
@@ -118,13 +118,13 @@
         width: 90%;
         height: 90%;
         top:0;
-        left:0;
+        left:7;
         flex-direction: column;
         flex:5;
         position:absolute;
         padding:5%;
         text-align: center;
-        
+        font-size: 17pt;
         /* justify-content: space-between; */
     }
     .CS2write{
