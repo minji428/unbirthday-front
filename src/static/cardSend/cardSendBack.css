@@ -104,6 +104,22 @@
     }
     
     
+    .CS3insideWhite{
+        display: flex;
+        /* object-fit: cover; */
+        width: 90%;
+        height: 70%;
+        top:0;
+        left:0;
+        /* padding: 5%; */
+        flex-direction: column;
+        flex:5;
+        position:absolute;
+        padding:5%;
+        text-align: center;
+        /* padding-left: 5%; */
+        
+    }
     .CS3insideYellow{
         display: flex;
         /* object-fit: cover; */
@@ -148,22 +164,26 @@
         display: flex;
         flex:0.7;
         margin-top: 6%;
+        margin-left: 5%;
         font-family:'PyeongChangPeace-Bold';
         font-size: 16pt;
         margin-left: 5%;
         font-weight:bold;
         text-align: left;
+
         color:black;
     }
     .CS3personNameforPurple{
         display: flex;
         flex:0.7;
         margin-top: 6%;
+        margin-left: 5%;
         font-family:'PyeongChangPeace-Bold';
         font-size: 16pt;
         margin-left: 5%;
         font-weight:bold;
         text-align: left;
+        /* margin-bottom: -5%; */
         color:rgba(250, 233, 82, 1);
     }
     .CS3tagMessage{
@@ -269,7 +289,7 @@
     
     .CS3writeMessage{
         display: flex;
-        /* flex:1.7; */
+        flex:1;
         position:relative;
         flex-direction: column;
         justify-content: center;
@@ -307,12 +327,13 @@
         /* height: 70%; */
         width: 177.8%;
         height: 143.4%;
+        /* height: 2000px; */
 
         text-align: left;
         font-family: 'GmarketSansMedium';
-        padding-left: 5%;
+        /* padding-left: 5%; */
         /* padding-left: 8.9%; */
-        /* padding-right: 8.9%; */
+        /* padding-right: 5%; */
 
         font-weight: 500;
 
@@ -339,6 +360,7 @@
     }
     .CS3notice{
         display: flex;
+        position: relative;
         /* background-color: black; */
         flex-direction: row;
         /* flex:0.4; */
@@ -347,7 +369,24 @@
         font-family: 'Noto Sans KR';
         font-size: 8px;
         margin-top:-35%;
+        /* margin-top:-10%; */
         /* background-color: #393939; */
+    }
+
+    .CS3noticeWhite{
+        display: flex;
+        position: relative;
+        /* background-color: black; */
+        flex-direction: row;
+        /* flex:0.4; */
+        justify-content: flex-start;
+        color:rgba(0, 0, 0, 0.5);
+        font-family: 'Noto Sans KR';
+        font-size: 8px;
+        /* margin-bottom: -5%; */
+        /* text-align: end; */
+        /* margin-top:-4%; */
+        margin-top:-35%;
     }
 
     .CS3complete{

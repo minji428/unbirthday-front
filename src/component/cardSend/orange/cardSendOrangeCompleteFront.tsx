@@ -185,12 +185,12 @@ class CardCompleteOrange extends React.Component<cardCompleteProps, any> {
             </div>
     
             <div className="GC2insideYellow" > 
-                <div className='GC2personNameOrange'>
+                <div className='CS4personName-orange'>
                     HAPPY<br></br>
                     UN-BIRTHDAY<br></br>
                     {this.props.card.toPerson}!
                 </div>
-                <div className="GC2subTextOrange">
+                <div className="CS4subTextOrange">
                     From. {this.props.card.fromPerson}
                 </div>
                 </div>

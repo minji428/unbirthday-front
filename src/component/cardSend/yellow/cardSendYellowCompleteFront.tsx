@@ -165,13 +165,13 @@ class CardCompleteYellow extends React.Component<cardCompleteProps, any> {
                 <div>
                     <img className="GC2card" src="../../img/card_empty_yellow.png"/>
                 </div>
-                <div className="GC2insideYellow" > 
-                    <div className='GC2personNameYellow'>
+                <div className="CS4insideYellow" > 
+                    <div className='CS4personName'>
                         HAPPY<br></br>
                         UN-BIRTHDAY<br></br>
                         {this.props.card.toPerson}!
                     </div>
-                    <div className="GC2subTextYellow">
+                    <div className="CS4subTextYellow">
                         From. {this.props.card.fromPerson}
                     </div>
                     </div>

@@ -128,12 +128,51 @@
         display: flex;
         flex:0.7;
         margin-top: 6%;
+        margin-left: 5%;
         font-family:'PyeongChangPeace-Bold';
-        font-size: 18pt;
+        font-size: 16pt;
+        margin-left: 5%;
         font-weight:bold;
         text-align: left;
         color:rgba(201, 102, 211, 1);
         
+    }
+    .CS3personNameforOrange{
+        display: flex;
+        flex:0.7;
+        margin-top: 6%;
+        font-family:'PyeongChangPeace-Bold';
+        font-size: 16pt;
+        margin-left: 5%;
+        font-weight:bold;
+        text-align: left;
+        color:rgba(213, 250, 82, 1);
+    }
+    .CS3personNameforWhite{
+        display: flex;
+        flex:0.7;
+        margin-top: 6%;
+        margin-left: 5%;
+        font-family:'PyeongChangPeace-Bold';
+        font-size: 16pt;
+        margin-left: 5%;
+        font-weight:bold;
+        text-align: left;
+
+        color:black;
+    }
+    .CS3personNameforPurple{
+        display: flex;
+        flex:0.7;
+        margin-top: 6%;
+        margin-left: 5%;
+        font-family:'PyeongChangPeace-Bold';
+        font-size: 16pt;
+        margin-left: 5%;
+        font-weight:bold;
+        text-align: left;
+        /* margin-bottom: -5%; */
+        color:rgba(250, 233, 82, 1);
     }
     
     .CS3tagMessage{
@@ -143,6 +182,9 @@
         padding-top:2%;
         padding-bottom: 2%;
         justify-content: center;
+        background-color: #393939;
+        margin-left: 3%;
+        margin-right: 3%;
         /* align-items: stretch; */
         justify-content: space-evenly;
         
@@ -183,7 +225,7 @@
         color:white;
 
     }
-    
+
     .CS3writeMessage{
         display: flex;
         flex:1;
@@ -202,23 +244,7 @@
         font-size: 10pt;
         margin-bottom: 2%;
     }
-    .CS3numCnt{
-        position:absolute;  
-        font-family: 'Noto Sans KR' ;
-        color:rgba(0, 0, 0, 0.5);
-        font-size: 8px;
-        margin-bottom:2%;
-    }
-    .CS3notice{
-        display: flex;
-        flex-direction: row;
-        /* flex:0.4; */
-        justify-content: flex-start;
-        color:rgba(0, 0, 0, 0.5);
-        font-family: 'Noto Sans KR';
-        font-size: 9px;
-    }
-
+    
     .CS3complete{
         display: flex;
         flex-direction: row;

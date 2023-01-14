@@ -323,8 +323,8 @@ class CardSendWhiteBack extends React.Component<cardSendFrontProps, any> {
                                     : <textarea className="memo" cols={10} rows={5} onChange={this.writeMemo} onBlur={this.removeEmoji} value={this.state.memo}/>
                                 }
                                 <div className="CS3numCnt">{this.state.memo ? this.state.memo.length : '0'}/90</div>
+                                <div className="CS3notice">입력을 안 할 경우 예시 문구로 카드를 완성해드려요.</div>
                             </div>
-                            <div className="CS3notice">입력을 안 할 경우 예시 문구로 카드를 완성해드려요.</div>
     
     
                         </div>

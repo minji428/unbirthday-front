@@ -170,13 +170,13 @@ class CardCompleteWhite extends React.Component<cardCompleteProps, any> {
                     <img className="GC2card" src="../../img/card_empty_white.png"/>
                 </div>
 
-                <div className="GC2insideYellow" > 
-                    <div className='GC2personNameWhite'>
+                <div className="CS4insideYellow" > 
+                    <div className='CS4personName-white'>
                         HAPPY<br></br>
                         UN-BIRTHDAY<br></br>
                         {this.props.card.toPerson}!
                     </div>
-                    <div className="GC2subTextWhite">
+                    <div className="CS4subTextWhite">
                         From. {this.props.card.fromPerson}
                     </div>
                     </div>
