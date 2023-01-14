@@ -133,7 +133,7 @@
         flex: 1;
     }
     .CS2nameBox input{
-        font-size: 16pt;
+        font-size: 17pt;
     }
     .CS2toPerson{
         display: flex;
@@ -143,7 +143,7 @@
         flex: 1;
         margin-top: 17%;
         margin-left:3%;
-        /* font-size: 16pt; */
+        font-size: 17pt;
     }
     .CS2fromPerson{
         display: flex;
@@ -153,14 +153,14 @@
         flex: 1;
         margin-bottom: 7%;
         margin-left:3%;
-        /* font-size: 16pt; */
+        font-size: 17pt;
     }
     .CS2to{
         display: flex;
         flex-direction: column;
         /* height: 100%; */
         justify-content: flex-start;
-        font-size: 16pt;
+        /* font-size: 17pt; */
     }
     .CS2notice{
         display: flex;
