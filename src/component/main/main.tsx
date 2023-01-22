@@ -53,6 +53,10 @@ class main extends React.Component<{}, any> {
         
     }
 
+    instagram(){
+        window.location.href = 'https://instagram.com/happy__un_birthday?igshid=Zjc2ZTc4Nzk='
+    }   
+
     render() {
         if(!this.isOnMobile()) {
             return (
@@ -189,6 +193,10 @@ class main extends React.Component<{}, any> {
                         <div className="btn2">
                             <img src="../img/bt_mycards.png" onClick={this.mycards}></img>
                         </div>
+                    </div>
+
+                    <div className="instagram">
+                        <img src="../img/bt_insta.png" onClick={this.instagram}/>
                     </div>
                 </div>
       

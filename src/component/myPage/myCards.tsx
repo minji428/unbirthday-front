@@ -171,6 +171,10 @@ class MyCards extends React.Component<{}, any> {
         window.location.href = 'https://eminent-clavicle-a2a.notion.site/620ee737c47240e0a77faba2b831df24'
     }
 
+    instagram(){
+        window.location.href = 'https://instagram.com/happy__un_birthday?igshid=Zjc2ZTc4Nzk='
+    }   
+
     cardSend = () => {
         window.location.href = '/cardsend'
     }
@@ -286,10 +290,18 @@ class MyCards extends React.Component<{}, any> {
                 </div>
                 <div className="MCnoticeText">
                     <div className="MCnotices" onClick={this.logout}>로그아웃하기</div>
-                    <div className="MCnotices" onClick={this.notion}>문의하기</div>
+                    {/* <div className="MCnotices" onClick={this.notion}>문의하기</div> */}
+                    <div className="myButtons">
+                        <div className="instagram_my">
+                            <img src="../img/bt_insta.png" onClick={this.instagram}/>
+                        </div>
+                        <div className="instagram_my" >
+                            <img src="../img/bt_insta.png" onClick={this.notion}/>
+                        </div>
+
+                    </div>
                 </div>
             </div>
-            
         </div>
 
     </div>
