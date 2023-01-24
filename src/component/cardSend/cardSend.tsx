@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import ReactGA from "react-ga4";
 import '../../static/cardSend/cardSend.css';
 
 class cardSend extends React.Component<{}, any> {
@@ -17,6 +18,11 @@ class cardSend extends React.Component<{}, any> {
     }
 
     yelloCard(){
+        ReactGA.event({
+            category: "Button",
+            action: "Choose yellow card",
+            label: "cardSend",
+          });
         window.location.href = '/cardsend/yellow'
     }
 
