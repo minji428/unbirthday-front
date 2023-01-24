@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
-import ReactGA from "react-ga";
+import ReactGA from "react-ga4";
 
 const RouteChangeTracker = () => {
   const location = useLocation();
@@ -16,8 +16,8 @@ const RouteChangeTracker = () => {
 		// 초기화 완료 되었다면 location 변화 추적하고 pageview 이벤트 발생.
   useEffect(() => {
     if (initialized) {
-      ReactGA.set({ page: location.pathname });
-      ReactGA.pageview(location.pathname + location.search);
+        ReactGA.set({ page: location.pathname });
+        ReactGA.send("pageview");
     }
   }, [initialized, location]);
 
