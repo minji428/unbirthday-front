@@ -2,17 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App'
-import ReactGA from 'react-ga';
 
-
-const TRACKING_ID  = process.env.REACT_APP_GOOGLE_ANALYTICS_TRAKING_ID;
 const root = document.querySelector("#root");
 
 ReactDOM.render(React.createElement(App), root);
-
-if (TRACKING_ID) {
-    ReactGA.initialize(TRACKING_ID);
-}
 
 // const root = ReactDOM.createRoot(document.getElementById('root'));
 // root.render(

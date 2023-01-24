@@ -2,7 +2,6 @@
 import './App.css';
 import React from 'react';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import RouteChangeTracker from './RouteChangeTracker';
 
 import Main from './component/main/main'
 import CardSend from './component/cardSend/cardSend'
@@ -34,8 +33,8 @@ import CardCompleteOrange from './component/cardSend/orange/cardSendOrangeComple
 import Receiver1 from './component/receiver/receiver1';
 
 const App = () => {
-    RouteChangeTracker();
-  return(
+
+    return(
     <div className='App'>
       <BrowserRouter>
         <Routes>
