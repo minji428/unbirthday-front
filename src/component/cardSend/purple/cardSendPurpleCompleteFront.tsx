@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import { Slide, toast, ToastContainer } from "react-toastify";
 import { cardCompleteProps } from '../white/cardSendWhiteCompleteFront';
+import ReactGA from "react-ga4";
 
 import '../../../static/cardSend/cardSendComplete.css';
 import '../../../static/cardSend/cardSend4.css';
@@ -54,6 +55,12 @@ class CardCompletePurple extends React.Component<cardCompleteProps, any> {
     completeCard = async(e: any) => {
 
         if(this.props.cardUUID === "") {
+            ReactGA.event({
+                category: "Button",
+                action: "share_card",
+                label: "cardSend",
+            });
+
             const param = {
                 send : this.props.card.fromPerson,
                 receive : this.props.card.toPerson,

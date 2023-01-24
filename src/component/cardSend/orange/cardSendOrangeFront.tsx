@@ -2,6 +2,8 @@ import React, {Component, useRef,FocusEvent,useState}  from 'react';
 import '../../../static/cardSend/cardSendFront.css';
 import { Card } from '../white/cardSendWhiteFrame';
 import { cardSendBackProps } from '../white/cardSendWhiteFront';
+import ReactGA from "react-ga4";
+
 import CardSendOrangeBack from './cardSendOrangeBack'
 
 // const searchInput = useRef(null);
@@ -48,6 +50,11 @@ class CardSendOrangeFront extends React.Component<cardSendBackProps, any> {    c
             || this.state.fromPerson == "   ") {
             alert("보내는사람을 입력해주세요.")
         } else {
+            ReactGA.event({
+                category: "Button",
+                action: "flip_card",
+                label: "cardSend",
+            });
             this.setState({
                 showback : true,
                 card: {

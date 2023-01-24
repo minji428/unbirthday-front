@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import { Card } from '../white/cardSendWhiteFrame'
 import { cardSendBackProps } from '../white/cardSendWhiteFront';
+import ReactGA from "react-ga4";
+
 import '../../../static/cardSend/cardSendFront.css';
 
 import CardSendYellowBack from './cardSendYellowBack'
@@ -47,6 +49,11 @@ class CardSendYellowFront extends React.Component<cardSendBackProps, any> {
             || this.state.fromPerson == "   ") {
             alert("보내는사람을 입력해주세요.")
         } else {
+            ReactGA.event({
+                category: "Button",
+                action: "flip_card",
+                label: "cardSend",
+            });
             this.setState({
                 showback : true,
                 card: {

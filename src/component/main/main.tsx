@@ -4,6 +4,7 @@ import '../../static/pc_ver/pc_ver.css';
 import * as service from '../../service/service';
 import styled from 'styled-components';
 import { keyframes } from "styled-components";
+import ReactGA from "react-ga4";
 
 class main extends React.Component<{}, any> {
     constructor(props: any){
@@ -41,10 +42,20 @@ class main extends React.Component<{}, any> {
     }
 
     cardSend(){
+        ReactGA.event({
+            category: "Button",
+            action: "cardsend",
+            label: "home",
+        });
         window.location.href = '/cardsend'
     }
 
     mycards() {
+        ReactGA.event({
+            category: "Button",
+            action: "to_mypage",
+            label: "home",
+        });
         if(sessionStorage.getItem("id") === null) {
             window.location.href = '/login'
         } else {

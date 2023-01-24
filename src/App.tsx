@@ -33,8 +33,7 @@ import CardCompleteOrange from './component/cardSend/orange/cardSendOrangeComple
 import Receiver1 from './component/receiver/receiver1';
 
 const App = () => {
-
-    return(
+  return(
     <div className='App'>
       <BrowserRouter>
         <Routes>

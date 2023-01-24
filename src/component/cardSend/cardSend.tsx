@@ -20,21 +20,36 @@ class cardSend extends React.Component<{}, any> {
     yelloCard(){
         ReactGA.event({
             category: "Button",
-            action: "Choose yellow card",
+            action: "choose_card_yellow",
             label: "cardSend",
           });
         window.location.href = '/cardsend/yellow'
     }
 
     orangeCard(){
+        ReactGA.event({
+            category: "Button",
+            action: "choose_card_orange",
+            label: "cardSend",
+        });
         window.location.href = '/cardsend/orange'
     }
 
     whiteCard(){
+        ReactGA.event({
+            category: "Button",
+            action: "choose_card_white",
+            label: "cardSend",
+        });
         window.location.href = '/cardsend/white'
     }
 
     purpleCard(){
+        ReactGA.event({
+            category: "Button",
+            action: "choose_card_purple",
+            label: "cardSend",
+        });
         window.location.href = '/cardsend/purple'
     }
 
