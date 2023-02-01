@@ -113,7 +113,7 @@ class login extends React.Component<{}, any> {
                             <img src="../img/bt_notion.png" onClick={this.notion}/>
                         </div>
 
-                    </div>
+                </div>
     
                 <div className="login">
                     <div className="Logintexts">아직 가입 전이라면?</div>

@@ -296,7 +296,7 @@ class MyCards extends React.Component<{}, any> {
                             <img src="../img/bt_insta.png" onClick={this.instagram}/>
                         </div>
                         <div className="instagram_my" >
-                            <img src="../img/bt_insta.png" onClick={this.notion}/>
+                            <img src="../img/bt_notion.png" onClick={this.notion}/>
                         </div>
 
                     </div>
