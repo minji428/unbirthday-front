@@ -63,6 +63,15 @@ class login extends React.Component<{}, any> {
         window.location.href = 'https://unbirthday.kr'
     }
 
+    notion(){
+        window.location.href = 'https://eminent-clavicle-a2a.notion.site/620ee737c47240e0a77faba2b831df24'
+    }
+
+    instagram(){
+        window.location.href = 'https://instagram.com/happy__un_birthday?igshid=Zjc2ZTc4Nzk='
+    }   
+
+
     render() {
         return(
             <div className= 'LoginMain'>
@@ -95,6 +104,16 @@ class login extends React.Component<{}, any> {
                 <div className="LoginBtn">
                     <img src="../img/bt_login.png" onClick={this.handleClickLogin}/>
                 </div>
+
+                <div className="myButtonsLogin">
+                        <div className="instagram_my">
+                            <img src="../img/bt_insta.png" onClick={this.instagram}/>
+                        </div>
+                        <div className="instagram_my" >
+                            <img src="../img/bt_notion.png" onClick={this.notion}/>
+                        </div>
+
+                    </div>
     
                 <div className="login">
                     <div className="Logintexts">아직 가입 전이라면?</div>

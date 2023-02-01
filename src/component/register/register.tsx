@@ -86,6 +86,16 @@ class Register extends React.Component<{}, any> {
         window.location.href = 'https://unbirthday.kr'
     }
 
+
+    notion(){
+        window.location.href = 'https://eminent-clavicle-a2a.notion.site/620ee737c47240e0a77faba2b831df24'
+    }
+
+    instagram(){
+        window.location.href = 'https://instagram.com/happy__un_birthday?igshid=Zjc2ZTc4Nzk='
+    }   
+
+
     render() {
         if(this.state.isDone){
             return <SignInFin1 />
@@ -123,7 +133,18 @@ class Register extends React.Component<{}, any> {
                 <div className="LoginBtn">
                     <img src="../img/bt_register.png" onClick={this.handleClickJoin}/>
                 </div>
-                    
+
+                
+                <div className="myButtonsRegister">
+                        <div className="instagram_my">
+                            <img src="../img/bt_insta.png" onClick={this.instagram}/>
+                        </div>
+                        <div className="instagram_my" >
+                            <img src="../img/bt_notion.png" onClick={this.notion}/>
+                        </div>
+
+                </div>
+        
     
                 <div className="RSlogin">
                     <div className="RStexts">이미 계정이 있다면?</div>
