@@ -85,14 +85,14 @@
         flex:0.3;
         text-align:center;
         align-items: center;
-        /* margin-top:10%; */
+        /* margin-top:-1%; */
         vertical-align:text-top;
-        /* background-color; */
+        /* background-color:#393939; */
     }
     .CS4mainText{
         animation: fadeInUp1 1.5s;
         -webkit-animation: fadeInUp1 1.5s;
-        font-size:17px;
+        font-size:15px;
         font-family:'Noto Sans KR';
         font-weight: 500;
         margin-left:7%;
@@ -100,10 +100,10 @@
         color:#ffffff;
     }
     .CS4subTexts{
-        font-size:14px;
+        font-size:12px;
         font-family:'Noto Sans KR';
-        margin-top:3%;
-        margin-bottom: 5%;
+        margin-top:1.5%;
+        /* margin-bottom: 5%; */
         color:#ffffff;
     }
     .CS4yelloBox{
@@ -115,11 +115,12 @@
         position:relative;
         margin-left: 7%;
         margin-right: 7%;
+        margin-top:-2%;
        
     }
     
     .CS4yelloBox img{
-        width:100%;
+        width:90%;
         height: 100%;
     }
     
@@ -130,7 +131,7 @@
         /* object-fit: cover; */
         width: 90%;
         height: 90%;
-        top:0;
+        top:0%;
         left:0;
         flex-direction: column;
         flex:5;
@@ -145,7 +146,8 @@
         flex:0.7;
         margin-top: 6%;
         font-family:'PyeongChangPeace-Bold';
-        font-size: 18pt;
+        font-size: 16pt;
+        margin-left: 5%;
         font-weight:bold;
         text-align: left;
         color:rgba(201, 102, 211, 1);
@@ -156,7 +158,8 @@
         flex:0.7;
         margin-top: 6%;
         font-family:'PyeongChangPeace-Bold';
-        font-size: 18pt;
+        font-size: 16pt;
+        margin-left: 5%;
         font-weight:bold;
         text-align: left;
         color:rgba(213, 250, 82, 1);
@@ -166,7 +169,8 @@
         flex:0.7;
         margin-top: 6%;
         font-family:'PyeongChangPeace-Bold';
-        font-size: 18pt;
+        font-size: 16pt;
+        margin-left: 5%;
         font-weight:bold;
         text-align: left;
         color:black;
@@ -176,7 +180,8 @@
         flex:0.7;
         margin-top: 6%;
         font-family:'PyeongChangPeace-Bold';
-        font-size: 18pt;
+        font-size: 16pt;
+        margin-left: 5%;
         font-weight:bold;
         text-align: left;
         color:rgba(250, 233, 82, 1);
@@ -203,7 +208,7 @@
         display: flex;
         flex-direction: row;
         align-items: center;
-        width: 60%;
+        width: 49%;
     }
     .CS4textSpace{
         display: flex;
@@ -213,7 +218,7 @@
     }
     .CS4subText{
         font-family: 'GmarketSansMedium';
-        font-size: 10pt;
+        font-size:10pt;
     }
     .CS4tag{
         display: flex;
@@ -221,7 +226,7 @@
         align-items: center;
         font-family: 'GmarketSansBold';
         font-weight: 700;
-        font-size: 11pt;
+        font-size: 9pt;
         background-color: black;
         border-radius: 20px 20px;
         width: 100%;
@@ -252,12 +257,12 @@
         flex-direction: row;
         width: 100%;
         margin-right: 18%;
-        margin-top:3%;
+        margin-top:1%;
         justify-content: flex-end;
         color:white;
         font-family: 'Noto Sans KR';
         font-weight: 400;
-        font-size: 15px;
+        font-size: 12px;
     }
 
     .CS4complete{
@@ -267,7 +272,7 @@
         justify-content: center;
         align-items: center;
         margin-bottom: 20%;
-        margin-top: 5%;
+        margin-top: -2.5%;
         width: 40%;
 
     }

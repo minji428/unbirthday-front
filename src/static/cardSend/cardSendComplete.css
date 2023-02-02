@@ -53,7 +53,7 @@
         position: fixed;
         overflow: hidden;
         /* padding:10%; */
-        padding-top:5%;
+        /* padding-top:5%; */
         padding-left: 3%;
         padding-right: 3%;
         top: 0;
@@ -63,42 +63,50 @@
     .CS4btn{
         display: flex;
         flex-direction: row;
+        justify-content: space-between;
         width:100%;
-        padding-left:10%;
-        padding-top: 2%;
-        
+        padding-left:5%;
+        margin-top:-3%;
+        /* padding-right: 15%; */
+        /* padding-top: 2%; */
     }
     .CS4backBtn{
         width:3.5%;
     }
-
+    .CS4home{
+        width:4.5%;
+        /* height: 20px; */
+        margin-right: 8%;
+    }
     .CS4texts{
         display: flex;
         flex-direction: column;
-        flex:0.3;
+        flex:0.2;
         text-align:center;
         align-items: center;
         vertical-align:text-top;
         margin-top:5%;
-        margin-bottom:5%;
+        margin-bottom:7%;
+        /* background-color:#fff; */
     }
     .CS4mainText{
         animation: fadeInUp1 1.5s;
         -webkit-animation: fadeInUp1 1.5s;
-        font-size:17px;
+        font-size:15px;
         font-family:'Noto Sans KR';
         font-weight: 500;
         margin-left:7%;
         margin-right:7%;
-        margin-top:-5%;
+        margin-top:-6%;
+        margin-bottom: 2%;
         color:#ffffff;
     }
     .CS4subTexts{
         animation: fadeInUp1-sub 2s;
         -webkit-animation: fadeInUp1-sub 2s;
-        font-size:12px;
+        font-size:10px;
         font-family:'Noto Sans KR';
-        margin-top:5%;
+        /* margin-top:51%; */
         color:#ffffff;
     }
     .CS4yelloBox{
@@ -106,14 +114,14 @@
         -webkit-animation: fadeInUp1 1.5s;
         display: flex;
         flex-direction: column;
-        flex:1;
+        flex:0.7;
         position:relative;
         margin-left: 7%;
         margin-right: 7%;
     }
     
     .CS4yelloBox img{
-        width:100%;
+        width:90%;
         height: 100%;
     }
     
@@ -132,25 +140,67 @@
         padding:5%;
         text-align: center;
         
-        /* justify-content: space-between; */
     }
     .CS4personName{
         display: flex;
         flex:0.7;
         margin-top: 6%;
         font-family:'PyeongChangPeace-Bold';
-        font-size: 17pt;
+        font-size: 16pt;
         font-weight:bold;
         text-align: left;
         color:rgba(201, 102, 211, 1);
-        
+    }
+    .CS4subTextYellow{
+        position:absolute;
+        bottom:5%;
+        text-align: right;
+        /* right:15%; */
+        margin-left: 5%;
+        /* margin-bottom: -5%; */
+        font-size:17pt;
+        font-family: 'GmarketSansMedium';
+        color:rgba(201, 102, 211, 1);
+    }
+    .CS4subTextOrange{
+        position:absolute;
+        bottom:5%;
+        text-align: right;
+        /* right:15%; */
+        margin-left: 5%;
+        /* margin-bottom: -5%; */
+        font-size:17pt;
+        font-family: 'GmarketSansMedium';
+        color:rgba(213, 250, 82, 1);
+    }
+    .CS4subTextWhite{
+        position:absolute;
+        bottom:5%;
+        text-align: right;
+        /* right:15%; */
+        right:13%;
+        /* margin-bottom: -5%; */
+        font-size:17pt;
+        font-family: 'GmarketSansMedium';
+        color:black;
+    }
+    .CS4subTextPurple{
+        position:absolute;
+        bottom:5%;
+        text-align: right;
+        /* right:15%; */
+        margin-left: 5%;
+        /* margin-bottom: -5%; */
+        font-size:17pt;
+        font-family: 'GmarketSansMedium';
+        color:rgba(250, 233, 82, 1);
     }
     .CS4personName-orange{
         display: flex;
         flex:0.7;
         margin-top: 6%;
         font-family:'PyeongChangPeace-Bold';
-        font-size: 20pt;
+        font-size: 16pt;
         font-weight:bold;
         text-align: left;
         color:rgba(213, 250, 82, 1);
@@ -160,7 +210,7 @@
         flex:0.7;
         margin-top: 6%;
         font-family:'PyeongChangPeace-Bold';
-        font-size: 20pt;
+        font-size: 16pt;
         font-weight:bold;
         text-align: left;
         color:black;
@@ -170,7 +220,7 @@
         flex:0.7;
         margin-top: 6%;
         font-family:'PyeongChangPeace-Bold';
-        font-size: 20pt;
+        font-size: 16pt;
         font-weight:bold;
         text-align: left;
         color:rgba(250, 233, 82, 1);
@@ -184,6 +234,8 @@
         padding-right: 7%; */
         padding-top:2%;
         padding-bottom: 2%;
+        margin-left: 3%;
+        margin-right: 3%;
         justify-content: center;
         /* align-items: stretch; */
         justify-content: space-evenly;
@@ -197,7 +249,8 @@
         display: flex;
         flex-direction: row;
         align-items: center;
-        width: 60%;
+        width: 49%;
+
     }
     .CS4textSpace{
         display: flex;
@@ -215,7 +268,7 @@
         align-items: center;
         font-family: 'GmarketSansMedium';
         font-weight: 500;
-        font-size: 11pt;
+        font-size: 9pt;
         background-color: black;
         border-radius: 20px 20px;
         width: 100%;
@@ -231,7 +284,7 @@
         align-items: center;
         font-family: 'GmarketSansMedium';
         font-weight: 700;
-        font-size: 11pt;
+        font-size: 9pt;
         background-color: rgba(201, 102, 211, 1);
         border-radius: 20px 20px;
         width: 100%;
@@ -246,7 +299,7 @@
         align-items: center;
         font-family: 'GmarketSansMedium';
         font-weight: 700;
-        font-size: 10pt;
+        font-size: 9pt;
         background-color: rgba(213, 250, 82, 1);
         border-radius: 20px 20px;
         width: 100%;
@@ -261,7 +314,7 @@
         align-items: center;
         font-family: 'GmarketSansMedium';
         font-weight: 700;
-        font-size: 10pt;
+        font-size: 9pt;
         background-color: rgba(250, 233, 82, 1);
         border-radius: 20px 20px;
         width: 100%;
@@ -272,17 +325,23 @@
     }
     .CS4writeMessage{
         display: flex;
-        flex:1;
+        /* flex:2; */
         flex-direction: column;
         justify-content: space-around;
-
         padding-left: 5%;
         padding-right: 5%;
+        margin-top: -3%;
+        padding-top: 5%;
+        /* height: 100%; */
+        overflow-y: scroll;
+        /* background-color: #393939; */
         text-align: left;
         font-family: 'GmarketSansMedium';
         font-weight: 100;
         font-size: 10pt;
-        margin-bottom: 2%;
+        /* margin-bottom: 2%; */
+        white-space:pre-wrap;
+        margin-left: 2%;
     }
     
     .CS4notice{
@@ -290,7 +349,7 @@
         flex-direction: row;
         width: 100%;
         margin-right: 18%;
-        margin-top:3%;
+        /* margin-top:3%; */
         justify-content: flex-end;
         color:white;
         font-family: 'Noto Sans KR';
@@ -305,10 +364,71 @@
         justify-content: center;
         align-items: center;
         margin-bottom: 20%;
-        margin-top: 5%;
+        /* margin-top: 5%; */
         width: 40%;
         /* background-color: yellowgreen; */
     }
+   
+.modal {
+    display: none;
+    position: absolute;
+    width: 95%;
+    flex-direction: column;
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: 1rem;
+    top: 35%;
+    z-index: 99;
+}
+.modal-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 7px;
+}
+.modal-body {
+    position: relative;
+    align-items: center;
+    flex: 1 1 auto;
+    padding: 2rem 1rem;
+}
+.modal-content button {
+    position: absolute;
+    right: 7px;
+    background-color: #fff;
+    border: none;
+    z-index: 100;
+}
+.modal-content button span {
+    font-size: 1.5rem;
+}
+.modal-body__column:first-child {
+    font-size: 14px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+.modal-body__column:last-child {
+    position: relative;
+    border: 1px solid rgba(0,0,0,.2);
+    height: 30px;
+    border-radius: 1rem;
+    padding-top: 6px
+}
+.modal-body__column:last-child input {
+    border: none;
+    width: 180%;
+    font-size: 20pt;
+
+    transform: scale(0.5);
+    transform-origin: left top;
+    margin-left: 10px;
+    margin-top: 4px;
+}
+.modal-body__column:last-child input:focus {
+    border: none;
+    outline: none;
+}
+
 @keyframes fadeInUp1-sub {
     0% {
         opacity: 0;

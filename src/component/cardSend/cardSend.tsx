@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import ReactGA from "react-ga4";
 import '../../static/cardSend/cardSend.css';
 
 class cardSend extends React.Component<{}, any> {
@@ -17,18 +18,38 @@ class cardSend extends React.Component<{}, any> {
     }
 
     yelloCard(){
+        ReactGA.event({
+            category: "Button",
+            action: "choose_card_yellow",
+            label: "cardSend",
+          });
         window.location.href = '/cardsend/yellow'
     }
 
     orangeCard(){
+        ReactGA.event({
+            category: "Button",
+            action: "choose_card_orange",
+            label: "cardSend",
+        });
         window.location.href = '/cardsend/orange'
     }
 
     whiteCard(){
+        ReactGA.event({
+            category: "Button",
+            action: "choose_card_white",
+            label: "cardSend",
+        });
         window.location.href = '/cardsend/white'
     }
 
     purpleCard(){
+        ReactGA.event({
+            category: "Button",
+            action: "choose_card_purple",
+            label: "cardSend",
+        });
         window.location.href = '/cardsend/purple'
     }
 

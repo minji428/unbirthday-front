@@ -94,14 +94,32 @@
         /* margin-bottom: 20%; */
         margin-left: 7%;
         margin-right: 7%;
+        /* padding-left: 5%; */
     }
     
     .CS3yelloBox img{
-        width:100%;
+        width:90%;
         height: 100%;
+        
     }
     
     
+    .CS3insideWhite{
+        display: flex;
+        /* object-fit: cover; */
+        width: 90%;
+        height: 70%;
+        top:0;
+        left:0;
+        /* padding: 5%; */
+        flex-direction: column;
+        flex:5;
+        position:absolute;
+        padding:5%;
+        text-align: center;
+        /* padding-left: 5%; */
+        
+    }
     .CS3insideYellow{
         display: flex;
         /* object-fit: cover; */
@@ -109,19 +127,23 @@
         height: 90%;
         top:0;
         left:0;
+        /* padding: 5%; */
         flex-direction: column;
         flex:5;
         position:absolute;
         padding:5%;
         text-align: center;
+        /* padding-left: 5%; */
         
     }
     .CS3personName{
         display: flex;
         flex:0.7;
         margin-top: 6%;
+        margin-left: 5%;
         font-family:'PyeongChangPeace-Bold';
-        font-size: 18pt;
+        font-size: 16pt;
+        margin-left: 5%;
         font-weight:bold;
         text-align: left;
         color:rgba(201, 102, 211, 1);
@@ -132,7 +154,8 @@
         flex:0.7;
         margin-top: 6%;
         font-family:'PyeongChangPeace-Bold';
-        font-size: 18pt;
+        font-size: 16pt;
+        margin-left: 5%;
         font-weight:bold;
         text-align: left;
         color:rgba(213, 250, 82, 1);
@@ -141,20 +164,26 @@
         display: flex;
         flex:0.7;
         margin-top: 6%;
+        margin-left: 5%;
         font-family:'PyeongChangPeace-Bold';
-        font-size: 18pt;
+        font-size: 16pt;
+        margin-left: 5%;
         font-weight:bold;
         text-align: left;
+
         color:black;
     }
     .CS3personNameforPurple{
         display: flex;
         flex:0.7;
         margin-top: 6%;
+        margin-left: 5%;
         font-family:'PyeongChangPeace-Bold';
-        font-size: 18pt;
+        font-size: 16pt;
+        margin-left: 5%;
         font-weight:bold;
         text-align: left;
+        /* margin-bottom: -5%; */
         color:rgba(250, 233, 82, 1);
     }
     .CS3tagMessage{
@@ -164,6 +193,9 @@
         padding-top:2%;
         padding-bottom: 2%;
         justify-content: center;
+        /* background-color: #393939; */
+        margin-left: 3%;
+        margin-right: 3%;
         /* align-items: stretch; */
         justify-content: space-evenly;
         
@@ -171,17 +203,21 @@
     .CS3temp{
         display: flex;
         justify-content: space-evenly;
+        /* padding:10%; */
     }
     .CS3tagSpace{
         display: flex;
         flex-direction: row;
         align-items: center;
-        width: 53%;
+        width: 49%;
     }
     .CS3textSpace{
         display: flex;
         flex-direction: row;
         align-items: center;
+        /* margin-left: 5%; */
+        /* margin-right: 3%; */
+        /* background-color: blue; */
         
     }
     .CS3subText{
@@ -194,8 +230,8 @@
         justify-content: center;
         align-items: center;
         font-family: 'GmarketSansMedium';
-        font-weight: 500;
-        font-size: 10pt;
+        font-weight: 700;
+        font-size: 9pt;
         background-color: black;
         border-radius: 20px 20px;
         width: 100%;
@@ -209,9 +245,9 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        font-family: 'GmarketSansBold';
+        font-family: 'GmarketSansMedium';
         font-weight: 700;
-        font-size: 10pt;
+        font-size: 9pt;
         background-color: rgba(201, 102, 211, 1);
         border-radius: 20px 20px;
         width: 100%;
@@ -226,7 +262,7 @@
         align-items: center;
         font-family: 'GmarketSansMedium';
         font-weight: 700;
-        font-size: 10pt;
+        font-size: 9pt;
         background-color: rgba(213, 250, 82, 1);
         border-radius: 20px 20px;
         width: 100%;
@@ -241,7 +277,7 @@
         align-items: center;
         font-family: 'GmarketSansMedium';
         font-weight: 700;
-        font-size: 10pt;
+        font-size: 9pt;
         background-color: rgba(250, 233, 82, 1);
         border-radius: 20px 20px;
         width: 100%;
@@ -254,47 +290,104 @@
     .CS3writeMessage{
         display: flex;
         flex:1;
+        position:relative;
         flex-direction: column;
         justify-content: center;
         color:black;
         background-color:white;
         border-color: rgba(0, 0, 0, 0.5);
         border-style:solid;
+
         border-width: 0.01px;
+        /* border-width: 0.00625px; */
+
+        /* 3% */
         padding-left: 3%;
         padding-right: 3%;
+        margin-left: 3%;
+        margin-right:3%;
+
         font-weight: 100;
-        font-size: 10pt;
-        margin-bottom: 2%;
+        height: 35%;
+        /* font-size: 6.25pt; */
+        /* font-size: 16pt; */
+
+        /* 2% */
+        /* margin-bottom: 2%; */
+/* 
+        transform: scale(0.625);
+        transform-origin: left top; */
     }
     .memo{
         position:relative;
+        margin-top:3%;
         border-width: 0;
         background-color: rgba(246, 246, 246, 1);
-        height: 80%;
+        
+        /* height: 70%; */
+        width: 174.8%;
+        height: 143.4%;
+        /* height: 2000px; */
+
         text-align: left;
         font-family: 'GmarketSansMedium';
-        padding-left: 5%;
+        /* padding-left: 5%; */
+
+        /* padding-left: 8.9%; */
+        /* padding-right: 5%; */
+
         font-weight: 500;
-        font-size: 9pt;
-        line-height:160%;
+        
+        /* font-size: 9pt; */
+        font-size: 16pt;
+
+        /* line-height:160%; */
+        line-height: 200.4%;
+
+        transform: scale(0.56);
+        transform-origin: left top;
+        /* margin-bottom: 5%; */
     }
+
     .CS3numCnt{
         position:absolute;
         font-family: 'Noto Sans KR' ;
         color:rgba(0, 0, 0, 0.5);
         font-size: 8px;
-        right: 10%;
-        bottom:11.5%;
+        right: 5%;
+        bottom:20%;
+
+        /* background-color: #393939; */
     }
     .CS3notice{
         display: flex;
+        position: relative;
+        /* background-color: black; */
         flex-direction: row;
         /* flex:0.4; */
         justify-content: flex-start;
         color:rgba(0, 0, 0, 0.5);
         font-family: 'Noto Sans KR';
-        font-size: 9px;
+        font-size: 8px;
+        margin-top:-35%;
+        /* margin-top:-10%; */
+        /* background-color: #393939; */
+    }
+
+    .CS3noticeWhite{
+        display: flex;
+        position: relative;
+        /* background-color: black; */
+        flex-direction: row;
+        /* flex:0.4; */
+        justify-content: flex-start;
+        color:rgba(0, 0, 0, 0.5);
+        font-family: 'Noto Sans KR';
+        font-size: 8px;
+        /* margin-bottom: -5%; */
+        /* text-align: end; */
+        /* margin-top:-4%; */
+        margin-top:-35%;
     }
 
     .CS3complete{

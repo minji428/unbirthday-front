@@ -90,8 +90,8 @@ class CardGotten extends React.Component<{}, any> {
                 <img className="CGeachCard" src={src} id={card.card_no} onClick={(e) => this.cardFront(e)}/>
                 <div className={color_to}>HAPPY<br></br>
                     UN-BIRTHDAY<br></br>
-                    {card.send}!</div>
-                <div className={color_from}>From.{card.receive}</div>
+                    {card.receive}!</div>
+                <div className={color_from}>From.{card.send}</div>
             </div>
         
         )

@@ -180,4 +180,55 @@
         flex-direction: row;
         justify-content: center;
     }
- 
+
+    .myButtonsRegister{
+        display: flex;
+        flex:0.3;
+        flex-direction: row;
+        width: 97%;
+        height: 100%;
+        justify-content:flex-start;
+        align-items: flex-start;
+        margin-left: 5%;
+        margin-top: 10%;
+        margin-bottom: 0%;
+    }
+
+    .instagram_my {
+        display: flex;
+        flex-direction: row;
+        margin-right: 3%;
+        margin-top:2%;
+        /* flex:1; */
+        /* margin-bottom: 20%; */
+        
+    }
+
+    .instagram_my img{
+        width: 30px;
+        margin-bottom: 15%;
+        
+    }
+
+    .login{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        /* position: absolute; */
+        font-family:'Noto Sans KR';
+        font-size: 12px;
+        font-weight: 700;
+        align-self: center;
+        /* margin-top:30%; */
+        justify-content:center;
+        /* background-color: aquamarine; */
+        
+    }
+    .Logintexts{
+        color: white;
+        margin-right: 2%;
+        /* margin-bottom: 13%; */
+    }
+    .loginText{
+        color: #91d7e0;
+    }

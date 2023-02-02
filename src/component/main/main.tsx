@@ -4,6 +4,7 @@ import '../../static/pc_ver/pc_ver.css';
 import * as service from '../../service/service';
 import styled from 'styled-components';
 import { keyframes } from "styled-components";
+import ReactGA from "react-ga4";
 
 class main extends React.Component<{}, any> {
     constructor(props: any){
@@ -41,10 +42,20 @@ class main extends React.Component<{}, any> {
     }
 
     cardSend(){
+        ReactGA.event({
+            category: "Button",
+            action: "cardsend",
+            label: "home",
+        });
         window.location.href = '/cardsend'
     }
 
     mycards() {
+        ReactGA.event({
+            category: "Button",
+            action: "to_mypage",
+            label: "home",
+        });
         if(sessionStorage.getItem("id") === null) {
             window.location.href = '/login'
         } else {
@@ -52,6 +63,10 @@ class main extends React.Component<{}, any> {
         }
         
     }
+
+    instagram(){
+        window.location.href = 'https://instagram.com/happy__un_birthday?igshid=Zjc2ZTc4Nzk='
+    }   
 
     render() {
         if(!this.isOnMobile()) {
@@ -123,49 +138,49 @@ class main extends React.Component<{}, any> {
                             </div>
                                 <div className="NameRow"> 
                                 <div className="insideRow3">
-                                    <div>{this.state.receiverName[12]}</div>
-                                    <div>{this.state.receiverName[13]}</div>
-                                    <div>{this.state.receiverName[14]}</div>
-                                    <div>{this.state.receiverName[15]}</div>
-                                    <div>{this.state.receiverName[16]}</div>
+                                    <div>{this.state.receiverName[18]}</div>
+                                    <div>{this.state.receiverName[19]}</div>
+                                    <div>{this.state.receiverName[20]}</div>
+                                    <div>{this.state.receiverName[21]}</div>
+                                    <div>{this.state.receiverName[22]}</div>
                                     {/* <div>{this.state.receiverName[17]}</div> */}
                                 </div>
                             </div>
                             <div className="NameRow"> 
                                 <div className="insideRow6">
-                                    <div>{this.state.receiverName[20]}</div>
-                                    <div>{this.state.receiverName[21]}</div>
-                                    <div>{this.state.receiverName[22]}</div>
                                     <div>{this.state.receiverName[23]}</div>
                                     <div>{this.state.receiverName[24]}</div>
+                                    <div>{this.state.receiverName[25]}</div>
+                                    <div>{this.state.receiverName[26]}</div>
+                                    <div>{this.state.receiverName[27]}</div>
                                 </div>
                             </div>
         
                             <div className="NameRow"> 
                                 <div className="insideRow7">
-                                    <div>{this.state.receiverName[25]}</div>
-                                    <div>{this.state.receiverName[26]}</div>
-                                    <div>{this.state.receiverName[27]}</div>
                                     <div>{this.state.receiverName[28]}</div>
-                                </div>
-                            </div>
-        
-                            <div className="NameRow"> 
-                                <div className="insideRow8">
                                     <div>{this.state.receiverName[29]}</div>
                                     <div>{this.state.receiverName[30]}</div>
                                     <div>{this.state.receiverName[31]}</div>
                                 </div>
                             </div>
+        
                             <div className="NameRow"> 
-                                <div className="insideRow9">
+                                <div className="insideRow8">
                                     <div>{this.state.receiverName[32]}</div>
                                     <div>{this.state.receiverName[33]}</div>
+                                    <div>{this.state.receiverName[34]}</div>
+                                </div>
+                            </div>
+                            <div className="NameRow"> 
+                                <div className="insideRow9">
+                                    <div>{this.state.receiverName[35]}</div>
+                                    <div>{this.state.receiverName[36]}</div>
                                 </div>
                             </div>
                             <div className="NameRow"> 
                                 <div className="insideRow3">
-                                    <div>{this.state.receiverName[34]}</div>
+                                    <div>{this.state.receiverName[37]}</div>
                                 </div>
                             </div>
                         </div>
@@ -189,6 +204,10 @@ class main extends React.Component<{}, any> {
                         <div className="btn2">
                             <img src="../img/bt_mycards.png" onClick={this.mycards}></img>
                         </div>
+                    </div>
+
+                    <div className="instagram">
+                        <img src="../img/bt_insta.png" onClick={this.instagram}/>
                     </div>
                 </div>
       

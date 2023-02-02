@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import { Slide, toast, ToastContainer } from "react-toastify";
 import { cardSendWhiteProps } from '../white/cardSendWhiteComplete';
+import ReactGA from "react-ga";
+
 // import '../../../static/cardSend/cardSendComplete.css';
 import '../../../static/cardSend/cardSend4.css';
 import * as service from '../../../service/service'
@@ -47,7 +49,7 @@ class CardCompleteOrange extends React.Component<cardSendWhiteProps, any> {
    
     handleCopyClipBoard = async (url: string) => {
         //this.checkItsShared(url)
-
+        
         if(navigator.share) {
             navigator.share({
                 title: 'HAPPY UNBIRTHDAY!',
@@ -58,7 +60,8 @@ class CardCompleteOrange extends React.Component<cardSendWhiteProps, any> {
             this.showAlert()
 
         } else {
-            alert("공유하기가 지원되지 않는 환경입니다.")
+            this.openModal()
+            // alert("아래 링크를 복사해서 받는 사람에게 보내주세요:)\n" + url)
         }
     }
 
@@ -79,9 +82,20 @@ class CardCompleteOrange extends React.Component<cardSendWhiteProps, any> {
         this.setState({showFront: !this.state.showFront})
     }
     
+    clickLogo(){
+        window.location.href = 'https://unbirthday.kr'
+    }
+
+
     completeCard = async(e: any) => {
         
         if(this.state.cardUUID === "") {
+            ReactGA.event({
+                category: "Button",
+                action: "share_card",
+                label: "cardSend",
+            });
+
             const param = {
                 send : this.props.card.fromPerson,
                 receive : this.props.card.toPerson,
@@ -115,6 +129,33 @@ class CardCompleteOrange extends React.Component<cardSendWhiteProps, any> {
         window.location.href = '/cardsend'
     }
 
+    selectAll = (e: any) => {
+        e.target.focus()
+        e.target.select()
+    }
+
+    openModal = () => {
+        let modal = document.getElementsByClassName("modal")[0] as HTMLElement
+        
+        if (modal !== null) { 
+            let parent = modal.parentNode as HTMLElement
+            if (parent !== null)
+                parent.style.overflow = 'hidden'
+            modal.style.display = "flex"
+        }
+    }
+
+    closeModal = (e: any) => {
+        let modal = document.getElementsByClassName("modal")[0] as HTMLElement
+        
+        if (modal !== null) {
+            let parent = modal.parentNode as HTMLElement
+            if (parent !== null)
+                parent.style.overflow = 'scroll'
+            modal.style.display="none"
+        }
+    }
+
     render() {
         if (this.state.showFront){
             return <CardSendOrangeCompleteFront 
@@ -127,6 +168,31 @@ class CardCompleteOrange extends React.Component<cardSendWhiteProps, any> {
         }
         return(
             <div className= 'CS1main'>
+                {/* modal */}
+                <div className="modal" >
+                    <div className="modal-dialog" role="document">
+                        <div className="modal-content">
+                            <div className="modal-header">
+                                <button type="button" className="close" onClick={this.closeModal}>
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div className="modal-body">
+                                <div className='modal-body__column'>
+                                    아래 링크를 복사해서 받는 사람에게 보내주세요 :) 
+                                </div>
+                                <div className='modal-body__column'>
+                                    <input 
+                                        value={'https://unbirthday.kr/cardreceive/'+this.state.cardUUID } 
+                                        readOnly
+                                        onClick={this.selectAll}
+                                        inputMode="none"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div className='div-toast' onClick={this.cardsend}>
                     <ToastContainer 
                         limit={1}
@@ -134,6 +200,7 @@ class CardCompleteOrange extends React.Component<cardSendWhiteProps, any> {
                 </div>
             <div className="CS4btn">
                 <img src="../../img/back.png" className="CS4backBtn" onClick={this.props.fixCard}/>
+                <img src="../../img/bt_grayhome.png" className="CS4home" onClick={this.clickLogo}/>
             </div>
             <div className="CS4texts">
                 <div className='CS4mainText'>
@@ -223,9 +290,7 @@ class CardCompleteOrange extends React.Component<cardSendWhiteProps, any> {
                             </div>
 
                         </div> 
-                         <div className="CS4writeMessage" >
-                            {this.props.card.memo}     
-                        </div>
+                        <pre className='CS4writeMessage'>{this.props.card.memo}</pre>
 
                     </div>
                 </div>
@@ -236,6 +301,7 @@ class CardCompleteOrange extends React.Component<cardSendWhiteProps, any> {
                 <div className='CS4complete'>
                     <img src="../../img/bt_copy_link.png" onClick={this.completeCard}/>
                 </div>
+
             </div>
         )
     }
