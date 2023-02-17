@@ -180,7 +180,6 @@ class CardGotten extends React.Component<{}, any> {
                         받은 언버스데이 카드
                     </div>
                 </div>
-                <hr></hr>
                 <div className="CGcards">
                     <div className="CGrow">
                         {this.state.cards !== null
