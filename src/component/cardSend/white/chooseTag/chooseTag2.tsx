@@ -62,6 +62,20 @@ class ChooseTag2 extends React.Component<cardSendYellowBackFrame, any> {
                         <div className="CTeachTagBlue" onClick={(e) => this.clickTag(e)}>#한여름 사이다 같은</div>
                         <div className="CTeachTagBlue" onClick={(e) => this.clickTag(e)}>#봄날의 햇살 같은</div>
                     </div>
+
+                    <div className="CTrowTag">
+                        <div className="CTeachTagBlue" onClick={(e) => this.clickTag(e)}>#평양냉면 같은</div>
+                        <div className="CTeachTagBlue" onClick={(e) => this.clickTag(e)}>#더 알고 싶은</div>
+                    </div>
+
+                    <div className="CTrowTag">
+                        <div className="CTeachTagBlue" onClick={(e) => this.clickTag(e)}>#열쩡 MAX</div>
+                        <div className="CTeachTagBlue" onClick={(e) => this.clickTag(e)}>#마성의 Fox</div>
+                    </div>
+
+                    <div className="CTrowTagLeft">
+                        <div className="CTeachTagBlue" onClick={(e) => this.clickTag(e)}>#자꾸 챙겨주고 싶은</div>
+                    </div>
                 </div>
              </div>
             <div className="CTpart2"></div>    
