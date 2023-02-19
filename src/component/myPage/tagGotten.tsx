@@ -43,6 +43,10 @@ class TagGotten extends React.Component<MyCardsProps, any> {
                     받은 언버스데이 #태그
                 </div>
             </div>
+            <div className='TGstatusLine'>
+                <img className= "TGnoticeImg" src="../img/notice.png"/>
+                <div className='TGstatusText'>2번 이상 받은 태그는 색이 채워져요</div>
+            </div>
             <div className="TGtags">
                 <div className="TGrowHigher1">
                     <div className="TGrow">
@@ -108,13 +112,8 @@ class TagGotten extends React.Component<MyCardsProps, any> {
                 </div>
       
             </div>
-            {/* <hr className="hr-class"></hr> */}
-            <div className="TGdirection">
-                <div className="TGnotice">
-                    <img className= "TGnoticeImg" src="../img/notice.png"/>
-                    <div className="TGnoticeText">&emsp;&emsp;2번 이상 받은 태그는 색이 채워져요.</div>
-                </div>
-            </div>
+            <hr className="hr-class"></hr>
+
         </div>
   
         )

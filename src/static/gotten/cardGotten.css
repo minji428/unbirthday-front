@@ -142,10 +142,11 @@
     }
     .CGfrom-white{
         position:absolute;
-        bottom:5%;
+        bottom:7%;
         text-align: right;
-        right:15%;
-        font-size:12px;
+        /* right:13%; */
+        margin-left: 50%;
+        font-size:11px;
         font-family: 'GmarketSansMedium';  
     }
     .CGfrom-white-null{
@@ -190,10 +191,11 @@
     }
     .CGfrom-purple{
         position:absolute;
-        bottom:5%;
+        bottom:7%;
         text-align: right;
-        right:50%;
-        font-size:12px;
+        /* right:55%; */
+        margin-left: 5%;
+        font-size:11px;
         color:rgba(250, 233, 82, 1);
         font-family: 'GmarketSansMedium';
         
@@ -201,11 +203,11 @@
 
     .CGfrom-yellow{
         position:absolute;
-        bottom:5%;
+        bottom:7%;
         text-align: right;
-        right:50%;
-        /* margin-right: 5%; */
-        font-size:12px;
+        /* right:50%; */
+        margin-left: 5%;
+        font-size:11px;
         font-family: 'GmarketSansMedium';
         color:rgba(201, 102, 211, 1); 
     }
@@ -242,13 +244,13 @@
     }
     .CGfrom-orange{
         position:absolute;
-        bottom:5%;
+        bottom:7%;
         text-align: right;
-        right:50%;
-        font-size:12px;
+        /* right:55%; */
+        margin-left:5%;
+        font-size:11px;
         font-family: 'GmarketSansMedium';
         color:rgba(213, 250, 82, 1);
-        
     }
     .CGfrom-orange-null{
         position:absolute;
