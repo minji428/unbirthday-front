@@ -158,7 +158,7 @@ class CardSendPurpleBack extends React.Component<cardSendFrontProps, any> {
     }
 
     limitString = (string: string) => {
-        const limit = 90
+        const limit = 100
         string.length > limit ? string = string.substring(0, limit) : string = string
 
         return string
@@ -167,20 +167,21 @@ class CardSendPurpleBack extends React.Component<cardSendFrontProps, any> {
     removeEmoji = (event: any) => {
         let string = event.target.value
 
-        if (this.doesStrContainEmoji(string)) {
+        if(this.doesStrContainEmoji(string)) {
+            const regexExp =  /(?:[\u2700-\u27bf]|(?:\ud83c[\udde6-\uddff]){2}|[\ud800-\udbff][\udc00-\udfff]|[\u0023-\u0039]\ufe0f?\u20e3|\u3299|\u3297|\u303d|\u3030|\u24c2|\ud83c[\udd70-\udd71]|\ud83c[\udd7e-\udd7f]|\ud83c\udd8e|\ud83c[\udd91-\udd9a]|\ud83c[\udde6-\uddff]|\ud83c[\ude01-\ude02]|\ud83c\ude1a|\ud83c\ude2f|\ud83c[\ude32-\ude3a]|\ud83c[\ude50-\ude51]|\u203c|\u2049|[\u25aa-\u25ab]|\u25b6|\u25c0|[\u25fb-\u25fe]|\u00a9|\u00ae|\u2122|\u2139|\ud83c\udc04|[\u2600-\u26FF]|\u2b05|\u2b06|\u2b07|\u2b1b|\u2b1c|\u2b50|\u2b55|\u231a|\u231b|\u2328|\u23cf|[\u23e9-\u23f3]|[\u23f8-\u23fa]|\ud83c\udccf|\u2934|\u2935|[\u2190-\u21ff]|\ufe0f|\u2764|\u200d)/g
+
             alert('이모티콘 사용은 불가해요😢')
-            event.target.value = string.replace(/([\u2700-\u27BF]|[\uE000-\uF8FF]|\uD83C[\uDC00-\uDFFF]|\uD83D[\uDC00-\uDFFF]|[\u2011-\u26FF]|\uD83E[\uDD10-\uDDFF])/g, '');
 
+            event.target.value = string.replace(regexExp, '')
+            
             this.setState({
-                memo: event.target.value
+                memo : event.target.value
             })
-        }
-
+        }  
     }
 
     doesStrContainEmoji = (string: string) => {
-        // const regexExp = /(\u00a9|\u00ae|[\u2000-\u3300]|\ud83c[\ud000-\udfff]|\ud83d[\ud000-\udfff]|\ud83e[\ud000-\udfff])/gi;
-        const regexExp = /([\u2700-\u27BF]|[\uE000-\uF8FF]|\uD83C[\uDC00-\uDFFF]|\uD83D[\uDC00-\uDFFF]|[\u2011-\u26FF]|\uD83E[\uDD10-\uDDFF])/g
+        const regexExp =  /(?:[\u2700-\u27bf]|(?:\ud83c[\udde6-\uddff]){2}|[\ud800-\udbff][\udc00-\udfff]|[\u0023-\u0039]\ufe0f?\u20e3|\u3299|\u3297|\u303d|\u3030|\u24c2|\ud83c[\udd70-\udd71]|\ud83c[\udd7e-\udd7f]|\ud83c\udd8e|\ud83c[\udd91-\udd9a]|\ud83c[\udde6-\uddff]|\ud83c[\ude01-\ude02]|\ud83c\ude1a|\ud83c\ude2f|\ud83c[\ude32-\ude3a]|\ud83c[\ude50-\ude51]|\u203c|\u2049|[\u25aa-\u25ab]|\u25b6|\u25c0|[\u25fb-\u25fe]|\u00a9|\u00ae|\u2122|\u2139|\ud83c\udc04|[\u2600-\u26FF]|\u2b05|\u2b06|\u2b07|\u2b1b|\u2b1c|\u2b50|\u2b55|\u231a|\u231b|\u2328|\u23cf|[\u23e9-\u23f3]|[\u23f8-\u23fa]|\ud83c\udccf|\u2934|\u2935|[\u2190-\u21ff]|\ufe0f|\u2764|\u200d)/g
 
         return regexExp.test(string)
     }
@@ -324,7 +325,7 @@ class CardSendPurpleBack extends React.Component<cardSendFrontProps, any> {
                                 <textarea className="memo" cols={10} rows={5} onChange={this.writeMemo} onBlur={this.removeEmoji} placeholder={"생일에나 할 수 있는 얘기를 오늘 해보네!\n낯간지럽지만 꼭 해주고 싶은 말이야.\n매일이 생일처럼 특별했으면 좋겠어.\n오늘도 해피 언버스데이 :) "} />
                                 : <textarea className="memo" cols={10} rows={5} onChange={this.writeMemo} onBlur={this.removeEmoji} value={this.state.memo} />
                             }
-                            <div className="CS3numCnt">{this.state.memo ? this.state.memo.length : '0'}/90</div>
+                            <div className="CS3numCnt">{this.state.memo ? this.state.memo.length : '0'}/100</div>
                             <div className="CS3notice">입력을 안 할 경우 예시 문구로 카드를 완성해드려요.</div>
                         </div>
 

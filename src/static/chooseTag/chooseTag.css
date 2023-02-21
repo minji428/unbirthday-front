@@ -134,6 +134,14 @@
         justify-content: space-around;
         margin-bottom: 10%;
     }
+    .CTrowTagLeft{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-bottom: 10%;
+        margin-left: -25%;
+        margin-right: 25%;
+    }
     .CTeachTagPink{
         display:flex;
         font-size: 11px;

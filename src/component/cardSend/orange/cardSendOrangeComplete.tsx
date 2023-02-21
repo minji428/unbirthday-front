@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import { Slide, toast, ToastContainer } from "react-toastify";
 import { cardSendWhiteProps } from '../white/cardSendWhiteComplete';
-import ReactGA from "react-ga";
+import ReactGA from "react-ga4";
 
 // import '../../../static/cardSend/cardSendComplete.css';
 import '../../../static/cardSend/cardSend4.css';
