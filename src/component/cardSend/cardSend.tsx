@@ -64,7 +64,7 @@ class cardSend extends React.Component<{}, any> {
     render() {
         return(
             <SafeAreaView style={{flex:1,backgroundColor:"#393939"}}>
-        
+                <View>
                 <div className= 'CS1main'>
                     {/* <div className='logo' onClick={this.clickLogo}>
                         <img src="../../img/bt_logo.png"/>
@@ -89,7 +89,8 @@ class cardSend extends React.Component<{}, any> {
                     </div>
                 
                 </div>
-            
+                </View>
+                
             </SafeAreaView>
         )
     }
