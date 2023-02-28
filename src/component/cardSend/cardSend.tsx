@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import ReactGA from "react-ga4";
 import '../../static/cardSend/cardSend.css';
-
+import { SafeAreaView } from 'react-native';
 class cardSend extends React.Component<{}, any> {
     constructor(props: any){
         super(props)
@@ -63,6 +63,9 @@ class cardSend extends React.Component<{}, any> {
 
     render() {
         return(
+            <SafeAreaView style={{backgroundColor:"#393939"}}>
+
+            
             <div className= 'CS1main'>
                 {/* <div className='logo' onClick={this.clickLogo}>
                     <img src="../../img/bt_logo.png"/>
@@ -87,6 +90,7 @@ class cardSend extends React.Component<{}, any> {
                 </div>
                
             </div>
+            </SafeAreaView>
         )
     }
 }
