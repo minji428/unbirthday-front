@@ -5,6 +5,8 @@ import * as service from '../../service/service';
 import styled from 'styled-components';
 import { keyframes } from "styled-components";
 import ReactGA from "react-ga4";
+import {SafeAreaView,View,StatusBar} from "react-native";
+// import {SafeAreaView} from 'react-native-safe-area-context';
 
 class main extends React.Component<{}, any> {
     constructor(props: any){
@@ -87,130 +89,133 @@ class main extends React.Component<{}, any> {
             )
         } else {
             return(
-                <div className= 'HomeMain'>
-                    <div className="happyUnbirthday">
-                        <img src="./img/bt_logo.png"/>
-                    </div>
-                   
-                    <div className="name-heart">
-                        <div className='heartimg'>
-                            <img src='./img/heart.png'/>
+                <SafeAreaView style={{flex:1,backgroundColor:"#393939",marginTop:StatusBar.currentHeight}}>
+                    <View>
+                    <div className= 'HomeMain'>
+                        <div className="happyUnbirthday">
+                            <img src="./img/bt_logo.png"/>
                         </div>
-                        <div className="names">
+                    
+                        <div className="name-heart">
+                            <div className='heartimg'>
+                                <img src='./img/heart.png'/>
+                            </div>
+                            <div className="names">
 
-                            <div className="NameRow"> 
-                                <div>{this.state.receiverName[0]}</div>
-                                <div>{this.state.receiverName[1]}</div>
-                                {/* <AnimatedGradientText>{this.state.receiverName[0]}</AnimatedGradientText> */}
-                                {/* <div><AnimatedGradientText>{this.state.receiverName[1]}</AnimatedGradientText></div> */}
-                            </div>
-                            <div className="NameRow">
-                                <div className="insideRow2">
-                                <div>{this.state.receiverName[2]}</div>
-                                <div>{this.state.receiverName[3]}</div>
-                                    {/* <div><AnimatedGradientText>{this.state.receiverName[2]}</AnimatedGradientText></div>
-                                    <div><AnimatedGradientText>{this.state.receiverName[3]}</AnimatedGradientText></div> */}
-                                </div> 
-                                <div className="insideRow2">
-                                    <div>{this.state.receiverName[4]}</div>
-                                    <div>{this.state.receiverName[5]}</div>
-                                </div>
-                            </div>
-                            <div className="NameRow"> 
-                                <div className="insideRow3">
-                                    <div>{this.state.receiverName[6]}</div>
-                                    <div>{this.state.receiverName[7]}</div>
-                                    <div>{this.state.receiverName[8]}</div>
-                                    <div>{this.state.receiverName[9]}</div>
-                                    <div>{this.state.receiverName[10]}</div>
-                                    <div>{this.state.receiverName[11]}</div>
-                                </div>
-                            </div>
-                            <div className="NameRow"> 
-                                <div className="insideRow3">
-                                    <div>{this.state.receiverName[12]}</div>
-                                    <div>{this.state.receiverName[13]}</div>
-                                    <div>{this.state.receiverName[14]}</div>
-                                    <div>{this.state.receiverName[15]}</div>
-                                    <div>{this.state.receiverName[16]}</div>
-                                    <div>{this.state.receiverName[17]}</div>
-                                </div>
-                            </div>
                                 <div className="NameRow"> 
-                                <div className="insideRow3">
-                                    <div>{this.state.receiverName[18]}</div>
-                                    <div>{this.state.receiverName[19]}</div>
-                                    <div>{this.state.receiverName[20]}</div>
-                                    <div>{this.state.receiverName[21]}</div>
-                                    <div>{this.state.receiverName[22]}</div>
-                                    {/* <div>{this.state.receiverName[17]}</div> */}
+                                    <div>{this.state.receiverName[0]}</div>
+                                    <div>{this.state.receiverName[1]}</div>
+                                    {/* <AnimatedGradientText>{this.state.receiverName[0]}</AnimatedGradientText> */}
+                                    {/* <div><AnimatedGradientText>{this.state.receiverName[1]}</AnimatedGradientText></div> */}
+                                </div>
+                                <div className="NameRow">
+                                    <div className="insideRow2">
+                                    <div>{this.state.receiverName[2]}</div>
+                                    <div>{this.state.receiverName[3]}</div>
+                                        {/* <div><AnimatedGradientText>{this.state.receiverName[2]}</AnimatedGradientText></div>
+                                        <div><AnimatedGradientText>{this.state.receiverName[3]}</AnimatedGradientText></div> */}
+                                    </div> 
+                                    <div className="insideRow2">
+                                        <div>{this.state.receiverName[4]}</div>
+                                        <div>{this.state.receiverName[5]}</div>
+                                    </div>
+                                </div>
+                                <div className="NameRow"> 
+                                    <div className="insideRow3">
+                                        <div>{this.state.receiverName[6]}</div>
+                                        <div>{this.state.receiverName[7]}</div>
+                                        <div>{this.state.receiverName[8]}</div>
+                                        <div>{this.state.receiverName[9]}</div>
+                                        <div>{this.state.receiverName[10]}</div>
+                                        <div>{this.state.receiverName[11]}</div>
+                                    </div>
+                                </div>
+                                <div className="NameRow"> 
+                                    <div className="insideRow3">
+                                        <div>{this.state.receiverName[12]}</div>
+                                        <div>{this.state.receiverName[13]}</div>
+                                        <div>{this.state.receiverName[14]}</div>
+                                        <div>{this.state.receiverName[15]}</div>
+                                        <div>{this.state.receiverName[16]}</div>
+                                        <div>{this.state.receiverName[17]}</div>
+                                    </div>
+                                </div>
+                                    <div className="NameRow"> 
+                                    <div className="insideRow3">
+                                        <div>{this.state.receiverName[18]}</div>
+                                        <div>{this.state.receiverName[19]}</div>
+                                        <div>{this.state.receiverName[20]}</div>
+                                        <div>{this.state.receiverName[21]}</div>
+                                        <div>{this.state.receiverName[22]}</div>
+                                        {/* <div>{this.state.receiverName[17]}</div> */}
+                                    </div>
+                                </div>
+                                <div className="NameRow"> 
+                                    <div className="insideRow6">
+                                        <div>{this.state.receiverName[23]}</div>
+                                        <div>{this.state.receiverName[24]}</div>
+                                        <div>{this.state.receiverName[25]}</div>
+                                        <div>{this.state.receiverName[26]}</div>
+                                        <div>{this.state.receiverName[27]}</div>
+                                    </div>
+                                </div>
+            
+                                <div className="NameRow"> 
+                                    <div className="insideRow7">
+                                        <div>{this.state.receiverName[28]}</div>
+                                        <div>{this.state.receiverName[29]}</div>
+                                        <div>{this.state.receiverName[30]}</div>
+                                        <div>{this.state.receiverName[31]}</div>
+                                    </div>
+                                </div>
+            
+                                <div className="NameRow"> 
+                                    <div className="insideRow8">
+                                        <div>{this.state.receiverName[32]}</div>
+                                        <div>{this.state.receiverName[33]}</div>
+                                        <div>{this.state.receiverName[34]}</div>
+                                    </div>
+                                </div>
+                                <div className="NameRow"> 
+                                    <div className="insideRow9">
+                                        <div>{this.state.receiverName[35]}</div>
+                                        <div>{this.state.receiverName[36]}</div>
+                                    </div>
+                                </div>
+                                <div className="NameRow"> 
+                                    <div className="insideRow3">
+                                        <div>{this.state.receiverName[37]}</div>
+                                    </div>
                                 </div>
                             </div>
-                            <div className="NameRow"> 
-                                <div className="insideRow6">
-                                    <div>{this.state.receiverName[23]}</div>
-                                    <div>{this.state.receiverName[24]}</div>
-                                    <div>{this.state.receiverName[25]}</div>
-                                    <div>{this.state.receiverName[26]}</div>
-                                    <div>{this.state.receiverName[27]}</div>
-                                </div>
-                            </div>
-        
-                            <div className="NameRow"> 
-                                <div className="insideRow7">
-                                    <div>{this.state.receiverName[28]}</div>
-                                    <div>{this.state.receiverName[29]}</div>
-                                    <div>{this.state.receiverName[30]}</div>
-                                    <div>{this.state.receiverName[31]}</div>
-                                </div>
-                            </div>
-        
-                            <div className="NameRow"> 
-                                <div className="insideRow8">
-                                    <div>{this.state.receiverName[32]}</div>
-                                    <div>{this.state.receiverName[33]}</div>
-                                    <div>{this.state.receiverName[34]}</div>
-                                </div>
-                            </div>
-                            <div className="NameRow"> 
-                                <div className="insideRow9">
-                                    <div>{this.state.receiverName[35]}</div>
-                                    <div>{this.state.receiverName[36]}</div>
-                                </div>
-                            </div>
-                            <div className="NameRow"> 
-                                <div className="insideRow3">
-                                    <div>{this.state.receiverName[37]}</div>
-                                </div>
-                            </div>
-                        </div>
-                        
+                            
 
 
-                    </div>
-                    <div className="ment">
-                        <div>
-                            바로 지금 언버스데이를 축하받은 사람들
                         </div>
-                        <div>
-                            생일이 아닌 오늘을 축하해!
+                        <div className="ment">
+                            <div>
+                                바로 지금 언버스데이를 축하받은 사람들
+                            </div>
+                            <div>
+                                생일이 아닌 오늘을 축하해!
+                            </div>
                         </div>
-                    </div>
 
-                    <div className="btns">
-                        <div className="btn1">
-                            <img src="../img/bt_send_card.png" onClick={this.cardSend}></img>
+                        <div className="btns">
+                            <div className="btn1">
+                                <img src="../img/bt_send_card.png" onClick={this.cardSend}></img>
+                            </div>
+                            <div className="btn2">
+                                <img src="../img/bt_mycards.png" onClick={this.mycards}></img>
+                            </div>
                         </div>
-                        <div className="btn2">
-                            <img src="../img/bt_mycards.png" onClick={this.mycards}></img>
-                        </div>
-                    </div>
 
-                    <div className="instagram">
-                        <img src="../img/bt_insta.png" onClick={this.instagram}/>
+                        <div className="instagram">
+                            <img src="../img/bt_insta.png" onClick={this.instagram}/>
+                        </div>
                     </div>
-                </div>
-      
+                </View>                            
+             </SafeAreaView>                           
             )
         }
 
