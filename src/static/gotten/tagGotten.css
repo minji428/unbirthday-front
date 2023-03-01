@@ -145,7 +145,7 @@
 
     .v-line {
         border-left : thin solid;
-        height : 500px;
+        height : 100%;
         color:white;
         position: absolute;
         margin-left: 50%;
@@ -160,11 +160,12 @@
         border: 0;
     }
     .hr-class{
-        width: 400px;
+        width: 150%;
         height: 1px;
         background-color: white;
         border: 0;
-        margin-top:5%
+        /* margin-top:5%; */
+        margin-left:-10%;
     }
 
 

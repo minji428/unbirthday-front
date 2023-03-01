@@ -79,7 +79,7 @@ class TagGotten extends React.Component<MyCardsProps, any> {
                     </div>
                 </div>
                 <div className="v-line"></div>
-                <hr></hr>
+                <div className='hr-class'></div>
                 <div className="TGrowHigher2">
                     <div className="TGrow">
                         <div className="TGrowText">
@@ -112,10 +112,15 @@ class TagGotten extends React.Component<MyCardsProps, any> {
                 </div>
       
             </div>
-            <hr className="hr-class"></hr>
+            <div className='hr-class'></div>
+            {/* <hr className="hr-class"></hr> */}
+            
+            {/* <hr></hr> */}
+            {/* <hr className="hr-class"></hr> */}
 
         </div>
-  
+        // <hr className="hr-class"></hr>
+                            
         )
         
     }
