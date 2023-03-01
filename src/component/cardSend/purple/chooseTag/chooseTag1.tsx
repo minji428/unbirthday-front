@@ -75,7 +75,7 @@ class ChooseTag1 extends React.Component<cardSendYellowBackFrame, any> {
                     </div>
 
                     <div className="CTrowTag">
-                        <div className="CTeachTagPink" id={'17'} onClick={(e) => this.clickTag(e)}>#전재 만재 갓기</div>
+                        <div className="CTeachTagPink" id={'17'} onClick={(e) => this.clickTag(e)}>#천재 만재 갓기</div>
                         <div className="CTeachTagPink" id={'18'} onClick={(e) => this.clickTag(e)}>#멋짐 그 잡채</div>
                     </div>
                 </div>

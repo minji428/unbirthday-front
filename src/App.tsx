@@ -31,10 +31,11 @@ import CardCompleteWhite from './component/cardSend/white/cardSendWhiteComplete'
 import CardCompletePurple from './component/cardSend/purple/cardSendPurpleComplete'
 import CardCompleteOrange from './component/cardSend/orange/cardSendOrangeComplete'
 import Receiver1 from './component/receiver/receiver1';
-
+// import {SafeAreaView, View, Text} from "react-native";
 const App = () => {
   return(
     <div className='App'>
+
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Main/>}></Route>

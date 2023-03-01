@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import ReactGA from "react-ga4";
 import '../../static/cardSend/cardSend.css';
-
+import { SafeAreaView, View} from 'react-native';
 class cardSend extends React.Component<{}, any> {
     constructor(props: any){
         super(props)
@@ -63,30 +63,35 @@ class cardSend extends React.Component<{}, any> {
 
     render() {
         return(
-            <div className= 'CS1main'>
-                {/* <div className='logo' onClick={this.clickLogo}>
-                    <img src="../../img/bt_logo.png"/>
-                </div> */}
-                <div className="CS1btn">
-                    <img src="../img/back.png" className="CS1backBtn" onClick={this.backButton}/>
-                </div>
-                <div className='CS1mainText'>
-                        그 사람을 깜짝 놀래켜줄<br></br>
-                        카드를 선택해주세요.
-                </div>
-                <div className="CS1cards">
-                    <div className="CS1card-1st">
-                        <img onClick={this.yelloCard} className="CS1card CS1card-first"  src="../img/yellow.png"/>
-                        <img onClick={this.orangeCard} className="CS1card CS1card-second"  src="../img/orange.png"/>
+            <SafeAreaView style={{flex:1,backgroundColor:"#393939"}}>
+                <View>
+                <div className= 'CS1main'>
+                    {/* <div className='logo' onClick={this.clickLogo}>
+                        <img src="../../img/bt_logo.png"/>
+                    </div> */}
+                    <div className="CS1btn">
+                        <img src="../img/back.png" className="CS1backBtn" onClick={this.backButton}/>
                     </div>
-                            
-                    <div className="CS1card-2nd">
-                        <img onClick={this.whiteCard} className="CS1card CS1card-third" src="../img/newwhite.png"/>
-                        <img onClick={this.purpleCard} className="CS1card CS1card-fourth" src="../img/pink.png"/>
+                    <div className='CS1mainText'>
+                            그 사람을 깜짝 놀래켜줄<br></br>
+                            카드를 선택해주세요.
                     </div>
+                    <div className="CS1cards">
+                        <div className="CS1card-1st">
+                            <img onClick={this.yelloCard} className="CS1card CS1card-first"  src="../img/yellow.png"/>
+                            <img onClick={this.orangeCard} className="CS1card CS1card-second"  src="../img/orange.png"/>
+                        </div>
+                                
+                        <div className="CS1card-2nd">
+                            <img onClick={this.whiteCard} className="CS1card CS1card-third" src="../img/newwhite.png"/>
+                            <img onClick={this.purpleCard} className="CS1card CS1card-fourth" src="../img/pink.png"/>
+                        </div>
+                    </div>
+                
                 </div>
-               
-            </div>
+                </View>
+                
+            </SafeAreaView>
         )
     }
 }
