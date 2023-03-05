@@ -5,8 +5,8 @@ import * as service from '../../service/service';
 import styled from 'styled-components';
 import { keyframes } from "styled-components";
 import ReactGA from "react-ga4";
-import {SafeAreaView,View,StatusBar} from "react-native";
-import { SafeAreaProvider } from 'react-native-safe-area-context';
+import {View,StatusBar} from "react-native";
+import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 // import {SafeAreaView} from 'react-native-safe-area-context';
 
 class main extends React.Component<{}, any> {
@@ -90,8 +90,8 @@ class main extends React.Component<{}, any> {
             )
         } else {
             return(
-                <SafeAreaProvider style={{backgroundColor:"#393939"}}>
-                    <SafeAreaView style={{flex:1,backgroundColor:"#393939",marginTop:StatusBar.currentHeight}}>
+                <SafeAreaProvider>
+                    <SafeAreaView style={{flex:1,backgroundColor:"#393939",marginTop:StatusBar.currentHeight}} edges={['bottom']}>
                         <View>
                         <div className= 'HomeMain'>
                             <div className="happyUnbirthday">
