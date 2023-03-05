@@ -90,11 +90,11 @@ class main extends React.Component<{}, any> {
             )
         } else {
             return(
-                <SafeAreaProvider>
-                    <StatusBar backgroundColor={'#393939'}/>
-                    <SafeAreaView style={{flex:1,backgroundColor:"#393939",marginTop:StatusBar.currentHeight}}>
-                        <View>
+                // <SafeAreaProvider>
+                    // <SafeAreaView style={{flex:1,backgroundColor:"#393939",marginTop:StatusBar.currentHeight}}>
+                        // <View>
                         <div className= 'HomeMain'>
+                            <StatusBar backgroundColor={'#393939'}/>
                             <div className="happyUnbirthday">
                                 <img src="./img/bt_logo.png"/>
                             </div>
@@ -206,9 +206,9 @@ class main extends React.Component<{}, any> {
                                 <img src="../img/bt_insta.png" onClick={this.instagram}/>
                             </div>
                         </div>
-                    </View>                            
-                </SafeAreaView> 
-            </SafeAreaProvider>                         
+            //         </View>                            
+            //     </SafeAreaView> 
+            // </SafeAreaProvider>                         
             )
         }
 
