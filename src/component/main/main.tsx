@@ -91,7 +91,8 @@ class main extends React.Component<{}, any> {
         } else {
             return(
                 <SafeAreaProvider>
-                    <SafeAreaView style={{flex:1,backgroundColor:"#393939",marginTop:StatusBar.currentHeight}} edges={['bottom']}>
+                    <StatusBar backgroundColor={'#393939'}/>
+                    <SafeAreaView style={{flex:1,backgroundColor:"#393939",marginTop:StatusBar.currentHeight}}>
                         <View>
                         <div className= 'HomeMain'>
                             <div className="happyUnbirthday">
